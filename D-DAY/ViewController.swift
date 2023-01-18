@@ -18,7 +18,8 @@ class ViewController: UIViewController {
     @IBAction func addDDAY(_ sender: Any) {
         let storyboard = UIStoryboard(name: "ModalAdd", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "AddViewController") as! AddViewController
-                
+        let a = 0
+        
         present(viewController, animated: true)
     }
 }
