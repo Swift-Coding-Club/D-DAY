@@ -9,11 +9,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var addButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
+    
+    @IBAction func addDDAY(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "ModalAdd", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "AddViewController") as! AddViewController
+                
+        present(viewController, animated: true)
+    }
 }
 
