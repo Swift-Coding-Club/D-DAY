@@ -53,7 +53,7 @@
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U7K-85-cvE">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1200"/>
                                         <subviews>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Wn9-yC-ZcK">
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bouncesZoom="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Wn9-yC-ZcK">
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="290"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="290" id="XYD-8o-CyN"/>
@@ -146,11 +146,11 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G8J-ik-qzu">
-                                                <rect key="frame" x="40" y="714" width="310" height="310"/>
+                                                <rect key="frame" x="40" y="714" width="266" height="266"/>
                                                 <color key="backgroundColor" red="0.37281388040000002" green="1" blue="0.017513433469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="310" id="Y0m-WL-U4h"/>
-                                                    <constraint firstAttribute="height" constant="310" id="nC0-YO-36d"/>
+                                                    <constraint firstAttribute="width" constant="266" id="Y0m-WL-U4h"/>
+                                                    <constraint firstAttribute="height" constant="266" id="nC0-YO-36d"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
