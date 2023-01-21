@@ -22,6 +22,7 @@ class AddViewController: UIViewController {
         super.viewDidLoad()
         
         addTableView.sectionHeaderTopPadding = 50
+        addTableView.isScrollEnabled = false
         
         addTableView.dataSource = self
         addTableView.delegate = self
