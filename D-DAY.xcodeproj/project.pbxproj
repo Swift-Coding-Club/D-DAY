@@ -15,6 +15,7 @@
 		437C832B297271A400F886FB /* D_DAYTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437C832A297271A400F886FB /* D_DAYTests.swift */; };
 		437C8335297271A400F886FB /* D_DAYUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437C8334297271A400F886FB /* D_DAYUITests.swift */; };
 		437C8337297271A400F886FB /* D_DAYUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437C8336297271A400F886FB /* D_DAYUITestsLaunchTests.swift */; };
+		B30B8C3B297BE15A00F8813B /* ColorWellCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30B8C3A297BE15A00F8813B /* ColorWellCell.swift */; };
 		B349285C2977DD850009C901 /* MainEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B349285B2977DD850009C901 /* MainEdit.storyboard */; };
 		B349285E2977DD920009C901 /* ModalAdd.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B349285D2977DD920009C901 /* ModalAdd.storyboard */; };
 		B34928602977DD980009C901 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B349285F2977DD980009C901 /* AddViewController.swift */; };
@@ -54,6 +55,7 @@
 		437C8330297271A400F886FB /* D-DAYUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "D-DAYUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		437C8334297271A400F886FB /* D_DAYUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D_DAYUITests.swift; sourceTree = "<group>"; };
 		437C8336297271A400F886FB /* D_DAYUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D_DAYUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B30B8C3A297BE15A00F8813B /* ColorWellCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorWellCell.swift; sourceTree = "<group>"; };
 		B349285B2977DD850009C901 /* MainEdit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainEdit.storyboard; sourceTree = "<group>"; };
 		B349285D2977DD920009C901 /* ModalAdd.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ModalAdd.storyboard; sourceTree = "<group>"; };
 		B349285F2977DD980009C901 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				B39BBFCE297A85DC001D408A /* DatePickerCell.swift */,
 				B349285D2977DD920009C901 /* ModalAdd.storyboard */,
 				B39BBFD0297A8609001D408A /* TextFieldCell.swift */,
+				B30B8C3A297BE15A00F8813B /* ColorWellCell.swift */,
 				B39BBFCC297A7FA3001D408A /* ModalAddMultiSection.swift */,
 				437C831C297271A200F886FB /* Assets.xcassets */,
 				437C831E297271A300F886FB /* LaunchScreen.storyboard */,
@@ -279,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				437C83182972719C00F886FB /* ViewController.swift in Sources */,
+				B30B8C3B297BE15A00F8813B /* ColorWellCell.swift in Sources */,
 				437C83142972719C00F886FB /* AppDelegate.swift in Sources */,
 				B39BBFCD297A7FA3001D408A /* ModalAddMultiSection.swift in Sources */,
 				B34928602977DD980009C901 /* AddViewController.swift in Sources */,

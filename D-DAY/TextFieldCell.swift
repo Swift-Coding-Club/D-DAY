@@ -7,12 +7,15 @@
 
 import UIKit
 
+
 class TextFieldCell: UITableViewCell {
+    
+    // Textfield object
+    let accTextField: UITextField = UITextField()
     
     override func awakeFromNib() {
         super.awakeFromNib()
-
-        let accTextField: UITextField = UITextField()
+        
         accTextField.frame = CGRect(x: 0, y: 0, width: 200, height: 100)
         accTextField.placeholder = "입력하기"
         accTextField.textAlignment = .right
@@ -24,7 +27,6 @@ class TextFieldCell: UITableViewCell {
 }
 
 extension TextFieldCell: UITextFieldDelegate {
-    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         // Event of back-space
         if let char = string.cString(using: String.Encoding.utf8) {
@@ -35,8 +37,8 @@ extension TextFieldCell: UITextFieldDelegate {
         }
         
         // Text length control
-        guard (textField.text?.count)! < 10 else {
-            // 10글자 미만으로 입력해주세요 event
+        guard (textField.text?.count)! < 12 else {
+            // 12글자 미만으로 입력해주세요 event
             return false
         }
         return true
