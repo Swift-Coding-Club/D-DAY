@@ -8,10 +8,10 @@
 
 import UIKit
 
-// 시키는데서, protocol 만들고, delegate?.chagneColor()로 시키기
 protocol ColorWellCellDelegate: AnyObject {
     func changeBGColor(bgColor color: UIColor?)
     func changeTxtColor(txtColor color: UIColor?)
+    func changeBothColor(bg bgColor: UIColor?, txt txtColor: UIColor?)
 }
 
 class ColorWellCell: UITableViewCell {
@@ -20,6 +20,9 @@ class ColorWellCell: UITableViewCell {
     
     @IBOutlet weak var colorwellText: UIColorWell!
     @IBOutlet weak var colorwellBackground: UIColorWell!
+    @IBOutlet weak var anyColorButton: UIButton!
+    
+    var colorIndex = 0
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,6 +37,8 @@ extension ColorWellCell {
         
         colorwellText.addTarget(self, action: #selector(txtColorChange), for: .valueChanged)
         colorwellBackground.addTarget(self, action: #selector(backgroundColorChange), for: .valueChanged)
+        anyColorButton.addTarget(self, action: #selector(showAnyColor), for: .touchUpInside)
+        
     }
     
     // Action function when 'colorwellBackground' tapped
@@ -47,5 +52,22 @@ extension ColorWellCell {
     @objc private func txtColorChange() {
         let changedColorForTXT = colorwellText.selectedColor
         delegate?.changeTxtColor(txtColor: changedColorForTXT)
+    }
+    
+    // Action function when 'any-color button' tapped
+    @objc private func showAnyColor() {
+        let colorList = Color.colorList
+        
+        colorIndex += 1
+        if colorIndex >= colorList.count {
+            colorIndex = 0
+        }
+        let changedColorForBackground = colorList[colorIndex].bgColor
+        let changedColorForTXT = colorList[colorIndex].txtColor
+        
+        colorwellBackground.selectedColor = colorList[colorIndex].bgColor
+        colorwellText.selectedColor = colorList[colorIndex].txtColor
+    
+        delegate?.changeBothColor(bg: changedColorForBackground, txt: changedColorForTXT)
     }
 }
