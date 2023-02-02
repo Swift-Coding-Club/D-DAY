@@ -20,6 +20,8 @@
 		B349285E2977DD920009C901 /* ModalAdd.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B349285D2977DD920009C901 /* ModalAdd.storyboard */; };
 		B34928602977DD980009C901 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B349285F2977DD980009C901 /* AddViewController.swift */; };
 		B34928622977DDB50009C901 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B34928612977DDB50009C901 /* Main.storyboard */; };
+		B38A475F2986A57F0088DC56 /* Inter-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B38A475E2986A57F0088DC56 /* Inter-Bold.otf */; };
+		B38A476129875CA00088DC56 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38A476029875CA00088DC56 /* Color.swift */; };
 		B39BBFCD297A7FA3001D408A /* ModalAddMultiSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39BBFCC297A7FA3001D408A /* ModalAddMultiSection.swift */; };
 		B39BBFCF297A85DC001D408A /* DatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39BBFCE297A85DC001D408A /* DatePickerCell.swift */; };
 		B39BBFD1297A8609001D408A /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39BBFD0297A8609001D408A /* TextFieldCell.swift */; };
@@ -60,6 +62,8 @@
 		B349285D2977DD920009C901 /* ModalAdd.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ModalAdd.storyboard; sourceTree = "<group>"; };
 		B349285F2977DD980009C901 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		B34928612977DDB50009C901 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B38A475E2986A57F0088DC56 /* Inter-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-Bold.otf"; path = "Fonts/Inter-Bold.otf"; sourceTree = "<group>"; };
+		B38A476029875CA00088DC56 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		B39BBFCC297A7FA3001D408A /* ModalAddMultiSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalAddMultiSection.swift; sourceTree = "<group>"; };
 		B39BBFCE297A85DC001D408A /* DatePickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerCell.swift; sourceTree = "<group>"; };
 		B39BBFD0297A8609001D408A /* TextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
@@ -113,6 +117,7 @@
 		437C83122972719C00F886FB /* D-DAY */ = {
 			isa = PBXGroup;
 			children = (
+				B38A475E2986A57F0088DC56 /* Inter-Bold.otf */,
 				43A612002984E02400219C7C /* LaunchScreen.storyboard */,
 				437C83132972719C00F886FB /* AppDelegate.swift */,
 				437C83152972719C00F886FB /* SceneDelegate.swift */,
@@ -124,6 +129,7 @@
 				B349285D2977DD920009C901 /* ModalAdd.storyboard */,
 				B39BBFD0297A8609001D408A /* TextFieldCell.swift */,
 				B30B8C3A297BE15A00F8813B /* ColorWellCell.swift */,
+				B38A476029875CA00088DC56 /* Color.swift */,
 				B39BBFCC297A7FA3001D408A /* ModalAddMultiSection.swift */,
 				437C831C297271A200F886FB /* Assets.xcassets */,
 				437C8321297271A300F886FB /* Info.plist */,
@@ -257,6 +263,7 @@
 				B349285C2977DD850009C901 /* MainEdit.storyboard in Resources */,
 				43A612012984E02400219C7C /* LaunchScreen.storyboard in Resources */,
 				437C831D297271A200F886FB /* Assets.xcassets in Resources */,
+				B38A475F2986A57F0088DC56 /* Inter-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +296,7 @@
 				437C83162972719C00F886FB /* SceneDelegate.swift in Sources */,
 				B39BBFCF297A85DC001D408A /* DatePickerCell.swift in Sources */,
 				B39BBFD1297A8609001D408A /* TextFieldCell.swift in Sources */,
+				B38A476129875CA00088DC56 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
