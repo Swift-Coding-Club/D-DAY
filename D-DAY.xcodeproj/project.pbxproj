@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4304BC382988F8C1003168BE /* DDAYCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4304BC372988F8C1003168BE /* DDAYCell.swift */; };
+		4304BC3A2988F8C6003168BE /* DDAYCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4304BC392988F8C6003168BE /* DDAYCell.xib */; };
+		4318E7AF298B873700755453 /* Model in Resources */ = {isa = PBXBuildFile; fileRef = 4318E7AE298B873700755453 /* Model */; };
+		4318E7B1298B875E00755453 /* DdayInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4318E7B0298B875E00755453 /* DdayInfo.swift */; };
+		4338D54B298945D100AB3F54 /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4338D54A298945D100AB3F54 /* UserDefaultsExtension.swift */; };
 		437C83142972719C00F886FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437C83132972719C00F886FB /* AppDelegate.swift */; };
 		437C83162972719C00F886FB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437C83152972719C00F886FB /* SceneDelegate.swift */; };
 		437C83182972719C00F886FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437C83172972719C00F886FB /* ViewController.swift */; };
@@ -43,6 +48,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4304BC372988F8C1003168BE /* DDAYCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDAYCell.swift; sourceTree = "<group>"; };
+		4304BC392988F8C6003168BE /* DDAYCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DDAYCell.xib; sourceTree = "<group>"; };
+		4318E7AE298B873700755453 /* Model */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Model; path = "../../Desktop/복제/D-DAY/Model"; sourceTree = "<group>"; };
+		4318E7B0298B875E00755453 /* DdayInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DdayInfo.swift; path = "../../Desktop/복제/D-DAY/Model/DdayInfo.swift"; sourceTree = "<group>"; };
+		4338D54A298945D100AB3F54 /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
 		437C83102972719C00F886FB /* D-DAY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "D-DAY.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		437C83132972719C00F886FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		437C83152972719C00F886FB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +123,10 @@
 		437C83122972719C00F886FB /* D-DAY */ = {
 			isa = PBXGroup;
 			children = (
+				4318E7AE298B873700755453 /* Model */,
+				4304BC372988F8C1003168BE /* DDAYCell.swift */,
+				4304BC392988F8C6003168BE /* DDAYCell.xib */,
+				4318E7B0298B875E00755453 /* DdayInfo.swift */,
 				43A612002984E02400219C7C /* LaunchScreen.storyboard */,
 				437C83132972719C00F886FB /* AppDelegate.swift */,
 				437C83152972719C00F886FB /* SceneDelegate.swift */,
@@ -127,6 +141,7 @@
 				B39BBFCC297A7FA3001D408A /* ModalAddMultiSection.swift */,
 				437C831C297271A200F886FB /* Assets.xcassets */,
 				437C8321297271A300F886FB /* Info.plist */,
+				4338D54A298945D100AB3F54 /* UserDefaultsExtension.swift */,
 			);
 			path = "D-DAY";
 			sourceTree = "<group>";
@@ -256,7 +271,9 @@
 				B349285E2977DD920009C901 /* ModalAdd.storyboard in Resources */,
 				B349285C2977DD850009C901 /* MainEdit.storyboard in Resources */,
 				43A612012984E02400219C7C /* LaunchScreen.storyboard in Resources */,
+				4318E7AF298B873700755453 /* Model in Resources */,
 				437C831D297271A200F886FB /* Assets.xcassets in Resources */,
+				4304BC3A2988F8C6003168BE /* DDAYCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,12 +300,15 @@
 			files = (
 				437C83182972719C00F886FB /* ViewController.swift in Sources */,
 				B30B8C3B297BE15A00F8813B /* ColorWellCell.swift in Sources */,
+				4304BC382988F8C1003168BE /* DDAYCell.swift in Sources */,
 				437C83142972719C00F886FB /* AppDelegate.swift in Sources */,
 				B39BBFCD297A7FA3001D408A /* ModalAddMultiSection.swift in Sources */,
 				B34928602977DD980009C901 /* AddViewController.swift in Sources */,
+				4318E7B1298B875E00755453 /* DdayInfo.swift in Sources */,
 				437C83162972719C00F886FB /* SceneDelegate.swift in Sources */,
 				B39BBFCF297A85DC001D408A /* DatePickerCell.swift in Sources */,
 				B39BBFD1297A8609001D408A /* TextFieldCell.swift in Sources */,
+				4338D54B298945D100AB3F54 /* UserDefaultsExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

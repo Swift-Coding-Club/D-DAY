@@ -9,19 +9,26 @@ import UIKit
 
 class AddViewController: UIViewController {
     // Define the IBOutlets
+    
+    // navigation bar
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
     
+    // D-Day info
     @IBOutlet weak var addTableView: UITableView!
     
+    // widget - small
     @IBOutlet weak var smallView: UIView!
     @IBOutlet weak var smallDday: UILabel!
     @IBOutlet weak var smallDayNumber: UILabel!
     @IBOutlet weak var smallTitle: UILabel!
     
+    // widget - medium
     @IBOutlet weak var mediumView: UIView!
     
+    // widget - large
     @IBOutlet weak var largeView: UIView!
+    
     
     // Textfield for Title
     var txtFieldForTitle: UITextField = UITextField()
@@ -43,6 +50,9 @@ class AddViewController: UIViewController {
     var colorForTXT: UIColor?
     var colorForBackground: UIColor?
     
+    // UserDefaults 넣어 줄 struct list
+    var ddayList = [DdayInfo]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configuration()
@@ -103,23 +113,34 @@ extension AddViewController {
         self.dismiss(animated: true)
     }
     
+    func save(_ existingDdayInfoList: [DdayInfo]) {
+        let data = existingDdayInfoList.map { try? JSONEncoder().encode($0) }
+        UserDefaults.standard.set(data, forKey: "DdayInfoList")
+    }
+    
     // IBAction for '저장(save)' button
     @IBAction func saveButtonTapped(_ sender: Any) {
-        // User Default for text
-        UserDefaults.standard.set(self.titleString!, forKey: "titleString")
-        UserDefaults.standard.set(self.subtitleString!, forKey: "subtitleString")
+
+        // UserDefaults에 추가
+        let newDdayInfo = DdayInfo(title: txtFieldForTitle.text!, subTitle: txtFieldForSubtitle.text!, date: Date())
         
+        // UserDefaults 불러오기 (encode UserDefaults)
+        let encodedData = UserDefaults.standard.array(forKey: KeyForUserDefaults) as? [Data] ?? []
+        
+        // 불러온 UserDefaults를 struct list에 넣어주기
+        ddayList = encodedData.map { try! JSONDecoder().decode(DdayInfo.self, from: $0) }
+        
+        // struct list에 추가될 새 struct 넣어주기
+        ddayList.append(newDdayInfo)
+        
+        // UserDefaults에 바뀐 struct list 저장하기 (decode UserDefaults)
+        let data = ddayList.map { try? JSONEncoder().encode($0) }
+        UserDefaults.standard.set(data, forKey: KeyForUserDefaults)
+          
         // User Default for date
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy.MM.dd"
-        let dateString = dateFormatter.string(from: self.theDate!)
-        
-        UserDefaults.standard.set(dateString, forKey: "theDate")
-        
-        // User Default for color
-        UserDefaults.standard.set(self.colorForTXT, forKey: "colorForTXT")
-        UserDefaults.standard.set(self.colorForBackground, forKey: "colorForBackground")
-        
+
         self.dismiss(animated: true)
     }
 }
