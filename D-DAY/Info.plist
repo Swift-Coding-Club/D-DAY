@@ -5,9 +5,12 @@
 	<key>NSUserActivityTypes</key>
 	<array>
 		<string>ConfigurationIntent</string>
+		<string>IntentIntent</string>
 	</array>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Inter-ExtraBold.otf</string>
+		<string>Inter-Medium.otf</string>
 		<string>Inter-Bold.otf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>

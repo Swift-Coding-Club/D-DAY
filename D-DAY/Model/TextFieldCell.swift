@@ -16,6 +16,8 @@ class TextFieldCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        accTextField.frame = CGRect(x: 0, y: 0, width: 220, height: 100)
+        accTextField.placeholder = "입력하기"
         accTextField.frame = CGRect(x: 0, y: 0, width: 200, height: 100)
 //        accTextField.placeholder = "입력하기"
         accTextField.textAlignment = .right
@@ -37,7 +39,7 @@ extension TextFieldCell: UITextFieldDelegate {
         }
         
         // Text length control
-        guard (textField.text?.count)! < 12 else {
+        guard (textField.text?.count)! < 13 else {
             // 12글자 미만으로 입력해주세요 event
             return false
         }
