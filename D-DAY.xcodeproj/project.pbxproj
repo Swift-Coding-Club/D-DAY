@@ -11,9 +11,6 @@
 		4323CD5929A32FCC008B75A8 /* DdayInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4323CD5829A32FCC008B75A8 /* DdayInfo.swift */; };
 		4323CD5C29A330E3008B75A8 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4323CD5B29A330E3008B75A8 /* EditViewController.swift */; };
 		4338D54B298945D100AB3F54 /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4338D54A298945D100AB3F54 /* UserDefaultsExtension.swift */; };
-		43618F8F29A5F68E005B55E1 /* DdayWIdget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 43F94DEB299BCA6000F99CCC /* DdayWIdget.intentdefinition */; };
-		43618F9129A6018B005B55E1 /* DdayInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4323CD5829A32FCC008B75A8 /* DdayInfo.swift */; };
-		437A48B629A74DE500107569 /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4338D54A298945D100AB3F54 /* UserDefaultsExtension.swift */; };
 		437BB28929A352FA002BB251 /* DDAYCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 437BB28829A352FA002BB251 /* DDAYCell.xib */; };
 		437C83142972719C00F886FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437C83132972719C00F886FB /* AppDelegate.swift */; };
 		437C83162972719C00F886FB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437C83152972719C00F886FB /* SceneDelegate.swift */; };
@@ -25,17 +22,6 @@
 		43998A4429A517C20001BC11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43998A4129A517C10001BC11 /* LaunchScreen.storyboard */; };
 		43998A4529A517C20001BC11 /* MainEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43998A4229A517C10001BC11 /* MainEdit.storyboard */; };
 		43998A4629A517C20001BC11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43998A4329A517C20001BC11 /* Main.storyboard */; };
-		43CC9088299CBEC30064F2C4 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F94E0D299C914800F99CCC /* IntentHandler.swift */; };
-		43F94DE4299BCA6000F99CCC /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43AA636C298E1A1D0091B6A0 /* WidgetKit.framework */; };
-		43F94DE5299BCA6000F99CCC /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43AA636E298E1A1E0091B6A0 /* SwiftUI.framework */; };
-		43F94DE8299BCA6000F99CCC /* DdayWIdgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F94DE7299BCA6000F99CCC /* DdayWIdgetBundle.swift */; };
-		43F94DEA299BCA6000F99CCC /* DdayWIdget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F94DE9299BCA6000F99CCC /* DdayWIdget.swift */; };
-		43F94DED299BCA6500F99CCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43F94DEC299BCA6500F99CCC /* Assets.xcassets */; };
-		43F94DF3299BCA6500F99CCC /* DdayWIdgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 43F94DE3299BCA6000F99CCC /* DdayWIdgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		43F94E0B299C914800F99CCC /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43F94E0A299C914800F99CCC /* Intents.framework */; };
-		43F94E0E299C914800F99CCC /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F94E0D299C914800F99CCC /* IntentHandler.swift */; };
-		43F94E12299C914800F99CCC /* DdayAppIntents.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 43F94E09299C914800F99CCC /* DdayAppIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		43F94E16299C917000F99CCC /* DdayWIdget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 43F94DEB299BCA6000F99CCC /* DdayWIdget.intentdefinition */; };
 		B30B8C3B297BE15A00F8813B /* ColorWellCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30B8C3A297BE15A00F8813B /* ColorWellCell.swift */; };
 		B349285E2977DD920009C901 /* ModalAdd.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B349285D2977DD920009C901 /* ModalAdd.storyboard */; };
 		B34928602977DD980009C901 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B349285F2977DD980009C901 /* AddViewController.swift */; };
@@ -61,20 +47,6 @@
 			remoteGlobalIDString = 437C830F2972719C00F886FB;
 			remoteInfo = "D-DAY";
 		};
-		43F94DF1299BCA6500F99CCC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 437C83082972719C00F886FB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 43F94DE2299BCA6000F99CCC;
-			remoteInfo = DdayWIdgetExtension;
-		};
-		43F94E10299C914800F99CCC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 437C83082972719C00F886FB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 43F94E08299C914800F99CCC;
-			remoteInfo = DdayAppIntents;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -84,8 +56,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				43F94E12299C914800F99CCC /* DdayAppIntents.appex in Embed Foundation Extensions */,
-				43F94DF3299BCA6500F99CCC /* DdayWIdgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -114,16 +84,7 @@
 		43998A4329A517C20001BC11 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		43AA636C298E1A1D0091B6A0 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		43AA636E298E1A1E0091B6A0 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		43F94DE3299BCA6000F99CCC /* DdayWIdgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DdayWIdgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		43F94DE7299BCA6000F99CCC /* DdayWIdgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DdayWIdgetBundle.swift; sourceTree = "<group>"; };
-		43F94DE9299BCA6000F99CCC /* DdayWIdget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DdayWIdget.swift; sourceTree = "<group>"; };
-		43F94DEB299BCA6000F99CCC /* DdayWIdget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = DdayWIdget.intentdefinition; sourceTree = "<group>"; };
-		43F94DEC299BCA6500F99CCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		43F94DEE299BCA6500F99CCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		43F94E09299C914800F99CCC /* DdayAppIntents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DdayAppIntents.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		43F94E0A299C914800F99CCC /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
-		43F94E0D299C914800F99CCC /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
-		43F94E0F299C914800F99CCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43F94E18299C9D0C00F99CCC /* DdayWIdgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DdayWIdgetExtension.entitlements; sourceTree = "<group>"; };
 		43F94E19299C9D2200F99CCC /* D-DAY.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "D-DAY.entitlements"; sourceTree = "<group>"; };
 		B30B8C3A297BE15A00F8813B /* ColorWellCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorWellCell.swift; sourceTree = "<group>"; };
@@ -158,23 +119,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		43F94DE0299BCA6000F99CCC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				43F94DE5299BCA6000F99CCC /* SwiftUI.framework in Frameworks */,
-				43F94DE4299BCA6000F99CCC /* WidgetKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		43F94E06299C914800F99CCC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				43F94E0B299C914800F99CCC /* Intents.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -185,8 +129,6 @@
 				437C83122972719C00F886FB /* D-DAY */,
 				437C8329297271A400F886FB /* D-DAYTests */,
 				437C8333297271A400F886FB /* D-DAYUITests */,
-				43F94DE6299BCA6000F99CCC /* DdayWIdget */,
-				43F94E0C299C914800F99CCC /* DdayAppIntents */,
 				43AA636B298E1A1D0091B6A0 /* Frameworks */,
 				437C83112972719C00F886FB /* Products */,
 			);
@@ -198,8 +140,6 @@
 				437C83102972719C00F886FB /* D-DAY.app */,
 				437C8326297271A400F886FB /* D-DAYTests.xctest */,
 				437C8330297271A400F886FB /* D-DAYUITests.xctest */,
-				43F94DE3299BCA6000F99CCC /* DdayWIdgetExtension.appex */,
-				43F94E09299C914800F99CCC /* DdayAppIntents.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -292,27 +232,6 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
-		43F94DE6299BCA6000F99CCC /* DdayWIdget */ = {
-			isa = PBXGroup;
-			children = (
-				43F94DE7299BCA6000F99CCC /* DdayWIdgetBundle.swift */,
-				43F94DE9299BCA6000F99CCC /* DdayWIdget.swift */,
-				43F94DEB299BCA6000F99CCC /* DdayWIdget.intentdefinition */,
-				43F94DEC299BCA6500F99CCC /* Assets.xcassets */,
-				43F94DEE299BCA6500F99CCC /* Info.plist */,
-			);
-			path = DdayWIdget;
-			sourceTree = "<group>";
-		};
-		43F94E0C299C914800F99CCC /* DdayAppIntents */ = {
-			isa = PBXGroup;
-			children = (
-				43F94E0D299C914800F99CCC /* IntentHandler.swift */,
-				43F94E0F299C914800F99CCC /* Info.plist */,
-			);
-			path = DdayAppIntents;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -328,8 +247,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				43F94DF2299BCA6500F99CCC /* PBXTargetDependency */,
-				43F94E11299C914800F99CCC /* PBXTargetDependency */,
 			);
 			name = "D-DAY";
 			productName = "D-DAY";
@@ -372,40 +289,6 @@
 			productReference = 437C8330297271A400F886FB /* D-DAYUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		43F94DE2299BCA6000F99CCC /* DdayWIdgetExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 43F94DF6299BCA6500F99CCC /* Build configuration list for PBXNativeTarget "DdayWIdgetExtension" */;
-			buildPhases = (
-				43F94DDF299BCA6000F99CCC /* Sources */,
-				43F94DE0299BCA6000F99CCC /* Frameworks */,
-				43F94DE1299BCA6000F99CCC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = DdayWIdgetExtension;
-			productName = DdayWIdgetExtension;
-			productReference = 43F94DE3299BCA6000F99CCC /* DdayWIdgetExtension.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
-		43F94E08299C914800F99CCC /* DdayAppIntents */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 43F94E13299C914800F99CCC /* Build configuration list for PBXNativeTarget "DdayAppIntents" */;
-			buildPhases = (
-				43F94E05299C914800F99CCC /* Sources */,
-				43F94E06299C914800F99CCC /* Frameworks */,
-				43F94E07299C914800F99CCC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = DdayAppIntents;
-			productName = DdayAppIntents;
-			productReference = 43F94E09299C914800F99CCC /* DdayAppIntents.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -427,12 +310,6 @@
 						CreatedOnToolsVersion = 14.1;
 						TestTargetID = 437C830F2972719C00F886FB;
 					};
-					43F94DE2299BCA6000F99CCC = {
-						CreatedOnToolsVersion = 14.1;
-					};
-					43F94E08299C914800F99CCC = {
-						CreatedOnToolsVersion = 14.1;
-					};
 				};
 			};
 			buildConfigurationList = 437C830B2972719C00F886FB /* Build configuration list for PBXProject "D-DAY" */;
@@ -451,8 +328,6 @@
 				437C830F2972719C00F886FB /* D-DAY */,
 				437C8325297271A400F886FB /* D-DAYTests */,
 				437C832F297271A400F886FB /* D-DAYUITests */,
-				43F94DE2299BCA6000F99CCC /* DdayWIdgetExtension */,
-				43F94E08299C914800F99CCC /* DdayAppIntents */,
 			);
 		};
 /* End PBXProject section */
@@ -480,21 +355,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		437C832E297271A400F886FB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		43F94DE1299BCA6000F99CCC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				43F94DED299BCA6500F99CCC /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		43F94E07299C914800F99CCC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -541,28 +401,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		43F94DDF299BCA6000F99CCC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				43F94DE8299BCA6000F99CCC /* DdayWIdgetBundle.swift in Sources */,
-				43F94DEA299BCA6000F99CCC /* DdayWIdget.swift in Sources */,
-				43618F9129A6018B005B55E1 /* DdayInfo.swift in Sources */,
-				43618F8F29A5F68E005B55E1 /* DdayWIdget.intentdefinition in Sources */,
-				437A48B629A74DE500107569 /* UserDefaultsExtension.swift in Sources */,
-				43CC9088299CBEC30064F2C4 /* IntentHandler.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		43F94E05299C914800F99CCC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				43F94E16299C917000F99CCC /* DdayWIdget.intentdefinition in Sources */,
-				43F94E0E299C914800F99CCC /* IntentHandler.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -575,16 +413,6 @@
 			isa = PBXTargetDependency;
 			target = 437C830F2972719C00F886FB /* D-DAY */;
 			targetProxy = 437C8331297271A400F886FB /* PBXContainerItemProxy */;
-		};
-		43F94DF2299BCA6500F99CCC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 43F94DE2299BCA6000F99CCC /* DdayWIdgetExtension */;
-			targetProxy = 43F94DF1299BCA6500F99CCC /* PBXContainerItemProxy */;
-		};
-		43F94E11299C914800F99CCC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 43F94E08299C914800F99CCC /* DdayAppIntents */;
-			targetProxy = 43F94E10299C914800F99CCC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -839,112 +667,6 @@
 			};
 			name = Release;
 		};
-		43F94DF4299BCA6500F99CCC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_ENTITLEMENTS = DdayWIdgetExtension.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MA5KYZD992;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DdayWIdget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = DdayWIdget;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dday.D-Day.D-DAY.DdayWIdget";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		43F94DF5299BCA6500F99CCC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_ENTITLEMENTS = DdayWIdgetExtension.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MA5KYZD992;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DdayWIdget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = DdayWIdget;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dday.D-Day.D-DAY.DdayWIdget";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		43F94E14299C914800F99CCC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MA5KYZD992;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DdayAppIntents/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = DdayAppIntents;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dday.D-Day.D-DAY.DdayAppIntents";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		43F94E15299C914800F99CCC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MA5KYZD992;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DdayAppIntents/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = DdayAppIntents;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dday.D-Day.D-DAY.DdayAppIntents";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -980,24 +702,6 @@
 			buildConfigurations = (
 				437C8341297271A400F886FB /* Debug */,
 				437C8342297271A400F886FB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		43F94DF6299BCA6500F99CCC /* Build configuration list for PBXNativeTarget "DdayWIdgetExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				43F94DF4299BCA6500F99CCC /* Debug */,
-				43F94DF5299BCA6500F99CCC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		43F94E13299C914800F99CCC /* Build configuration list for PBXNativeTarget "DdayAppIntents" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				43F94E14299C914800F99CCC /* Debug */,
-				43F94E15299C914800F99CCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
