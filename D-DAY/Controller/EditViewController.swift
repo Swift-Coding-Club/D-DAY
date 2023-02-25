@@ -1,13 +1,13 @@
 //
-//  AddViewController.swift
+//  EditViewController.swift
 //  D-DAY
 //
-//  Created by Hakyung Sohn on 2023/01/18.
+//  Created by MinJi Kang on 2023/02/07.
 //
 
 import UIKit
 
-class AddViewController: UIViewController {
+class EditViewController: UIViewController {
     // Define the IBOutlets
     
     // navigation bar
@@ -47,7 +47,7 @@ class AddViewController: UIViewController {
     var subtitleString: String?
     
     // Variable for DatePicker
-    var theDate: Date?
+    var theDate: Date = Date()
     
     // Variables for Colorwell
     var colorForTXT: UIColor?
@@ -56,13 +56,26 @@ class AddViewController: UIViewController {
     // UserDefaults 넣어 줄 struct list
     var ddayList = [DdayInfo]()
 
+    var cellTag = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        let userDefaults = UserDefaults(suiteName: "group.dday.ddayApp")
+        
+        //TODO: 해당 cell에 대한 UserDefaults값만 불러오기
+        // UserDefaults 불러오기 (encode UserDefaults)
+//        let encodedData = UserDefaults.standard.array(forKey: KeyForUserDefaults) as? [Data] ?? []
+        let encodedData = UserDefaults.shared.array(forKey: KeyForUserDefaults) as? [Data] ?? []
+
+        // 불러온 UserDefaults를 struct list에 넣어주기
+        ddayList = encodedData.map { try! JSONDecoder().decode(DdayInfo.self, from: $0) }
+        
         configuration()
     }
 }
 
-extension AddViewController {
+extension EditViewController {
     func configuration() {
         addTableView.sectionHeaderTopPadding = 50
         addTableView.isScrollEnabled = false
@@ -87,7 +100,7 @@ extension AddViewController {
     func calculateDday() -> Int {
         // D-day 날짜 계산
         // date-picker 선택시간 (formattedTargetDate)
-        let targetDateString = dateFormatToString(from: self.theDate!)
+        let targetDateString = dateFormatToString(from: self.theDate)
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy.MM.dd"
@@ -219,23 +232,28 @@ extension AddViewController {
     
     // IBAction for '저장(save)' button
     @IBAction func saveButtonTapped(_ sender: Any) {
-
-        // UserDefaults에 추가
-        let newDdayInfo = DdayInfo(title: txtFieldForTitle.text!, subTitle: txtFieldForSubtitle.text!, date: Date())
+        print("\(cellTag) Tag로 index값을 받아옴")
+        
+        // 변경될 struct
+        let editDdayInfo = DdayInfo(title: txtFieldForTitle.text!, subTitle: txtFieldForSubtitle.text!, date: theDate)
+        
+//        let userDefaults = UserDefaults(suiteName: "group.dday.ddayApp")
         
         // UserDefaults 불러오기 (encode UserDefaults)
-        let encodedData = UserDefaults.standard.array(forKey: KeyForUserDefaults) as? [Data] ?? []
-        
+//        let encodedData = UserDefaults.standard.array(forKey: KeyForUserDefaults) as? [Data] ?? []
+        let encodedData = UserDefaults.shared.array(forKey: KeyForUserDefaults) as? [Data] ?? []
+
         // 불러온 UserDefaults를 struct list에 넣어주기
         ddayList = encodedData.map { try! JSONDecoder().decode(DdayInfo.self, from: $0) }
         
-        // struct list에 추가될 새 struct 넣어주기
-        ddayList.append(newDdayInfo)
+        // struct list 중 cellTag(클릭한 cell의 number)에 해당하는 struct의 값을, 변경된 struct값으로 바꿔주기
+        ddayList[cellTag] = editDdayInfo
         
         // UserDefaults에 바뀐 struct list 저장하기 (decode UserDefaults)
         let data = ddayList.map { try? JSONEncoder().encode($0) }
-        UserDefaults.standard.set(data, forKey: KeyForUserDefaults)
-          
+//        UserDefaults.standard.set(data, forKey: KeyForUserDefaults)
+        UserDefaults.shared.setValue(data, forKey: KeyForUserDefaults)
+        
         // User Default for date
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy.MM.dd"
@@ -244,7 +262,7 @@ extension AddViewController {
     }
 }
 
-extension AddViewController: DatePickerCellDelegate {
+extension EditViewController: DatePickerCellDelegate {
     func getDateValue(value date: Date) {
         self.theDate = date
         self.smallDayNumber.text = String(calculateDday())
@@ -252,7 +270,7 @@ extension AddViewController: DatePickerCellDelegate {
     }
 }
     
-extension AddViewController: ColorWellCellDelegate {
+extension EditViewController: ColorWellCellDelegate {
     // ColorWellCellDelegate method 구현
     func changeBGColor(bgColor color: UIColor?) {
         smallView.backgroundColor = color
@@ -288,30 +306,40 @@ extension AddViewController: ColorWellCellDelegate {
     }
 }
 
-extension AddViewController: UITableViewDataSource {
+extension EditViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return list[section].items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let target = list[indexPath.section].items[indexPath.row]
-        
+
         if indexPath.section == 0 { // textfield section
             let cellForTxtfield = addTableView.dequeueReusableCell(withIdentifier: target.type.rawValue, for: indexPath) as! TextFieldCell
             
             if indexPath.row == 0 { // title row
+                
                 txtFieldForTitle = cellForTxtfield.accTextField
                 cellForTxtfield.accTextField.addTarget(self, action: #selector(getTitle), for: .editingChanged)
+                
+                // place holder 대신 UserDefaults의 입력값 넣어주기
+                txtFieldForTitle.text = ddayList[cellTag].title
+                
             } else { // subtitle row
+                
                 txtFieldForSubtitle = cellForTxtfield.accTextField
                 cellForTxtfield.accTextField.addTarget(self, action: #selector(getSubTitle), for: .editingDidEnd)
+                
+                // place holder 대신 UserDefaults의 입력값 넣어주기
+                txtFieldForSubtitle.text = ddayList[cellTag].subTitle
+
             }
             
             cellForTxtfield.textLabel?.text = "\(target.title)"
             
             return cellForTxtfield
             
-        } else if indexPath.section == 1 { // datepicker section
+        } else if indexPath.section == 1 { // datepicker section // TODO: UserDefaults에 저장된 Date값 불러오기
             let cellForDatepicker = addTableView.dequeueReusableCell(withIdentifier: target.type.rawValue, for: indexPath) as! DatePickerCell
             cellForDatepicker.textLabel?.text = "\(target.title)"
             cellForDatepicker.delegate = self
@@ -348,14 +376,23 @@ extension AddViewController: UITableViewDataSource {
     }
 }
 
-extension AddViewController: UITableViewDelegate {}
+extension EditViewController: UITableViewDelegate {}
 
-extension UILabel {
-    func addCharacterSpacing(_ value: Double = -0.1) {
-        let kernValue = self.font.pointSize * CGFloat(value)
-        guard let text = text, !text.isEmpty else { return }
-        let string = NSMutableAttributedString(string: text)
-        string.addAttribute(NSAttributedString.Key.kern, value: kernValue, range: NSRange(location: 0, length: string.length - 1))
-        attributedText = string
-    }
-}
+// TODO: 에러나서 지워뒀는데 괜찮으면 지우기
+//extension UILabel {
+//    func addCharacterSpacing(_ value: Double = -0.1) {
+//        let kernValue = self.font.pointSize * CGFloat(value)
+//        guard let text = text, !text.isEmpty else { return }
+//        let string = NSMutableAttributedString(string: text)
+//        string.addAttribute(NSAttributedString.Key.kern, value: kernValue, range: NSRange(location: 0, length: string.length - 1))
+//        attributedText = string
+//    }
+//}
+//
+//// MARK: UserDefaults AppGroup
+//extension UserDefaults {
+//    static var shared: UserDefaults {
+//        let appGroupId = "group.dday.ddayApp"
+//        return UserDefaults(suiteName: appGroupId)!
+//    }
+//}
