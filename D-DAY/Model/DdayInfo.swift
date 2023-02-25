@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DdayInfo: Codable {
+struct DdayInfo: Hashable, Codable {
     let title: String
     let subTitle: String
     let date: Date
