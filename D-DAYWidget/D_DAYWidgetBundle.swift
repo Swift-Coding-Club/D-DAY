@@ -2,7 +2,7 @@
 //  D_DAYWidgetBundle.swift
 //  D-DAYWidget
 //
-//  Created by Hakyung Sohn on 2023/02/09.
+//  Created by MinJi Kang on 2023/02/26.
 //
 
 import WidgetKit

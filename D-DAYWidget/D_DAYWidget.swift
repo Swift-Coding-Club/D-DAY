@@ -2,7 +2,7 @@
 //  D_DAYWidget.swift
 //  D-DAYWidget
 //
-//  Created by Hakyung Sohn on 2023/02/09.
+//  Created by MinJi Kang on 2023/02/26.
 //
 
 import WidgetKit
@@ -41,14 +41,10 @@ struct SimpleEntry: TimelineEntry {
 }
 
 struct D_DAYWidgetEntryView : View {
-    @Environment(\.widgetFamily) var family: WidgetFamily
     var entry: Provider.Entry
 
     var body: some View {
-        VStack {
-            Text(entry.date, style: .time)
-            Text(entry.configuration.symbol ?? "No value~~~")
-        }
+        Text(entry.date, style: .time)
     }
 }
 
@@ -61,21 +57,12 @@ struct D_DAYWidget: Widget {
         }
         .configurationDisplayName("My Widget")
         .description("This is an example widget.")
-        .supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
     }
 }
 
 struct D_DAYWidget_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            D_DAYWidgetEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-                .previewContext(WidgetPreviewContext(family: .systemSmall))
-            
-            D_DAYWidgetEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-                .previewContext(WidgetPreviewContext(family: .systemMedium))
-            
-            D_DAYWidgetEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-                .previewContext(WidgetPreviewContext(family: .systemLarge))
-        }
+        D_DAYWidgetEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+            .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }

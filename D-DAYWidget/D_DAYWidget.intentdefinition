@@ -9,11 +9,11 @@
 	<key>INIntentDefinitionNamespace</key>
 	<string>88xZPY</string>
 	<key>INIntentDefinitionSystemVersion</key>
-	<string>21G115</string>
+	<string>20A294</string>
 	<key>INIntentDefinitionToolsBuildVersion</key>
-	<string>14C18</string>
+	<string>12A6144</string>
 	<key>INIntentDefinitionToolsVersion</key>
-	<string>14.2</string>
+	<string>12.0</string>
 	<key>INIntents</key>
 	<array>
 		<dict>
@@ -25,59 +25,8 @@
 			<true/>
 			<key>INIntentIneligibleForSuggestions</key>
 			<true/>
-			<key>INIntentLastParameterTag</key>
-			<integer>2</integer>
 			<key>INIntentName</key>
 			<string>Configuration</string>
-			<key>INIntentParameters</key>
-			<array>
-				<dict>
-					<key>INIntentParameterConfigurable</key>
-					<true/>
-					<key>INIntentParameterDisplayName</key>
-					<string>Symbol test</string>
-					<key>INIntentParameterDisplayNameID</key>
-					<string>YFKhT8</string>
-					<key>INIntentParameterDisplayPriority</key>
-					<integer>1</integer>
-					<key>INIntentParameterMetadata</key>
-					<dict>
-						<key>INIntentParameterMetadataCapitalization</key>
-						<string>Sentences</string>
-						<key>INIntentParameterMetadataDefaultValue</key>
-						<string>testsss</string>
-						<key>INIntentParameterMetadataDefaultValueID</key>
-						<string>J53mGT</string>
-					</dict>
-					<key>INIntentParameterName</key>
-					<string>symbol</string>
-					<key>INIntentParameterPromptDialogs</key>
-					<array>
-						<dict>
-							<key>INIntentParameterPromptDialogCustom</key>
-							<true/>
-							<key>INIntentParameterPromptDialogType</key>
-							<string>Configuration</string>
-						</dict>
-						<dict>
-							<key>INIntentParameterPromptDialogCustom</key>
-							<true/>
-							<key>INIntentParameterPromptDialogFormatString</key>
-							<string>siiritest</string>
-							<key>INIntentParameterPromptDialogFormatStringID</key>
-							<string>3a0YDI</string>
-							<key>INIntentParameterPromptDialogType</key>
-							<string>Primary</string>
-						</dict>
-					</array>
-					<key>INIntentParameterSupportsResolution</key>
-					<true/>
-					<key>INIntentParameterTag</key>
-					<integer>1</integer>
-					<key>INIntentParameterType</key>
-					<string>String</string>
-				</dict>
-			</array>
 			<key>INIntentResponse</key>
 			<dict>
 				<key>INIntentResponseCodes</key>
