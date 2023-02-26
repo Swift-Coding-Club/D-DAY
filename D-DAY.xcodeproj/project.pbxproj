@@ -27,20 +27,9 @@
 		B34928602977DD980009C901 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B349285F2977DD980009C901 /* AddViewController.swift */; };
 		B38A475F2986A57F0088DC56 /* Inter-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B38A475E2986A57F0088DC56 /* Inter-Bold.otf */; };
 		B38A476129875CA00088DC56 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38A476029875CA00088DC56 /* Color.swift */; };
-		B38A4763298B9B250088DC56 /* DdayInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38A4762298B9B240088DC56 /* DdayInfo.swift */; };
-		B38A4765298CDC3A0088DC56 /* Inter-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B38A4764298CDC3A0088DC56 /* Inter-Medium.otf */; };
-		B38A4767298D0F180088DC56 /* Inter-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B38A4766298D0F180088DC56 /* Inter-ExtraBold.otf */; };
 		B39BBFCD297A7FA3001D408A /* ModalAddMultiSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39BBFCC297A7FA3001D408A /* ModalAddMultiSection.swift */; };
 		B39BBFCF297A85DC001D408A /* DatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39BBFCE297A85DC001D408A /* DatePickerCell.swift */; };
 		B39BBFD1297A8609001D408A /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39BBFD0297A8609001D408A /* TextFieldCell.swift */; };
-		B3C356022994F67600CA01EE /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B38A476E298E1FF80088DC56 /* WidgetKit.framework */; };
-		B3C356032994F67600CA01EE /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B38A4770298E1FF90088DC56 /* SwiftUI.framework */; };
-		B3C356062994F67600CA01EE /* D_DAYWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C356052994F67600CA01EE /* D_DAYWidgetBundle.swift */; };
-		B3C356082994F67600CA01EE /* D_DAYWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C356072994F67600CA01EE /* D_DAYWidget.swift */; };
-		B3C3560B2994F67700CA01EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C3560A2994F67700CA01EE /* Assets.xcassets */; };
-		B3C3560D2994F67700CA01EE /* D_DAYWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B3C356092994F67600CA01EE /* D_DAYWidget.intentdefinition */; };
-		B3C3560E2994F67700CA01EE /* D_DAYWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B3C356092994F67600CA01EE /* D_DAYWidget.intentdefinition */; };
-		B3C356112994F67700CA01EE /* D-DAYWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B3C356012994F67600CA01EE /* D-DAYWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,23 +47,15 @@
 			remoteGlobalIDString = 437C830F2972719C00F886FB;
 			remoteInfo = "D-DAY";
 		};
-		B3C3560F2994F67700CA01EE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 437C83082972719C00F886FB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B3C356002994F67600CA01EE;
-			remoteInfo = "D-DAYWidgetExtension";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B38A4783298E1FFA0088DC56 /* Embed Foundation Extensions */ = {
+		43AA6380298E1A220091B6A0 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				B3C356112994F67700CA01EE /* D-DAYWidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,25 +90,11 @@
 		B30B8C3A297BE15A00F8813B /* ColorWellCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorWellCell.swift; sourceTree = "<group>"; };
 		B349285D2977DD920009C901 /* ModalAdd.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ModalAdd.storyboard; sourceTree = "<group>"; };
 		B349285F2977DD980009C901 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
-		B34928612977DDB50009C901 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B38A475E2986A57F0088DC56 /* Inter-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.otf"; sourceTree = "<group>"; };
 		B38A476029875CA00088DC56 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		B38A4762298B9B240088DC56 /* DdayInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DdayInfo.swift; sourceTree = "<group>"; };
-		B38A4764298CDC3A0088DC56 /* Inter-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.otf"; sourceTree = "<group>"; };
-		B38A4766298D0F180088DC56 /* Inter-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraBold.otf"; sourceTree = "<group>"; };
-		B38A476E298E1FF80088DC56 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
-		B38A4770298E1FF90088DC56 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		B38A478B298E2A1E0088DC56 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
-		B38A4796298E2A1F0088DC56 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
 		B39BBFCC297A7FA3001D408A /* ModalAddMultiSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalAddMultiSection.swift; sourceTree = "<group>"; };
 		B39BBFCE297A85DC001D408A /* DatePickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerCell.swift; sourceTree = "<group>"; };
 		B39BBFD0297A8609001D408A /* TextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
-		B3C356012994F67600CA01EE /* D-DAYWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "D-DAYWidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3C356052994F67600CA01EE /* D_DAYWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D_DAYWidgetBundle.swift; sourceTree = "<group>"; };
-		B3C356072994F67600CA01EE /* D_DAYWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D_DAYWidget.swift; sourceTree = "<group>"; };
-		B3C356092994F67600CA01EE /* D_DAYWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = D_DAYWidget.intentdefinition; sourceTree = "<group>"; };
-		B3C3560A2994F67700CA01EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B3C3560C2994F67700CA01EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,15 +119,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B3C355FE2994F67600CA01EE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B3C356032994F67600CA01EE /* SwiftUI.framework in Frameworks */,
-				B3C356022994F67600CA01EE /* WidgetKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -171,8 +129,7 @@
 				437C83122972719C00F886FB /* D-DAY */,
 				437C8329297271A400F886FB /* D-DAYTests */,
 				437C8333297271A400F886FB /* D-DAYUITests */,
-				B3C356042994F67600CA01EE /* D-DAYWidget */,
-				B38A476D298E1FF80088DC56 /* Frameworks */,
+				43AA636B298E1A1D0091B6A0 /* Frameworks */,
 				437C83112972719C00F886FB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -183,7 +140,6 @@
 				437C83102972719C00F886FB /* D-DAY.app */,
 				437C8326297271A400F886FB /* D-DAYTests.xctest */,
 				437C8330297271A400F886FB /* D-DAYUITests.xctest */,
-				B3C356012994F67600CA01EE /* D-DAYWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -222,85 +178,58 @@
 			path = "D-DAYUITests";
 			sourceTree = "<group>";
 		};
-		B38A476D298E1FF80088DC56 /* Frameworks */ = {
+		43AA636B298E1A1D0091B6A0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B38A476E298E1FF80088DC56 /* WidgetKit.framework */,
-				B38A4770298E1FF90088DC56 /* SwiftUI.framework */,
-				B38A478B298E2A1E0088DC56 /* Intents.framework */,
-				B38A4796298E2A1F0088DC56 /* IntentsUI.framework */,
+				43AA636C298E1A1D0091B6A0 /* WidgetKit.framework */,
+				43AA636E298E1A1E0091B6A0 /* SwiftUI.framework */,
+				43F94E0A299C914800F99CCC /* Intents.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B3C3049129A9CC1400AF2B33 /* Font */ = {
+		43C1E38929A9CEE0004FF0F6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B38A4766298D0F180088DC56 /* Inter-ExtraBold.otf */,
-				B38A4764298CDC3A0088DC56 /* Inter-Medium.otf */,
-				B38A475E2986A57F0088DC56 /* Inter-Bold.otf */,
+				4323CD5829A32FCC008B75A8 /* DdayInfo.swift */,
+				4304BC372988F8C1003168BE /* DDAYCell.swift */,
+				437BB28829A352FA002BB251 /* DDAYCell.xib */,
+				B39BBFD0297A8609001D408A /* TextFieldCell.swift */,
+				B30B8C3A297BE15A00F8813B /* ColorWellCell.swift */,
+				B38A476029875CA00088DC56 /* Color.swift */,
+				B39BBFCE297A85DC001D408A /* DatePickerCell.swift */,
 			);
-			path = Font;
-			sourceTree = "<group>";
-		};
-		B3C3049529A9CD7500AF2B33 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				B39BBFCC297A7FA3001D408A /* ModalAddMultiSection.swift */,
-				B349285F2977DD980009C901 /* AddViewController.swift */,
-				437C83172972719C00F886FB /* ViewController.swift */,
-			);
-			path = Controller;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		43C1E38C29A9CF72004FF0F6 /* View */ = {
-		B3C3049629A9CDB400AF2B33 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				43998A4129A517C10001BC11 /* LaunchScreen.storyboard */,
 				43998A4329A517C20001BC11 /* Main.storyboard */,
 				43998A4229A517C10001BC11 /* MainEdit.storyboard */,
-				43A612002984E02400219C7C /* LaunchScreen.storyboard */,
-				B34928612977DDB50009C901 /* Main.storyboard */,
-				B349285B2977DD850009C901 /* MainEdit.storyboard */,
 				B349285D2977DD920009C901 /* ModalAdd.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
 		43C1E38D29A9CF8C004FF0F6 /* Controller */ = {
-		B3C3049829A9CDFD00AF2B33 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				437C83172972719C00F886FB /* ViewController.swift */,
 				4323CD5B29A330E3008B75A8 /* EditViewController.swift */,
 				B349285F2977DD980009C901 /* AddViewController.swift */,
 				B39BBFCC297A7FA3001D408A /* ModalAddMultiSection.swift */,
-				B39BBFCE297A85DC001D408A /* DatePickerCell.swift */,
-				B39BBFD0297A8609001D408A /* TextFieldCell.swift */,
-				B30B8C3A297BE15A00F8813B /* ColorWellCell.swift */,
-				B38A476029875CA00088DC56 /* Color.swift */,
-				4304BC372988F8C1003168BE /* DDAYCell.swift */,
-				4304BC392988F8C6003168BE /* DDAYCell.xib */,
-				B38A4762298B9B240088DC56 /* DdayInfo.swift */,
 			);
 			path = Controller;
-			path = Model;
 			sourceTree = "<group>";
 		};
 		43C1E38E29A9D006004FF0F6 /* Font */ = {
-		B3C356042994F67600CA01EE /* D-DAYWidget */ = {
 			isa = PBXGroup;
 			children = (
 				B38A475E2986A57F0088DC56 /* Inter-Bold.otf */,
-				B3C356052994F67600CA01EE /* D_DAYWidgetBundle.swift */,
-				B3C356072994F67600CA01EE /* D_DAYWidget.swift */,
-				B3C356092994F67600CA01EE /* D_DAYWidget.intentdefinition */,
-				B3C3560A2994F67700CA01EE /* Assets.xcassets */,
-				B3C3560C2994F67700CA01EE /* Info.plist */,
 			);
 			path = Font;
-			path = "D-DAYWidget";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,12 +242,11 @@
 				437C830C2972719C00F886FB /* Sources */,
 				437C830D2972719C00F886FB /* Frameworks */,
 				437C830E2972719C00F886FB /* Resources */,
-				B38A4783298E1FFA0088DC56 /* Embed Foundation Extensions */,
+				43AA6380298E1A220091B6A0 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B3C356102994F67700CA01EE /* PBXTargetDependency */,
 			);
 			name = "D-DAY";
 			productName = "D-DAY";
@@ -361,23 +289,6 @@
 			productReference = 437C8330297271A400F886FB /* D-DAYUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		B3C356002994F67600CA01EE /* D-DAYWidgetExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B3C356142994F67700CA01EE /* Build configuration list for PBXNativeTarget "D-DAYWidgetExtension" */;
-			buildPhases = (
-				B3C355FD2994F67600CA01EE /* Sources */,
-				B3C355FE2994F67600CA01EE /* Frameworks */,
-				B3C355FF2994F67600CA01EE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "D-DAYWidgetExtension";
-			productName = "D-DAYWidgetExtension";
-			productReference = B3C356012994F67600CA01EE /* D-DAYWidgetExtension.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -385,7 +296,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1420;
+				LastSwiftUpdateCheck = 1410;
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
 					437C830F2972719C00F886FB = {
@@ -398,9 +309,6 @@
 					437C832F297271A400F886FB = {
 						CreatedOnToolsVersion = 14.1;
 						TestTargetID = 437C830F2972719C00F886FB;
-					};
-					B3C356002994F67600CA01EE = {
-						CreatedOnToolsVersion = 14.2;
 					};
 				};
 			};
@@ -420,7 +328,6 @@
 				437C830F2972719C00F886FB /* D-DAY */,
 				437C8325297271A400F886FB /* D-DAYTests */,
 				437C832F297271A400F886FB /* D-DAYUITests */,
-				B3C356002994F67600CA01EE /* D-DAYWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -432,13 +339,11 @@
 			files = (
 				43998A4629A517C20001BC11 /* Main.storyboard in Resources */,
 				B349285E2977DD920009C901 /* ModalAdd.storyboard in Resources */,
-				B349285C2977DD850009C901 /* MainEdit.storyboard in Resources */,
-				43A612012984E02400219C7C /* LaunchScreen.storyboard in Resources */,
+				43998A4529A517C20001BC11 /* MainEdit.storyboard in Resources */,
+				437BB28929A352FA002BB251 /* DDAYCell.xib in Resources */,
 				437C831D297271A200F886FB /* Assets.xcassets in Resources */,
-				B38A4767298D0F180088DC56 /* Inter-ExtraBold.otf in Resources */,
+				43998A4429A517C20001BC11 /* LaunchScreen.storyboard in Resources */,
 				B38A475F2986A57F0088DC56 /* Inter-Bold.otf in Resources */,
-				4304BC3A2988F8C6003168BE /* DDAYCell.xib in Resources */,
-				B38A4765298CDC3A0088DC56 /* Inter-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,14 +361,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B3C355FF2994F67600CA01EE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B3C3560B2994F67700CA01EE /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -471,7 +368,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3C3560E2994F67700CA01EE /* D_DAYWidget.intentdefinition in Sources */,
 				437C83182972719C00F886FB /* ViewController.swift in Sources */,
 				B30B8C3B297BE15A00F8813B /* ColorWellCell.swift in Sources */,
 				4304BC382988F8C1003168BE /* DDAYCell.swift in Sources */,
@@ -480,7 +376,6 @@
 				B34928602977DD980009C901 /* AddViewController.swift in Sources */,
 				4323CD5C29A330E3008B75A8 /* EditViewController.swift in Sources */,
 				437C83162972719C00F886FB /* SceneDelegate.swift in Sources */,
-				B38A4763298B9B250088DC56 /* DdayInfo.swift in Sources */,
 				B39BBFCF297A85DC001D408A /* DatePickerCell.swift in Sources */,
 				4323CD5929A32FCC008B75A8 /* DdayInfo.swift in Sources */,
 				B39BBFD1297A8609001D408A /* TextFieldCell.swift in Sources */,
@@ -506,16 +401,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B3C355FD2994F67600CA01EE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B3C3560D2994F67700CA01EE /* D_DAYWidget.intentdefinition in Sources */,
-				B3C356062994F67600CA01EE /* D_DAYWidgetBundle.swift in Sources */,
-				B3C356082994F67600CA01EE /* D_DAYWidget.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -528,11 +413,6 @@
 			isa = PBXTargetDependency;
 			target = 437C830F2972719C00F886FB /* D-DAY */;
 			targetProxy = 437C8331297271A400F886FB /* PBXContainerItemProxy */;
-		};
-		B3C356102994F67700CA01EE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B3C356002994F67600CA01EE /* D-DAYWidgetExtension */;
-			targetProxy = B3C3560F2994F67700CA01EE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -787,62 +667,6 @@
 			};
 			name = Release;
 		};
-		B3C356122994F67700CA01EE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MA5KYZD992;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "D-DAYWidget/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "D-DAYWidget";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dday.D-Day.D-DAY.D-DAYWidget";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		B3C356132994F67700CA01EE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MA5KYZD992;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "D-DAYWidget/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "D-DAYWidget";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dday.D-Day.D-DAY.D-DAYWidget";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -878,15 +702,6 @@
 			buildConfigurations = (
 				437C8341297271A400F886FB /* Debug */,
 				437C8342297271A400F886FB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B3C356142994F67700CA01EE /* Build configuration list for PBXNativeTarget "D-DAYWidgetExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B3C356122994F67700CA01EE /* Debug */,
-				B3C356132994F67700CA01EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
