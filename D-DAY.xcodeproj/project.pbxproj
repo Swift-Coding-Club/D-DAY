@@ -16,7 +16,6 @@
 		434E0C5129AB740000548535 /* D_DAYWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434E0C5029AB740000548535 /* D_DAYWidgetBundle.swift */; };
 		434E0C5329AB740000548535 /* D_DAYWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434E0C5229AB740000548535 /* D_DAYWidget.swift */; };
 		434E0C5629AB740400548535 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 434E0C5529AB740400548535 /* Assets.xcassets */; };
-		434E0C5829AB740400548535 /* D_DAYWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 434E0C5429AB740000548535 /* D_DAYWidget.intentdefinition */; };
 		434E0C5929AB740400548535 /* D_DAYWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 434E0C5429AB740000548535 /* D_DAYWidget.intentdefinition */; };
 		434E0C5C29AB740400548535 /* D-DAYWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 434E0C4C29AB740000548535 /* D-DAYWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		434E0C6129AB791100548535 /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4338D54A298945D100AB3F54 /* UserDefaultsExtension.swift */; };
@@ -111,7 +110,6 @@
 		43AA636C298E1A1D0091B6A0 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		43AA636E298E1A1E0091B6A0 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		43F94E0A299C914800F99CCC /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
-		43F94E18299C9D0C00F99CCC /* DdayWIdgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DdayWIdgetExtension.entitlements; sourceTree = "<group>"; };
 		43F94E19299C9D2200F99CCC /* D-DAY.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "D-DAY.entitlements"; sourceTree = "<group>"; };
 		B30B8C3A297BE15A00F8813B /* ColorWellCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorWellCell.swift; sourceTree = "<group>"; };
 		B349285D2977DD920009C901 /* ModalAdd.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ModalAdd.storyboard; sourceTree = "<group>"; };
@@ -172,7 +170,6 @@
 		437C83072972719C00F886FB = {
 			isa = PBXGroup;
 			children = (
-				43F94E18299C9D0C00F99CCC /* DdayWIdgetExtension.entitlements */,
 				437C83122972719C00F886FB /* D-DAY */,
 				437C8329297271A400F886FB /* D-DAYTests */,
 				437C8333297271A400F886FB /* D-DAYUITests */,
@@ -449,7 +446,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				434E0C5829AB740400548535 /* D_DAYWidget.intentdefinition in Sources */,
 				434E0C5129AB740000548535 /* D_DAYWidgetBundle.swift in Sources */,
 				434E0C6229AB791500548535 /* DdayInfo.swift in Sources */,
 				434E0C6129AB791100548535 /* UserDefaultsExtension.swift in Sources */,
