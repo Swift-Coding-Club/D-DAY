@@ -10,7 +10,14 @@ import SwiftUI
 
 @main
 struct D_DAYWidgetBundle: WidgetBundle {
+    
+    @WidgetBundleBuilder
     var body: some Widget {
-        D_DAYWidget()
+        WidgetView_Single01()
+        WidgetView_Single02()
+        
+        WidgetView_Multi01()
+        WidgetView_Multi02()
+        WidgetView_Multi03()
     }
 }
