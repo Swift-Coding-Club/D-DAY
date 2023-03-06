@@ -14,30 +14,40 @@
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="ViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="ViewController" customModule="D_DAY" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc" userLabel="Total View">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rce-PY-ccu" userLabel="Title View">
-                                <rect key="frame" x="0.0" y="142" width="393" height="72"/>
+                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="rce-PY-ccu" userLabel="Title View">
+                                <rect key="frame" x="0.0" y="153" width="393" height="81"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="D-DAY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5p-Ix-ky3">
-                                        <rect key="frame" x="25" y="-9" width="123" height="48"/>
+                                        <rect key="frame" x="25" y="23" width="116.66666666666669" height="45.666666666666657"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="38"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="ViewController" text="디데이를 추가해보세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glC-xW-Mke">
-                                        <rect key="frame" x="25" y="47" width="201" height="27"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" fixedFrame="YES" restorationIdentifier="ViewController" text="디데이를 추가해보세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glC-xW-Mke">
+                                        <rect key="frame" x="25" y="67" width="183" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7Zf-yg-dtp" userLabel="Table View">
+                                <rect key="frame" x="0.0" y="234" width="393" height="564"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="564" id="ynA-lO-FEN"/>
+                                </constraints>
+                                <color key="sectionIndexColor" name="AccentColor"/>
+                                <color key="sectionIndexBackgroundColor" red="0.30980392159999998" green="0.76078431369999999" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexTrackingBackgroundColor" red="0.93929594760000001" green="0.4261787534" blue="0.21823975440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBw-zb-v2G">
                                 <rect key="frame" x="298" y="723" width="75" height="75"/>
                                 <constraints>
@@ -49,9 +59,9 @@
                                 <buttonConfiguration key="configuration" style="plain">
                                     <imageReference key="image" image="plus.circle.fill" catalog="system" renderingMode="hierarchical">
                                         <hierarchicalColors>
-                                            <color red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color systemColor="secondaryLabelColor"/>
-                                            <color systemColor="tertiaryLabelColor"/>
+                                            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color systemColor="systemGrayColor"/>
+                                            <color systemColor="systemGrayColor"/>
                                         </hierarchicalColors>
                                     </imageReference>
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="50"/>
@@ -60,42 +70,31 @@
                                     <action selector="addDDAY:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="tQm-zN-wkg"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7Zf-yg-dtp" userLabel="Table View">
-                                <rect key="frame" x="0.0" y="219" width="393" height="496"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="564" id="ynA-lO-FEN"/>
-                                </constraints>
-                                <color key="sectionIndexColor" name="AccentColor"/>
-                                <color key="sectionIndexBackgroundColor" red="0.30980392159999998" green="0.76078431369999999" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="sectionIndexTrackingBackgroundColor" red="0.93929594760000001" green="0.4261787534" blue="0.21823975440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="rce-PY-ccu" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="3Fe-oO-6m8"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="7Zf-yg-dtp" secondAttribute="bottom" constant="35" id="CIp-Cx-Enc"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="7Zf-yg-dtp" secondAttribute="bottom" constant="20" id="CIp-Cx-Enc"/>
                             <constraint firstItem="7Zf-yg-dtp" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="DEX-93-IA2"/>
                             <constraint firstItem="7Zf-yg-dtp" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Ior-15-NgO"/>
-                            <constraint firstItem="7Zf-yg-dtp" firstAttribute="top" secondItem="rce-PY-ccu" secondAttribute="bottom" constant="5" id="SSy-Y8-Tol"/>
-                            <constraint firstItem="rce-PY-ccu" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="39" id="TUB-2U-DTg"/>
+                            <constraint firstItem="7Zf-yg-dtp" firstAttribute="top" secondItem="rce-PY-ccu" secondAttribute="bottom" id="TS0-zX-l9n"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="GBw-zb-v2G" secondAttribute="trailing" constant="20" id="Uit-UL-IvQ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="GBw-zb-v2G" secondAttribute="bottom" constant="20" id="d95-fz-Igg"/>
                             <constraint firstItem="rce-PY-ccu" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="fAx-Rs-cUh"/>
-                            <constraint firstItem="7Zf-yg-dtp" firstAttribute="top" secondItem="rce-PY-ccu" secondAttribute="bottom" constant="5" id="sgM-Dz-kp9"/>
+                            <constraint firstItem="rce-PY-ccu" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="tOG-5r-p9s"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="YKT-zD-Suc">
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="DV9-Nt-AkT">
+                    <navigationItem key="navigationItem" id="nJV-BZ-Qz5">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="qSl-55-BJX">
                             <connections>
-                                <action selector="editDDAY:" destination="Y6W-OH-hqX" id="wJw-W4-cDK"/>
+                                <action selector="editDDAY:" destination="Y6W-OH-hqX" id="kIX-nG-23r"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="addButton" destination="GBw-zb-v2G" id="WRr-fu-AqI"/>
-                        <outlet property="editButton" destination="DV9-Nt-AkT" id="sw8-cK-yro"/>
+                        <outlet property="editButton" destination="qSl-55-BJX" id="TC8-PZ-0Bn"/>
                         <outlet property="tableView" destination="7Zf-yg-dtp" id="wqE-dW-cZo"/>
                     </connections>
                 </viewController>
@@ -127,17 +126,14 @@
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="tertiaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

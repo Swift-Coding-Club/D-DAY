@@ -8,9 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		4304BC382988F8C1003168BE /* DDAYCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4304BC372988F8C1003168BE /* DDAYCell.swift */; };
+		4322A41729ACF9DE00994EB1 /* TimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322A41529ACF9DE00994EB1 /* TimelineProvider.swift */; };
+		4322A41829ACF9DE00994EB1 /* TimelineEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322A41629ACF9DE00994EB1 /* TimelineEntry.swift */; };
+		4322A41A29AD07DE00994EB1 /* DdayInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4323CD5829A32FCC008B75A8 /* DdayInfo.swift */; };
+		4322A41B29AD07E900994EB1 /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4338D54A298945D100AB3F54 /* UserDefaultsExtension.swift */; };
 		4323CD5929A32FCC008B75A8 /* DdayInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4323CD5829A32FCC008B75A8 /* DdayInfo.swift */; };
 		4323CD5C29A330E3008B75A8 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4323CD5B29A330E3008B75A8 /* EditViewController.swift */; };
 		4338D54B298945D100AB3F54 /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4338D54A298945D100AB3F54 /* UserDefaultsExtension.swift */; };
+		43491FE929B0768E0084B2EA /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C304CB29AB8C1700AF2B33 /* IntentHandler.swift */; };
 		437BB28929A352FA002BB251 /* DDAYCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 437BB28829A352FA002BB251 /* DDAYCell.xib */; };
 		437C83142972719C00F886FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437C83132972719C00F886FB /* AppDelegate.swift */; };
 		437C83162972719C00F886FB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437C83152972719C00F886FB /* SceneDelegate.swift */; };
@@ -22,6 +27,8 @@
 		43998A4429A517C20001BC11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43998A4129A517C10001BC11 /* LaunchScreen.storyboard */; };
 		43998A4529A517C20001BC11 /* MainEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43998A4229A517C10001BC11 /* MainEdit.storyboard */; };
 		43998A4629A517C20001BC11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43998A4329A517C20001BC11 /* Main.storyboard */; };
+		43CE316B29AE4A0900FC7D26 /* DdayInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4323CD5829A32FCC008B75A8 /* DdayInfo.swift */; };
+		43CE316D29AF7C7D00FC7D26 /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4338D54A298945D100AB3F54 /* UserDefaultsExtension.swift */; };
 		B30B8C3B297BE15A00F8813B /* ColorWellCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30B8C3A297BE15A00F8813B /* ColorWellCell.swift */; };
 		B349285E2977DD920009C901 /* ModalAdd.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B349285D2977DD920009C901 /* ModalAdd.storyboard */; };
 		B34928602977DD980009C901 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B349285F2977DD980009C901 /* AddViewController.swift */; };
@@ -37,7 +44,6 @@
 		B3C304B929AB879B00AF2B33 /* D-DAYWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B3C304A929AB879A00AF2B33 /* D-DAYWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B3C304C329AB8AA400AF2B33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 437C831C297271A200F886FB /* Assets.xcassets */; };
 		B3C304C929AB8C1700AF2B33 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43F94E0A299C914800F99CCC /* Intents.framework */; };
-		B3C304CC29AB8C1700AF2B33 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C304CB29AB8C1700AF2B33 /* IntentHandler.swift */; };
 		B3C304D029AB8C1700AF2B33 /* D-DAYIntents.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B3C304C829AB8C1700AF2B33 /* D-DAYIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B3C304D729AB91D700AF2B33 /* WidgetView_Single01.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C304D629AB91D700AF2B33 /* WidgetView_Single01.swift */; };
 		B3C304DF29AB949B00AF2B33 /* Inter-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 434E0C4729AB737300548535 /* Inter-Medium.otf */; };
@@ -106,9 +112,13 @@
 
 /* Begin PBXFileReference section */
 		4304BC372988F8C1003168BE /* DDAYCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDAYCell.swift; sourceTree = "<group>"; };
+		4322A41529ACF9DE00994EB1 /* TimelineProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineProvider.swift; sourceTree = "<group>"; };
+		4322A41629ACF9DE00994EB1 /* TimelineEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineEntry.swift; sourceTree = "<group>"; };
+		4322A41929ACFD0C00994EB1 /* D-DAYWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "D-DAYWidgetExtension.entitlements"; sourceTree = "<group>"; };
 		4323CD5829A32FCC008B75A8 /* DdayInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DdayInfo.swift; sourceTree = "<group>"; };
 		4323CD5B29A330E3008B75A8 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		4338D54A298945D100AB3F54 /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
+		43491FEA29B081870084B2EA /* D-DAYIntents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "D-DAYIntents.entitlements"; sourceTree = "<group>"; };
 		434E0C4629AB737300548535 /* Inter-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraBold.otf"; sourceTree = "<group>"; };
 		434E0C4729AB737300548535 /* Inter-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.otf"; sourceTree = "<group>"; };
 		437BB28829A352FA002BB251 /* DDAYCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DDAYCell.xib; sourceTree = "<group>"; };
@@ -200,9 +210,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4322A41429ACF9C600994EB1 /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				4322A41629ACF9DE00994EB1 /* TimelineEntry.swift */,
+				4322A41529ACF9DE00994EB1 /* TimelineProvider.swift */,
+			);
+			path = Timeline;
+			sourceTree = "<group>";
+		};
 		437C83072972719C00F886FB = {
 			isa = PBXGroup;
 			children = (
+				4322A41929ACFD0C00994EB1 /* D-DAYWidgetExtension.entitlements */,
 				437C83122972719C00F886FB /* D-DAY */,
 				437C8329297271A400F886FB /* D-DAYTests */,
 				437C8333297271A400F886FB /* D-DAYUITests */,
@@ -324,7 +344,7 @@
 				B3C304B129AB879A00AF2B33 /* D_DAYWidget.intentdefinition */,
 				B3C304B429AB879B00AF2B33 /* Info.plist */,
 				B3C304F629AB964500AF2B33 /* Assets.xcassets */,
-				B3C3050B29B05C9500AF2B33 /* Timeline */,
+				4322A41429ACF9C600994EB1 /* Timeline */,
 			);
 			path = "D-DAYWidget";
 			sourceTree = "<group>";
@@ -332,6 +352,7 @@
 		B3C304CA29AB8C1700AF2B33 /* D-DAYIntents */ = {
 			isa = PBXGroup;
 			children = (
+				43491FEA29B081870084B2EA /* D-DAYIntents.entitlements */,
 				B3C304CB29AB8C1700AF2B33 /* IntentHandler.swift */,
 				B3C304CD29AB8C1700AF2B33 /* Info.plist */,
 			);
@@ -628,12 +649,13 @@
 				B3C3050729ABA12400AF2B33 /* WidgetView_Multi03.swift in Sources */,
 				B3C304D729AB91D700AF2B33 /* WidgetView_Single01.swift in Sources */,
 				B3C3050129AB9B5C00AF2B33 /* WidgetView_Single02.swift in Sources */,
-				B3C3050F29B05CD300AF2B33 /* TimelineEntry.swift in Sources */,
+				4322A41829ACF9DE00994EB1 /* TimelineEntry.swift in Sources */,
 				B3C304AE29AB879A00AF2B33 /* D_DAYWidgetBundle.swift in Sources */,
-				B3C3051329B09E7E00AF2B33 /* IntentHandler.swift in Sources */,
 				B3C3050529ABA01800AF2B33 /* WidgetView_Multi02.swift in Sources */,
+				4322A41A29AD07DE00994EB1 /* DdayInfo.swift in Sources */,
 				B3C3050329AB9EB900AF2B33 /* WidgetView_Multi01.swift in Sources */,
-				B3C3050E29B05CD300AF2B33 /* TimelineProvider.swift in Sources */,
+				4322A41729ACF9DE00994EB1 /* TimelineProvider.swift in Sources */,
+				4322A41B29AD07E900994EB1 /* UserDefaultsExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -641,9 +663,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3C3051229B09D3200AF2B33 /* DdayInfo.swift in Sources */,
-				B3C3051029B077E100AF2B33 /* D_DAYWidget.intentdefinition in Sources */,
-				B3C304CC29AB8C1700AF2B33 /* IntentHandler.swift in Sources */,
+				43CE316B29AE4A0900FC7D26 /* DdayInfo.swift in Sources */,
+				B3C304D429AB8C3200AF2B33 /* D_DAYWidget.intentdefinition in Sources */,
+				43491FE929B0768E0084B2EA /* IntentHandler.swift in Sources */,
+				43CE316D29AF7C7D00FC7D26 /* UserDefaultsExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -796,7 +819,7 @@
 				CODE_SIGN_ENTITLEMENTS = "D-DAY/D-DAY.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4F4VQHPY5W;
+				DEVELOPMENT_TEAM = MA5KYZD992;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "D-DAY/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -829,7 +852,7 @@
 				CODE_SIGN_ENTITLEMENTS = "D-DAY/D-DAY.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4F4VQHPY5W;
+				DEVELOPMENT_TEAM = MA5KYZD992;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "D-DAY/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -934,9 +957,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "D-DAYWidgetExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4F4VQHPY5W;
+				DEVELOPMENT_TEAM = MA5KYZD992;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "D-DAYWidget/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "D-DAYWidget";
@@ -962,9 +986,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "D-DAYWidgetExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4F4VQHPY5W;
+				DEVELOPMENT_TEAM = MA5KYZD992;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "D-DAYWidget/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "D-DAYWidget";
@@ -988,9 +1013,10 @@
 		B3C304D229AB8C1700AF2B33 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "D-DAYIntents/D-DAYIntents.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4F4VQHPY5W;
+				DEVELOPMENT_TEAM = MA5KYZD992;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "D-DAYIntents/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "D-DAYIntents";
@@ -1014,9 +1040,10 @@
 		B3C304D329AB8C1700AF2B33 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "D-DAYIntents/D-DAYIntents.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4F4VQHPY5W;
+				DEVELOPMENT_TEAM = MA5KYZD992;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "D-DAYIntents/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "D-DAYIntents";
