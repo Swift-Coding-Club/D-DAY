@@ -26,7 +26,7 @@
 			<key>INIntentIneligibleForSuggestions</key>
 			<true/>
 			<key>INIntentLastParameterTag</key>
-			<integer>3</integer>
+			<integer>5</integer>
 			<key>INIntentName</key>
 			<string>Configuration</string>
 			<key>INIntentParameters</key>
@@ -60,26 +60,6 @@
 							<key>INIntentParameterPromptDialogType</key>
 							<string>Primary</string>
 						</dict>
-						<dict>
-							<key>INIntentParameterPromptDialogCustom</key>
-							<true/>
-							<key>INIntentParameterPromptDialogFormatString</key>
-							<string>There are ${count} options matching ‘${ddaySymbol}’.</string>
-							<key>INIntentParameterPromptDialogFormatStringID</key>
-							<string>mQdAPc</string>
-							<key>INIntentParameterPromptDialogType</key>
-							<string>DisambiguationIntroduction</string>
-						</dict>
-						<dict>
-							<key>INIntentParameterPromptDialogCustom</key>
-							<true/>
-							<key>INIntentParameterPromptDialogFormatString</key>
-							<string>Just to confirm, you wanted ‘${ddaySymbol}’?</string>
-							<key>INIntentParameterPromptDialogFormatStringID</key>
-							<string>Ozw14E</string>
-							<key>INIntentParameterPromptDialogType</key>
-							<string>Confirmation</string>
-						</dict>
 					</array>
 					<key>INIntentParameterSupportsDynamicEnumeration</key>
 					<true/>
@@ -91,6 +71,48 @@
 					<integer>3</integer>
 					<key>INIntentParameterType</key>
 					<string>Object</string>
+				</dict>
+				<dict>
+					<key>INIntentParameterConfigurable</key>
+					<true/>
+					<key>INIntentParameterDisplayName</key>
+					<string>그림자 효과 사용하기</string>
+					<key>INIntentParameterDisplayNameID</key>
+					<string>5xJ1HU</string>
+					<key>INIntentParameterDisplayPriority</key>
+					<integer>2</integer>
+					<key>INIntentParameterMetadata</key>
+					<dict>
+						<key>INIntentParameterMetadataFalseDisplayName</key>
+						<string>Off</string>
+						<key>INIntentParameterMetadataFalseDisplayNameID</key>
+						<string>qSbbrX</string>
+						<key>INIntentParameterMetadataTrueDisplayName</key>
+						<string>On</string>
+						<key>INIntentParameterMetadataTrueDisplayNameID</key>
+						<string>JI84o0</string>
+					</dict>
+					<key>INIntentParameterName</key>
+					<string>shadow</string>
+					<key>INIntentParameterPromptDialogs</key>
+					<array>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Configuration</string>
+						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Primary</string>
+						</dict>
+					</array>
+					<key>INIntentParameterTag</key>
+					<integer>5</integer>
+					<key>INIntentParameterType</key>
+					<string>Boolean</string>
 				</dict>
 			</array>
 			<key>INIntentResponse</key>
@@ -127,7 +149,7 @@
 			<key>INTypeDisplayNameID</key>
 			<string>YuQiXR</string>
 			<key>INTypeLastPropertyTag</key>
-			<integer>104</integer>
+			<integer>106</integer>
 			<key>INTypeName</key>
 			<string>DdaySymbol</string>
 			<key>INTypeProperties</key>
@@ -248,7 +270,7 @@
 					<key>INTypePropertyName</key>
 					<string>ddayLanguage</string>
 					<key>INTypePropertyTag</key>
-					<integer>104</integer>
+					<integer>106</integer>
 					<key>INTypePropertyType</key>
 					<string>String</string>
 				</dict>

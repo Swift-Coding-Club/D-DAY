@@ -17,15 +17,15 @@ struct WidgetView_Single02EntryView : View {
         
         switch self.family {
         case .systemMedium:
-            
+
                 // 1. 위젯 초기(tableview list읽어온 데이터 없을시) 보여지는 default CustomSymbol array
                 let defaultDdaySymbolMenu: [DdaySymbol] = [
                     DdaySymbol(identifier: "ddayNeonBlue", display: "길게눌러서 디데이 추가하기", pronunciationHint: "ddayNeonYellow", subtitle: "2050.01.01", image: nil),
                 ]
-                
+
                 // 2. 위젯 편집후 불러오는 CustomSymbol array
             let ddaySymbolMenu: [DdaySymbol] = entry.configuration.ddaySymbol ?? defaultDdaySymbolMenu
-            
+
             ZStack {
                 ZStack {
                     Text("Dday")
@@ -35,14 +35,14 @@ struct WidgetView_Single02EntryView : View {
                         .kerning(-2)
                         .rotationEffect(.degrees(-13))
                         .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.pronunciationHint ?? "ddayNeonYellow"))
-                    
+
                     Text("제이슨이 한국에 오는날")
                         .font(.custom("Inter-Bold", size: 14.0)) // 4글자(미국여행)-25, 5>-
                         .frame(width: 75, height: 70, alignment: .topTrailing)
                         .padding(EdgeInsets(top: 0, leading: 230, bottom: 50, trailing: 0))
                         .multilineTextAlignment(.trailing)
                         .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.pronunciationHint ?? "ddayNeonYellow"))
-                    
+
                     Text("999")
                         .font(.custom("Inter-Bold", size: 137.0)) // 000-130, 124-145, 999-137
                         .frame(width: 350, height: 100, alignment: .leading)
@@ -51,7 +51,7 @@ struct WidgetView_Single02EntryView : View {
                         .kerning(-12) // 000-12, 124- 11
                         .rotationEffect(.degrees(-8))
                         .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.pronunciationHint ?? "ddayNeonYellow"))
-                    
+
                     Text("2023.12.31")
                         .font(.custom("Inter-Bold", size: 10.0))
                         .frame(width: 30, height: 70, alignment: .trailing)
@@ -59,7 +59,7 @@ struct WidgetView_Single02EntryView : View {
                         .multilineTextAlignment(.leading)
                         .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.pronunciationHint ?? "ddayNeonYellow"))
                 }
-                
+
             }
             .frame(height: 200)
             .background(Color("ddayNeonBlue"))
@@ -75,7 +75,7 @@ struct WidgetView_Single02EntryView : View {
                         .rotationEffect(.degrees(-13))
                         .multilineTextAlignment(.leading)
                         .foregroundColor(.black)
-                    
+
 //                    Text("매일매일 커피한잔으로 하루 시작하기")
                     Text("Christmas party\nin Canada")
                         .font(.custom("Inter-Bold", size: 17.0))
@@ -85,7 +85,7 @@ struct WidgetView_Single02EntryView : View {
                         .lineSpacing(2)
                         .lineLimit(3)
                         .foregroundColor(.black)
-                    
+
                     Text("2023.12.31")
                         .font(.custom("Inter-Bold", size: 10.0))
                         .frame(width: 110, height: 50, alignment: .topTrailing)
@@ -93,7 +93,7 @@ struct WidgetView_Single02EntryView : View {
                         .multilineTextAlignment(.trailing)
                         .lineSpacing(2)
                         .foregroundColor(.black)
-                    
+
                     Text("124")
                         .font(.custom("Inter-Bold", size: 223.0)) // 223- 124,
                         .frame(width: 450, alignment: .leading)
@@ -122,8 +122,8 @@ struct WidgetView_Single02: Widget {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
             WidgetView_Single02EntryView(entry: entry)
         }
-        .configurationDisplayName("#2 다중 위젯")
-        .description("여러개의 디데이를 표시할 수 있는 위젯입니다.")
+        .configurationDisplayName("#1 심플 위젯")
+        .description("한 개의 디데이를 표시할 수 있는 위젯입니다.")
         .supportedFamilies([.systemMedium, .systemLarge])
     }
 }

@@ -39,21 +39,23 @@
 		B3C304C929AB8C1700AF2B33 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43F94E0A299C914800F99CCC /* Intents.framework */; };
 		B3C304CC29AB8C1700AF2B33 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C304CB29AB8C1700AF2B33 /* IntentHandler.swift */; };
 		B3C304D029AB8C1700AF2B33 /* D-DAYIntents.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B3C304C829AB8C1700AF2B33 /* D-DAYIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		B3C304D429AB8C3200AF2B33 /* D_DAYWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B3C304B129AB879A00AF2B33 /* D_DAYWidget.intentdefinition */; };
 		B3C304D729AB91D700AF2B33 /* WidgetView_Single01.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C304D629AB91D700AF2B33 /* WidgetView_Single01.swift */; };
 		B3C304DF29AB949B00AF2B33 /* Inter-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 434E0C4729AB737300548535 /* Inter-Medium.otf */; };
 		B3C304EC29AB95B100AF2B33 /* Inter-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3C304E929AB95B100AF2B33 /* Inter-Bold.otf */; };
 		B3C304ED29AB95B100AF2B33 /* Inter-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3C304EA29AB95B100AF2B33 /* Inter-ExtraBold.otf */; };
 		B3C304EE29AB95B100AF2B33 /* Inter-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3C304EB29AB95B100AF2B33 /* Inter-Medium.otf */; };
 		B3C304F729AB964500AF2B33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C304F629AB964500AF2B33 /* Assets.xcassets */; };
-		B3C304F929AB969900AF2B33 /* TimelineEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C304F829AB969900AF2B33 /* TimelineEntry.swift */; };
-		B3C304FB29AB969F00AF2B33 /* TimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C304FA29AB969F00AF2B33 /* TimelineProvider.swift */; };
 		B3C304FC29AB989A00AF2B33 /* Inter-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 434E0C4629AB737300548535 /* Inter-ExtraBold.otf */; };
 		B3C304FD29AB989A00AF2B33 /* Inter-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B38A475E2986A57F0088DC56 /* Inter-Bold.otf */; };
 		B3C3050129AB9B5C00AF2B33 /* WidgetView_Single02.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C3050029AB9B5C00AF2B33 /* WidgetView_Single02.swift */; };
 		B3C3050329AB9EB900AF2B33 /* WidgetView_Multi01.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C3050229AB9EB900AF2B33 /* WidgetView_Multi01.swift */; };
 		B3C3050529ABA01800AF2B33 /* WidgetView_Multi02.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C3050429ABA01800AF2B33 /* WidgetView_Multi02.swift */; };
 		B3C3050729ABA12400AF2B33 /* WidgetView_Multi03.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C3050629ABA12400AF2B33 /* WidgetView_Multi03.swift */; };
+		B3C3050E29B05CD300AF2B33 /* TimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C3050C29B05CD300AF2B33 /* TimelineProvider.swift */; };
+		B3C3050F29B05CD300AF2B33 /* TimelineEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C3050D29B05CD300AF2B33 /* TimelineEntry.swift */; };
+		B3C3051029B077E100AF2B33 /* D_DAYWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B3C304B129AB879A00AF2B33 /* D_DAYWidget.intentdefinition */; };
+		B3C3051229B09D3200AF2B33 /* DdayInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4323CD5829A32FCC008B75A8 /* DdayInfo.swift */; };
+		B3C3051329B09E7E00AF2B33 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C304CB29AB8C1700AF2B33 /* IntentHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,12 +150,12 @@
 		B3C304EA29AB95B100AF2B33 /* Inter-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraBold.otf"; sourceTree = "<group>"; };
 		B3C304EB29AB95B100AF2B33 /* Inter-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.otf"; sourceTree = "<group>"; };
 		B3C304F629AB964500AF2B33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B3C304F829AB969900AF2B33 /* TimelineEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimelineEntry.swift; path = "D-DAYWidget/TimelineEntry.swift"; sourceTree = SOURCE_ROOT; };
-		B3C304FA29AB969F00AF2B33 /* TimelineProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimelineProvider.swift; path = "D-DAYWidget/TimelineProvider.swift"; sourceTree = SOURCE_ROOT; };
 		B3C3050029AB9B5C00AF2B33 /* WidgetView_Single02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView_Single02.swift; sourceTree = "<group>"; };
 		B3C3050229AB9EB900AF2B33 /* WidgetView_Multi01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView_Multi01.swift; sourceTree = "<group>"; };
 		B3C3050429ABA01800AF2B33 /* WidgetView_Multi02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView_Multi02.swift; sourceTree = "<group>"; };
 		B3C3050629ABA12400AF2B33 /* WidgetView_Multi03.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView_Multi03.swift; sourceTree = "<group>"; };
+		B3C3050C29B05CD300AF2B33 /* TimelineProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineProvider.swift; sourceTree = "<group>"; };
+		B3C3050D29B05CD300AF2B33 /* TimelineEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineEntry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -322,7 +324,7 @@
 				B3C304B129AB879A00AF2B33 /* D_DAYWidget.intentdefinition */,
 				B3C304B429AB879B00AF2B33 /* Info.plist */,
 				B3C304F629AB964500AF2B33 /* Assets.xcassets */,
-				B3C304DC29AB938F00AF2B33 /* Timeline */,
+				B3C3050B29B05C9500AF2B33 /* Timeline */,
 			);
 			path = "D-DAYWidget";
 			sourceTree = "<group>";
@@ -334,15 +336,6 @@
 				B3C304CD29AB8C1700AF2B33 /* Info.plist */,
 			);
 			path = "D-DAYIntents";
-			sourceTree = "<group>";
-		};
-		B3C304DC29AB938F00AF2B33 /* Timeline */ = {
-			isa = PBXGroup;
-			children = (
-				B3C304FA29AB969F00AF2B33 /* TimelineProvider.swift */,
-				B3C304F829AB969900AF2B33 /* TimelineEntry.swift */,
-			);
-			path = Timeline;
 			sourceTree = "<group>";
 		};
 		B3C304FF29AB9B3100AF2B33 /* Font */ = {
@@ -381,6 +374,15 @@
 				B3C3050629ABA12400AF2B33 /* WidgetView_Multi03.swift */,
 			);
 			path = Multiple;
+			sourceTree = "<group>";
+		};
+		B3C3050B29B05C9500AF2B33 /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				B3C3050D29B05CD300AF2B33 /* TimelineEntry.swift */,
+				B3C3050C29B05CD300AF2B33 /* TimelineProvider.swift */,
+			);
+			path = Timeline;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -626,11 +628,12 @@
 				B3C3050729ABA12400AF2B33 /* WidgetView_Multi03.swift in Sources */,
 				B3C304D729AB91D700AF2B33 /* WidgetView_Single01.swift in Sources */,
 				B3C3050129AB9B5C00AF2B33 /* WidgetView_Single02.swift in Sources */,
-				B3C304FB29AB969F00AF2B33 /* TimelineProvider.swift in Sources */,
+				B3C3050F29B05CD300AF2B33 /* TimelineEntry.swift in Sources */,
 				B3C304AE29AB879A00AF2B33 /* D_DAYWidgetBundle.swift in Sources */,
-				B3C304F929AB969900AF2B33 /* TimelineEntry.swift in Sources */,
+				B3C3051329B09E7E00AF2B33 /* IntentHandler.swift in Sources */,
 				B3C3050529ABA01800AF2B33 /* WidgetView_Multi02.swift in Sources */,
 				B3C3050329AB9EB900AF2B33 /* WidgetView_Multi01.swift in Sources */,
+				B3C3050E29B05CD300AF2B33 /* TimelineProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,7 +641,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3C304D429AB8C3200AF2B33 /* D_DAYWidget.intentdefinition in Sources */,
+				B3C3051229B09D3200AF2B33 /* DdayInfo.swift in Sources */,
+				B3C3051029B077E100AF2B33 /* D_DAYWidget.intentdefinition in Sources */,
 				B3C304CC29AB8C1700AF2B33 /* IntentHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -805,7 +809,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dday.D-Day.D-DAY";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dday.dd.D-DAY";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -838,7 +842,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dday.D-Day.D-DAY";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dday.dd.D-DAY";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -856,11 +860,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MA5KYZD992;
+				DEVELOPMENT_TEAM = 4F4VQHPY5W;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dday.D-Day.D-DAYTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dday.dd.D-DAYTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -876,11 +880,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MA5KYZD992;
+				DEVELOPMENT_TEAM = 4F4VQHPY5W;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dday.D-Day.D-DAYTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dday.dd.D-DAYTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -895,10 +899,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MA5KYZD992;
+				DEVELOPMENT_TEAM = 4F4VQHPY5W;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dday.D-Day.D-DAYUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dday.dd.D-DAYUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -913,10 +917,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MA5KYZD992;
+				DEVELOPMENT_TEAM = 4F4VQHPY5W;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dday.D-Day.D-DAYUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dday.dd.D-DAYUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -937,14 +941,14 @@
 				INFOPLIST_FILE = "D-DAYWidget/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "D-DAYWidget";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dday.D-Day.D-DAY.D-DAYWidget";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dday.dd.D-DAY.D-DAYWidget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -965,14 +969,14 @@
 				INFOPLIST_FILE = "D-DAYWidget/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "D-DAYWidget";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dday.D-Day.D-DAY.D-DAYWidget";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dday.dd.D-DAY.D-DAYWidget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -991,14 +995,14 @@
 				INFOPLIST_FILE = "D-DAYIntents/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "D-DAYIntents";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dday.D-Day.D-DAY.D-DAYIntents";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dday.dd.D-DAY.D-DAYIntents";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1017,14 +1021,14 @@
 				INFOPLIST_FILE = "D-DAYIntents/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "D-DAYIntents";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dday.D-Day.D-DAY.D-DAYIntents";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dday.dd.D-DAY.D-DAYIntents";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;

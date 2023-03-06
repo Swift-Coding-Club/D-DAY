@@ -105,6 +105,10 @@ struct WidgetView_Multi03EntryView : View {
             .frame(width: 400, height: 400)
             .background(Color("ddayNeonGreen"))
             
+        case .systemExtraLarge:
+            
+            Text("hi")
+            
         @unknown default:
             Text("Sorry, You have encountered Default Error.")
         }
@@ -117,11 +121,11 @@ struct WidgetView_Multi03: Widget {
 
     var body: some WidgetConfiguration {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
-            WidgetView_Multi02EntryView(entry: entry)
+            WidgetView_Multi03EntryView(entry: entry)
         }
         .configurationDisplayName("#2 다중 위젯")
         .description("여러개의 디데이를 표시할 수 있는 위젯입니다.")
-        .supportedFamilies([.systemLarge])
+        .supportedFamilies([.systemLarge, .systemExtraLarge])
     }
 }
 
@@ -129,5 +133,12 @@ struct WidgetView_Multi03_Previews: PreviewProvider {
     static var previews: some View {
         WidgetView_Multi03EntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
             .previewContext(WidgetPreviewContext(family: .systemLarge))
+    }
+}
+
+struct WidgetView_Multi03_Previews2: PreviewProvider {
+    static var previews: some View {
+        WidgetView_Multi03EntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+            .previewContext(WidgetPreviewContext(family: .systemExtraLarge))
     }
 }
