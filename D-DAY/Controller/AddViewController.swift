@@ -77,6 +77,12 @@ class AddViewController: UIViewController {
         configuration()
         setupPopUpLanguageButton()
     }
+    
+//    // DetailViewController.swift
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(animated)
+//        NotificationCenter.default.post(name: NSNotification.Name("DismissDetailView"), object: nil, userInfo: nil)
+//    }
 }
 
 extension AddViewController {
@@ -419,7 +425,7 @@ extension AddViewController {
 
         // TODO: DatePicker에서 오늘 날짜를 선택하면 에러
         // UserDefaults에 추가
-        let newDdayInfo = DdayInfo(title: txtFieldForTitle.text!, subTitle: txtFieldForSubtitle.text!, date: theDate)
+        let newDdayInfo = DdayInfo(title: txtFieldForTitle.text!, subTitle: txtFieldForSubtitle.text!, date: theDate, widgetTextColor: "String", widgetBGColor: "String", language: "String")
         
 //        let userDefaults = UserDefaults(suiteName: "group.dday.ddayApp")
         
@@ -442,7 +448,8 @@ extension AddViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy.MM.dd"
 
-        self.dismiss(animated: true)
+//        self.dismiss(animated: true)
+        self.presentingViewController?.dismiss(animated: true)
     }
 }
 

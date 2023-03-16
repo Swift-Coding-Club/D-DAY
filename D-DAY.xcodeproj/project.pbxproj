@@ -27,6 +27,10 @@
 		43998A4429A517C20001BC11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43998A4129A517C10001BC11 /* LaunchScreen.storyboard */; };
 		43998A4529A517C20001BC11 /* MainEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43998A4229A517C10001BC11 /* MainEdit.storyboard */; };
 		43998A4629A517C20001BC11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43998A4329A517C20001BC11 /* Main.storyboard */; };
+		43B17C3D29B9E98200B6A33E /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 43B17C3C29B9E98200B6A33E /* Lottie */; };
+		43B17C3F29BA2E2000B6A33E /* check.json in Resources */ = {isa = PBXBuildFile; fileRef = 43B17C3E29BA2E2000B6A33E /* check.json */; };
+		43B17C4129BA42EB00B6A33E /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B17C4029BA42EB00B6A33E /* SplashViewController.swift */; };
+		43B17C4329BA445B00B6A33E /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43B17C4229BA445B00B6A33E /* SplashScreen.storyboard */; };
 		43CE316B29AE4A0900FC7D26 /* DdayInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4323CD5829A32FCC008B75A8 /* DdayInfo.swift */; };
 		43CE316D29AF7C7D00FC7D26 /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4338D54A298945D100AB3F54 /* UserDefaultsExtension.swift */; };
 		B300FF1329C06AB500A2AB3B /* WidgetView_Multi01_M_Comp01.swift in Sources */ = {isa = PBXBuildFile; fileRef = B300FF1229C06AB500A2AB3B /* WidgetView_Multi01_M_Comp01.swift */; };
@@ -158,6 +162,9 @@
 		43998A4329A517C20001BC11 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		43AA636C298E1A1D0091B6A0 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		43AA636E298E1A1E0091B6A0 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		43B17C3E29BA2E2000B6A33E /* check.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = check.json; sourceTree = "<group>"; };
+		43B17C4029BA42EB00B6A33E /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		43B17C4229BA445B00B6A33E /* SplashScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
 		43F94E0A299C914800F99CCC /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		43F94E19299C9D2200F99CCC /* D-DAY.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "D-DAY.entitlements"; sourceTree = "<group>"; };
 		B300FF1229C06AB500A2AB3B /* WidgetView_Multi01_M_Comp01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView_Multi01_M_Comp01.swift; sourceTree = "<group>"; };
@@ -215,6 +222,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43B17C3D29B9E98200B6A33E /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +306,7 @@
 				437C83132972719C00F886FB /* AppDelegate.swift */,
 				437C83152972719C00F886FB /* SceneDelegate.swift */,
 				437C831C297271A200F886FB /* Assets.xcassets */,
+				43B17C3E29BA2E2000B6A33E /* check.json */,
 				437C8321297271A300F886FB /* Info.plist */,
 				4338D54A298945D100AB3F54 /* UserDefaultsExtension.swift */,
 			);
@@ -348,6 +357,7 @@
 		43C1E38C29A9CF72004FF0F6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				43B17C4229BA445B00B6A33E /* SplashScreen.storyboard */,
 				43998A4129A517C10001BC11 /* LaunchScreen.storyboard */,
 				43998A4329A517C20001BC11 /* Main.storyboard */,
 				43998A4229A517C10001BC11 /* MainEdit.storyboard */,
@@ -359,6 +369,7 @@
 		43C1E38D29A9CF8C004FF0F6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				43B17C4029BA42EB00B6A33E /* SplashViewController.swift */,
 				437C83172972719C00F886FB /* ViewController.swift */,
 				4323CD5B29A330E3008B75A8 /* EditViewController.swift */,
 				B349285F2977DD980009C901 /* AddViewController.swift */,
@@ -562,6 +573,9 @@
 				B3C304CF29AB8C1700AF2B33 /* PBXTargetDependency */,
 			);
 			name = "D-DAY";
+			packageProductDependencies = (
+				43B17C3C29B9E98200B6A33E /* Lottie */,
+			);
 			productName = "D-DAY";
 			productReference = 437C83102972719C00F886FB /* D-DAY.app */;
 			productType = "com.apple.product-type.application";
@@ -674,6 +688,9 @@
 				Base,
 			);
 			mainGroup = 437C83072972719C00F886FB;
+			packageReferences = (
+				43B17C3B29B9E98200B6A33E /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 437C83112972719C00F886FB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -693,6 +710,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3C304FC29AB989A00AF2B33 /* Inter-ExtraBold.otf in Resources */,
+				43B17C3F29BA2E2000B6A33E /* check.json in Resources */,
 				B3C304FD29AB989A00AF2B33 /* Inter-Bold.otf in Resources */,
 				43998A4629A517C20001BC11 /* Main.storyboard in Resources */,
 				B349285E2977DD920009C901 /* ModalAdd.storyboard in Resources */,
@@ -700,6 +718,7 @@
 				437BB28929A352FA002BB251 /* DDAYCell.xib in Resources */,
 				437C831D297271A200F886FB /* Assets.xcassets in Resources */,
 				43998A4429A517C20001BC11 /* LaunchScreen.storyboard in Resources */,
+				43B17C4329BA445B00B6A33E /* SplashScreen.storyboard in Resources */,
 				B3C304DF29AB949B00AF2B33 /* Inter-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -753,6 +772,7 @@
 				4323CD5C29A330E3008B75A8 /* EditViewController.swift in Sources */,
 				437C83162972719C00F886FB /* SceneDelegate.swift in Sources */,
 				B3C304B629AB879B00AF2B33 /* D_DAYWidget.intentdefinition in Sources */,
+				43B17C4129BA42EB00B6A33E /* SplashViewController.swift in Sources */,
 				B39BBFCF297A85DC001D408A /* DatePickerCell.swift in Sources */,
 				4323CD5929A32FCC008B75A8 /* DdayInfo.swift in Sources */,
 				B39BBFD1297A8609001D408A /* TextFieldCell.swift in Sources */,
@@ -980,7 +1000,7 @@
 				CODE_SIGN_ENTITLEMENTS = "D-DAY/D-DAY.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4F4VQHPY5W;
+				DEVELOPMENT_TEAM = MA5KYZD992;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "D-DAY/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1013,7 +1033,7 @@
 				CODE_SIGN_ENTITLEMENTS = "D-DAY/D-DAY.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4F4VQHPY5W;
+				DEVELOPMENT_TEAM = MA5KYZD992;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "D-DAY/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1044,7 +1064,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4F4VQHPY5W;
+				DEVELOPMENT_TEAM = MA5KYZD992;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MARKETING_VERSION = 1.0;
@@ -1064,7 +1084,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4F4VQHPY5W;
+				DEVELOPMENT_TEAM = MA5KYZD992;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MARKETING_VERSION = 1.0;
@@ -1083,7 +1103,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4F4VQHPY5W;
+				DEVELOPMENT_TEAM = MA5KYZD992;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dday.dd.D-DAYUITests";
@@ -1121,7 +1141,7 @@
 				CODE_SIGN_ENTITLEMENTS = "D-DAYWidgetExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4F4VQHPY5W;
+				DEVELOPMENT_TEAM = MA5KYZD992;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "D-DAYWidget/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "D-DAYWidget";
@@ -1150,7 +1170,7 @@
 				CODE_SIGN_ENTITLEMENTS = "D-DAYWidgetExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4F4VQHPY5W;
+				DEVELOPMENT_TEAM = MA5KYZD992;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "D-DAYWidget/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "D-DAYWidget";
@@ -1177,7 +1197,7 @@
 				CODE_SIGN_ENTITLEMENTS = "D-DAYIntents/D-DAYIntents.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4F4VQHPY5W;
+				DEVELOPMENT_TEAM = MA5KYZD992;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "D-DAYIntents/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "D-DAYIntents";
@@ -1204,7 +1224,7 @@
 				CODE_SIGN_ENTITLEMENTS = "D-DAYIntents/D-DAYIntents.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4F4VQHPY5W;
+				DEVELOPMENT_TEAM = MA5KYZD992;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "D-DAYIntents/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "D-DAYIntents";
@@ -1283,6 +1303,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		43B17C3B29B9E98200B6A33E /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		43B17C3C29B9E98200B6A33E /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 43B17C3B29B9E98200B6A33E /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 437C83082972719C00F886FB /* Project object */;
 }

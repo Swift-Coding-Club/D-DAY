@@ -19,7 +19,7 @@
         <!--Add View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="AddViewController" modalPresentationStyle="fullScreen" id="Y6W-OH-hqX" customClass="AddViewController" customModule="D_DAY" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddViewController" id="Y6W-OH-hqX" customClass="AddViewController" customModule="D_DAY" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="1400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -153,7 +153,7 @@
                                                 <rect key="frame" x="40" y="327" width="150" height="150"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28l-cg-SU7">
-                                                        <rect key="frame" x="1" y="-24" width="67.666666666666671" height="112.66666666666667"/>
+                                                        <rect key="frame" x="1.0000000000000036" y="-24" width="63.333333333333343" height="111"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="D">
                                                                 <attributes>
@@ -209,7 +209,7 @@
                                                 <rect key="frame" x="40" y="534" width="266" height="123"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hul-FM-sye">
-                                                        <rect key="frame" x="-4" y="13.666666666666622" width="305" height="116.33333333333331"/>
+                                                        <rect key="frame" x="-4" y="15.333333333333378" width="284.33333333333331" height="114.66666666666669"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="D-999">
                                                                 <attributes>
@@ -271,11 +271,11 @@
                                                 <rect key="frame" x="40" y="714" width="266" height="123"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w30-rx-FNd">
-                                                        <rect key="frame" x="-3" y="-15" width="153.33333333333334" height="74"/>
+                                                        <rect key="frame" x="-3" y="-15" width="136.66666666666666" height="73"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="Dday">
                                                                 <attributes>
-                                                                    <font key="NSFont" size="61" name="Inter-Bold"/>
+                                                                    <font key="NSFont" metaFont="system" size="61"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                                 </attributes>
                                                             </fragment>
@@ -283,12 +283,12 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T4U-sx-s4c">
-                                                        <rect key="frame" x="21" y="20.666666666666622" width="217" height="127.33333333333331"/>
+                                                        <rect key="frame" x="21" y="22.666666666666622" width="191.33333333333334" height="125.33333333333331"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="000">
                                                                 <attributes>
                                                                     <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <font key="NSFont" size="105" name="Inter-Bold"/>
+                                                                    <font key="NSFont" metaFont="system" size="105"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>

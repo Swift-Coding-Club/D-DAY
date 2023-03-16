@@ -22,11 +22,24 @@ class IntentHandler: INExtension, ConfigurationIntentHandling {
                 subtitle: "2017.07.01",
                 image: nil
             )
+            
+            // UserDefaults's title (model from DdayInfo.swift)
             symbolDdayItem.ddayTitle = listItem.title
-            symbolDdayItem.ddayDate = listItem.title
-            symbolDdayItem.ddayBgColor = listItem.title
-            symbolDdayItem.ddayTxtColor = listItem.title
-            symbolDdayItem.ddayLanguage = listItem.title
+            
+            // UserDefaults's date (model from DdayInfo.swift)
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy.MM.dd"
+            let listItemDate = dateFormatter.string(from: listItem.date)
+            symbolDdayItem.ddayDate = listItemDate
+
+            // UserDefaults's widget text color (model from DdayInfo.swift)
+            symbolDdayItem.ddayTxtColor = listItem.widgetTextColor
+            
+            // UserDefaults's widget bg color (model from DdayInfo.swift)
+            symbolDdayItem.ddayBgColor = listItem.widgetBGColor
+            
+            // UserDefaults's language (model from DdayInfo.swift)
+            symbolDdayItem.ddayLanguage = listItem.language
 
             return symbolDdayItem
         }
