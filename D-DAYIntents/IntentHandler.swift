@@ -19,7 +19,7 @@ class IntentHandler: INExtension, ConfigurationIntentHandling {
                 identifier: "ddayNeonPurple",
                 display: listItem.title,
                 pronunciationHint: "ddayOrange",
-                subtitle: "2077.07.01",
+                subtitle: "2017.07.01",
                 image: nil
             )
             symbolDdayItem.ddayTitle = listItem.title

@@ -29,6 +29,25 @@
 		43998A4629A517C20001BC11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43998A4329A517C20001BC11 /* Main.storyboard */; };
 		43CE316B29AE4A0900FC7D26 /* DdayInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4323CD5829A32FCC008B75A8 /* DdayInfo.swift */; };
 		43CE316D29AF7C7D00FC7D26 /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4338D54A298945D100AB3F54 /* UserDefaultsExtension.swift */; };
+		B300FF1329C06AB500A2AB3B /* WidgetView_Multi01_M_Comp01.swift in Sources */ = {isa = PBXBuildFile; fileRef = B300FF1229C06AB500A2AB3B /* WidgetView_Multi01_M_Comp01.swift */; };
+		B300FF1529C06ABF00A2AB3B /* WidgetView_Multi01_M_Comp02.swift in Sources */ = {isa = PBXBuildFile; fileRef = B300FF1429C06ABF00A2AB3B /* WidgetView_Multi01_M_Comp02.swift */; };
+		B300FF1729C06B2D00A2AB3B /* WidgetView_Multi02_M_Comp01.swift in Sources */ = {isa = PBXBuildFile; fileRef = B300FF1629C06B2D00A2AB3B /* WidgetView_Multi02_M_Comp01.swift */; };
+		B300FF1929C06B3800A2AB3B /* WidgetView_Multi02_M_Comp02.swift in Sources */ = {isa = PBXBuildFile; fileRef = B300FF1829C06B3800A2AB3B /* WidgetView_Multi02_M_Comp02.swift */; };
+		B300FF1B29C06BA600A2AB3B /* WidgetView_Multi03_M_Comp01.swift in Sources */ = {isa = PBXBuildFile; fileRef = B300FF1A29C06BA600A2AB3B /* WidgetView_Multi03_M_Comp01.swift */; };
+		B300FF1D29C06BAB00A2AB3B /* WidgetView_Multi03_M_Comp02.swift in Sources */ = {isa = PBXBuildFile; fileRef = B300FF1C29C06BAB00A2AB3B /* WidgetView_Multi03_M_Comp02.swift */; };
+		B300FF2329C06C8900A2AB3B /* WidgetView_Multi04_L_Comp01.swift in Sources */ = {isa = PBXBuildFile; fileRef = B300FF2229C06C8900A2AB3B /* WidgetView_Multi04_L_Comp01.swift */; };
+		B300FF2529C06C8F00A2AB3B /* WidgetView_Multi04_L_Comp02.swift in Sources */ = {isa = PBXBuildFile; fileRef = B300FF2429C06C8F00A2AB3B /* WidgetView_Multi04_L_Comp02.swift */; };
+		B300FF2729C06DA800A2AB3B /* WidgetView_Multi05_L_Comp01.swift in Sources */ = {isa = PBXBuildFile; fileRef = B300FF2629C06DA800A2AB3B /* WidgetView_Multi05_L_Comp01.swift */; };
+		B300FF2929C06DAC00A2AB3B /* WidgetView_Multi05_L_Comp02.swift in Sources */ = {isa = PBXBuildFile; fileRef = B300FF2829C06DAC00A2AB3B /* WidgetView_Multi05_L_Comp02.swift */; };
+		B300FF2B29C072D500A2AB3B /* CustomFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B300FF2A29C072D500A2AB3B /* CustomFunctions.swift */; };
+		B3075B0229C1973F007F978C /* WidgetView_Single01_S_Comp01.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3075B0129C1973F007F978C /* WidgetView_Single01_S_Comp01.swift */; };
+		B3075B0429C19744007F978C /* WidgetView_Single01_S_Comp02.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3075B0329C19744007F978C /* WidgetView_Single01_S_Comp02.swift */; };
+		B3075B0629C1985D007F978C /* WidgetView_Single01_M_Comp01.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3075B0529C1985D007F978C /* WidgetView_Single01_M_Comp01.swift */; };
+		B3075B0829C19867007F978C /* WidgetView_Single01_M_Comp02.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3075B0729C19867007F978C /* WidgetView_Single01_M_Comp02.swift */; };
+		B3075B0A29C1A3D8007F978C /* WidgetView_Single02_M_Comp01.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3075B0929C1A3D8007F978C /* WidgetView_Single02_M_Comp01.swift */; };
+		B3075B0C29C1A3DC007F978C /* WidgetView_Single02_M_Comp02.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3075B0B29C1A3DC007F978C /* WidgetView_Single02_M_Comp02.swift */; };
+		B3075B0E29C1A49B007F978C /* WidgetView_Single02_L_Comp01.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3075B0D29C1A49B007F978C /* WidgetView_Single02_L_Comp01.swift */; };
+		B3075B1029C1A49F007F978C /* WidgetView_Single02_L_Comp02.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3075B0F29C1A49F007F978C /* WidgetView_Single02_L_Comp02.swift */; };
 		B30B8C3B297BE15A00F8813B /* ColorWellCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30B8C3A297BE15A00F8813B /* ColorWellCell.swift */; };
 		B349285E2977DD920009C901 /* ModalAdd.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B349285D2977DD920009C901 /* ModalAdd.storyboard */; };
 		B34928602977DD980009C901 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B349285F2977DD980009C901 /* AddViewController.swift */; };
@@ -36,6 +55,8 @@
 		B39BBFCD297A7FA3001D408A /* ModalAddMultiSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39BBFCC297A7FA3001D408A /* ModalAddMultiSection.swift */; };
 		B39BBFCF297A85DC001D408A /* DatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39BBFCE297A85DC001D408A /* DatePickerCell.swift */; };
 		B39BBFD1297A8609001D408A /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39BBFD0297A8609001D408A /* TextFieldCell.swift */; };
+		B3B9FF0229B845F300DF2E0F /* WidgetView_Multi02.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B9FF0129B845F300DF2E0F /* WidgetView_Multi02.swift */; };
+		B3B9FF0429B845FC00DF2E0F /* WidgetView_Multi03.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B9FF0329B845FC00DF2E0F /* WidgetView_Multi03.swift */; };
 		B3C304AA29AB879A00AF2B33 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43AA636C298E1A1D0091B6A0 /* WidgetKit.framework */; };
 		B3C304AB29AB879A00AF2B33 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43AA636E298E1A1E0091B6A0 /* SwiftUI.framework */; };
 		B3C304AE29AB879A00AF2B33 /* D_DAYWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C304AD29AB879A00AF2B33 /* D_DAYWidgetBundle.swift */; };
@@ -55,13 +76,12 @@
 		B3C304FD29AB989A00AF2B33 /* Inter-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B38A475E2986A57F0088DC56 /* Inter-Bold.otf */; };
 		B3C3050129AB9B5C00AF2B33 /* WidgetView_Single02.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C3050029AB9B5C00AF2B33 /* WidgetView_Single02.swift */; };
 		B3C3050329AB9EB900AF2B33 /* WidgetView_Multi01.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C3050229AB9EB900AF2B33 /* WidgetView_Multi01.swift */; };
-		B3C3050529ABA01800AF2B33 /* WidgetView_Multi02.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C3050429ABA01800AF2B33 /* WidgetView_Multi02.swift */; };
-		B3C3050729ABA12400AF2B33 /* WidgetView_Multi03.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C3050629ABA12400AF2B33 /* WidgetView_Multi03.swift */; };
-		B3C3050E29B05CD300AF2B33 /* TimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C3050C29B05CD300AF2B33 /* TimelineProvider.swift */; };
-		B3C3050F29B05CD300AF2B33 /* TimelineEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C3050D29B05CD300AF2B33 /* TimelineEntry.swift */; };
-		B3C3051029B077E100AF2B33 /* D_DAYWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B3C304B129AB879A00AF2B33 /* D_DAYWidget.intentdefinition */; };
-		B3C3051229B09D3200AF2B33 /* DdayInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4323CD5829A32FCC008B75A8 /* DdayInfo.swift */; };
-		B3C3051329B09E7E00AF2B33 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C304CB29AB8C1700AF2B33 /* IntentHandler.swift */; };
+		B3C3050529ABA01800AF2B33 /* WidgetView_Multi04.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C3050429ABA01800AF2B33 /* WidgetView_Multi04.swift */; };
+		B3C3050729ABA12400AF2B33 /* WidgetView_Multi05.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C3050629ABA12400AF2B33 /* WidgetView_Multi05.swift */; };
+		B3C3051D29B5D11D00AF2B33 /* D_DAYWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B3C304B129AB879A00AF2B33 /* D_DAYWidget.intentdefinition */; };
+		B3D0430B29C187BD00213B87 /* WidgetView_Multi03_L_Comp01_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D0430A29C187BD00213B87 /* WidgetView_Multi03_L_Comp01_1.swift */; };
+		B3D0430D29C188CC00213B87 /* WidgetView_Multi03_L_Comp01_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D0430C29C188CC00213B87 /* WidgetView_Multi03_L_Comp01_2.swift */; };
+		B3D0430F29C1892800213B87 /* WidgetView_Multi03_L_Comp01_3.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D0430E29C1892800213B87 /* WidgetView_Multi03_L_Comp01_3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,6 +160,25 @@
 		43AA636E298E1A1E0091B6A0 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		43F94E0A299C914800F99CCC /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		43F94E19299C9D2200F99CCC /* D-DAY.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "D-DAY.entitlements"; sourceTree = "<group>"; };
+		B300FF1229C06AB500A2AB3B /* WidgetView_Multi01_M_Comp01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView_Multi01_M_Comp01.swift; sourceTree = "<group>"; };
+		B300FF1429C06ABF00A2AB3B /* WidgetView_Multi01_M_Comp02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView_Multi01_M_Comp02.swift; sourceTree = "<group>"; };
+		B300FF1629C06B2D00A2AB3B /* WidgetView_Multi02_M_Comp01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView_Multi02_M_Comp01.swift; sourceTree = "<group>"; };
+		B300FF1829C06B3800A2AB3B /* WidgetView_Multi02_M_Comp02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView_Multi02_M_Comp02.swift; sourceTree = "<group>"; };
+		B300FF1A29C06BA600A2AB3B /* WidgetView_Multi03_M_Comp01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView_Multi03_M_Comp01.swift; sourceTree = "<group>"; };
+		B300FF1C29C06BAB00A2AB3B /* WidgetView_Multi03_M_Comp02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView_Multi03_M_Comp02.swift; sourceTree = "<group>"; };
+		B300FF2229C06C8900A2AB3B /* WidgetView_Multi04_L_Comp01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView_Multi04_L_Comp01.swift; sourceTree = "<group>"; };
+		B300FF2429C06C8F00A2AB3B /* WidgetView_Multi04_L_Comp02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView_Multi04_L_Comp02.swift; sourceTree = "<group>"; };
+		B300FF2629C06DA800A2AB3B /* WidgetView_Multi05_L_Comp01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView_Multi05_L_Comp01.swift; sourceTree = "<group>"; };
+		B300FF2829C06DAC00A2AB3B /* WidgetView_Multi05_L_Comp02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView_Multi05_L_Comp02.swift; sourceTree = "<group>"; };
+		B300FF2A29C072D500A2AB3B /* CustomFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFunctions.swift; sourceTree = "<group>"; };
+		B3075B0129C1973F007F978C /* WidgetView_Single01_S_Comp01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView_Single01_S_Comp01.swift; sourceTree = "<group>"; };
+		B3075B0329C19744007F978C /* WidgetView_Single01_S_Comp02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView_Single01_S_Comp02.swift; sourceTree = "<group>"; };
+		B3075B0529C1985D007F978C /* WidgetView_Single01_M_Comp01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView_Single01_M_Comp01.swift; sourceTree = "<group>"; };
+		B3075B0729C19867007F978C /* WidgetView_Single01_M_Comp02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView_Single01_M_Comp02.swift; sourceTree = "<group>"; };
+		B3075B0929C1A3D8007F978C /* WidgetView_Single02_M_Comp01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView_Single02_M_Comp01.swift; sourceTree = "<group>"; };
+		B3075B0B29C1A3DC007F978C /* WidgetView_Single02_M_Comp02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView_Single02_M_Comp02.swift; sourceTree = "<group>"; };
+		B3075B0D29C1A49B007F978C /* WidgetView_Single02_L_Comp01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView_Single02_L_Comp01.swift; sourceTree = "<group>"; };
+		B3075B0F29C1A49F007F978C /* WidgetView_Single02_L_Comp02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView_Single02_L_Comp02.swift; sourceTree = "<group>"; };
 		B30B8C3A297BE15A00F8813B /* ColorWellCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorWellCell.swift; sourceTree = "<group>"; };
 		B349285D2977DD920009C901 /* ModalAdd.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ModalAdd.storyboard; sourceTree = "<group>"; };
 		B349285F2977DD980009C901 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +187,8 @@
 		B39BBFCC297A7FA3001D408A /* ModalAddMultiSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalAddMultiSection.swift; sourceTree = "<group>"; };
 		B39BBFCE297A85DC001D408A /* DatePickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerCell.swift; sourceTree = "<group>"; };
 		B39BBFD0297A8609001D408A /* TextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
+		B3B9FF0129B845F300DF2E0F /* WidgetView_Multi02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView_Multi02.swift; sourceTree = "<group>"; };
+		B3B9FF0329B845FC00DF2E0F /* WidgetView_Multi03.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView_Multi03.swift; sourceTree = "<group>"; };
 		B3C304A929AB879A00AF2B33 /* D-DAYWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "D-DAYWidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3C304AD29AB879A00AF2B33 /* D_DAYWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D_DAYWidgetBundle.swift; sourceTree = "<group>"; };
 		B3C304B129AB879A00AF2B33 /* D_DAYWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = D_DAYWidget.intentdefinition; sourceTree = "<group>"; };
@@ -162,10 +203,11 @@
 		B3C304F629AB964500AF2B33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3C3050029AB9B5C00AF2B33 /* WidgetView_Single02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView_Single02.swift; sourceTree = "<group>"; };
 		B3C3050229AB9EB900AF2B33 /* WidgetView_Multi01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView_Multi01.swift; sourceTree = "<group>"; };
-		B3C3050429ABA01800AF2B33 /* WidgetView_Multi02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView_Multi02.swift; sourceTree = "<group>"; };
-		B3C3050629ABA12400AF2B33 /* WidgetView_Multi03.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView_Multi03.swift; sourceTree = "<group>"; };
-		B3C3050C29B05CD300AF2B33 /* TimelineProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineProvider.swift; sourceTree = "<group>"; };
-		B3C3050D29B05CD300AF2B33 /* TimelineEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineEntry.swift; sourceTree = "<group>"; };
+		B3C3050429ABA01800AF2B33 /* WidgetView_Multi04.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView_Multi04.swift; sourceTree = "<group>"; };
+		B3C3050629ABA12400AF2B33 /* WidgetView_Multi05.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView_Multi05.swift; sourceTree = "<group>"; };
+		B3D0430A29C187BD00213B87 /* WidgetView_Multi03_L_Comp01_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView_Multi03_L_Comp01_1.swift; sourceTree = "<group>"; };
+		B3D0430C29C188CC00213B87 /* WidgetView_Multi03_L_Comp01_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView_Multi03_L_Comp01_2.swift; sourceTree = "<group>"; };
+		B3D0430E29C1892800213B87 /* WidgetView_Multi03_L_Comp01_3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView_Multi03_L_Comp01_3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -335,6 +377,106 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		B3075B1129C1A540007F978C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B3075B1229C1A54D007F978C /* Single */,
+				B3075B1529C1A56D007F978C /* Multiple */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		B3075B1229C1A54D007F978C /* Single */ = {
+			isa = PBXGroup;
+			children = (
+				B3075B1329C1A559007F978C /* Single01 */,
+				B3075B1429C1A563007F978C /* Single02 */,
+			);
+			path = Single;
+			sourceTree = "<group>";
+		};
+		B3075B1329C1A559007F978C /* Single01 */ = {
+			isa = PBXGroup;
+			children = (
+				B3075B0129C1973F007F978C /* WidgetView_Single01_S_Comp01.swift */,
+				B3075B0329C19744007F978C /* WidgetView_Single01_S_Comp02.swift */,
+				B3075B0529C1985D007F978C /* WidgetView_Single01_M_Comp01.swift */,
+				B3075B0729C19867007F978C /* WidgetView_Single01_M_Comp02.swift */,
+			);
+			path = Single01;
+			sourceTree = "<group>";
+		};
+		B3075B1429C1A563007F978C /* Single02 */ = {
+			isa = PBXGroup;
+			children = (
+				B3075B0929C1A3D8007F978C /* WidgetView_Single02_M_Comp01.swift */,
+				B3075B0B29C1A3DC007F978C /* WidgetView_Single02_M_Comp02.swift */,
+				B3075B0D29C1A49B007F978C /* WidgetView_Single02_L_Comp01.swift */,
+				B3075B0F29C1A49F007F978C /* WidgetView_Single02_L_Comp02.swift */,
+			);
+			path = Single02;
+			sourceTree = "<group>";
+		};
+		B3075B1529C1A56D007F978C /* Multiple */ = {
+			isa = PBXGroup;
+			children = (
+				B3075B1629C1A576007F978C /* Multiple01 */,
+				B3075B1729C1A581007F978C /* Multiple02 */,
+				B3075B1829C1A58A007F978C /* Multiple03 */,
+				B3075B1929C1A592007F978C /* Multiple04 */,
+				B3075B1A29C1A599007F978C /* Multiple05 */,
+			);
+			path = Multiple;
+			sourceTree = "<group>";
+		};
+		B3075B1629C1A576007F978C /* Multiple01 */ = {
+			isa = PBXGroup;
+			children = (
+				B300FF1229C06AB500A2AB3B /* WidgetView_Multi01_M_Comp01.swift */,
+				B300FF1429C06ABF00A2AB3B /* WidgetView_Multi01_M_Comp02.swift */,
+			);
+			path = Multiple01;
+			sourceTree = "<group>";
+		};
+		B3075B1729C1A581007F978C /* Multiple02 */ = {
+			isa = PBXGroup;
+			children = (
+				B300FF1629C06B2D00A2AB3B /* WidgetView_Multi02_M_Comp01.swift */,
+				B300FF1829C06B3800A2AB3B /* WidgetView_Multi02_M_Comp02.swift */,
+			);
+			path = Multiple02;
+			sourceTree = "<group>";
+		};
+		B3075B1829C1A58A007F978C /* Multiple03 */ = {
+			isa = PBXGroup;
+			children = (
+				B300FF1A29C06BA600A2AB3B /* WidgetView_Multi03_M_Comp01.swift */,
+				B300FF1C29C06BAB00A2AB3B /* WidgetView_Multi03_M_Comp02.swift */,
+				B3D0430A29C187BD00213B87 /* WidgetView_Multi03_L_Comp01_1.swift */,
+				B3D0430C29C188CC00213B87 /* WidgetView_Multi03_L_Comp01_2.swift */,
+				B3D0430E29C1892800213B87 /* WidgetView_Multi03_L_Comp01_3.swift */,
+			);
+			path = Multiple03;
+			sourceTree = "<group>";
+		};
+		B3075B1929C1A592007F978C /* Multiple04 */ = {
+			isa = PBXGroup;
+			children = (
+				B300FF2229C06C8900A2AB3B /* WidgetView_Multi04_L_Comp01.swift */,
+				B300FF2429C06C8F00A2AB3B /* WidgetView_Multi04_L_Comp02.swift */,
+			);
+			path = Multiple04;
+			sourceTree = "<group>";
+		};
+		B3075B1A29C1A599007F978C /* Multiple05 */ = {
+			isa = PBXGroup;
+			children = (
+				B300FF2629C06DA800A2AB3B /* WidgetView_Multi05_L_Comp01.swift */,
+				B300FF2829C06DAC00A2AB3B /* WidgetView_Multi05_L_Comp02.swift */,
+			);
+			path = Multiple05;
+			sourceTree = "<group>";
+		};
 		B3C304AC29AB879A00AF2B33 /* D-DAYWidget */ = {
 			isa = PBXGroup;
 			children = (
@@ -345,6 +487,8 @@
 				B3C304B429AB879B00AF2B33 /* Info.plist */,
 				B3C304F629AB964500AF2B33 /* Assets.xcassets */,
 				4322A41429ACF9C600994EB1 /* Timeline */,
+				B3075B1129C1A540007F978C /* Components */,
+				B300FF2A29C072D500A2AB3B /* CustomFunctions.swift */,
 			);
 			path = "D-DAYWidget";
 			sourceTree = "<group>";
@@ -391,19 +535,12 @@
 			isa = PBXGroup;
 			children = (
 				B3C3050229AB9EB900AF2B33 /* WidgetView_Multi01.swift */,
-				B3C3050429ABA01800AF2B33 /* WidgetView_Multi02.swift */,
-				B3C3050629ABA12400AF2B33 /* WidgetView_Multi03.swift */,
+				B3B9FF0129B845F300DF2E0F /* WidgetView_Multi02.swift */,
+				B3B9FF0329B845FC00DF2E0F /* WidgetView_Multi03.swift */,
+				B3C3050429ABA01800AF2B33 /* WidgetView_Multi04.swift */,
+				B3C3050629ABA12400AF2B33 /* WidgetView_Multi05.swift */,
 			);
 			path = Multiple;
-			sourceTree = "<group>";
-		};
-		B3C3050B29B05C9500AF2B33 /* Timeline */ = {
-			isa = PBXGroup;
-			children = (
-				B3C3050D29B05CD300AF2B33 /* TimelineEntry.swift */,
-				B3C3050C29B05CD300AF2B33 /* TimelineProvider.swift */,
-			);
-			path = Timeline;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -646,16 +783,40 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3C304B529AB879B00AF2B33 /* D_DAYWidget.intentdefinition in Sources */,
-				B3C3050729ABA12400AF2B33 /* WidgetView_Multi03.swift in Sources */,
+				B3D0430F29C1892800213B87 /* WidgetView_Multi03_L_Comp01_3.swift in Sources */,
+				B3075B0C29C1A3DC007F978C /* WidgetView_Single02_M_Comp02.swift in Sources */,
+				B3075B0A29C1A3D8007F978C /* WidgetView_Single02_M_Comp01.swift in Sources */,
+				B300FF1929C06B3800A2AB3B /* WidgetView_Multi02_M_Comp02.swift in Sources */,
+				B300FF2529C06C8F00A2AB3B /* WidgetView_Multi04_L_Comp02.swift in Sources */,
+				B3C3050729ABA12400AF2B33 /* WidgetView_Multi05.swift in Sources */,
+				B3075B0229C1973F007F978C /* WidgetView_Single01_S_Comp01.swift in Sources */,
+				B3B9FF0229B845F300DF2E0F /* WidgetView_Multi02.swift in Sources */,
 				B3C304D729AB91D700AF2B33 /* WidgetView_Single01.swift in Sources */,
+				B300FF2729C06DA800A2AB3B /* WidgetView_Multi05_L_Comp01.swift in Sources */,
+				B3075B0829C19867007F978C /* WidgetView_Single01_M_Comp02.swift in Sources */,
+				B300FF2B29C072D500A2AB3B /* CustomFunctions.swift in Sources */,
+				B3075B0E29C1A49B007F978C /* WidgetView_Single02_L_Comp01.swift in Sources */,
+				B3075B1029C1A49F007F978C /* WidgetView_Single02_L_Comp02.swift in Sources */,
+				B3075B0429C19744007F978C /* WidgetView_Single01_S_Comp02.swift in Sources */,
+				B300FF1729C06B2D00A2AB3B /* WidgetView_Multi02_M_Comp01.swift in Sources */,
+				B3B9FF0429B845FC00DF2E0F /* WidgetView_Multi03.swift in Sources */,
 				B3C3050129AB9B5C00AF2B33 /* WidgetView_Single02.swift in Sources */,
+				B300FF2929C06DAC00A2AB3B /* WidgetView_Multi05_L_Comp02.swift in Sources */,
 				4322A41829ACF9DE00994EB1 /* TimelineEntry.swift in Sources */,
 				B3C304AE29AB879A00AF2B33 /* D_DAYWidgetBundle.swift in Sources */,
-				B3C3050529ABA01800AF2B33 /* WidgetView_Multi02.swift in Sources */,
+				B3C3050529ABA01800AF2B33 /* WidgetView_Multi04.swift in Sources */,
+				B300FF1529C06ABF00A2AB3B /* WidgetView_Multi01_M_Comp02.swift in Sources */,
 				4322A41A29AD07DE00994EB1 /* DdayInfo.swift in Sources */,
+				B300FF2329C06C8900A2AB3B /* WidgetView_Multi04_L_Comp01.swift in Sources */,
+				B3075B0629C1985D007F978C /* WidgetView_Single01_M_Comp01.swift in Sources */,
 				B3C3050329AB9EB900AF2B33 /* WidgetView_Multi01.swift in Sources */,
+				B3D0430B29C187BD00213B87 /* WidgetView_Multi03_L_Comp01_1.swift in Sources */,
+				B300FF1D29C06BAB00A2AB3B /* WidgetView_Multi03_M_Comp02.swift in Sources */,
+				B300FF1329C06AB500A2AB3B /* WidgetView_Multi01_M_Comp01.swift in Sources */,
 				4322A41729ACF9DE00994EB1 /* TimelineProvider.swift in Sources */,
+				B300FF1B29C06BA600A2AB3B /* WidgetView_Multi03_M_Comp01.swift in Sources */,
 				4322A41B29AD07E900994EB1 /* UserDefaultsExtension.swift in Sources */,
+				B3D0430D29C188CC00213B87 /* WidgetView_Multi03_L_Comp01_2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -664,8 +825,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				43CE316B29AE4A0900FC7D26 /* DdayInfo.swift in Sources */,
-				B3C304D429AB8C3200AF2B33 /* D_DAYWidget.intentdefinition in Sources */,
 				43491FE929B0768E0084B2EA /* IntentHandler.swift in Sources */,
+				B3C3051D29B5D11D00AF2B33 /* D_DAYWidget.intentdefinition in Sources */,
 				43CE316D29AF7C7D00FC7D26 /* UserDefaultsExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -819,7 +980,7 @@
 				CODE_SIGN_ENTITLEMENTS = "D-DAY/D-DAY.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MA5KYZD992;
+				DEVELOPMENT_TEAM = 4F4VQHPY5W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "D-DAY/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -852,7 +1013,7 @@
 				CODE_SIGN_ENTITLEMENTS = "D-DAY/D-DAY.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MA5KYZD992;
+				DEVELOPMENT_TEAM = 4F4VQHPY5W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "D-DAY/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -960,7 +1121,7 @@
 				CODE_SIGN_ENTITLEMENTS = "D-DAYWidgetExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MA5KYZD992;
+				DEVELOPMENT_TEAM = 4F4VQHPY5W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "D-DAYWidget/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "D-DAYWidget";
@@ -989,7 +1150,7 @@
 				CODE_SIGN_ENTITLEMENTS = "D-DAYWidgetExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MA5KYZD992;
+				DEVELOPMENT_TEAM = 4F4VQHPY5W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "D-DAYWidget/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "D-DAYWidget";
@@ -1016,7 +1177,7 @@
 				CODE_SIGN_ENTITLEMENTS = "D-DAYIntents/D-DAYIntents.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MA5KYZD992;
+				DEVELOPMENT_TEAM = 4F4VQHPY5W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "D-DAYIntents/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "D-DAYIntents";
@@ -1043,7 +1204,7 @@
 				CODE_SIGN_ENTITLEMENTS = "D-DAYIntents/D-DAYIntents.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MA5KYZD992;
+				DEVELOPMENT_TEAM = 4F4VQHPY5W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "D-DAYIntents/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "D-DAYIntents";

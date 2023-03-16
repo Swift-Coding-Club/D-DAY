@@ -19,5 +19,7 @@ struct D_DAYWidgetBundle: WidgetBundle {
         WidgetView_Multi01()
         WidgetView_Multi02()
         WidgetView_Multi03()
+        WidgetView_Multi04()
+        WidgetView_Multi05()
     }
 }
