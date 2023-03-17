@@ -117,7 +117,7 @@ struct WidgetView_Multi03EntryView : View {
             .background(Color(ddaySymbolMenu[safe: 0]?.identifier ?? "ddayNeonPink"))
              
         @unknown default:
-            Text("Sorry, You have encountered Default Error.")
+            Text("Sorry, You have encountered Default Error.  M03-3")
         }
     }
 }
@@ -130,8 +130,8 @@ struct WidgetView_Multi03: Widget {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
             WidgetView_Multi03EntryView(entry: entry)
         }
-        .configurationDisplayName("#1 심플 위젯")
-        .description("한 개의 디데이를 표시할 수 있는 위젯입니다.")
+        .configurationDisplayName("#2 다중 위젯")
+        .description("여러개의 디데이를 표시할 수 있는 위젯입니다.")
         .supportedFamilies([.systemMedium, .systemLarge])
     }
 }
