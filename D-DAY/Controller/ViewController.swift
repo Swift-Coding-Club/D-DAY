@@ -7,11 +7,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CALayerDelegate {
 
     @IBOutlet weak var editButton: UIBarButtonItem!
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var titleView: UIView!
+    
     var lifePointsInt = Int()
     var testValue: Int = 0
     
@@ -21,9 +23,40 @@ class ViewController: UIViewController {
     let editButtonTitle0 = "Edit"
     let editButtonTitle1 = "Done"
         
+    private var gradient: CAGradientLayer!
+    
+    // Persist the top view height constraint
+    @IBOutlet weak var topViewHeightConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var titleViewLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var titleViewTrailingConstraint: NSLayoutConstraint!
+    
+    // Original height of the top view
+    var viewHeight: CGFloat = 131
+    
+    // Keep track of the
+    private var isAnimationInProgress = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("viewDidLoad ->")
+        
+        titleView.layer.cornerRadius = 20
+//        titleView.layer.maskedCorners = [.layerMaxXMaxYCorner]
+        
+        titleView.layer.shadowColor = UIColor.gray.cgColor
+        titleView.layer.shadowOpacity = 0.8
+        titleView.layer.shadowOffset = CGSize(width: 3, height: 3) // 그림자 위치
+        titleView.layer.shadowRadius = 2 // 그림자 경계의 선명도
+    
+        
+        tableView.layer.cornerRadius = 20
+        tableView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        
+        tableView.layer.shadowColor = UIColor.gray.cgColor
+        tableView.layer.shadowOpacity = 1.0
+        tableView.layer.shadowOffset = CGSize.zero
+        tableView.layer.shadowRadius = 6 // 그림자 경계의 선명도
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -32,7 +65,33 @@ class ViewController: UIViewController {
         tableView.register(UINib(nibName: "DDAYCell", bundle: nil), forCellReuseIdentifier: "ReusableCell")
         
         tableView.isEditing = false
+        
+        // 추가하기 버튼 shadow 효과
+        addButton.layer.shadowColor = UIColor.gray.cgColor
+        addButton.layer.shadowOpacity = 0.3
+        addButton.layer.shadowOffset = CGSize(width: 3, height: 3) // 그림자 위치
+        addButton.layer.shadowRadius = 3 // 그림자 경계의 선명도
 
+        gradient = CAGradientLayer()
+        gradient.colors = [UIColor.black.cgColor, UIColor.black.cgColor, UIColor.black.cgColor, UIColor.clear.cgColor]
+        gradient.locations = [0, 0.1, 0.9, 1]
+        gradient.delegate = self
+        tableView.layer.mask = gradient
+
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+
+//        tableView.contentInset = UIEdgeInsets(top: tableView.frame.height - 40, left: 0, bottom: 0, right: 0)
+        gradient.colors = [UIColor.black.cgColor, UIColor.black.cgColor, UIColor.black.cgColor, UIColor.clear.cgColor]
+
+        updateGradientFrame()
+    }
+    
+    // MARK: - CALayerDelegate
+    func action(for layer: CALayer, forKey event: String) -> CAAction? {
+        return NSNull()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -243,4 +302,110 @@ extension UserDefaults {
         return UserDefaults(suiteName: appGroupId)!
     }
 }
+
+// MARK: UIScrollViewDelegate
+extension ViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
+
+        updateGradientFrame()
+        
+        // Check if the animation is locked or not
+        if !isAnimationInProgress {
+            
+//            gradient.colors = [UIColor.black.cgColor, UIColor.black.cgColor, UIColor.black.cgColor, UIColor.clear.cgColor]
+
+            guard let topViewHeightConstraint = topViewHeightConstraint
+            else { return }
+            
+            // Check if an animation is required
+            if scrollView.contentOffset.y > .zero &&
+                topViewHeightConstraint.constant > .zero {
+                
+                topViewHeightConstraint.constant = .zero
+                animateTopViewHeight()
+                print("animateTopViewHeight - 1")
+            }
+            else if scrollView.contentOffset.y <= .zero
+                        && topViewHeightConstraint.constant <= .zero {
+                
+                topViewHeightConstraint.constant = viewHeight
+                animateTopViewHeight2()
+                print("animateTopViewHeight - 2")
+                gradient.colors = [UIColor.black.cgColor, UIColor.black.cgColor, UIColor.black.cgColor, UIColor.clear.cgColor]
+
+            }
+            else if scrollView.contentOffset.y == maximumOffset {
+                gradient.colors = [UIColor.clear.cgColor, UIColor.black.cgColor, UIColor.black.cgColor, UIColor.black.cgColor]
+                print("스크롤뷰 끝")
+            }
+        }
+        
+    }
+    
+    // table view 맨위 맨끝 그라데이션
+    private func updateGradientFrame() {
+        gradient.frame = CGRect(
+            x: 0,
+            y: tableView.contentOffset.y,
+            width: tableView.bounds.width,
+            height: tableView.bounds.height
+            )
+    }
+    
+    // 스크롤 down - title view 사라지게
+    private func animateTopViewHeight() {
+        
+        // Lock the animation functionality
+        isAnimationInProgress = true
+        
+        UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseOut, animations: {
+            
+//            self.titleViewTrailingConstraint.constant = 0
+            self.titleViewLeadingConstraint.constant = 0
+            self.titleView.frame.size.height = 0
+            self.titleView.alpha = 0
+            
+            self.view.layoutIfNeeded()
+            
+        }, completion: { [weak self] (_) in
+//            self?.navigationController?.navigationBar.barTintColor = self?.titleView.backgroundColor
+            self?.navigationController?.navigationBar.barTintColor = self?.titleView.backgroundColor
+//            self?.navigationController?.tabBarItem.title.
+            // Unlock the animation functionality
+            self?.isAnimationInProgress = false
+        })
+    }
+    
+    // 스크롤 up - title view 다시 생기게
+    private func animateTopViewHeight2() {
+        
+        // Lock the animation functionality
+        isAnimationInProgress = true
+        
+        UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseOut, animations: {
+            
+//            self.titleViewTrailingConstraint.constant = 20
+            self.titleViewLeadingConstraint.constant = -20
+            self.titleView.frame.size.height = self.viewHeight
+            self.titleView.alpha = 1
+            
+            self.view.layoutIfNeeded()
+            
+        }, completion: { [weak self] (_) in
+//            self?.navigationController?.navigationBar.barTintColor = self?.titleView.backgroundColor
+            self?.navigationController?.navigationBar.barTintColor = UIColor.white
+
+            // Unlock the animation functionality
+            self?.isAnimationInProgress = false
+        })
+    }
+    
+}
+//
+//extension ViewController: CALayerDelegate {
+//    func action(for layer: CALayer, forKey event: String) -> CAAction? {
+//          return NSNull()
+//      }
+//}
 

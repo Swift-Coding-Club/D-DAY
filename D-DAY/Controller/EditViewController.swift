@@ -204,13 +204,18 @@ extension EditViewController {
     
     func changeTitle(value title: String?) {
         self.smallTitle.text = title
+        
+        saveButtonEnabled()
+        
+        fontConfigurationForTitle()
+    }
+    
+    func saveButtonEnabled() {
         if self.titleString?.count == 0 {
             self.saveButton.isEnabled = false
         } else {
             self.saveButton.isEnabled = true
         }
-        
-        fontConfigurationForTitle()
     }
     
     func dateFormatToString(from value: Date) -> String {
@@ -235,7 +240,7 @@ extension EditViewController {
         print("\(cellTag) Tag로 index값을 받아옴")
         
         // 변경될 struct
-        let editDdayInfo = DdayInfo(title: txtFieldForTitle.text!, subTitle: txtFieldForSubtitle.text!, date: theDate)
+        let editDdayInfo = DdayInfo(title: txtFieldForTitle.text!, subTitle: txtFieldForSubtitle.text!,  date: theDate, widgetTextColor: "String", widgetBGColor: "String", language: "String")
         
 //        let userDefaults = UserDefaults(suiteName: "group.dday.ddayApp")
         
@@ -266,6 +271,8 @@ extension EditViewController: DatePickerCellDelegate {
     func getDateValue(value date: Date) {
         self.theDate = date
         self.smallDayNumber.text = String(calculateDday())
+        
+        saveButtonEnabled()
         fontConfigurationForDate()
     }
 }
@@ -328,7 +335,7 @@ extension EditViewController: UITableViewDataSource {
             } else { // subtitle row
                 
                 txtFieldForSubtitle = cellForTxtfield.accTextField
-                cellForTxtfield.accTextField.addTarget(self, action: #selector(getSubTitle), for: .editingDidEnd)
+                cellForTxtfield.accTextField.addTarget(self, action: #selector(getSubTitle), for: .allEvents)
                 
                 // place holder 대신 UserDefaults의 입력값 넣어주기
                 txtFieldForSubtitle.text = ddayList[cellTag].subTitle
@@ -365,6 +372,8 @@ extension EditViewController: UITableViewDataSource {
     @objc private func getSubTitle() {
         self.subtitleString = self.txtFieldForSubtitle.text
         print("subtitle 2222: \(self.subtitleString!)")
+        
+        saveButtonEnabled()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
