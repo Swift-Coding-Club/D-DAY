@@ -423,9 +423,17 @@ extension AddViewController {
     // IBAction for '저장(save)' button
     @IBAction func saveButtonTapped(_ sender: Any) {
 
-        // TODO: DatePicker에서 오늘 날짜를 선택하면 에러
+        var bgColor = String()
+        var txtColor = String()
+                
+        bgColor = colorForBackground?.toHexString() ?? "ddayBlack"
+        txtColor = colorForTXT?.toHexString() ?? "ddayWhite"
+
+        print("bgColor: \(bgColor)")
+        print("txtColor: \(txtColor)")
+
         // UserDefaults에 추가
-        let newDdayInfo = DdayInfo(title: txtFieldForTitle.text!, subTitle: txtFieldForSubtitle.text!, date: theDate, widgetTextColor: "String", widgetBGColor: "String", language: "String")
+        let newDdayInfo = DdayInfo(title: txtFieldForTitle.text!, subTitle: txtFieldForSubtitle.text!, date: theDate, widgetTextColor: bgColor, widgetBGColor: txtColor, language: language)
         
 //        let userDefaults = UserDefaults(suiteName: "group.dday.ddayApp")
         

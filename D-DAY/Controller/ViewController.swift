@@ -371,6 +371,12 @@ extension ViewController: UIScrollViewDelegate {
         }, completion: { [weak self] (_) in
 //            self?.navigationController?.navigationBar.barTintColor = self?.titleView.backgroundColor
             self?.navigationController?.navigationBar.barTintColor = self?.titleView.backgroundColor
+            
+            let backItem = UIBarButtonItem()
+//                 backItem.title = "BACK"
+                 backItem.tintColor = .white
+            self?.navigationItem.rightBarButtonItem = backItem
+            
 //            self?.navigationController?.tabBarItem.title.
             // Unlock the animation functionality
             self?.isAnimationInProgress = false
