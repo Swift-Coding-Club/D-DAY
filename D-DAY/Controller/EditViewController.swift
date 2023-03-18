@@ -56,6 +56,9 @@ class EditViewController: UIViewController {
     // UserDefaults 넣어 줄 struct list
     var ddayList = [DdayInfo]()
 
+    // Language
+    var language: String = "English"
+    
     var cellTag = 0
     
     override func viewDidLoad() {
@@ -239,8 +242,18 @@ extension EditViewController {
     @IBAction func saveButtonTapped(_ sender: Any) {
         print("\(cellTag) Tag로 index값을 받아옴")
         
+        
+        var bgColor = String()
+        var txtColor = String()
+                
+        bgColor = colorForBackground?.toHexString() ?? "ddayBlack"
+        txtColor = colorForTXT?.toHexString() ?? "ddayWhite"
+
+        print("bgColor: \(bgColor)")
+        print("txtColor: \(txtColor)")
+
         // 변경될 struct
-        let editDdayInfo = DdayInfo(title: txtFieldForTitle.text!, subTitle: txtFieldForSubtitle.text!,  date: theDate, widgetTextColor: "String", widgetBGColor: "String", language: "String")
+        let editDdayInfo = DdayInfo(title: txtFieldForTitle.text!, subTitle: txtFieldForSubtitle.text!,  date: theDate, widgetTextColor: bgColor, widgetBGColor: txtColor, language: language)
         
 //        let userDefaults = UserDefaults(suiteName: "group.dday.ddayApp")
         

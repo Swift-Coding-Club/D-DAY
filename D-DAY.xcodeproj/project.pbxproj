@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4304BC382988F8C1003168BE /* DDAYCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4304BC372988F8C1003168BE /* DDAYCell.swift */; };
+		430CFEF529C55A1E00C40015 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430CFEF429C55A1E00C40015 /* UIColorExtension.swift */; };
 		4322A41729ACF9DE00994EB1 /* TimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322A41529ACF9DE00994EB1 /* TimelineProvider.swift */; };
 		4322A41829ACF9DE00994EB1 /* TimelineEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322A41629ACF9DE00994EB1 /* TimelineEntry.swift */; };
 		4322A41A29AD07DE00994EB1 /* DdayInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4323CD5829A32FCC008B75A8 /* DdayInfo.swift */; };
@@ -136,6 +137,7 @@
 
 /* Begin PBXFileReference section */
 		4304BC372988F8C1003168BE /* DDAYCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDAYCell.swift; sourceTree = "<group>"; };
+		430CFEF429C55A1E00C40015 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		4322A41529ACF9DE00994EB1 /* TimelineProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineProvider.swift; sourceTree = "<group>"; };
 		4322A41629ACF9DE00994EB1 /* TimelineEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineEntry.swift; sourceTree = "<group>"; };
 		4322A41929ACFD0C00994EB1 /* D-DAYWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "D-DAYWidgetExtension.entitlements"; sourceTree = "<group>"; };
@@ -309,6 +311,7 @@
 				43B17C3E29BA2E2000B6A33E /* check.json */,
 				437C8321297271A300F886FB /* Info.plist */,
 				4338D54A298945D100AB3F54 /* UserDefaultsExtension.swift */,
+				430CFEF429C55A1E00C40015 /* UIColorExtension.swift */,
 			);
 			path = "D-DAY";
 			sourceTree = "<group>";
@@ -774,6 +777,7 @@
 				B3C304B629AB879B00AF2B33 /* D_DAYWidget.intentdefinition in Sources */,
 				43B17C4129BA42EB00B6A33E /* SplashViewController.swift in Sources */,
 				B39BBFCF297A85DC001D408A /* DatePickerCell.swift in Sources */,
+				430CFEF529C55A1E00C40015 /* UIColorExtension.swift in Sources */,
 				4323CD5929A32FCC008B75A8 /* DdayInfo.swift in Sources */,
 				B39BBFD1297A8609001D408A /* TextFieldCell.swift in Sources */,
 				B38A476129875CA00088DC56 /* Color.swift in Sources */,
