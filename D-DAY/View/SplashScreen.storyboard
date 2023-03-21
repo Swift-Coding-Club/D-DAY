@@ -23,30 +23,38 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pwX-67-4cz">
-                                <rect key="frame" x="51" y="464" width="497" height="168"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gkN-JJ-BbG">
+                                <rect key="frame" x="-238" y="220" width="671" height="168"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="widget10" translatesAutoresizingMaskIntoConstraints="NO" id="Zvq-Ap-MQf">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="w0" translatesAutoresizingMaskIntoConstraints="NO" id="gmo-xN-RjM">
                                         <rect key="frame" x="20" y="20" width="240" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="widget2" translatesAutoresizingMaskIntoConstraints="NO" id="7Sr-Is-qP5">
-                                        <rect key="frame" x="237" y="20" width="240" height="128"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="w1" translatesAutoresizingMaskIntoConstraints="NO" id="dxk-UC-7v3">
+                                        <rect key="frame" x="235" y="20" width="240" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="w2" translatesAutoresizingMaskIntoConstraints="NO" id="X94-Hz-LkK">
+                                        <rect key="frame" x="483" y="20" width="154" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gkN-JJ-BbG">
-                                <rect key="frame" x="-157" y="220" width="495" height="168"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pwX-67-4cz">
+                                <rect key="frame" x="-34" y="464" width="619" height="168"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="widget0" translatesAutoresizingMaskIntoConstraints="NO" id="gmo-xN-RjM">
-                                        <rect key="frame" x="20" y="20" width="240" height="128"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="w4" translatesAutoresizingMaskIntoConstraints="NO" id="7Sr-Is-qP5">
+                                        <rect key="frame" x="213" y="20" width="146" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="widget3" translatesAutoresizingMaskIntoConstraints="NO" id="dxk-UC-7v3">
-                                        <rect key="frame" x="235" y="20" width="240" height="128"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="w3" translatesAutoresizingMaskIntoConstraints="NO" id="S8C-MO-QDu">
+                                        <rect key="frame" x="379" y="20" width="240" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="w5" translatesAutoresizingMaskIntoConstraints="NO" id="oBt-qY-JK2">
+                                        <rect key="frame" x="-35" y="20" width="240" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
@@ -67,10 +75,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="widget0" width="306" height="140"/>
-        <image name="widget10" width="161" height="161"/>
-        <image name="widget2" width="306" height="140"/>
-        <image name="widget3" width="161" height="161"/>
+        <image name="w0" width="161" height="161"/>
+        <image name="w1" width="306" height="140"/>
+        <image name="w2" width="161" height="161"/>
+        <image name="w3" width="306" height="140"/>
+        <image name="w4" width="161" height="161"/>
+        <image name="w5" width="306" height="140"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

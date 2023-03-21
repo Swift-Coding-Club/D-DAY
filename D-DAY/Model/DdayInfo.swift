@@ -15,6 +15,16 @@ struct DdayInfo: Codable, Hashable {
     let widgetBGColor: String? // UIColor -> String
     let language: String?
     
+    
+    init(title: String, subTitle: String, date: Date, widgetTextColor: String?, widgetBGColor: String?, language: String?) {
+        self.title = title
+        self.subTitle = subTitle
+        self.date = date
+        self.widgetTextColor = widgetTextColor
+        self.widgetBGColor = widgetBGColor
+        self.language = language
+    }
+    
 //    init(title: String, subTitle: String, date: Date, widgetTextColor: String, widgetBGColor: String, language: String) {
 //        self.title = title
 //        self.subTitle = subTitle
