@@ -13,167 +13,161 @@ struct WidgetView_Multi01_M_Comp01: View { // disable shadow
     
     var body: some View {
         
-        // 1. 위젯 초기(tableview list읽어온 데이터 없을시) 보여지는 default CustomSymbol array
-        let defaultDdaySymbolMenu: [DdaySymbol] = [
-            DdaySymbol(identifier: "ddayOrange", display: "길게눌러서 디데이 추가하기", pronunciationHint: "ddayNeonYellow", subtitle: "2050.01.01", image: nil),
-            DdaySymbol(identifier: "ddayNeonYellow", display: "길게눌러서 디데이 추가하기"),
-            DdaySymbol(identifier: "ddayNeonYellow", display: "길게눌러서 디데이 추가하기"),
-            DdaySymbol(identifier: "ddayNeonYellow", display: "길게눌러서 디데이 추가하기"),
+        // 0. Default Array for the variable 'defaultDdaySymbolMenu'
+        let defaultStringArr: [[String]] = [
+            // format: [ddayTitle, ddayDate, ddayBgColor, ddayTxtColor]
+            ["길게눌러서 디데이 추가하기", "2023.08.04", "ddayOrange", "ddayNeonYellow"],
+            ["길게눌러서 디데이 추가하기", "2023.06.04", "ddayChristmasGreen", "ddayChristmasRed"],
+            ["길게눌러서 디데이 추가하기", "2023.03.04", "ddayLightOrange", "ddayBabyPurpleBrighter"],
+            ["길게눌러서 디데이 추가하기", "2023.04.04", "ddayPurpleDarker", "ddayDriedRosePink"],
         ]
+        
+        // 1. 위젯 초기(tableview list읽어온 데이터 없을시) 보여지는 default CustomSymbol array
+        let defaultDdaySymbolMenu: [DdaySymbol] = defaultStringArr.map { sArray in
+            let symbolDdayItem = DdaySymbol (identifier: "identifier", display: "diaplay")
+            symbolDdayItem.ddayTitle = sArray[0]
+            symbolDdayItem.ddayDate = sArray[1]
+            symbolDdayItem.ddayBgColor = sArray[2]
+            symbolDdayItem.ddayTxtColor = sArray[3]
+            
+            return symbolDdayItem
+        }
         
         // 2. 위젯 편집후 불러오는 CustomSymbol array
         let ddaySymbolMenu: [DdaySymbol] = entry.configuration.ddaySymbol ?? defaultDdaySymbolMenu
         
+        var dateInt0 = CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  defaultStringArr[0][1])))
+        var dateInt1 = CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 1]?.ddayDate ??  defaultStringArr[1][1])))
+        var dateInt2 = CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 2]?.ddayDate ??  defaultStringArr[2][1])))
+        var dateInt3 = CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 3]?.ddayDate ??  defaultStringArr[3][1])))
+        
         VStack(spacing: 0) {
             HStack(alignment: .bottom, spacing: 0) {
                 ZStack(alignment: .bottom) {
-                    Text("호주여행 준비")
-//                    Text(ddaySymbolMenu[safe: 0]?.displayString ?? "길게눌러서 디데이 추가하기")
-                        .font(.custom("Inter-Bold", size: 15.0))
+                    Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                        .font(.custom("Inter-Bold", size: 13.0))
                         .frame(width: 200, height: 50, alignment: .topLeading)
                         .position(x: 116, y: 85)
-                        .foregroundColor(Color("ddayNeonYellow"))
-                    //                            .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.identifier ?? "ddayOrange"))
+                        .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayNeonYellow"))
                     
-                    Text(ddaySymbolMenu[safe: 0]?.subtitleString ?? "2023.12.28")
+                    Text(ddaySymbolMenu[safe: 0]?.ddayDate ?? "2023.00.00")
                         .font(.custom("Inter-Bold", size: 9.0))
                         .multilineTextAlignment(.leading)
                         .frame(width: 28, height: 50, alignment: .topLeading)
                         .position(x: 30, y: 123)
-                        .foregroundColor(Color("ddayNeonYellow"))
-                    //                            .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.identifier ?? "ddayOrange"))
+                        .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayNeonYellow"))
                     
                     ZStack {
-                        Text("-93")
+                        Text("\(dateInt0)")
                             .font(.custom("Inter-ExtraBold", size: 56.0))
                             .frame(width: 128, height: 49, alignment: .topTrailing)
                             .position(x: 65, y: 21)
                             .kerning(-5)
                             .clipped()
-                            .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.identifier ?? "ddayOrange"))
+                            .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayOrange"))
                     }
                     .frame(width: 130, height: 49, alignment: .bottomTrailing)
-                    //                        .padding(EdgeInsets(top: 5, leading: 0, bottom: 0, trailing: 0))
-                    .background(Color(ddaySymbolMenu[safe: 0]?.pronunciationHint ?? "ddayBlack"))
+                    .background(Color(ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayNeonYellow"))
+                    
                 }
-                //                    .background(Color(ddaySymbolMenu[safe: 0]?.pronunciationHint ?? "ddayBlack"))
                 .position(x: 168, y: 65)
                 .frame(width: 230, height: 130)
-                .background(Color("ddayOrange"))
+                .background(Color(ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayOrange"))
                 
                 
                 ZStack(alignment: .bottom) {
-                    Text("나니아연대기 책 다 읽기")
-//                    Text(ddaySymbolMenu[safe: 0]?.displayString ?? "길게눌러서 디데이 추가하기")
-                        .font(.custom("Inter-Bold", size: 15.0))
+                    Text(ddaySymbolMenu[safe: 1]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                        .font(.custom("Inter-Bold", size: 13.0))
                         .frame(width: 200, height: 50, alignment: .topTrailing)
                         .position(x: 110, y: 85)
-                        .foregroundColor(Color("ddayChristmasRed"))
-                    //                            .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.identifier ?? "ddayOrange"))
+                        .foregroundColor(Color(ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayChristmasRed"))
                     
-                    Text(ddaySymbolMenu[safe: 0]?.subtitleString ?? "2023.12.28")
+                    Text(ddaySymbolMenu[safe: 1]?.ddayDate ?? "2023.00.00")
                         .font(.custom("Inter-Bold", size: 9.0))
                         .multilineTextAlignment(.leading)
                         .frame(width: 28, height: 50, alignment: .topTrailing)
                         .position(x: 198, y: 123)
-                        .foregroundColor(Color("ddayChristmasRed"))
-                    //                            .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.identifier ?? "ddayOrange"))
+                        .foregroundColor(Color(ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayChristmasRed"))
                     
                     ZStack {
-                        Text("-143")
+                        Text("\(dateInt1)")
                             .font(.custom("Inter-ExtraBold", size: 56.0))
                             .frame(width: 135, height: 49, alignment: .topLeading)
                             .position(x: 64, y: 21)
                             .kerning(-5)
                             .clipped()
-                            .foregroundColor(Color("ddayChristmasGreen"))
-                        //                                .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.identifier ?? "ddayOrange"))
+                            .foregroundColor(Color(ddaySymbolMenu[safe: 1]?.ddayBgColor ?? "ddayChristmasGreen"))
                     }
                     .frame(width: 130, height: 49, alignment: .bottomLeading)
-                    // .background(Color(ddaySymbolMenu[safe: 0]?.pronunciationHint ?? "ddayBlack"))
-                    .background(Color("ddayChristmasRed"))
+                    .background(Color(ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayChristmasRed"))
                 }
                 .position(x: 65, y: 65)
                 .frame(width: 230, height: 130)
-                .background(Color("ddayChristmasGreen"))
-                //                    .background(Color(ddaySymbolMenu[safe: 0]?.pronunciationHint ?? "ddayBlack"))
+                .background(Color(ddaySymbolMenu[safe: 1]?.ddayBgColor ?? "ddayChristmasGreen"))
             }
             
             
-            
             HStack(alignment: .top, spacing: 0) {
-                
                 ZStack(alignment: .top) {
-                    Text("여름대비 운동")
-//                    Text(ddaySymbolMenu[safe: 0]?.displayString ?? "길게눌러서 디데이 추가하기")
-                        .font(.custom("Inter-Bold", size: 15.0))
+                    Text(ddaySymbolMenu[safe: 2]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                        .font(.custom("Inter-Bold", size: 13.0))
                         .frame(width: 200, height: 50, alignment: .topLeading)
-                        .position(x: 116, y: 80)                            .foregroundColor(Color("ddayBabyPurpleBrighter"))
-                    //                            .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.identifier ?? "ddayOrange"))
+                        .position(x: 116, y: 80)
+                        .foregroundColor(Color(ddaySymbolMenu[safe: 2]?.ddayTxtColor ?? "ddayBabyPurpleBrighter"))
                     
-                    Text(ddaySymbolMenu[safe: 0]?.subtitleString ?? "2023.12.28")
+                    Text(ddaySymbolMenu[safe: 2]?.ddayDate ?? "2023.00.00")
                         .font(.custom("Inter-Bold", size: 9.0))
                         .multilineTextAlignment(.leading)
                         .frame(width: 28, height: 50, alignment: .topLeading)
                         .position(x: 30, y: 35)
-                    //                                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-                        .foregroundColor(Color("ddayBabyPurpleBrighter"))
-                    //                            .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.identifier ?? "ddayOrange"))
+                        .foregroundColor(Color(ddaySymbolMenu[safe: 2]?.ddayTxtColor ?? "ddayBabyPurpleBrighter"))
                     
                     ZStack {
-                        Text("+12")
+                        Text("\(dateInt2)")
                             .font(.custom("Inter-ExtraBold", size: 56.0))
                             .frame(width: 135, height: 49, alignment: .topLeading)
                             .position(x: 61, y: 21)
                             .kerning(-5)
                             .clipped()
-                            .foregroundColor(Color("ddayLightOrange"))
+                            .foregroundColor(Color(ddaySymbolMenu[safe: 2]?.ddayBgColor ?? "ddayLightOrange"))
                     }
                     .frame(width: 130, height: 49, alignment: .bottomLeading)
-                    //                        .background(Color(ddaySymbolMenu[safe: 0]?.pronunciationHint ?? "ddayBlack"))
-                    .background(Color("ddayBabyPurpleBrighter"))
+                    .background(Color(ddaySymbolMenu[safe: 2]?.ddayTxtColor ?? "ddayBabyPurpleBrighter"))
                 }
-                //                    .background(Color(ddaySymbolMenu[safe: 0]?.pronunciationHint ?? "ddayBlack"))
                 .position(x: 168, y: 65)
                 .frame(width: 230, height: 130)
-                .background(Color("ddayLightOrange"))
+                .background(Color(ddaySymbolMenu[safe: 2]?.ddayBgColor ?? "ddayLightOrange"))
                 
                 
                 ZStack(alignment: .top) {
-                    Text("물 한잔으로 하루 시작하기")
-//                    Text(ddaySymbolMenu[safe: 0]?.displayString ?? "길게눌러서 디데이 추가하기")
-                        .font(.custom("Inter-Bold", size: 14.0))
+                    Text(ddaySymbolMenu[safe: 3]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                        .font(.custom("Inter-Bold", size: 13.0))
                         .frame(width: 200, height: 50, alignment: .topTrailing)
                         .position(x: 110, y: 80)
-                        .foregroundColor(Color("ddayDriedRosePink"))
-                    //                            .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.identifier ?? "ddayOrange"))
+                        .foregroundColor(Color(ddaySymbolMenu[safe: 3]?.ddayTxtColor ?? "ddayDriedRosePink"))
                     
-                    Text(ddaySymbolMenu[safe: 0]?.subtitleString ?? "2023.12.28")
+                    Text(ddaySymbolMenu[safe: 3]?.ddayDate ?? "2023.00.00")
                         .font(.custom("Inter-Bold", size: 9.0))
                         .multilineTextAlignment(.leading)
                         .frame(width: 28, height: 50, alignment: .topTrailing)
                         .position(x: 200, y: 35)
-                        .foregroundColor(Color("ddayDriedRosePink"))
-                    //                            .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.identifier ?? "ddayOrange"))
+                        .foregroundColor(Color(ddaySymbolMenu[safe: 3]?.ddayTxtColor ?? "ddayDriedRosePink"))
                     
                     ZStack {
-                        Text("+31")
+                        Text("\(dateInt3)")
                             .font(.custom("Inter-ExtraBold", size: 56.0))
                             .frame(width: 135, height: 49, alignment: .topTrailing)
                             .position(x: 60, y: 23)
                             .kerning(-5)
                             .clipped()
-                            .foregroundColor(Color("ddayPurpleDarker"))
+                            .foregroundColor(Color(ddaySymbolMenu[safe: 3]?.ddayBgColor ?? "ddayPurpleDarker"))
                     }
                     .frame(width: 130, height: 49, alignment: .bottomTrailing)
-                    //                        .background(Color(ddaySymbolMenu[safe: 0]?.pronunciationHint ?? "ddayBlack"))
-                    .background(Color("ddayDriedRosePink"))
+                    .background(Color(ddaySymbolMenu[safe: 3]?.ddayTxtColor ?? "ddayDriedRosePink"))
                 }
-                //                    .background(Color(ddaySymbolMenu[safe: 0]?.pronunciationHint ?? "ddayBlack"))
                 .position(x: 65, y: 65)
                 .frame(width: 230, height: 130)
-                .background(Color("ddayPurpleDarker"))
-                
+                .background(Color(ddaySymbolMenu[safe: 3]?.ddayBgColor ?? "ddayPurpleDarker"))
             }
         }
     }

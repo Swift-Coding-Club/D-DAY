@@ -12,24 +12,26 @@ class IntentHandler: INExtension, ConfigurationIntentHandling {
     func provideDdaySymbolOptionsCollection(for intent: ConfigurationIntent, searchTerm: String?, with completion: @escaping (INObjectCollection<DdaySymbol>?, Error?) -> Void) {
         
         var testArr = UserDefaults(suiteName: "group.dday.ddayApp")!.getDdayInfo()
-        let stringTest = String(testArr[0].title)
-        let stringTest1 = testArr[0].title.count
-        let symbols3: [DdaySymbol] = testArr.map { listItem in
+        
+        let symbols: [DdaySymbol] = testArr.map { listItem in
+            
+            // UserDefaults's date (model from DdayInfo.swift) - 1
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy.MM.dd"
+            let listItemDate = dateFormatter.string(from: listItem.date)
+            
             let symbolDdayItem = DdaySymbol (
                 identifier: "ddayNeonPurple",
                 display: listItem.title,
                 pronunciationHint: "ddayOrange",
-                subtitle: "2017.07.01",
+                subtitle: listItemDate,
                 image: nil
             )
             
             // UserDefaults's title (model from DdayInfo.swift)
             symbolDdayItem.ddayTitle = listItem.title
             
-            // UserDefaults's date (model from DdayInfo.swift)
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "yyyy.MM.dd"
-            let listItemDate = dateFormatter.string(from: listItem.date)
+            // UserDefaults's date (model from DdayInfo.swift) - 2
             symbolDdayItem.ddayDate = listItemDate
 
             // UserDefaults's widget text color (model from DdayInfo.swift)
@@ -44,7 +46,7 @@ class IntentHandler: INExtension, ConfigurationIntentHandling {
             return symbolDdayItem
         }
         
-        let collection = INObjectCollection(items: symbols3)
+        let collection = INObjectCollection(items: symbols)
         
         completion(collection, nil)
     }

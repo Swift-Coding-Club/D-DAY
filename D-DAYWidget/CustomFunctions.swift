@@ -26,7 +26,7 @@ struct CustomFunctions {
     
     func ddaySetDorPlus(dateIntParam: Int) -> String {
         if dateIntParam < 0 {
-            return "D"
+            return ""
         } else {
             return "+"
         }
@@ -37,6 +37,14 @@ struct CustomFunctions {
             return String(format: "%02d", (-1) * dateIntParam)
         } else {
             return String(format: "%02d", dateIntParam)
+        }
+    }
+    
+    func makeSignedDateNumber(dateIntParam: Int) -> String {
+        if dateIntParam > 0 {
+            return "+\(dateIntParam)"
+        } else {
+            return "\(dateIntParam)"
         }
     }
 }

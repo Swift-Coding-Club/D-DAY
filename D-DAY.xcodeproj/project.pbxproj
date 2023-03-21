@@ -95,6 +95,9 @@
 		B3D0430B29C187BD00213B87 /* WidgetView_Multi03_L_Comp01_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D0430A29C187BD00213B87 /* WidgetView_Multi03_L_Comp01_1.swift */; };
 		B3D0430D29C188CC00213B87 /* WidgetView_Multi03_L_Comp01_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D0430C29C188CC00213B87 /* WidgetView_Multi03_L_Comp01_2.swift */; };
 		B3D0430F29C1892800213B87 /* WidgetView_Multi03_L_Comp01_3.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D0430E29C1892800213B87 /* WidgetView_Multi03_L_Comp01_3.swift */; };
+		B3FC355129C872B40095ED9D /* WidgetView_Multi03_L_Comp02_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FC355029C872B40095ED9D /* WidgetView_Multi03_L_Comp02_1.swift */; };
+		B3FC355329C872FF0095ED9D /* WidgetView_Multi03_L_Comp02_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FC355229C872FF0095ED9D /* WidgetView_Multi03_L_Comp02_2.swift */; };
+		B3FC355529C8735D0095ED9D /* WidgetView_Multi03_L_Comp02_3.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FC355429C8735D0095ED9D /* WidgetView_Multi03_L_Comp02_3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -233,6 +236,9 @@
 		B3D0430A29C187BD00213B87 /* WidgetView_Multi03_L_Comp01_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView_Multi03_L_Comp01_1.swift; sourceTree = "<group>"; };
 		B3D0430C29C188CC00213B87 /* WidgetView_Multi03_L_Comp01_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView_Multi03_L_Comp01_2.swift; sourceTree = "<group>"; };
 		B3D0430E29C1892800213B87 /* WidgetView_Multi03_L_Comp01_3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView_Multi03_L_Comp01_3.swift; sourceTree = "<group>"; };
+		B3FC355029C872B40095ED9D /* WidgetView_Multi03_L_Comp02_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView_Multi03_L_Comp02_1.swift; sourceTree = "<group>"; };
+		B3FC355229C872FF0095ED9D /* WidgetView_Multi03_L_Comp02_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView_Multi03_L_Comp02_2.swift; sourceTree = "<group>"; };
+		B3FC355429C8735D0095ED9D /* WidgetView_Multi03_L_Comp02_3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView_Multi03_L_Comp02_3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -487,6 +493,9 @@
 				B3D0430A29C187BD00213B87 /* WidgetView_Multi03_L_Comp01_1.swift */,
 				B3D0430C29C188CC00213B87 /* WidgetView_Multi03_L_Comp01_2.swift */,
 				B3D0430E29C1892800213B87 /* WidgetView_Multi03_L_Comp01_3.swift */,
+				B3FC355029C872B40095ED9D /* WidgetView_Multi03_L_Comp02_1.swift */,
+				B3FC355229C872FF0095ED9D /* WidgetView_Multi03_L_Comp02_2.swift */,
+				B3FC355429C8735D0095ED9D /* WidgetView_Multi03_L_Comp02_3.swift */,
 			);
 			path = Multiple03;
 			sourceTree = "<group>";
@@ -867,6 +876,7 @@
 				B3075B2629C2F2A4007F978C /* WidgetView_Multi07_XL_Comp01.swift in Sources */,
 				B3C304D729AB91D700AF2B33 /* WidgetView_Single01.swift in Sources */,
 				B300FF2729C06DA800A2AB3B /* WidgetView_Multi05_L_Comp01.swift in Sources */,
+				B3FC355329C872FF0095ED9D /* WidgetView_Multi03_L_Comp02_2.swift in Sources */,
 				B3075B0829C19867007F978C /* WidgetView_Single01_M_Comp02.swift in Sources */,
 				B3075B2029C2F0B5007F978C /* WidgetView_Multi06.swift in Sources */,
 				B300FF2B29C072D500A2AB3B /* CustomFunctions.swift in Sources */,
@@ -887,11 +897,13 @@
 				B3075B2429C2F298007F978C /* WidgetView_Multi06_XL_Comp02.swift in Sources */,
 				B3075B3029C305C8007F978C /* WidgetView_Multi08_XL_Comp01.swift in Sources */,
 				B300FF2329C06C8900A2AB3B /* WidgetView_Multi04_L_Comp01.swift in Sources */,
+				B3FC355129C872B40095ED9D /* WidgetView_Multi03_L_Comp02_1.swift in Sources */,
 				B3075B0629C1985D007F978C /* WidgetView_Single01_M_Comp01.swift in Sources */,
 				B3C3050329AB9EB900AF2B33 /* WidgetView_Multi01.swift in Sources */,
 				B3075B2829C2F2A9007F978C /* WidgetView_Multi07_XL_Comp02.swift in Sources */,
 				B3D0430B29C187BD00213B87 /* WidgetView_Multi03_L_Comp01_1.swift in Sources */,
 				B300FF1D29C06BAB00A2AB3B /* WidgetView_Multi03_M_Comp02.swift in Sources */,
+				B3FC355529C8735D0095ED9D /* WidgetView_Multi03_L_Comp02_3.swift in Sources */,
 				B300FF1329C06AB500A2AB3B /* WidgetView_Multi01_M_Comp01.swift in Sources */,
 				4322A41729ACF9DE00994EB1 /* TimelineProvider.swift in Sources */,
 				B300FF1B29C06BA600A2AB3B /* WidgetView_Multi03_M_Comp01.swift in Sources */,
@@ -1068,6 +1080,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1080,7 +1093,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1101,6 +1114,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1113,7 +1127,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -1165,6 +1179,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MA5KYZD992;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dday.dd.D-DAYUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1183,6 +1198,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4F4VQHPY5W;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dday.dd.D-DAYUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -15,7 +15,7 @@ struct WidgetView_Single01_S_Comp01: View { // disable shadow
         let defaultDdaySymbolMenu: [DdaySymbol] = [0].map { index in
             let symbolDdayItem = DdaySymbol (identifier: "identifier", display: "diaplay")
             symbolDdayItem.ddayTitle = "길게눌러서 디데이 추가하기"
-            symbolDdayItem.ddayDate = "2023.03.04"
+            symbolDdayItem.ddayDate = "2024.12.04"
             symbolDdayItem.ddayBgColor = "ddayBlack"
             symbolDdayItem.ddayTxtColor = "ddayWhite"
 
@@ -24,8 +24,8 @@ struct WidgetView_Single01_S_Comp01: View { // disable shadow
             
         let ddaySymbolMenu: [DdaySymbol] = entry.configuration.ddaySymbol ?? defaultDdaySymbolMenu
         
-        var dateInt = CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  "2022.02.16"))
-        var ddayDorPlus = CustomFunctions().ddaySetDorPlus(dateIntParam: dateInt)
+        let dateInt = CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  "2024.02.16"))
+        let ddayDorPlus = CustomFunctions().ddaySetDorPlus(dateIntParam: dateInt)
         
         ZStack {
             ZStack() {
@@ -50,16 +50,38 @@ struct WidgetView_Single01_S_Comp01: View { // disable shadow
                     Text("Encountered Error S01-1-1")
                 }
                 
-                Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
-                    .frame(width: 70, height: 50, alignment: .topTrailing)
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 48, trailing: -60))
-                //                    .font(.system(size: 12.0))
-                    .font(.custom("Inter-Bold", size: 10.0))
-                    .multilineTextAlignment(.trailing)
+                
+                
+                
+                
+                
+                ////////////// 확인!!!!!!!!!!!!!!!!!!!!!!
+                switch ddaySymbolMenu[safe: 0]!.ddayTitle!.count {
+                case ...10:
+                    Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                        .frame(width: 70, height: 50, alignment: .topTrailing)
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 48, trailing: -60))
+                        .font(.custom("Inter-Bold", size: 12.0))
+                        .multilineTextAlignment(.trailing)
+                
+                case 11...:
+                    Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                        .frame(width: 70, height: 50, alignment: .topTrailing)
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 48, trailing: -60))
+                        .font(.custom("Inter-Bold", size: 10.0))
+                        .multilineTextAlignment(.trailing)
+                    
+                default:
+                    Text("Encountered Error S01-1-2")
+                }
+                
+                
+                
+                
+                
             }
             .position(x: 80,y: 64)
-            .foregroundColor(Color("ddayNeonGreen"))
-//                .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
+            .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
             
             var dateNumber = CustomFunctions().dateIntSign(dateIntParam: dateInt)
             switch dateNumber.count {
@@ -71,8 +93,7 @@ struct WidgetView_Single01_S_Comp01: View { // disable shadow
                     .kerning(-10)
                     .rotationEffect(.degrees(-10))
                     .position(x: 82, y: 108)
-                    .foregroundColor(Color("ddayNeonGreen"))
-//                        .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
+                    .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
             case 3:
                 
                 switch Int(dateNumber)! / 100 {
@@ -84,8 +105,7 @@ struct WidgetView_Single01_S_Comp01: View { // disable shadow
                         .kerning(-10)
                         .rotationEffect(.degrees(-10))
                         .position(x: 106, y: 108)
-                        .foregroundColor(Color("ddayNeonGreen"))
-//                            .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
+                        .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                     
                 case 3...8 :
                     Text("\(dateNumber)")
@@ -95,8 +115,7 @@ struct WidgetView_Single01_S_Comp01: View { // disable shadow
                         .kerning(-10)
                         .rotationEffect(.degrees(-10))
                         .position(x: 104, y: 108)
-                        .foregroundColor(Color("ddayNeonGreen"))
-//                            .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
+                        .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                     
                 case 9 :
                     Text("\(dateNumber)")
@@ -106,8 +125,8 @@ struct WidgetView_Single01_S_Comp01: View { // disable shadow
                         .kerning(-10)
                         .rotationEffect(.degrees(-10))
                         .position(x: 105, y: 108)
-                        .foregroundColor(Color("ddayNeonGreen"))
-//                            .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
+                        .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
+                    
                 default:
                     Text("Default Error")
                 }
@@ -116,7 +135,6 @@ struct WidgetView_Single01_S_Comp01: View { // disable shadow
                 Text("Encountered Error S01-1-2")
             }
         }
-//            .background(Color(ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
-          .background(Color("ddayNeonBlue"))
+        .background(Color(ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
     }
 }

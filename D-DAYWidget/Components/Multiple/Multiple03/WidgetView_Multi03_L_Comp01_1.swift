@@ -12,19 +12,31 @@ struct WidgetView_Multi03_L_Comp01_1: View { // disable shadow
     var entry: Provider.Entry
     
     var body: some View {
-        let defaultDdaySymbolMenu_sub: [DdaySymbol] = [
-            DdaySymbol(identifier: "ddayNeonPink", display: "길게눌러서 디데이 추가하기", pronunciationHint: "ddayNeonGreen", subtitle: "2024.01.04", image: nil),
-            DdaySymbol(identifier: "ddayNeonPink", display: "길게눌러서 디데이 추가하기", pronunciationHint: "ddayNeonGreen", subtitle: "2024.02.04", image: nil),
-            DdaySymbol(identifier: "ddayNeonPink", display: "길게눌러서 디데이 추가하기", pronunciationHint: "ddayNeonGreen", subtitle: "2024.03.04", image: nil),
+        
+        let defaultStringArr: [[String]] = [
+            // format: [ddayTitle, ddayDate, ddayBgColor, ddayTxtColor]
+            ["길게눌러서 디데이 추가하기", "2024.01.04", "ddayNeonPink", "ddayNeonGreen"],
+            ["길게눌러서 디데이 추가하기", "2024.02.04", "ddayNeonPink", "ddayNeonGreen"],
+            ["길게눌러서 디데이 추가하기", "2023.02.04", "ddayNeonPink", "ddayNeonGreen"],
         ]
         
-        let ddaySymbolMenu_sub: [DdaySymbol] = entry.configuration.ddaySymbol ?? defaultDdaySymbolMenu_sub
+        let defaultDdaySymbolMenu: [DdaySymbol] = defaultStringArr.map { sArray in
+            let symbolDdayItem = DdaySymbol (identifier: "identifier", display: "diaplay")
+            symbolDdayItem.ddayTitle = sArray[0]
+            symbolDdayItem.ddayDate = sArray[1]
+            symbolDdayItem.ddayBgColor = sArray[2]
+            symbolDdayItem.ddayTxtColor = sArray[3]
+            
+            return symbolDdayItem
+        }
         
-        var dateInt: Int = CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu_sub[safe: 0]?.subtitleString ??  "2024.02.16"))
+        let ddaySymbolMenu: [DdaySymbol] = entry.configuration.ddaySymbol ?? defaultDdaySymbolMenu
+        
+        var dateInt: Int = CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.subtitleString ??  "2023.12.16"))
         var ddayDorPlus: String = CustomFunctions().ddaySetDorPlus(dateIntParam: dateInt)
         var _formattedDateInt: String = CustomFunctions().dateIntSign(dateIntParam: dateInt) // 296
         
-        var txtStringArr: [String] = [ddayDorPlus] //D296 +296
+        var txtStringArr: [String] = []
         var _dateCountArr: [Int] = [_formattedDateInt.count]
         
         let _: [String] = _dateCountArr.map { index in
@@ -36,53 +48,94 @@ struct WidgetView_Multi03_L_Comp01_1: View { // disable shadow
         }
         
         ZStack {
-            Text(ddaySymbolMenu_sub[safe: 0]?.displayString ?? "길게눌러서 디데이 추가하기")
+            Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
                 .font(.custom("Inter-Bold", size: 12.0)) // 2- 14, 3~5-12, <8=-11,  많이-9
                 .frame(width: 70, height: 55, alignment: .topTrailing)
                 .multilineTextAlignment(.trailing)
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 270, trailing: 0))
-                .foregroundColor(Color(ddaySymbolMenu_sub[safe: 0]?.identifier ?? "ddayNeonPink"))
+                .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayNeonPink"))
             
-            Text(ddaySymbolMenu_sub[safe: 0]?.subtitleString ?? "2099.01.30")
+            Text(ddaySymbolMenu[safe: 0]?.ddayDate ?? "2019.03.30")
                 .font(.custom("Inter-Bold", size: 12.0))
                 .rotationEffect(.degrees(-90))
                 .frame(width: 70, height: 50, alignment: .topLeading)
                 .padding(EdgeInsets(top: 295, leading: 0, bottom: 0, trailing: 45))
-                .foregroundColor(Color(ddaySymbolMenu_sub[safe: 0]?.identifier ?? "ddayNeonPink"))
-        
-            Text("\(txtStringArr[safe: 0] ?? "E")")
-                .font(.custom("Inter-Bold", size: 95.0))
-                .frame(width: 55, height: 20, alignment: .top)
-                .position(x: 70, y: 104)
-                .foregroundColor(Color(ddaySymbolMenu_sub[safe: 0]?.identifier ?? "ddayNeonPink"))
+                .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayNeonPink"))
             
-            Text("\(txtStringArr[safe: 1] ?? "")")
-                .font(.custom("Inter-Bold", size: 95.0))
-                .frame(width: 55, height: 20, alignment: .top)
-                .position(x: 71, y: 170)
-                .foregroundColor(Color(ddaySymbolMenu_sub[safe: 0]?.identifier ?? "ddayNeonPink"))
-            
-            Text("\(txtStringArr[safe: 2] ?? "")")
-                .font(.custom("Inter-Bold", size: 95.0))
-                .frame(width: 55, height: 20, alignment: .top)
-                .position(x: 71, y: 231)
-                .foregroundColor(Color(ddaySymbolMenu_sub[safe: 0]?.identifier ?? "ddayNeonPink"))
-            
-            Text("\(txtStringArr[safe: 3] ?? "")")
-                .font(.custom("Inter-Bold", size: 95.0))
-                .frame(width: 55, height: 20, alignment: .top)
-                .position(x: 71, y: 295)
-                .foregroundColor(Color(ddaySymbolMenu_sub[safe: 0]?.identifier ?? "ddayNeonPink"))
-            
-            
-//            Text("\(txtStringArr[safe: 4] ?? "")")
-//                .font(.custom("Inter-Bold", size: 95.0))
-//                .frame(width: 55, height: 20, alignment: .top)
-//                .position(x: 71, y: 295)
-//                .foregroundColor(Color(ddaySymbolMenu_sub[safe: 0]?.identifier ?? "ddayNeonPink"))
-            
+            switch txtStringArr.count {
+            case 0...3:
+                Text("D")
+                    .font(.custom("Inter-Bold", size: 93.0))
+                    .frame(width: 55, height: 20, alignment: .top)
+                    .position(x: 70, y: 104)
+                    .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayNeonPink"))
+                
+                Text("\(ddayDorPlus)")
+                    .font(.custom("Inter-ExtraBold", size: 50.0))
+                    .frame(width: 75, height: 20, alignment: .top)
+                    .position(x: 37, y: 175)
+                    .kerning(-6)
+                    .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayNeonPink"))
+                
+                Text("\(txtStringArr[safe: 0] ?? "")")
+                    .font(.custom("Inter-Bold", size: 95.0))
+                    .frame(width: 55, height: 20, alignment: .top)
+                    .position(x: 71, y: 170)
+                    .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayNeonPink"))
+                
+                Text("\(txtStringArr[safe: 1] ?? "")")
+                    .font(.custom("Inter-Bold", size: 95.0))
+                    .frame(width: 55, height: 20, alignment: .top)
+                    .position(x: 71, y: 231)
+                    .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayNeonPink"))
+                
+                Text("\(txtStringArr[safe: 2] ?? "")")
+                    .font(.custom("Inter-Bold", size: 95.0))
+                    .frame(width: 55, height: 20, alignment: .top)
+                    .position(x: 71, y: 295)
+                    .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayNeonPink"))
+                
+            default:
+                Text("D")
+                    .font(.custom("Inter-Bold", size: 80.0))
+                    .frame(width: 55, height: 20, alignment: .top)
+                    .position(x: 78, y: 94)
+                    .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayNeonPink"))
+                
+                Text("\(ddayDorPlus)")
+                    .font(.custom("Inter-ExtraBold", size: 50.0))
+                    .frame(width: 75, height: 20, alignment: .top)
+                    .position(x: 45, y: 147)
+                    .kerning(-6)
+                    .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayNeonPink"))
+                
+                Text("\(txtStringArr[safe: 0] ?? "9")")
+                    .font(.custom("Inter-Bold", size: 80.0))
+                    .frame(width: 55, height: 20, alignment: .top)
+                    .position(x: 79, y: 149)
+                    .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayNeonPink"))
+                
+                Text("\(txtStringArr[safe: 1] ?? "9")")
+                    .font(.custom("Inter-Bold", size: 80.0))
+                    .frame(width: 55, height: 20, alignment: .top)
+                    .position(x: 79, y: 204)
+                    .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayNeonPink"))
+                
+                Text("\(txtStringArr[safe: 2] ?? "9")")
+                    .font(.custom("Inter-Bold", size: 80.0))
+                    .frame(width: 55, height: 20, alignment: .top)
+                    .position(x: 79, y: 259)
+                    .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayNeonPink"))
+                
+                Text("\(txtStringArr[safe: 3] ?? "9")")
+                    .font(.custom("Inter-Bold", size: 80.0))
+                    .frame(width: 55, height: 20, alignment: .top)
+                    .position(x: 79, y: 314)
+                    .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayNeonPink"))
+            }
         }
         .frame(width: 80, height: 400)
-        .background(Color(ddaySymbolMenu_sub[safe: 0]?.pronunciationHint ?? "ddayNeonGreen"))
+        .background(Color(ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayNeonGreen"))
+        .clipped()
     }
 }
