@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController, CALayerDelegate {
 
-    @IBOutlet weak var editButton: UIBarButtonItem!
+//    @IBOutlet weak var editButton: UIBarButtonItem!
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var titleView: UIView!
@@ -20,8 +20,8 @@ class ViewController: UIViewController, CALayerDelegate {
     // UserDefaults 넣어 줄 struct list
     var ddayList = [DdayInfo]()
     
-    let editButtonTitle0 = "Edit"
-    let editButtonTitle1 = "Done"
+//    let editButtonTitle0 = "Edit"
+//    let editButtonTitle1 = "Done"
         
     private var gradient: CAGradientLayer!
     
@@ -42,31 +42,25 @@ class ViewController: UIViewController, CALayerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // titleView shape
         titleView.layer.cornerRadius = 20
-//        titleView.layer.maskedCorners = [.layerMaxXMaxYCorner]
-        
         titleView.layer.shadowColor = UIColor.gray.cgColor
         titleView.layer.shadowOpacity = 0.8
         titleView.layer.shadowOffset = CGSize(width: 3, height: 3) // 그림자 위치
         titleView.layer.shadowRadius = 2 // 그림자 경계의 선명도
-    
         
-        tableView.layer.cornerRadius = 20
-        tableView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-        
-        tableView.layer.shadowColor = UIColor.gray.cgColor
-        tableView.layer.shadowOpacity = 1.0
-        tableView.layer.shadowOffset = CGSize.zero
-        tableView.layer.shadowRadius = 6 // 그림자 경계의 선명도
-        
+        // tableView load
         tableView.delegate = self
         tableView.dataSource = self
         
+        // tableView drag&drop delegate to reordering cell
+        tableView.dragInteractionEnabled = true
+        tableView.dragDelegate = self
+        tableView.dropDelegate = self
+        
         // DDAYCell XIB파일 등록
         tableView.register(UINib(nibName: "DDAYCell", bundle: nil), forCellReuseIdentifier: "ReusableCell")
-        
-        tableView.isEditing = false
-        
+                
         // 추가하기 버튼 shadow 효과
         addButton.layer.shadowColor = UIColor.gray.cgColor
         addButton.layer.shadowOpacity = 0.3
@@ -79,14 +73,11 @@ class ViewController: UIViewController, CALayerDelegate {
         gradient.delegate = self
         tableView.layer.mask = gradient
 
-        self.tableView.setEditing(true, animated: true)
-
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
 
-//        tableView.contentInset = UIEdgeInsets(top: tableView.frame.height - 40, left: 0, bottom: 0, right: 0)
         gradient.colors = [UIColor.black.cgColor, UIColor.black.cgColor, UIColor.black.cgColor, UIColor.clear.cgColor]
 
         updateGradientFrame()
@@ -128,11 +119,6 @@ class ViewController: UIViewController, CALayerDelegate {
         
         if self.tableView.isEditing { // edit mode가 아닐 때 (setEditing true -> false)
             addButton.isHidden = false
-
-//            self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: editButtonTitle0, style: .plain, target: self, action:
-//            #selector(editDDAY))
-            
-            self.tableView.setEditing(false, animated: true)
             
             // TODO: sendDataToExtension 실행으로 인해 animated: true가 실행이 안됨
 //            saveUserDefaults(ddayListToSave: ddayList) // 바뀐 table view 값 refresh
@@ -141,26 +127,19 @@ class ViewController: UIViewController, CALayerDelegate {
         } else { // edit mode일 떄 (setEditing false -> true)
             
             addButton.isHidden = true
-                        
-//            self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: editButtonTitle1, style: .plain, target: self, action:
-//            #selector(editDDAY))
             
-            self.tableView.setEditing(true, animated: true)
         }
 
     }
     
     func dateFormatToString(from value: Date) -> String {
-        
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy.MM.dd"
         
         return dateFormatter.string(from: value)
-        
     }
     
     func calculateDday(storedDate: Date) -> Int {
-        
         let targetDateString = dateFormatToString(from: storedDate)
 
         let dateFormatter = DateFormatter()
@@ -174,12 +153,10 @@ class ViewController: UIViewController, CALayerDelegate {
         let timeInterval = Calendar.current.dateComponents([.day], from: formattedTargetDate, to: formattedCurrentDate)
             
         return timeInterval.day!
-        
     }
     
     // edit mode 종료 후 바뀐 table view 값을 다시 UserDefaults에 저장하고, 다시 불러와서 table view에 reload
     func sendDataToExtension(ddayListToSave: [DdayInfo]) {
-
         // UserDefaults에 바뀐 struct list 저장하기 (decode UserDefaults)
         let data = ddayList.map { try? JSONEncoder().encode($0) }
         UserDefaults.shared.setValue(data, forKey: KeyForUserDefaults)
@@ -192,14 +169,11 @@ class ViewController: UIViewController, CALayerDelegate {
         
         // AddViewController가 dismiss될 때마다(== viewWillAppear) table view 리프레시 해주기
         tableView.reloadData()
-
     }
-    
 }
 
 // MARK: DataSource: table view의 cell을 호출해 주는 역할
 extension ViewController: UITableViewDataSource{
-    
     // 한 section 안에 몇개의 rows가 있을 건지 알려주는 함수
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ddayList.count
@@ -237,17 +211,6 @@ extension ViewController: UITableViewDataSource{
         return cell
     }
     
-    
-    // editingStyleForRowAt: table view의 cell별 +, - 모드 지정 (none으로 해줘서 deletion control 없앰)
-    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-        return .none
-    }
-    
-    // MARK: tableView.isEditing == true일 때 셀을 들여쓸지에 대한 설정 (editingStyleForRowAt에서 .none 설정 시 빈공간 제거)
-    func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-    
     // trailingSwipeActionsConfigurationForRowAt: table view의 cell을 swipe 했을 때 삭제 옵션이 나옴
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         // delete 버튼
@@ -265,17 +228,30 @@ extension ViewController: UITableViewDataSource{
         return UISwipeActionsConfiguration(actions: [delete])
     }
     
-    // moveRowAt: table view의 cell을 이동시켜 주는 역할
-    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        print("\(self.ddayList) from: \(sourceIndexPath.row) -> to: \(destinationIndexPath.row)")
-        let targetItem: DdayInfo = self.ddayList[sourceIndexPath.row]
-        self.ddayList.remove(at: sourceIndexPath.row)
-        self.ddayList.insert(targetItem, at: destinationIndexPath.row)
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) { }
+
+}
+
+// MARK: TableView Drage Delegate to reorder cell
+extension ViewController: UITableViewDragDelegate {
+    func tableView(_ tableView: UITableView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
+        return [UIDragItem(itemProvider: NSItemProvider())]
+    }
+}
+
+// MARK: TableView Drop Delegate to reorder cell
+extension ViewController: UITableViewDropDelegate {
+    func tableView(_ tableView: UITableView, dropSessionDidUpdate session: UIDropSession, withDestinationIndexPath destinationIndexPath: IndexPath?) -> UITableViewDropProposal {
+
+        if session.localDragSession != nil { // Drag originated from the same app.
+            return UITableViewDropProposal(operation: .move, intent: .insertAtDestinationIndexPath)
+        }
+
+        return UITableViewDropProposal(operation: .cancel, intent: .unspecified)
     }
 
-//    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-//        cell.showsReorderControl = false
-//    }
+    func tableView(_ tableView: UITableView, performDropWith coordinator: UITableViewDropCoordinator) {
+    }
 }
     
 // MARK: Delegate: table view 클릭 시 interaction
@@ -370,7 +346,6 @@ extension ViewController: UIScrollViewDelegate {
         
         UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseOut, animations: {
             
-//            self.titleViewTrailingConstraint.constant = 0
             self.titleViewLeadingConstraint.constant = 0
             self.titleView.frame.size.height = 0
             self.titleView.alpha = 0
@@ -380,8 +355,6 @@ extension ViewController: UIScrollViewDelegate {
         }, completion: { [weak self] (_) in
 
             self?.navigationController?.navigationBar.barTintColor = self?.titleView.backgroundColor
-
-            self?.editButton.tintColor = UIColor.white
             
             // Unlock the animation functionality
             self?.isAnimationInProgress = false
@@ -406,8 +379,6 @@ extension ViewController: UIScrollViewDelegate {
         }, completion: { [weak self] (_) in
 
             self?.navigationController?.navigationBar.barTintColor = UIColor.white
-
-            self?.editButton.tintColor = UIColor.red
 
             // Unlock the animation functionality
             self?.isAnimationInProgress = false
