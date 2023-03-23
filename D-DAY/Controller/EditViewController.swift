@@ -73,7 +73,7 @@ class EditViewController: UIViewController {
 
         // 불러온 UserDefaults를 struct list에 넣어주기
         ddayList = encodedData.map { try! JSONDecoder().decode(DdayInfo.self, from: $0) }
-        
+
         configuration()
     }
 }
@@ -240,17 +240,12 @@ extension EditViewController {
     
     // IBAction for '저장(save)' button
     @IBAction func saveButtonTapped(_ sender: Any) {
-        print("\(cellTag) Tag로 index값을 받아옴")
-        
         
         var bgColor = String()
         var txtColor = String()
                 
         bgColor = colorForBackground?.toHexString() ?? "ddayBlack"
         txtColor = colorForTXT?.toHexString() ?? "ddayWhite"
-
-        print("bgColor: \(bgColor)")
-        print("txtColor: \(txtColor)")
 
         // 변경될 struct
         let editDdayInfo = DdayInfo(title: txtFieldForTitle.text!, subTitle: txtFieldForSubtitle.text!,  date: theDate, widgetTextColor: bgColor, widgetBGColor: txtColor, language: language)
@@ -360,8 +355,14 @@ extension EditViewController: UITableViewDataSource {
             return cellForTxtfield
             
         } else if indexPath.section == 1 { // datepicker section // TODO: UserDefaults에 저장된 Date값 불러오기
+            theDate = ddayList[cellTag].date
+            
             let cellForDatepicker = addTableView.dequeueReusableCell(withIdentifier: target.type.rawValue, for: indexPath) as! DatePickerCell
             cellForDatepicker.textLabel?.text = "\(target.title)"
+            
+            // userdefaults에서 date값으로 수정
+            cellForDatepicker.accDatePicker.date = ddayList[cellTag].date
+            
             cellForDatepicker.delegate = self
             
             return cellForDatepicker
@@ -384,7 +385,6 @@ extension EditViewController: UITableViewDataSource {
     
     @objc private func getSubTitle() {
         self.subtitleString = self.txtFieldForSubtitle.text
-        print("subtitle 2222: \(self.subtitleString!)")
         
         saveButtonEnabled()
     }

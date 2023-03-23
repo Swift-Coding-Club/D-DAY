@@ -9,7 +9,6 @@ import UIKit
 
 class ViewController: UIViewController, CALayerDelegate {
 
-//    @IBOutlet weak var editButton: UIBarButtonItem!
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var titleView: UIView!
@@ -19,9 +18,6 @@ class ViewController: UIViewController, CALayerDelegate {
     
     // UserDefaults 넣어 줄 struct list
     var ddayList = [DdayInfo]()
-    
-//    let editButtonTitle0 = "Edit"
-//    let editButtonTitle1 = "Done"
         
     private var gradient: CAGradientLayer!
     
@@ -90,11 +86,8 @@ class ViewController: UIViewController, CALayerDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-                
-//        let userDefaults = UserDefaults(suiteName: "group.dday.ddayApp")
-            
+
         // UserDefaults 불러오기 (encode UserDefaults)
-//        let encodedData = UserDefaults.standard.array(forKey: KeyForUserDefaults) as? [Data] ?? []
         let encodedData = UserDefaults.shared.array(forKey: KeyForUserDefaults) as? [Data] ?? []
             
         // 불러온 UserDefaults를 struct list에 넣어주기
@@ -121,13 +114,10 @@ class ViewController: UIViewController, CALayerDelegate {
             addButton.isHidden = false
             
             // TODO: sendDataToExtension 실행으로 인해 animated: true가 실행이 안됨
-//            saveUserDefaults(ddayListToSave: ddayList) // 바뀐 table view 값 refresh
             sendDataToExtension(ddayListToSave: ddayList)
             
         } else { // edit mode일 떄 (setEditing false -> true)
-            
             addButton.isHidden = true
-            
         }
 
     }
@@ -155,7 +145,7 @@ class ViewController: UIViewController, CALayerDelegate {
         return timeInterval.day!
     }
     
-    // edit mode 종료 후 바뀐 table view 값을 다시 UserDefaults에 저장하고, 다시 불러와서 table view에 reload
+    // 변경된 tableView 값을 UserDefaults에 저장하고, 다시 불러와서 tableView reload
     func sendDataToExtension(ddayListToSave: [DdayInfo]) {
         // UserDefaults에 바뀐 struct list 저장하기 (decode UserDefaults)
         let data = ddayList.map { try? JSONEncoder().encode($0) }
@@ -167,7 +157,6 @@ class ViewController: UIViewController, CALayerDelegate {
         // 불러온 UserDefaults를 struct list에 넣어주기
         ddayList = encodedData.map { try! JSONDecoder().decode(DdayInfo.self, from: $0) }
         
-        // AddViewController가 dismiss될 때마다(== viewWillAppear) table view 리프레시 해주기
         tableView.reloadData()
     }
 }
@@ -211,15 +200,16 @@ extension ViewController: UITableViewDataSource{
         return cell
     }
     
-    // trailingSwipeActionsConfigurationForRowAt: table view의 cell을 swipe 했을 때 삭제 옵션이 나옴
+    // trailingSwipeActionsConfigurationForRowAt: table view의 cell을 swipe 했을 때
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        // delete 버튼
+        
+        // delete action 생성
         let delete = UIContextualAction(style: .destructive, title: "delete") {
             action, view, completion in
             self.ddayList.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
             
-            // UserDefaults 업데이트
+            // UserDefaults에 업데이트
             self.sendDataToExtension(ddayListToSave: self.ddayList)
         }
         delete.image = UIImage(systemName: "trash.fill")
@@ -228,7 +218,15 @@ extension ViewController: UITableViewDataSource{
         return UISwipeActionsConfiguration(actions: [delete])
     }
     
-    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) { }
+    // tableView의 cell 이동 시
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let targetItem: DdayInfo = self.ddayList[sourceIndexPath.row]
+        self.ddayList.remove(at: sourceIndexPath.row)
+        self.ddayList.insert(targetItem, at: destinationIndexPath.row)
+        
+        // UserDefaults에 업데이트
+        self.sendDataToExtension(ddayListToSave: self.ddayList)
+    }
 
 }
 
@@ -243,15 +241,15 @@ extension ViewController: UITableViewDragDelegate {
 extension ViewController: UITableViewDropDelegate {
     func tableView(_ tableView: UITableView, dropSessionDidUpdate session: UIDropSession, withDestinationIndexPath destinationIndexPath: IndexPath?) -> UITableViewDropProposal {
 
-        if session.localDragSession != nil { // Drag originated from the same app.
+        if session.localDragSession != nil { // 앱 내부에서 드래그가 발생했을 때
             return UITableViewDropProposal(operation: .move, intent: .insertAtDestinationIndexPath)
         }
 
         return UITableViewDropProposal(operation: .cancel, intent: .unspecified)
     }
 
-    func tableView(_ tableView: UITableView, performDropWith coordinator: UITableViewDropCoordinator) {
-    }
+    // 사용자가 드롭을 완료할 때 (드래그 후 스크린에서 손가락을 뗄 때)
+    func tableView(_ tableView: UITableView, performDropWith coordinator: UITableViewDropCoordinator) {}
 }
     
 // MARK: Delegate: table view 클릭 시 interaction
@@ -261,9 +259,7 @@ extension ViewController: UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath) as! DDAYCell
         
         cell.tag = indexPath.row
-        
-        print("\(indexPath.row) 버튼의 Tag값: \(cell.tag)")
-        
+                
         let storyboard = UIStoryboard(name: "MainEdit", bundle: nil)
         guard let nextVC = storyboard.instantiateViewController(identifier: "EditViewController") as? EditViewController else {
                 return
@@ -290,9 +286,6 @@ extension ViewController: UIScrollViewDelegate {
         
         // Check if the animation is locked or not
         if !isAnimationInProgress {
-            
-            guard let topViewHeightConstraint = topViewHeightConstraint else { return }
-            guard let scrollViewTopConstraint = scrollViewTopConstraint else { return }
             
             // Check if an animation is required
             if scrollView.contentOffset.y > .zero &&
@@ -323,7 +316,6 @@ extension ViewController: UIScrollViewDelegate {
     // MARK: 스크롤뷰의 drag animation이 끝난 후 (위치가 맨 밑일 경우 실행)
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         if (scrollView.contentOffset.y + 1) >= (scrollView.contentSize.height - scrollView.frame.size.height) {
-            print("맨끝이에오옥")
             gradient.colors = [UIColor.clear.cgColor, UIColor.black.cgColor, UIColor.black.cgColor, UIColor.black.cgColor]
         }
     }
@@ -335,12 +327,11 @@ extension ViewController: UIScrollViewDelegate {
             y: tableView.contentOffset.y,
             width: tableView.bounds.width,
             height: tableView.bounds.height
-            )
+        )
     }
     
     // 스크롤 down - title view 사라지게
     private func animateTopViewHeight() {
-        
         // Lock the animation functionality
         isAnimationInProgress = true
         
@@ -363,13 +354,11 @@ extension ViewController: UIScrollViewDelegate {
     
     // 스크롤 up - title view 다시 생기게
     private func animateTopViewHeight2() {
-        
         // Lock the animation functionality
         isAnimationInProgress = true
         
         UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseOut, animations: {
             
-//            self.titleViewTrailingConstraint.constant = 20
             self.titleViewLeadingConstraint.constant = -20
             self.titleView.frame.size.height = self.viewHeight
             self.titleView.alpha = 1
@@ -384,6 +373,5 @@ extension ViewController: UIScrollViewDelegate {
             self?.isAnimationInProgress = false
         })
     }
-    
 }
 

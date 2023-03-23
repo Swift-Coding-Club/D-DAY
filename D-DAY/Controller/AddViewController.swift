@@ -248,8 +248,6 @@ extension AddViewController {
             self.largeDayNumber.text = String((-1) * Int(self.largeDayNumber.text!)!)
             self.largeDday.text = "D"
             self.largeDday.font = UIFont(name: "Inter-Bold", size: 165.0)
-            print("constraint >>>> \(largeDday.constraints)")
-            print("font >>>> \(largeDday.font)")
         }
         else {
             self.largeDday.text = "+"
@@ -429,9 +427,6 @@ extension AddViewController {
         bgColor = colorForBackground?.toHexString() ?? "ddayBlack"
         txtColor = colorForTXT?.toHexString() ?? "ddayWhite"
 
-        print("bgColor: \(bgColor)")
-        print("txtColor: \(txtColor)")
-
         // UserDefaults에 추가
         let newDdayInfo = DdayInfo(title: txtFieldForTitle.text!, subTitle: txtFieldForSubtitle.text!, date: theDate, widgetTextColor: bgColor, widgetBGColor: txtColor, language: language)
         
@@ -597,7 +592,6 @@ extension AddViewController: UITableViewDataSource {
     
     @objc private func getSubTitle() {
         self.subtitleString = self.txtFieldForSubtitle.text
-        print("subtitle 2222: \(self.subtitleString!)")
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
