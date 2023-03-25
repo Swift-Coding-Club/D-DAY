@@ -22,7 +22,7 @@ class SplashViewController: UIViewController {
         super.viewDidLoad()
         
         // 투명도 - 투명하게 시작
-        self.splashLabel.alpha = 0.0
+        self.splashLabel.alpha = 0.5
         self.animationView0.alpha = 0.0
         self.animationView1.alpha = 0.0
         self.animationView2.alpha = 0.0
