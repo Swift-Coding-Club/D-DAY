@@ -41,7 +41,7 @@ struct CustomFunctions {
     }
     
     func ddaySetDorPlus(dateIntParam: Int) -> String {
-        if dateIntParam < 0 {
+        if dateIntParam <= 0 {
             return "D"
         } else {
             return "+"
