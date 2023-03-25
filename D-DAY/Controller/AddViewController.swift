@@ -164,7 +164,6 @@ extension AddViewController {
             ])
             
         case "Japanese":
-            
             if Int(mediumDayNumber2.text!)! <= 0 {
                 mediumDayNumber2.text = String((-1) * Int(mediumDayNumber2.text!)!)
                 mediumDday2.text = "ディ-デ-"
@@ -248,8 +247,6 @@ extension AddViewController {
             self.largeDayNumber.text = String((-1) * Int(self.largeDayNumber.text!)!)
             self.largeDday.text = "D"
             self.largeDday.font = UIFont(name: "Inter-Bold", size: 165.0)
-            print("constraint >>>> \(largeDday.constraints)")
-            print("font >>>> \(largeDday.font)")
         }
         else {
             self.largeDday.text = "+"
@@ -429,9 +426,6 @@ extension AddViewController {
         bgColor = colorForBackground?.toHexString() ?? "ddayBlack"
         txtColor = colorForTXT?.toHexString() ?? "ddayWhite"
 
-        print("bgColor: \(bgColor)")
-        print("txtColor: \(txtColor)")
-
         // UserDefaults에 추가
         let newDdayInfo = DdayInfo(title: txtFieldForTitle.text!, subTitle: txtFieldForSubtitle.text!, date: theDate, widgetTextColor: bgColor, widgetBGColor: txtColor, language: language)
         
@@ -560,11 +554,14 @@ extension AddViewController: UITableViewDataSource {
             if indexPath.row == 0 { // title row
                 txtFieldForTitle = cellForTxtfield.accTextField
                 cellForTxtfield.accTextField.addTarget(self, action: #selector(getTitle), for: .editingChanged)
-                txtFieldForTitle.placeholder = "입력하기"
+//                txtFieldForTitle.placeholder = "입력하기"
+                txtFieldForTitle.placeholder = NSLocalizedString("입력하기", comment: "") // 지역화 객체
+
             } else { // subtitle row
                 txtFieldForSubtitle = cellForTxtfield.accTextField
                 cellForTxtfield.accTextField.addTarget(self, action: #selector(getSubTitle), for: .editingDidEnd)
-                txtFieldForSubtitle.placeholder = "입력하기"
+//                txtFieldForSubtitle.placeholder = "입력하기"
+                txtFieldForSubtitle.placeholder = NSLocalizedString("입력하기", comment: "") // 지역화 객체
 
             }
             
@@ -597,7 +594,6 @@ extension AddViewController: UITableViewDataSource {
     
     @objc private func getSubTitle() {
         self.subtitleString = self.txtFieldForSubtitle.text
-        print("subtitle 2222: \(self.subtitleString!)")
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

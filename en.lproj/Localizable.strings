@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  D-DAY
+
+  Created by MinJi Kang on 2023/03/25.
+  
+*/
+
+"디데이를 추가해보세요." = "Add D-DAY";
+
+"추가하기" = "Add";
+"수정하기" = "Edit";
+
+"취소" = "Cancel";
+"저장" = "Done";
+
+"제목" = "Title";
+"추가 설명" = "Subtitle";
+"입력하기" = "Write";
+
+"날짜" = "Date";
+"위젯 색상" = "Widget Colors";

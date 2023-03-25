@@ -32,23 +32,30 @@ class DdaySettingSection {
     var header: String?
     var footer: String?
     
+    let title = NSLocalizedString("제목", comment: "")
+    let subTitle = NSLocalizedString("추가 설명", comment: "")
+    
     static func generateData() -> [DdaySettingSection] {
         let list: [DdaySettingSection] =
         [
             DdaySettingSection(
                 items: [
-                    DdaySettingItem(type: .textfield, title: "제목"),
-                    DdaySettingItem(type: .textfield, title: "추가 설명")
+//                    DdaySettingItem(type: .textfield, title: "제목"),
+                    DdaySettingItem(type: .textfield, title: NSLocalizedString("제목", comment: "")),
+//                    DdaySettingItem(type: .textfield, title: "추가 설명")
+                    DdaySettingItem(type: .textfield, title: NSLocalizedString("추가 설명", comment: ""))
                 ]
             ),
             DdaySettingSection(
                 items: [
-                    DdaySettingItem(type: .datepicker, title: "날짜")
+//                    DdaySettingItem(type: .datepicker, title: "날짜")
+                    DdaySettingItem(type: .datepicker, title: NSLocalizedString("날짜", comment: ""))
                 ]
             ),
             DdaySettingSection(
                 items: [
-                    DdaySettingItem(type: .colorwell, title: "위젯 색상")
+//                    DdaySettingItem(type: .colorwell, title: "위젯 색상")
+                    DdaySettingItem(type: .colorwell, title: NSLocalizedString("위젯 색상", comment: ""))
                 ]
             ),
         ]
