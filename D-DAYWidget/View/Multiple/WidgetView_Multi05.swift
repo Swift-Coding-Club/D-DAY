@@ -8,7 +8,7 @@
 import SwiftUI
 import WidgetKit
 
-struct WidgetView_Multi05EntryView : View {
+struct WidgetView_Multi05EntryView : View { // hex done
     @Environment(\.widgetFamily) var family: WidgetFamily
     
     var entry: Provider.Entry
@@ -35,7 +35,7 @@ struct WidgetView_Multi05EntryView : View {
     }
 }
 
-// Multi Large03, ExtraLarge01
+// Multi Large03
 struct WidgetView_Multi05: Widget {
     let kind: String = "WidgetView_Multi05"
 

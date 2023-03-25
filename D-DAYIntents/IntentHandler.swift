@@ -11,9 +11,9 @@ class IntentHandler: INExtension, ConfigurationIntentHandling {
     
     func provideDdaySymbolOptionsCollection(for intent: ConfigurationIntent, searchTerm: String?, with completion: @escaping (INObjectCollection<DdaySymbol>?, Error?) -> Void) {
         
-        var testArr = UserDefaults(suiteName: "group.dday.ddayApp")!.getDdayInfo()
+        var tableViewDdayList = UserDefaults(suiteName: "group.dday.ddayApp")!.getDdayInfo()
         
-        let symbols: [DdaySymbol] = testArr.map { listItem in
+        let symbols: [DdaySymbol] = tableViewDdayList.map { listItem in
             
             // UserDefaults's date (model from DdayInfo.swift) - 1
             let dateFormatter = DateFormatter()
@@ -21,9 +21,9 @@ class IntentHandler: INExtension, ConfigurationIntentHandling {
             let listItemDate = dateFormatter.string(from: listItem.date)
             
             let symbolDdayItem = DdaySymbol (
-                identifier: "ddayNeonPurple",
+                identifier: "identifier",
                 display: listItem.title,
-                pronunciationHint: "ddayOrange",
+                pronunciationHint: "pronunciationHint",
                 subtitle: listItemDate,
                 image: nil
             )
@@ -35,10 +35,10 @@ class IntentHandler: INExtension, ConfigurationIntentHandling {
             symbolDdayItem.ddayDate = listItemDate
 
             // UserDefaults's widget text color (model from DdayInfo.swift)
-            symbolDdayItem.ddayTxtColor = listItem.widgetTextColor
+            symbolDdayItem.ddayTxtColor = listItem.widgetTextColor ?? "ddayWhite"
             
             // UserDefaults's widget bg color (model from DdayInfo.swift)
-            symbolDdayItem.ddayBgColor = listItem.widgetBGColor
+            symbolDdayItem.ddayBgColor = listItem.widgetBGColor  ?? "ddayBlack"
             
             // UserDefaults's language (model from DdayInfo.swift)
             symbolDdayItem.ddayLanguage = listItem.language

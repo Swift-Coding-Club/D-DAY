@@ -37,7 +37,7 @@ struct WidgetView_Single02EntryView : View {
                 WidgetView_Single02_L_Comp02(entry: self.entry).body
                 
             default:
-                Text("Encountered Error S04-1")
+                Text("Encountered Error S02-2")
             }
             
         @unknown default:

@@ -8,12 +8,14 @@
 import SwiftUI
 import WidgetKit
 
-struct WidgetView_Multi03EntryView : View {
+struct WidgetView_Multi03EntryView : View { // hex done
     @Environment(\.widgetFamily) var family: WidgetFamily
     
     var entry: Provider.Entry
 
     var body: some View {
+        
+        let ddaySymbolMenu: [DdaySymbol] = DefaultArrForWidget_M03().getDaySymbolMenu(entry: self.entry)
         
         switch self.family {
         case .systemMedium:
@@ -32,29 +34,26 @@ struct WidgetView_Multi03EntryView : View {
             switch entry.configuration.shadow?.stringValue ?? "0" {
             case "0": // disable shadow
                 HStack(spacing: 20) {
-                    WidgetView_Multi03_L_Comp01_1(entry: self.entry).body
-                    WidgetView_Multi03_L_Comp01_2(entry: self.entry).body
-                    WidgetView_Multi03_L_Comp01_3(entry: self.entry).body
+                    WidgetView_Multi03_L_Comp01_1(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu).body
+                    WidgetView_Multi03_L_Comp01_2(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu).body
+                    WidgetView_Multi03_L_Comp01_3(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu).body
                 }
                 .frame(width: 400, height: 400)
-//                .background(Color(entry.configuration.ddaySymbol?[safe: 0]?.ddayBgColor ?? "ddayNeonPink"))
-                .background(Color(entry.configuration.ddaySymbol?[safe: 0]?.ddayBgColor ?? "ddayWhite"))
+                .background(Color(hex: entry.configuration.ddaySymbol?[safe: 0]?.ddayBgColor ?? "ddayNeonPink"))
                 
             case "1": // enable shadow
                 HStack(spacing: 20) {
-                    WidgetView_Multi03_L_Comp02_1(entry: self.entry).body
-                    WidgetView_Multi03_L_Comp02_2(entry: self.entry).body
-                    WidgetView_Multi03_L_Comp02_3(entry: self.entry).body
+                    WidgetView_Multi03_L_Comp02_1(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu).body
+                    WidgetView_Multi03_L_Comp02_2(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu).body
+                    WidgetView_Multi03_L_Comp02_3(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu).body
                 }
                 .frame(width: 400, height: 400)
-                .background(Color(entry.configuration.ddaySymbol?[safe: 0]?.ddayBgColor ?? "ddayWhite"))
+                .background(Color(hex: entry.configuration.ddaySymbol?[safe: 0]?.ddayBgColor ?? "ddayNeonPink"))
                 
             default:
-                Text("Encountered Error M03-1")
+                Text("Encountered Error M03-2")
             }
             
-            
-             
         @unknown default:
             Text("Sorry, You have encountered Default Error.  M03-3")
         }
@@ -88,3 +87,6 @@ struct WidgetView_Multi03_Previews2: PreviewProvider {
             .previewContext(WidgetPreviewContext(family: .systemLarge))
     }
 }
+
+
+

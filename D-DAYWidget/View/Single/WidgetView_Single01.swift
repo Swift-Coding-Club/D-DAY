@@ -18,7 +18,7 @@ struct WidgetView_Single01EntryView : View {
         case .systemSmall:
             switch entry.configuration.shadow?.stringValue ?? "0" {
             case "0": // disable shadow
-                WidgetView_Single01_S_Comp01(entry: self.entry).body
+                WidgetView_Single01_S_Comp01(entry: self.entry).body  
                 
             case "1": // enable shadow
                 WidgetView_Single01_S_Comp02(entry: self.entry).body
@@ -70,15 +70,5 @@ struct WidgetView_Single01_Previews2: PreviewProvider {
     static var previews: some View {
         WidgetView_Single01EntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
             .previewContext(WidgetPreviewContext(family: .systemMedium))
-    }
-}
-
-extension Array {
-    subscript (safe index: Int) -> Element? {
-        // iOS 9 or later
-        return indices ~= index ? self[index] : nil
-        // iOS 8 or earlier
-        // return startIndex <= index && index < endIndex ? self[index] : nil
-        // return 0 <= index && index < self.count ? self[index] : nil
     }
 }

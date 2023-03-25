@@ -47,7 +47,7 @@ struct WidgetView_Multi02_M_Comp02: View { // enable shadow
                         .frame(width: 120, height: 50, alignment: .topLeading)
                         .position(x: 180, y: -42)
                         .rotationEffect(.degrees(-90))
-                        .foregroundColor(Color(ddaySymbolMenu[safe: 3]?.ddayBgColor ?? "ddayNeonEmerald"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 3]?.ddayBgColor ?? "ddayNeonEmerald"))
 
                 default:
                     Text(ddaySymbolMenu[safe: 3]?.ddayDate ?? "2023.00.00")
@@ -55,11 +55,11 @@ struct WidgetView_Multi02_M_Comp02: View { // enable shadow
                         .frame(width: 120, height: 50, alignment: .topLeading)
                         .position(x: 180, y: -42)
                         .rotationEffect(.degrees(-90))
-                        .foregroundColor(Color(ddaySymbolMenu[safe: 3]?.ddayTxtColor ?? "ddayNeonEmerald"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 3]?.ddayTxtColor ?? "ddayNeonEmerald"))
                 }
                 ZStack{
                     RoundedRectangle(cornerRadius: 25)
-                        .fill(Color(ddaySymbolMenu[safe: 3]?.ddayBgColor ?? "ddayNeonPurple"))
+                        .fill(Color(hex: ddaySymbolMenu[safe: 3]?.ddayBgColor ?? "ddayNeonPurple"))
                         .frame(width: 110, height: 90)
                     
                     Text("D")
@@ -69,14 +69,14 @@ struct WidgetView_Multi02_M_Comp02: View { // enable shadow
                         .position(x: 44, y: 19)
                         .rotationEffect(.degrees(-10))
                         .multilineTextAlignment(.trailing)
-                        .foregroundColor(Color(ddaySymbolMenu[safe: 3]?.ddayTxtColor ?? "ddayNeonEmerald"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 3]?.ddayTxtColor ?? "ddayNeonEmerald"))
                     
                     Text(ddaySymbolMenu[safe: 3]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
                         .font(.custom("Inter-ExtraBold", size: 8.0))
                         .frame(width: 85, height: 50, alignment: .topTrailing)
                         .position(x: 50, y: 45)
                         .multilineTextAlignment(.trailing)
-                        .foregroundColor(Color(ddaySymbolMenu[safe: 3]?.ddayTxtColor ?? "ddayNeonEmerald"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 3]?.ddayTxtColor ?? "ddayNeonEmerald"))
                     
                     Text("\(CustomFunctions().dateIntSign(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 3]?.ddayDate ??  defaultStringArr[3][1]))))")
                         .font(.custom("Inter-Bold", size: 57.0))
@@ -85,7 +85,7 @@ struct WidgetView_Multi02_M_Comp02: View { // enable shadow
                         .kerning(-5)
                         .position(x: 73, y: 60)
                         .rotationEffect(.degrees(-6))
-                        .foregroundColor(Color(ddaySymbolMenu[safe: 3]?.ddayTxtColor ?? "ddayNeonEmerald"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 3]?.ddayTxtColor ?? "ddayNeonEmerald"))
                 }
                 .frame(width: 110, height: 90)
                 .cornerRadius(25)
@@ -100,18 +100,18 @@ struct WidgetView_Multi02_M_Comp02: View { // enable shadow
                         .font(.custom("Inter-Bold", size: 8.0))
                         .frame(width: 120, height: 50, alignment: .topLeading)
                         .position(x: 181, y: 194)
-                        .foregroundColor(Color(ddaySymbolMenu[safe: 4]?.ddayBgColor ?? "ddayWhite"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 4]?.ddayBgColor ?? "ddayWhite"))
 
                 default:
                     Text(ddaySymbolMenu[safe: 4]?.ddayDate ?? "2023.00.00")
                         .font(.custom("Inter-Bold", size: 8.0))
                         .frame(width: 120, height: 50, alignment: .topLeading)
                         .position(x: 181, y: 194)
-                        .foregroundColor(Color(ddaySymbolMenu[safe: 4]?.ddayTxtColor ?? "ddayWhite"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 4]?.ddayTxtColor ?? "ddayWhite"))
                 }
                 ZStack{
                     RoundedRectangle(cornerRadius: 20)
-                        .fill(Color(ddaySymbolMenu[safe: 4]?.ddayBgColor ?? "ddayNeonPink"))
+                        .fill(Color(hex: ddaySymbolMenu[safe: 4]?.ddayBgColor ?? "ddayNeonPink"))
                         .frame(width: 115, height: 67)
                     
                     Text("D")
@@ -121,14 +121,14 @@ struct WidgetView_Multi02_M_Comp02: View { // enable shadow
                         .position(x: 46, y: 8)
                         .rotationEffect(.degrees(-10))
                         .multilineTextAlignment(.trailing)
-                        .foregroundColor(Color(ddaySymbolMenu[safe: 4]?.ddayTxtColor ?? "ddayWhite"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 4]?.ddayTxtColor ?? "ddayWhite"))
                     
                     Text(ddaySymbolMenu[safe: 4]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
                         .font(.custom("Inter-ExtraBold", size: 8.0))
                         .frame(width: 85, height: 50, alignment: .topTrailing)
                         .position(x: 55, y: 30)
                         .multilineTextAlignment(.trailing)
-                        .foregroundColor(Color(ddaySymbolMenu[safe: 4]?.ddayTxtColor ?? "ddayWhite"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 4]?.ddayTxtColor ?? "ddayWhite"))
                     
                     Text("\(CustomFunctions().dateIntSign(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 4]?.ddayDate ??  defaultStringArr[4][1]))))")
                         .font(.custom("Inter-Bold", size: 47.0))
@@ -136,7 +136,7 @@ struct WidgetView_Multi02_M_Comp02: View { // enable shadow
                         .kerning(-5)
                         .position(x: 75, y: 47)
                         .rotationEffect(.degrees(-6))
-                        .foregroundColor(Color(ddaySymbolMenu[safe: 4]?.ddayTxtColor ?? "ddayWhite"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 4]?.ddayTxtColor ?? "ddayWhite"))
                 }
                 .frame(width: 115, height: 67)
                 .cornerRadius(20)
@@ -153,18 +153,18 @@ struct WidgetView_Multi02_M_Comp02: View { // enable shadow
                         .font(.custom("Inter-Bold", size: 8.0))
                         .frame(width: 120, height: 50, alignment: .topLeading)
                         .position(x: 74, y: 50)
-                        .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayNeonGreen"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayNeonGreen"))
 
                 default:
                     Text(ddaySymbolMenu[safe: 0]?.ddayDate ?? "2023.00.00")
                         .font(.custom("Inter-Bold", size: 8.0))
                         .frame(width: 120, height: 50, alignment: .topLeading)
                         .position(x: 74, y: 50)
-                        .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayNeonGreen"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayNeonGreen"))
                 }
                 ZStack{
                     RoundedRectangle(cornerRadius: 25)
-                        .fill(Color(ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayNeonGreen"))
+                        .fill(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayNeonGreen"))
                         .frame(width: 150, height: 70)
                     
                     Text("D")
@@ -173,14 +173,14 @@ struct WidgetView_Multi02_M_Comp02: View { // enable shadow
                         .position(x: 48, y: 4)
                         .rotationEffect(.degrees(-10))
                         .multilineTextAlignment(.trailing)
-                        .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                     
                     Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
                         .font(.custom("Inter-ExtraBold", size: 9.0))
                         .frame(width: 90, height: 50, alignment: .topTrailing)
                         .position(x: 65, y: 32)
                         .multilineTextAlignment(.trailing)
-                        .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                     
                     Text("\(CustomFunctions().dateIntSign(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  defaultStringArr[0][1]))))")
                         .font(.custom("Inter-Bold", size: 51.0))
@@ -189,7 +189,7 @@ struct WidgetView_Multi02_M_Comp02: View { // enable shadow
                         .kerning(-5)
                         .position(x: 78, y: 50)
                         .rotationEffect(.degrees(-4))
-                        .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                 }
                 .frame(width: 150, height: 70)
                 .cornerRadius(25)
@@ -204,18 +204,18 @@ struct WidgetView_Multi02_M_Comp02: View { // enable shadow
                         .font(.custom("Inter-Bold", size: 8.0))
                         .frame(width: 120, height: 50, alignment: .topLeading)
                         .position(x: 239, y: 194)
-                        .foregroundColor(Color(ddaySymbolMenu[safe: 5]?.ddayBgColor ?? "ddayChristmasRed"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 5]?.ddayBgColor ?? "ddayChristmasRed"))
 
                 default:
                     Text(ddaySymbolMenu[safe: 5]?.ddayDate ?? "2023.00.00")
                         .font(.custom("Inter-Bold", size: 8.0))
                         .frame(width: 120, height: 50, alignment: .topLeading)
                         .position(x: 239, y: 194)
-                        .foregroundColor(Color(ddaySymbolMenu[safe: 5]?.ddayTxtColor ?? "ddayChristmasRed"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 5]?.ddayTxtColor ?? "ddayChristmasRed"))
                 }
                 ZStack{
                     RoundedRectangle(cornerRadius: 25)
-                        .fill(Color(ddaySymbolMenu[safe: 5]?.ddayBgColor ?? "ddayNeonBlueDarker"))
+                        .fill(Color(hex: ddaySymbolMenu[safe: 5]?.ddayBgColor ?? "ddayNeonBlueDarker"))
                         .frame(width: 149, height: 81)
                     
                     Text("D")
@@ -225,14 +225,14 @@ struct WidgetView_Multi02_M_Comp02: View { // enable shadow
                         .position(x: 48, y: 10)
                         .rotationEffect(.degrees(-10))
                         .multilineTextAlignment(.trailing)
-                        .foregroundColor(Color(ddaySymbolMenu[safe: 5]?.ddayTxtColor ?? "ddayChristmasRed"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 5]?.ddayTxtColor ?? "ddayChristmasRed"))
                     
                     Text(ddaySymbolMenu[safe: 5]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
                         .font(.custom("Inter-ExtraBold", size: 9.0))
                         .frame(width: 97, height: 50, alignment: .topTrailing)
                         .position(x: 60, y: 38)
                         .multilineTextAlignment(.trailing)
-                        .foregroundColor(Color(ddaySymbolMenu[safe: 5]?.ddayTxtColor ?? "ddayChristmasRed"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 5]?.ddayTxtColor ?? "ddayChristmasRed"))
                     
                     Text("\(CustomFunctions().dateIntSign(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 5]?.ddayDate ??  defaultStringArr[5][1]))))")
                         .font(.custom("Inter-Bold", size: 53.0))
@@ -241,7 +241,7 @@ struct WidgetView_Multi02_M_Comp02: View { // enable shadow
                         .kerning(-5)
                         .position(x: 71, y: 54)
                         .rotationEffect(.degrees(-6))
-                        .foregroundColor(Color(ddaySymbolMenu[safe: 5]?.ddayTxtColor ?? "ddayChristmasRed"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 5]?.ddayTxtColor ?? "ddayChristmasRed"))
                 }
                 .frame(width: 149, height: 81)
                 .cornerRadius(25)
@@ -259,7 +259,7 @@ struct WidgetView_Multi02_M_Comp02: View { // enable shadow
                         .font(.custom("Inter-Bold", size: 8.0))
                         .frame(width: 120, height: 50, alignment: .topLeading)
                         .position(x: 162, y: -41)
-                        .foregroundColor(Color(ddaySymbolMenu[safe: 2]?.ddayBgColor ?? "ddayYellow"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 2]?.ddayBgColor ?? "ddayYellow"))
                         .rotationEffect(.degrees(90))
                     
                 default:
@@ -267,12 +267,12 @@ struct WidgetView_Multi02_M_Comp02: View { // enable shadow
                         .font(.custom("Inter-Bold", size: 8.0))
                         .frame(width: 120, height: 50, alignment: .topLeading)
                         .position(x: 162, y: -41)
-                        .foregroundColor(Color(ddaySymbolMenu[safe: 2]?.ddayTxtColor ?? "ddayYellow"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 2]?.ddayTxtColor ?? "ddayYellow"))
                         .rotationEffect(.degrees(90))
                 }
                 ZStack{
                     RoundedRectangle(cornerRadius: 25)
-                        .fill(Color(ddaySymbolMenu[safe: 2]?.ddayBgColor ?? "ddayNeonSkyBlue"))
+                        .fill(Color(hex: ddaySymbolMenu[safe: 2]?.ddayBgColor ?? "ddayNeonSkyBlue"))
                         .frame(width: 119, height: 85)
                     
                     Text("D")
@@ -282,14 +282,14 @@ struct WidgetView_Multi02_M_Comp02: View { // enable shadow
                         .position(x: 64, y: 8)
                         .rotationEffect(.degrees(-10))
                         .multilineTextAlignment(.trailing)
-                        .foregroundColor(Color(ddaySymbolMenu[safe: 2]?.ddayTxtColor ?? "ddayYellow"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 2]?.ddayTxtColor ?? "ddayYellow"))
                     
                     Text(ddaySymbolMenu[safe: 2]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
                         .font(.custom("Inter-ExtraBold", size: 8.0))
                         .frame(width: 85, height: 70, alignment: .topTrailing)
                         .position(x: 68, y: 46)
                         .multilineTextAlignment(.trailing)
-                        .foregroundColor(Color(ddaySymbolMenu[safe: 2]?.ddayTxtColor ?? "ddayYellow"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 2]?.ddayTxtColor ?? "ddayYellow"))
                     
                     Text("\(CustomFunctions().dateIntSign(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 2]?.ddayDate ??  defaultStringArr[2][1]))))")
                         .font(.custom("Inter-Bold", size: 59.0))
@@ -298,7 +298,7 @@ struct WidgetView_Multi02_M_Comp02: View { // enable shadow
                         .kerning(-5)
                         .position(x: 91, y: 55)
                         .rotationEffect(.degrees(-6))
-                        .foregroundColor(Color(ddaySymbolMenu[safe: 2]?.ddayTxtColor ?? "ddayYellow"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 2]?.ddayTxtColor ?? "ddayYellow"))
                 }
                 .frame(width: 119, height: 85)
                 .cornerRadius(25)
@@ -314,18 +314,18 @@ struct WidgetView_Multi02_M_Comp02: View { // enable shadow
                         .font(.custom("Inter-Bold", size: 8.0))
                         .frame(width: 120, height: 50, alignment: .topLeading)
                         .position(x: 132, y: 50)
-                        .foregroundColor(Color(ddaySymbolMenu[safe: 1]?.ddayBgColor ?? "ddayOrangeLighter"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayBgColor ?? "ddayOrangeLighter"))
 
                 default:
                     Text(ddaySymbolMenu[safe: 1]?.ddayDate ?? "2023.00.00")
                         .font(.custom("Inter-Bold", size: 8.0))
                         .frame(width: 120, height: 50, alignment: .topLeading)
                         .position(x: 132, y: 50)
-                        .foregroundColor(Color(ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayOrangeLighter"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayOrangeLighter"))
                 }
                 ZStack{
                     RoundedRectangle(cornerRadius: 25)
-                        .fill(Color(ddaySymbolMenu[safe: 1]?.ddayBgColor ?? "ddayNeonCrimson"))
+                        .fill(Color(hex: ddaySymbolMenu[safe: 1]?.ddayBgColor ?? "ddayNeonCrimson"))
                         .frame(width: 119, height: 81)
                     
                     Text("D")
@@ -335,14 +335,14 @@ struct WidgetView_Multi02_M_Comp02: View { // enable shadow
                         .position(x: 48, y: 5)
                         .rotationEffect(.degrees(-10))
                         .multilineTextAlignment(.trailing)
-                        .foregroundColor(Color(ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayOrangeLighter"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayOrangeLighter"))
                     
                     Text(ddaySymbolMenu[safe: 1]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
                         .font(.custom("Inter-ExtraBold", size: 9.0))
                         .frame(width: 97, height: 50, alignment: .topTrailing)
                         .position(x: 60, y: 35)
                         .multilineTextAlignment(.trailing)
-                        .foregroundColor(Color(ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayOrangeLighter"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayOrangeLighter"))
                     
                     Text("\(CustomFunctions().dateIntSign(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 1]?.ddayDate ??  defaultStringArr[1][1]))))")
                         .font(.custom("Inter-Bold", size: 58.0))
@@ -351,7 +351,7 @@ struct WidgetView_Multi02_M_Comp02: View { // enable shadow
                         .kerning(-5)
                         .position(x: 73, y: 52)
                         .rotationEffect(.degrees(-6))
-                        .foregroundColor(Color(ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayOrangeLighter"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayOrangeLighter"))
                 }
                 .frame(width: 119, height: 81)
                 .cornerRadius(25)

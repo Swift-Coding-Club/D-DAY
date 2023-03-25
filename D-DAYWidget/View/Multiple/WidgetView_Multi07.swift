@@ -8,7 +8,7 @@
 import SwiftUI
 import WidgetKit
 
-struct WidgetView_Multi07EntryView: View {
+struct WidgetView_Multi07EntryView: View { // hex done
     @Environment(\.widgetFamily) var family: WidgetFamily
     
     var entry: Provider.Entry

@@ -12,26 +12,67 @@ struct WidgetView_Single01_M_Comp02: View { // enable shadow
     var entry: Provider.Entry
     
     var body: some View {
-        let defaultDdaySymbolMenu: [DdaySymbol] = [
-            DdaySymbol(identifier: "ddayNeonGreen", display: "길게눌러서 디데이 추가하기", pronunciationHint: "ddayBlack", subtitle: "2021.12.18", image: nil),
-        ]
         
+        let defaultDdaySymbolMenu: [DdaySymbol] = [0].map { index in
+            let symbolDdayItem = DdaySymbol (identifier: "identifier", display: "diaplay")
+            symbolDdayItem.ddayTitle = "길게눌러서 디데이 추가하기"
+            symbolDdayItem.ddayDate = "2025.12.25"
+            symbolDdayItem.ddayBgColor = "ddayNeonGreen"
+            symbolDdayItem.ddayTxtColor = "ddayBlack"
+
+            return symbolDdayItem
+        }
+            
         let ddaySymbolMenu: [DdaySymbol] = entry.configuration.ddaySymbol ?? defaultDdaySymbolMenu
+        let dateInt = CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  "2024.02.16"))
         
-        var dateInt = CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.subtitleString ??  "2022.02.16"))
         
         ZStack {
             ZStack {
-                Text(ddaySymbolMenu[safe: 0]?.displayString ?? "길게눌러서 디데이 추가하기")
-                    .font(.custom("Inter-Bold", size: 13.0)) // 많-12, 길게눌러-13
-                    .frame(width: 200, height: 20, alignment: .topLeading)
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 110, trailing: 110))
-                    .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.pronunciationHint ?? "ddayBlack"))
+            
+                // Title
+                switch (ddaySymbolMenu[safe: 0]?.ddayTitle ?? "길게눌러서 디데이 추가하기").count {
+                case ...5:
+                    Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                        .font(.custom("Inter-Bold", size: 20.0))
+                        .frame(width: 200, height: 20, alignment: .topLeading)
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 105, trailing: 103))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
+                    
+                case 6...10:
+                    Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                        .font(.custom("Inter-Bold", size: 18.0))
+                        .frame(width: 200, height: 20, alignment: .topLeading)
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 105, trailing: 107))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
+                    
+                case 11...14:
+                    Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                        .font(.custom("Inter-Bold", size: 15.0))
+                        .frame(width: 200, height: 20, alignment: .topLeading)
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 105, trailing: 107))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
+                    
+                case 15...:
+                    Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                        .font(.custom("Inter-Bold", size: 14.0))
+                        .frame(width: 200, height: 80, alignment: .topLeading)
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 48, trailing: 110))
+                        .multilineTextAlignment(.leading)
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
+                    
+                default:
+                    Text("Default E S01-1-0")
+                    
+                }
+                
                 
                 let ddayNumber = CustomFunctions().dateIntSign(dateIntParam: dateInt)
                 let startIndex = ddayNumber.index(ddayNumber.startIndex, offsetBy: 1)
                 let dayStr = String(ddayNumber[...startIndex]) // D+ / D-
                 
+                
+                // DayNumber
                 switch dateInt <= 0 {
                 case true :
                     switch ddayNumber.count {
@@ -44,7 +85,7 @@ struct WidgetView_Single01_M_Comp02: View { // enable shadow
                             .multilineTextAlignment(.leading)
                             .kerning(-13)
                             .rotationEffect(.degrees(-10))
-                            .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.pronunciationHint ?? "ddayBlack"))
+                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                         
                     case 4:
                         Text("D-\(ddayNumber)")
@@ -55,21 +96,21 @@ struct WidgetView_Single01_M_Comp02: View { // enable shadow
                             .multilineTextAlignment(.leading)
                             .kerning(-11)
                             .rotationEffect(.degrees(-10))
-                            .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.pronunciationHint ?? "ddayBlack"))
+                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                         
-                    case 5...8:
+                    case 5...:
                         Text("D-\(ddayNumber)")
                             .font(.custom("Inter-Bold", size: 100.0))
                             .frame(width: 400, height: 100, alignment: .leading)
                             .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
                             .padding(EdgeInsets(top: 15, leading: 41, bottom: 0, trailing: 0))
                             .multilineTextAlignment(.leading)
-                            .kerning(-11)
+                            .kerning(-10)
                             .rotationEffect(.degrees(-10))
-                            .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.pronunciationHint ?? "ddayBlack"))
+                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                         
                     default:
-                        Text("Default E4")
+                        Text("Default E S01-1-1")
                     }
                     
                 case false :
@@ -83,7 +124,7 @@ struct WidgetView_Single01_M_Comp02: View { // enable shadow
                             .multilineTextAlignment(.leading)
                             .kerning(-15)
                             .rotationEffect(.degrees(-10))
-                            .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.pronunciationHint ?? "ddayBlack"))
+                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                         
                         Text("\(ddayNumber)")
                             .font(.custom("Inter-Bold", size: 128.0))
@@ -93,7 +134,7 @@ struct WidgetView_Single01_M_Comp02: View { // enable shadow
                             .multilineTextAlignment(.leading)
                             .kerning(-13)
                             .rotationEffect(.degrees(-10))
-                            .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.pronunciationHint ?? "ddayBlack"))
+                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                         
                     case 3:
                         
@@ -107,7 +148,7 @@ struct WidgetView_Single01_M_Comp02: View { // enable shadow
                                 .multilineTextAlignment(.leading)
                                 .kerning(-15)
                                 .rotationEffect(.degrees(-10))
-                                .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.pronunciationHint ?? "ddayBlack"))
+                                .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                             
                             Text("\(ddayNumber)")
                                 .font(.custom("Inter-Bold", size: 128.0))
@@ -117,7 +158,7 @@ struct WidgetView_Single01_M_Comp02: View { // enable shadow
                                 .multilineTextAlignment(.leading)
                                 .kerning(-13)
                                 .rotationEffect(.degrees(-10))
-                                .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.pronunciationHint ?? "ddayBlack"))
+                                .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                             
                         case 2...9:
                             Text("D+")
@@ -128,7 +169,7 @@ struct WidgetView_Single01_M_Comp02: View { // enable shadow
                                 .multilineTextAlignment(.leading)
                                 .kerning(-15)
                                 .rotationEffect(.degrees(-10))
-                                .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.pronunciationHint ?? "ddayBlack"))
+                                .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                             
                             Text("\(ddayNumber)")
                                 .font(.custom("Inter-Bold", size: 120.0))
@@ -138,14 +179,14 @@ struct WidgetView_Single01_M_Comp02: View { // enable shadow
                                 .multilineTextAlignment(.leading)
                                 .kerning(-12)
                                 .rotationEffect(.degrees(-10))
-                                .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.pronunciationHint ?? "ddayBlack"))
+                                .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                         
                         default:
-                            Text("Default E3")
+                            Text("Default ES01-1-2")
                         }
                         
                         
-                    case 4...8:
+                    case 4:
                         Text("D")
                             .font(.custom("Inter-Bold", size: 113.0))
                             .frame(width: 400, height: 100, alignment: .leading)
@@ -153,7 +194,7 @@ struct WidgetView_Single01_M_Comp02: View { // enable shadow
                             .padding(EdgeInsets(top: 15, leading: 41, bottom: 0, trailing: 0))
                             .multilineTextAlignment(.leading)
                             .rotationEffect(.degrees(-10))
-                            .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.pronunciationHint ?? "ddayBlack"))
+                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                         
                         Text("+")
                             .font(.custom("Inter-ExtraBold", size: 87.0))
@@ -162,7 +203,7 @@ struct WidgetView_Single01_M_Comp02: View { // enable shadow
                             .padding(EdgeInsets(top: 15, leading: 182, bottom: 11, trailing: 0))
                             .multilineTextAlignment(.leading)
                             .rotationEffect(.degrees(-10))
-                            .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.pronunciationHint ?? "ddayBlack"))
+                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                         
                         Text("\(ddayNumber)")
                             .font(.custom("Inter-Bold", size: 109.0))
@@ -172,24 +213,55 @@ struct WidgetView_Single01_M_Comp02: View { // enable shadow
                             .multilineTextAlignment(.leading)
                             .kerning(-11)
                             .rotationEffect(.degrees(-10))
-                            .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.pronunciationHint ?? "ddayBlack"))
+                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
+                        
+                    case 5...:
+                        Text("D")
+                            .font(.custom("Inter-Bold", size: 105.0))
+                            .frame(width: 400, height: 100, alignment: .leading)
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
+                            .padding(EdgeInsets(top: 15, leading: 41, bottom: 0, trailing: 0))
+                            .multilineTextAlignment(.leading)
+                            .rotationEffect(.degrees(-10))
+                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
+                        
+                        Text("+")
+                            .font(.custom("Inter-ExtraBold", size: 82.0))
+                            .frame(width: 400, height: 100, alignment: .leading)
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
+                            .padding(EdgeInsets(top: 15, leading: 175, bottom: 11, trailing: 0))
+                            .multilineTextAlignment(.leading)
+                            .rotationEffect(.degrees(-10))
+                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
+                        
+                        Text("\(ddayNumber)")
+                            .font(.custom("Inter-Bold", size: 93.0))
+                            .frame(width: 400, height: 100, alignment: .leading)
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
+                            .padding(EdgeInsets(top: 15, leading: 266, bottom: 0, trailing: 0))
+                            .multilineTextAlignment(.leading)
+                            .kerning(-11)
+                            .rotationEffect(.degrees(-10))
+                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                         
                     default:
-                        Text("Default error2")
+                        Text("Default error S01-1-3")
                     }
+                    
                 default:
-                    Text("Default error1")
+                    Text("Default Error S01-1")
                 }
                 
-                Text("2023.12.31")
-                    .font(.custom("Inter-Bold", size: 10.0))
+                
+                // Date
+                Text(ddaySymbolMenu[safe: 0]?.ddayDate ?? "2023.12.31")
+                    .font(.custom("Inter-Bold", size: 13.0))
                     .frame(width: 300, height: 20, alignment: .trailing)
-                    .padding(EdgeInsets(top: 120, leading: 0, bottom: 0, trailing: 0))
-                    .foregroundColor(Color(ddaySymbolMenu[safe: 0]?.pronunciationHint ?? "ddayBlack"))
+                    .padding(EdgeInsets(top: 115, leading: 0, bottom: 0, trailing: 0))
+                    .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
             }
         }
         .frame(height: 200)
-        .background(Color(ddaySymbolMenu[safe: 0]?.identifier ?? "ddayNeonGreen"))
-        
+        .background(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayNeonGreen"))
     }
 }

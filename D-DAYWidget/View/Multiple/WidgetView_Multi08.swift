@@ -17,12 +17,25 @@ struct WidgetView_Multi08EntryView: View {
         
         switch self.family {
         case .systemExtraLarge:
+            
+            let ddaySymbolMenu: [DdaySymbol] = DefaultArrForWidget_M08().getDaySymbolMenu(entry: self.entry)
+            
             switch entry.configuration.shadow?.stringValue ?? "0" {
             case "0":  // disable shadow
-                WidgetView_Multi08_XL_Comp01(entry: self.entry).body
-                
+                ZStack{
+                    WidgetView_Multi08_XL_Comp01_1(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu).body
+                    WidgetView_Multi08_XL_Comp01_2(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu).body
+                }
+                .frame(height: 450)
+                .background(Color("ddayBlack"))
+            
             case "1": // enable shadow
-                WidgetView_Multi08_XL_Comp02(entry: self.entry).body
+                ZStack{
+                    WidgetView_Multi08_XL_Comp02_1(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu).body
+                    WidgetView_Multi08_XL_Comp02_2(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu).body
+                }
+                .frame(height: 450)
+                .background(Color("ddayBlack"))
                 
             default:
                 Text("Encountered Error M08-1")
