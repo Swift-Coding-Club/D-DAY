@@ -63,12 +63,9 @@ class EditViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        let userDefaults = UserDefaults(suiteName: "group.dday.ddayApp")
-        
+                
         //TODO: 해당 cell에 대한 UserDefaults값만 불러오기
         // UserDefaults 불러오기 (encode UserDefaults)
-//        let encodedData = UserDefaults.standard.array(forKey: KeyForUserDefaults) as? [Data] ?? []
         let encodedData = UserDefaults.shared.array(forKey: KeyForUserDefaults) as? [Data] ?? []
 
         // 불러온 UserDefaults를 struct list에 넣어주기
@@ -249,11 +246,8 @@ extension EditViewController {
 
         // 변경될 struct
         let editDdayInfo = DdayInfo(title: txtFieldForTitle.text!, subTitle: txtFieldForSubtitle.text!,  date: theDate, widgetTextColor: bgColor, widgetBGColor: txtColor, language: language)
-        
-//        let userDefaults = UserDefaults(suiteName: "group.dday.ddayApp")
-        
+                
         // UserDefaults 불러오기 (encode UserDefaults)
-//        let encodedData = UserDefaults.standard.array(forKey: KeyForUserDefaults) as? [Data] ?? []
         let encodedData = UserDefaults.shared.array(forKey: KeyForUserDefaults) as? [Data] ?? []
 
         // 불러온 UserDefaults를 struct list에 넣어주기
@@ -264,7 +258,6 @@ extension EditViewController {
         
         // UserDefaults에 바뀐 struct list 저장하기 (decode UserDefaults)
         let data = ddayList.map { try? JSONEncoder().encode($0) }
-//        UserDefaults.standard.set(data, forKey: KeyForUserDefaults)
         UserDefaults.shared.setValue(data, forKey: KeyForUserDefaults)
         
         // User Default for date
@@ -360,7 +353,7 @@ extension EditViewController: UITableViewDataSource {
             let cellForDatepicker = addTableView.dequeueReusableCell(withIdentifier: target.type.rawValue, for: indexPath) as! DatePickerCell
             cellForDatepicker.textLabel?.text = "\(target.title)"
             
-            // userdefaults에서 date값으로 수정
+            // UserDefaults의 date값으로 수정
             cellForDatepicker.accDatePicker.date = ddayList[cellTag].date
             
             cellForDatepicker.delegate = self
@@ -370,6 +363,22 @@ extension EditViewController: UITableViewDataSource {
         } else { // colorwell section
             let cellForColorwell = addTableView.dequeueReusableCell(withIdentifier: target.type.rawValue, for: indexPath) as! ColorWellCell
             cellForColorwell.textLabel?.text = "\(target.title)"
+            
+            // UserDefaults의 color값으로 수정
+            var bgColor = String()
+            var txtColor = String()
+            
+            bgColor = ddayList[cellTag].widgetBGColor ?? "ddayBlack"
+            txtColor = ddayList[cellTag].widgetTextColor ?? "ddayWhite"
+            
+            changeBGColor(bgColor: UIColor(hexRGB: bgColor))
+            changeTxtColor(txtColor: UIColor(hexRGB: txtColor))
+            changeBothColor(bg: UIColor(hexRGB: bgColor), txt: UIColor(hexRGB: txtColor))
+            
+            // ColorWell에 보이는 값도 UserDefaults의 color값으로 수정
+            cellForColorwell.colorwellBackground.selectedColor = UIColor(hexRGB: bgColor)
+            cellForColorwell.colorwellText.selectedColor = UIColor(hexRGB: txtColor)
+
             cellForColorwell.delegate = self
             
             return cellForColorwell
@@ -399,22 +408,3 @@ extension EditViewController: UITableViewDataSource {
 }
 
 extension EditViewController: UITableViewDelegate {}
-
-// TODO: 에러나서 지워뒀는데 괜찮으면 지우기
-//extension UILabel {
-//    func addCharacterSpacing(_ value: Double = -0.1) {
-//        let kernValue = self.font.pointSize * CGFloat(value)
-//        guard let text = text, !text.isEmpty else { return }
-//        let string = NSMutableAttributedString(string: text)
-//        string.addAttribute(NSAttributedString.Key.kern, value: kernValue, range: NSRange(location: 0, length: string.length - 1))
-//        attributedText = string
-//    }
-//}
-//
-//// MARK: UserDefaults AppGroup
-//extension UserDefaults {
-//    static var shared: UserDefaults {
-//        let appGroupId = "group.dday.ddayApp"
-//        return UserDefaults(suiteName: appGroupId)!
-//    }
-//}

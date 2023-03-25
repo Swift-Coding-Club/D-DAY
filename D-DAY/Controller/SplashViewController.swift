@@ -16,6 +16,8 @@ class SplashViewController: UIViewController {
     @IBOutlet weak var animationView2: UIView!
     @IBOutlet weak var animationView3: UIView!
     
+    @IBOutlet weak var labelConstraintX: NSLayoutConstraint!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,7 +27,9 @@ class SplashViewController: UIViewController {
         self.animationView1.alpha = 0.0
         self.animationView2.alpha = 0.0
         self.animationView3.alpha = 0.0
-
+        
+//        labelConstraintX.constant = 0
+        
         UIView.animate(withDuration: 3.0, delay: 0.1, options: .curveEaseIn, animations: {
             // 투명도 - 점점 선명해지게
             self.splashLabel.alpha = 1
@@ -54,5 +58,9 @@ class SplashViewController: UIViewController {
                  self.present(VC, animated: false, completion: nil)
              })
     }
+    
+//    func prepareAnimation() {
+//            labelConstraintX.constant = view.bounds.width
+//    }
 }
 
