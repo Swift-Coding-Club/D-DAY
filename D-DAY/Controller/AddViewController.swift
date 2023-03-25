@@ -164,7 +164,6 @@ extension AddViewController {
             ])
             
         case "Japanese":
-            
             if Int(mediumDayNumber2.text!)! <= 0 {
                 mediumDayNumber2.text = String((-1) * Int(mediumDayNumber2.text!)!)
                 mediumDday2.text = "ディ-デ-"
@@ -555,11 +554,14 @@ extension AddViewController: UITableViewDataSource {
             if indexPath.row == 0 { // title row
                 txtFieldForTitle = cellForTxtfield.accTextField
                 cellForTxtfield.accTextField.addTarget(self, action: #selector(getTitle), for: .editingChanged)
-                txtFieldForTitle.placeholder = "입력하기"
+//                txtFieldForTitle.placeholder = "입력하기"
+                txtFieldForTitle.placeholder = NSLocalizedString("입력하기", comment: "") // 지역화 객체
+
             } else { // subtitle row
                 txtFieldForSubtitle = cellForTxtfield.accTextField
                 cellForTxtfield.accTextField.addTarget(self, action: #selector(getSubTitle), for: .editingDidEnd)
-                txtFieldForSubtitle.placeholder = "입력하기"
+//                txtFieldForSubtitle.placeholder = "입력하기"
+                txtFieldForSubtitle.placeholder = NSLocalizedString("입력하기", comment: "") // 지역화 객체
 
             }
             

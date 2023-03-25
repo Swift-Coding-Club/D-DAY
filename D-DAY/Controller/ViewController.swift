@@ -86,7 +86,7 @@ class ViewController: UIViewController, CALayerDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
+        
         // UserDefaults 불러오기 (encode UserDefaults)
         let encodedData = UserDefaults.shared.array(forKey: KeyForUserDefaults) as? [Data] ?? []
             

@@ -13,18 +13,18 @@
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="ViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="ViewController" customModule="D_DAY" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="5EZ-qb-Rvc">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7Zf-yg-dtp" userLabel="Table View">
-                                <rect key="frame" x="0.0" y="254" width="393" height="564"/>
+                                <rect key="frame" x="0.0" y="248" width="393" height="564"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="564" id="ynA-lO-FEN"/>
                                 </constraints>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBw-zb-v2G">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBw-zb-v2G">
                                 <rect key="frame" x="298" y="723" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="GBw-zb-v2G" secondAttribute="height" id="6if-uf-DiN"/>
@@ -47,7 +47,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="rce-PY-ccu" userLabel="Title View">
-                                <rect key="frame" x="-20" y="103" width="367" height="131"/>
+                                <rect key="frame" x="-20" y="103" width="393" height="120"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D-DAY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5p-Ix-ky3">
                                         <rect key="frame" x="40.000000000000007" y="24.999999999999996" width="116.66666666666669" height="45.666666666666657"/>
@@ -55,8 +55,8 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" restorationIdentifier="ViewController" text="디데이를 추가해보세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glC-xW-Mke">
-                                        <rect key="frame" x="40" y="75.666666666666657" width="156.33333333333334" height="20.333333333333329"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" restorationIdentifier="ViewController" text="Add D-Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glC-xW-Mke">
+                                        <rect key="frame" x="40" y="75.666666666666657" width="84" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -68,8 +68,7 @@
                                     <constraint firstItem="glC-xW-Mke" firstAttribute="leading" secondItem="rce-PY-ccu" secondAttribute="leading" constant="40" id="ebF-ZV-Aak"/>
                                     <constraint firstItem="glC-xW-Mke" firstAttribute="top" secondItem="m5p-Ix-ky3" secondAttribute="bottom" constant="5" id="fzE-Jv-cSv"/>
                                     <constraint firstItem="m5p-Ix-ky3" firstAttribute="top" secondItem="rce-PY-ccu" secondAttribute="top" constant="25" id="pWd-0S-inb"/>
-                                    <constraint firstAttribute="width" constant="367" id="rfd-UU-mtf"/>
-                                    <constraint firstAttribute="height" constant="131" id="yT0-VH-XL2"/>
+                                    <constraint firstAttribute="height" constant="120" id="yT0-VH-XL2"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -77,10 +76,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="rce-PY-ccu" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="-20" id="3Fe-oO-6m8"/>
-                            <constraint firstAttribute="bottom" secondItem="7Zf-yg-dtp" secondAttribute="bottom" id="CIp-Cx-Enc"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="rce-PY-ccu" secondAttribute="trailing" constant="20" id="4Ht-Om-a70"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="7Zf-yg-dtp" secondAttribute="bottom" constant="6" id="CIp-Cx-Enc"/>
                             <constraint firstItem="7Zf-yg-dtp" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="DEX-93-IA2"/>
                             <constraint firstItem="7Zf-yg-dtp" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Ior-15-NgO"/>
-                            <constraint firstItem="7Zf-yg-dtp" firstAttribute="top" secondItem="rce-PY-ccu" secondAttribute="bottom" constant="20" id="TS0-zX-l9n"/>
+                            <constraint firstItem="7Zf-yg-dtp" firstAttribute="top" secondItem="rce-PY-ccu" secondAttribute="bottom" constant="25" id="TS0-zX-l9n"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="GBw-zb-v2G" secondAttribute="trailing" constant="20" id="Uit-UL-IvQ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="GBw-zb-v2G" secondAttribute="bottom" constant="20" id="d95-fz-Igg"/>
                             <constraint firstItem="rce-PY-ccu" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="tOG-5r-p9s"/>
