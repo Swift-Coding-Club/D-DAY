@@ -1,54 +1,41 @@
 # D-DAY
 D-DAY APP
 
-> Simple date count down iOS app with widget
-             
+> Cool & Simple Date Count Down iOS App with Widget 
 
-</br>   
-<p float="left">
-  <img src="https://user-images.githubusercontent.com/47246760/173627160-e800fe2c-96d6-49b0-b78b-d6b79f67cadc.gif" width="200" />
-  <img src="https://user-images.githubusercontent.com/47246760/173628718-e1911484-1111-4321-b240-eb29192d1983.gif" width="200" /> 
-  <img src="https://user-images.githubusercontent.com/47246760/173628767-11f03004-3e65-4c0e-ad20-06f8aaeddc10.gif" width="200" />
-  <img src="https://user-images.githubusercontent.com/47246760/173628921-a982cc39-d61d-452c-a0da-90f7fe7b4fd1.gif" width="200" />
-</p>
-</br>   
+</br>
 
-## Description & API
-* #### **Whistle** ####
-  * Whistle Sound Button with sound controller in the main page
-    * Used _AVAudioPlayer_ to implement sound effect
-    * Used _WKInterfaceSlider_ with Digital Crown to implement volume controller
-* #### **Timer** ####
-  * Simple Timer in the next page
-    * Used _WKInterfacePicker_ (list style) to implement time picker
-    * Used _WKInterfaceTimer_ to implement count-down timer       
+## Description
+* #### **App** ####
+  * UIKit
+  * Add D-DAY 
+    * Add title / subtitle / date / widget colors to show / widget languages to show
+    * Preview of widget with selected colors
+  * Edit D-DAY 
+    * Edit title / subtitle / date / widget colors to show / widget languages to show 
+    * Delete D-DAY with swipe action
+    * Move D-DAY with drag&drop action
+* #### **Widget** ####
+  * SwiftUI
+  * Choose widget size
+  * Choose D-DAY to show on the widget  
 
 </br>   
 
 ## Requirements
-* watchOS 8.0+     
+* iOS 15.0+     
 
 </br>   
 
 ## Tech Stack
-* Swift
-* WatchKit
-* Independent Watch App     
-
-</br>   
-
-## Resource
-* Whistle Sound: Free source     
-
-</br>   
-
-## Contributors
-* Whistle image by **Jimin Sung**
-* Little thankful helps by [@ChoiysApple](https://github.com/ChoiysApple)    
+* UIKit
+* Storyboard
+* SwiftUI
+* MVC    
 
 </br>   
 
 ## Installation
-1. Go to App Store in your Apple Watch
-2. Search with keyword '_whistle_' or '_wristle_'
+1. Go to App Store
+2. Search with keyword 'D-DAY' <span style="color:gray"> also '_dday_' or '_ddaywidget_' </span>
 3. Download and Use!
