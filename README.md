@@ -1,5 +1,4 @@
 # D-DAY
-D-DAY APP
 
 > Cool & Simple Date Count Down iOS App with Widget 
 
