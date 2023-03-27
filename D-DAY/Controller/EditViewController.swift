@@ -55,6 +55,9 @@ class EditViewController: UIViewController {
     // UserDefaults 넣어 줄 struct list
     var ddayList = [DdayInfo]()
 
+    // TODO: isTodayCounted 추가했어요 (수정 후 이 코멘트 삭제)
+    var isTodayCounted = false
+    
     // Language
     var language: String = "English"
     
@@ -94,8 +97,9 @@ extension EditViewController {
         bgColor = colorForBackground?.toHexString() ?? "ddayBlack"
         txtColor = colorForTXT?.toHexString() ?? "ddayWhite"
 
+        // TODO: isTodayCounted 추가했어요 (수정 후 이 코멘트 삭제)
         // 변경될 struct
-        let editDdayInfo = DdayInfo(title: self.txtFieldForTitle.text!, subTitle: self.txtFieldForSubtitle.text!,  date: self.theDate, widgetTextColor: txtColor, widgetBGColor: bgColor, language: self.language)
+        let editDdayInfo = DdayInfo(title: self.txtFieldForTitle.text!, subTitle: self.txtFieldForSubtitle.text!,  date: self.theDate, isTodayCounted: false, widgetTextColor: txtColor, widgetBGColor: bgColor, language: self.language)
                 
         // UserDefaults 불러오기 (encode UserDefaults)
         let encodedData = UserDefaults.shared.array(forKey: KeyForUserDefaults) as? [Data] ?? []
@@ -418,7 +422,7 @@ extension EditViewController: UITableViewDataSource {
             print("txt: \(txtColor)")
             
             
-            // Setting for Widget Defautl Color
+            // Setting for Widget Default Color
             self.smallView.backgroundColor = UIColor(hex: bgColor)
             self.smallTitle.textColor  = UIColor(hex: txtColor)
             self.smallDday.textColor  = UIColor(hex: txtColor)

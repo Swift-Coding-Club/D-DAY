@@ -19,6 +19,9 @@ class ViewController: UIViewController, CALayerDelegate {
     // UserDefaults 넣어 줄 struct list
     var ddayList = [DdayInfo]()
         
+    // TODO: isTodayCounted 추가했어요 (수정 후 이 코멘트 삭제)
+    var isTodayCounted = false
+    
     private var gradient: CAGradientLayer!
     
     // Persist the top view height constraint
@@ -196,6 +199,9 @@ extension ViewController: UITableViewDataSource{
             cell.dday.textColor = .systemRed
             cell.dday.backgroundColor = .none
         }
+        
+        // TODO: isTodayCounted (수정 후 코멘트 삭제)
+        isTodayCounted = ddayList[indexPath.row].isTodayCounted
         
         return cell
     }
