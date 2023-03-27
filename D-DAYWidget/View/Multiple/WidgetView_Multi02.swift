@@ -20,10 +20,10 @@ struct WidgetView_Multi02EntryView : View { // hex done
             
             switch entry.configuration.shadow?.stringValue ?? "0" {
             case "0": // disable shadow
-                WidgetView_Multi02_M_Comp01(entry: self.entry).body
+                WidgetView_Multi03_M_Comp01(entry: self.entry).body
                 
             case "1": // enable shadow
-                WidgetView_Multi02_M_Comp02(entry: self.entry).body
+                WidgetView_Multi03_M_Comp02(entry: self.entry).body
                 
             default:
                 Text("Encountered Error M02-1")

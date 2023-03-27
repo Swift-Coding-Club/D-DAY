@@ -69,8 +69,6 @@ struct WidgetView_Single01_M_Comp02: View { // enable shadow
                 
                 let ddayNumber = CustomFunctions().dateIntSign(dateIntParam: dateInt)
                 let startIndex = ddayNumber.index(ddayNumber.startIndex, offsetBy: 1)
-                let dayStr = String(ddayNumber[...startIndex]) // D+ / D-
-                
                 
                 // DayNumber
                 switch dateInt <= 0 {

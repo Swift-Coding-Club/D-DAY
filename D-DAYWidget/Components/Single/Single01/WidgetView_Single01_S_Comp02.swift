@@ -103,7 +103,7 @@ struct WidgetView_Single01_S_Comp02: View { // enable shadow
             
             
             // DayNumber
-            var dateNumber = CustomFunctions().dateIntSign(dateIntParam: dateInt)
+            let dateNumber = CustomFunctions().dateIntSign(dateIntParam: dateInt)
             switch dateNumber.count {
                 
             case 2:

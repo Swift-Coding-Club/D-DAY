@@ -22,7 +22,7 @@ class ColorWellCell: UITableViewCell {
     @IBOutlet weak var colorwellBackground: UIColorWell!
     @IBOutlet weak var anyColorButton: UIButton!
     
-    var colorIndex = 0
+    var colorIndex = -1
     
     override func awakeFromNib() {
         super.awakeFromNib()

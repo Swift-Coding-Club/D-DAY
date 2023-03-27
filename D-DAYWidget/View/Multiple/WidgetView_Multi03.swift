@@ -18,17 +18,19 @@ struct WidgetView_Multi03EntryView : View { // hex done
         let ddaySymbolMenu: [DdaySymbol] = DefaultArrForWidget_M03().getDaySymbolMenu(entry: self.entry)
         
         switch self.family {
+            /*
         case .systemMedium:
             switch entry.configuration.shadow?.stringValue ?? "0" {
             case "0": // disable shadow
-                WidgetView_Multi03_M_Comp01(entry: self.entry).body
+                WidgetView_Multi02_M_Comp01(entry: self.entry).body
                 
             case "1": // enable shadow
-                WidgetView_Multi03_M_Comp02(entry: self.entry).body
+                WidgetView_Multi02_M_Comp02(entry: self.entry).body
                 
             default:
                 Text("Encountered Error M03-1")
             }
+             */
             
         case .systemLarge:
             switch entry.configuration.shadow?.stringValue ?? "0" {
@@ -70,23 +72,14 @@ struct WidgetView_Multi03: Widget {
         }
         .configurationDisplayName("#2 다중 위젯")
         .description("여러개의 디데이를 표시할 수 있는 위젯입니다.")
-        .supportedFamilies([.systemMedium, .systemLarge])
+        .supportedFamilies([.systemLarge])
     }
 }
 
 struct WidgetView_Multi03_Previews: PreviewProvider {
     static var previews: some View {
         WidgetView_Multi03EntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-            .previewContext(WidgetPreviewContext(family: .systemMedium))
-    }
-}
-
-struct WidgetView_Multi03_Previews2: PreviewProvider {
-    static var previews: some View {
-        WidgetView_Multi03EntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
             .previewContext(WidgetPreviewContext(family: .systemLarge))
     }
 }
-
-
 

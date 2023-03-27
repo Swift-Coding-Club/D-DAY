@@ -11,7 +11,7 @@ class IntentHandler: INExtension, ConfigurationIntentHandling {
     
     func provideDdaySymbolOptionsCollection(for intent: ConfigurationIntent, searchTerm: String?, with completion: @escaping (INObjectCollection<DdaySymbol>?, Error?) -> Void) {
         
-        var tableViewDdayList = UserDefaults(suiteName: "group.dday.ddayApp")!.getDdayInfo()
+        let tableViewDdayList = UserDefaults(suiteName: "group.dday.ddayApp")!.getDdayInfo()
         
         let symbols: [DdaySymbol] = tableViewDdayList.map { listItem in
             

@@ -20,7 +20,6 @@ class EditViewController: UIViewController {
     // widget - small
     @IBOutlet weak var smallView: UIView!
     @IBOutlet weak var smallDday: UILabel!
-    @IBOutlet weak var smallPlus: UILabel!
     @IBOutlet weak var smallDayNumber: UILabel!
     @IBOutlet weak var smallTitle: UILabel!
     
@@ -28,10 +27,10 @@ class EditViewController: UIViewController {
     @IBOutlet weak var mediumView: UIView!
     @IBOutlet weak var mediumDday: UILabel!
     @IBOutlet weak var mediumDayNumber: UILabel!
+    @IBOutlet weak var mediumTitle: UILabel!
+    @IBOutlet weak var mediumDate: UILabel!
     
-    // widget - large
-    @IBOutlet weak var largeView: UIView!
-    
+    @IBOutlet weak var languageButton: UIButton!
     
     // Textfield for Title
     var txtFieldForTitle: UITextField = UITextField()
@@ -50,8 +49,8 @@ class EditViewController: UIViewController {
     var theDate: Date = Date()
     
     // Variables for Colorwell
-    var colorForTXT: UIColor?
-    var colorForBackground: UIColor?
+    var colorForTXT: UIColor? = UIColor(hex: "ddayNeonGreen")
+    var colorForBackground: UIColor? = UIColor(hex: "ddayBlack")
     
     // UserDefaults 넣어 줄 struct list
     var ddayList = [DdayInfo]()
@@ -64,7 +63,6 @@ class EditViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
                 
-        //TODO: 해당 cell에 대한 UserDefaults값만 불러오기
         // UserDefaults 불러오기 (encode UserDefaults)
         let encodedData = UserDefaults.shared.array(forKey: KeyForUserDefaults) as? [Data] ?? []
 
@@ -72,170 +70,22 @@ class EditViewController: UIViewController {
         ddayList = encodedData.map { try! JSONDecoder().decode(DdayInfo.self, from: $0) }
 
         configuration()
+        setupPopUpLanguageButton()
     }
 }
 
 extension EditViewController {
-    func configuration() {
-        addTableView.sectionHeaderTopPadding = 50
-        addTableView.isScrollEnabled = false
-        
-        saveButton.isEnabled = false
-        
-        addTableView.dataSource = self
-        addTableView.delegate = self
-        
-        smallView.layer.cornerRadius = 20
-        mediumView.layer.cornerRadius = 20
-        largeView.layer.cornerRadius = 20
-        
-        smallView.clipsToBounds = true
-        mediumView.clipsToBounds = true
-        largeView.clipsToBounds = true
-        
-        fontConfigurationForDday()
-        fontConfigurationForDate()
-    }
     
-    func calculateDday() -> Int {
-        // D-day 날짜 계산
-        // date-picker 선택시간 (formattedTargetDate)
-        let targetDateString = dateFormatToString(from: self.theDate)
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy.MM.dd"
-        let formattedTargetDate = dateFormatter.date(from: targetDateString)!
-        
-        // 현재시간 (formattedCurrentDate)
-        let currentDateString = dateFormatToString(from: Date())
-        let formattedCurrentDate = dateFormatter.date(from: currentDateString)!
-        
-        let timeInterval = Calendar.current.dateComponents([.day], from: formattedTargetDate, to: formattedCurrentDate)
-        
-        return timeInterval.day!
-    }
-    
-    func fontConfigurationForDday() {
-        // 폰트
-        self.smallDday.font = UIFont(name: "Inter-Bold", size: 93.0) // 93
-        // 회전
-        self.smallDday.transform = CGAffineTransform(rotationAngle: .pi * -0.08)
-        // 자간
-        self.smallDday.addCharacterSpacing(-0.2)
-        
-        
-        self.mediumDday.transform = CGAffineTransform(rotationAngle: .pi * -0.04)
-        self.mediumDday.addCharacterSpacing(-0.1)
-        self.mediumDday.font = UIFont(name: "Inter-Bold", size: 96.0)
-        self.mediumDayNumber.transform = CGAffineTransform(rotationAngle: .pi * -0.04)
-        self.mediumDayNumber.addCharacterSpacing(-0.1)
-        self.mediumDayNumber.font = UIFont(name: "Inter-Bold", size: 102.0)
-        
-    }
-    
-    func fontConfigurationForDate() {
-        // 회전
-        self.smallDayNumber.transform = CGAffineTransform(rotationAngle: .pi * -0.04)
-        self.smallPlus.transform = CGAffineTransform(rotationAngle: .pi * -0.08)
-        // font-size
-        if Int(smallDayNumber.text!)! <= 0 {
-            smallDayNumber.text = String((-1) * Int(smallDayNumber.text!)!)
-            smallPlus.text = ""
-        }
-        else {
-            smallPlus.text = "+"
-            smallPlus.font = UIFont(name: "Inter-Bold", size: 30.0)
-        }
-        
-        let smallDayNumberFontCount = smallDayNumber.text!.count
-        if smallDayNumberFontCount <= 2 {
-            self.smallDayNumber.font = UIFont(name: "Inter-Bold", size: 117.0)
-            
-            if smallDayNumberFontCount == 1 {
-                self.smallDayNumber.text = "0" + self.smallDayNumber.text!
-            }
-        } else {
-            self.smallDayNumber.font = UIFont(name: "Inter-Bold", size: 109.0)
-        }
-        
-        // 숫자별 폰트사이즈 조절
-        let intNumber = Int(smallDayNumber!.text!)!
-        switch intNumber / 100 {
-        case 1:
-            smallDayNumber.font = smallDayNumber.font.withSize(106)
-        case 3...9:
-            smallDayNumber.font = smallDayNumber.font.withSize(101)
-        default:
-            break
-        }
-        
-        if intNumber % 100 == 0 {
-            smallDayNumber.font = smallDayNumber.font.withSize(92)
-        }
-        
-        switch smallDayNumber.text {
-        case "00":
-            smallDayNumber.font = smallDayNumber.font.withSize(117)
-        case "111":
-            smallDayNumber.font = smallDayNumber.font.withSize(123)
-        case "222":
-            smallDayNumber.font = smallDayNumber.font.withSize(105)
-        case "100":
-            smallDayNumber.font = smallDayNumber.font.withSize(100)
-        default:
-            break
-        }
-        
-        // 자간 조절
-        self.smallDayNumber.addCharacterSpacing()
-    }
-    
-    func fontConfigurationForTitle() {
-        // font-size
-        let smallTitleFontCount = smallTitle.text!.count
-        if smallTitleFontCount <= 8 {
-            smallTitle.font = smallTitle.font.withSize(17)
-        } else if smallTitleFontCount > 8 {
-            smallTitle.font = smallTitle.font.withSize(14)
-        } else if smallTitleFontCount > 10 {
-            smallTitle.font = smallTitle.font.withSize(12)
-        }
-    }
-    
-    func changeTitle(value title: String?) {
-        self.smallTitle.text = title
-        
-        saveButtonEnabled()
-        
-        fontConfigurationForTitle()
-    }
-    
-    func saveButtonEnabled() {
-        if self.titleString?.count == 0 {
-            self.saveButton.isEnabled = false
-        } else {
-            self.saveButton.isEnabled = true
-        }
-    }
-    
-    func dateFormatToString(from value: Date) -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy.MM.dd"
-        
-        return dateFormatter.string(from: value)
-    }
-    
-    // IBAction for '취소(cancel)' button
+    /****
+     IBAction for '취소(cancel)' button
+     */
     @IBAction func cancelButtonTapped(_ sender: Any) {
         self.dismiss(animated: true)
     }
     
-    func save(_ existingDdayInfoList: [DdayInfo]) {
-        let data = existingDdayInfoList.map { try? JSONEncoder().encode($0) }
-        UserDefaults.standard.set(data, forKey: "DdayInfoList")
-    }
-    
-    // IBAction for '저장(save)' button
+    /****
+     IBAction for '저장(save)' button
+     */
     @IBAction func saveButtonTapped(_ sender: Any) {
         
         var bgColor = String()
@@ -245,7 +95,7 @@ extension EditViewController {
         txtColor = colorForTXT?.toHexString() ?? "ddayWhite"
 
         // 변경될 struct
-        let editDdayInfo = DdayInfo(title: txtFieldForTitle.text!, subTitle: txtFieldForSubtitle.text!,  date: theDate, widgetTextColor: bgColor, widgetBGColor: txtColor, language: language)
+        let editDdayInfo = DdayInfo(title: self.txtFieldForTitle.text!, subTitle: self.txtFieldForSubtitle.text!,  date: self.theDate, widgetTextColor: txtColor, widgetBGColor: bgColor, language: self.language)
                 
         // UserDefaults 불러오기 (encode UserDefaults)
         let encodedData = UserDefaults.shared.array(forKey: KeyForUserDefaults) as? [Data] ?? []
@@ -266,26 +116,202 @@ extension EditViewController {
 
         self.dismiss(animated: true)
     }
+    
+    func configuration() {
+        addTableView.sectionHeaderTopPadding = 50
+        addTableView.isScrollEnabled = false
+        
+        saveButton.isEnabled = false
+        
+        addTableView.dataSource = self
+        addTableView.delegate = self
+        
+        languageButton.layer.borderWidth = 1
+        languageButton.layer.borderColor = UIColor.systemBlue.cgColor
+        
+        fontConfigurationForSmall()
+        fontConfigurationForMedium()
+    }
+    
+    /****
+     D-day 날짜 계산
+     */
+    func calculateDday(_ ddayRecievedDate: Date) -> Int {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy.MM.dd"
+        
+        // Date Picker에서 선택한 날짜 (formattedCurrentDate)
+        let ddayRecievedDate_Str = dateFormatter.string(from: ddayRecievedDate)
+        let formattedTargetDate = dateFormatter.date(from: ddayRecievedDate_Str)!
+        
+        // 현재날짜 (formattedCurrentDate)
+        let currentDateString = dateFormatter.string(from: Date())
+        let formattedCurrentDate = dateFormatter.date(from: currentDateString)!
+        
+        let timeInterval = Calendar.current.dateComponents([.day], from: formattedTargetDate, to: formattedCurrentDate)
+        
+        return timeInterval.day!
+    }
+    
+    /****
+     Configuration For Widget - Small
+     */
+    func fontConfigurationForSmall() {
+        // D
+        self.smallDday.font = UIFont(name: "Inter-Bold", size: 113.0)
+        self.smallDday.transform = CGAffineTransform(rotationAngle: .pi * -0.08)
+        // D - Shadow
+        self.smallDday.layer.shadowOffset = CGSize(width: 3, height: 5)
+        self.smallDday.layer.shadowOpacity = 0.3
+        self.smallDday.layer.shadowRadius = 2
+        self.smallDday.layer.shadowColor = CGColor.init(srgbRed: 0.09, green: 0.09, blue: 0.09, alpha: 0.8)
+        
+        // Title
+        smallTitle.font = smallTitle.font.withSize(13)
+        
+        // Day Number
+        self.smallDayNumber.font = UIFont(name: "Inter-Bold", size: 118.0)
+        self.smallDayNumber.transform = CGAffineTransform(rotationAngle: .pi * -0.04)
+        self.smallDayNumber.addCharacterSpacing()
+        // Day Number - Shadow
+        self.smallDayNumber.layer.shadowOffset = CGSize(width: 3, height: 5)
+        self.smallDayNumber.layer.shadowOpacity = 0.3
+        self.smallDayNumber.layer.shadowRadius = 2
+        self.smallDayNumber.layer.shadowColor = CGColor.init(srgbRed: 0.09, green: 0.09, blue: 0.09, alpha: 0.8)
+        
+        self.smallView.layer.cornerRadius = 20
+        self.smallView.clipsToBounds = true
+    }
+    
+    /****
+     Configuration For Widget - Medium
+     */
+    func fontConfigurationForMedium() {
+        // Language
+        languageButtonConfiguration(lan: language)
+        // D
+        self.mediumDday.transform = CGAffineTransform(rotationAngle: .pi * -0.08)
+        // Title
+        self.mediumTitle.font = UIFont(name: "Inter-Bold", size: 14.0)
+        // Day Number
+        self.mediumDayNumber.font = UIFont(name: "Inter-Bold", size: 132.0)
+        self.mediumDayNumber.transform = CGAffineTransform(rotationAngle: .pi * -0.06)
+        self.mediumDayNumber.addCharacterSpacing(-0.09)
+
+        // Date
+        self.mediumDate.font = UIFont(name: "Inter-Medium", size: 10.0)
+        
+        self.mediumView.layer.cornerRadius = 20
+        self.mediumView.clipsToBounds = true
+        
+    }
+    
+    /****
+     Item List For Language Button - Medium
+     */
+    func setupPopUpLanguageButton() {
+        let popUpButtonClosure = { [self] (action: UIAction) in
+            language = action.title
+            languageButtonConfiguration(lan: language)
+            
+            saveButtonEnabled()
+        }
+                
+        languageButton.menu = UIMenu(title: "Language",
+            children: [
+            UIAction(title: "English", handler: popUpButtonClosure),
+            UIAction(title: "Korean", handler: popUpButtonClosure),
+            UIAction(title: "Japanese", handler: popUpButtonClosure),
+        ])
+        languageButton.layer.cornerRadius = 10
+    }
+    
+    /****
+     Configuration For Language Button - Medium
+     */
+    func languageButtonConfiguration(lan: String) {
+        switch lan {
+        case "English":
+            self.mediumDday.text = "Dday"
+            self.mediumDday.font = UIFont(name: "Inter-Bold", size: 69.0)
+            self.mediumDday.addCharacterSpacing(-0.03)
+            self.mediumDday.transform = CGAffineTransform(rotationAngle: .pi * -0.08)
+            
+            self.mediumDday.bottomAnchor.constraint(
+                equalTo: self.mediumView.bottomAnchor, constant: -70
+            ).isActive = true
+            
+        case "Korean":
+            self.mediumDday.text = "디데이"
+            self.mediumDday.font = UIFont(name: "Inter-Bold", size: 68.0)
+            self.mediumDday.addCharacterSpacing(-0.03)
+            self.mediumDday.transform = CGAffineTransform(rotationAngle: .pi * -0.05)
+            
+            self.mediumDday.bottomAnchor.constraint(
+                equalTo: self.mediumView.bottomAnchor, constant: 90
+            ).isActive = true
+            
+        case "Japanese":
+            self.mediumDday.text = "ディ-デ-"
+            self.mediumDday.font = UIFont(name: "Inter-Bold", size: 62.0)
+            self.mediumDday.addCharacterSpacing(-0.15)
+            self.mediumDday.transform = CGAffineTransform(rotationAngle: .pi * -0.05)
+            
+            self.mediumDday.bottomAnchor.constraint(
+                equalTo: self.mediumView.bottomAnchor, constant: 120
+            ).isActive = true
+            
+        default:
+            break
+        }
+    }
+    
+    /****
+     Title 업데이트시 불러옴
+     */
+    func changeTitle(value title: String?) {
+        //self.smallTitle.text = title
+        saveButtonEnabled()
+    }
+    
+    /****
+     Title 유/무에 따른 '저장'버튼 활성화
+     */
+    func saveButtonEnabled() {
+        if self.titleString?.count == 0 {
+            self.saveButton.isEnabled = false
+        } else {
+            self.saveButton.isEnabled = true
+        }
+    }
 }
 
+/****
+DatePickerCell Delegate
+*/
 extension EditViewController: DatePickerCellDelegate {
     func getDateValue(value date: Date) {
         self.theDate = date
-        self.smallDayNumber.text = String(calculateDday())
+        //self.smallDayNumber.text = String(calculateDday(self.theDate))
         
         saveButtonEnabled()
-        fontConfigurationForDate()
     }
 }
     
+/****
+ ColorWellCell Delegate
+ */
 extension EditViewController: ColorWellCellDelegate {
+    
     // ColorWellCellDelegate method 구현
     func changeBGColor(bgColor color: UIColor?) {
         smallView.backgroundColor = color
         mediumView.backgroundColor = color
-        largeView.backgroundColor = color
         
         colorForBackground = color
+        
+        saveButtonEnabled()
     }
     
     // ColorWellCellDelegate method 구현
@@ -294,23 +320,35 @@ extension EditViewController: ColorWellCellDelegate {
         smallDayNumber.textColor = color
         smallTitle.textColor = color
         
+        mediumDday.textColor = color
+        mediumTitle.textColor = color
+        mediumDayNumber.textColor = color
+        mediumDate.textColor = color
+        
         colorForTXT = color
+        
+        saveButtonEnabled()
     }
     
     // ColorWellCellDelegate method 구현
     func changeBothColor(bg bgColor: UIColor?, txt txtColor: UIColor?) {
         smallDday.textColor = txtColor
-        smallPlus.textColor = txtColor
         smallDayNumber.textColor = txtColor
         smallTitle.textColor = txtColor
+        
         mediumDday.textColor = txtColor
+        mediumTitle.textColor = txtColor
         mediumDayNumber.textColor = txtColor
+        mediumDate.textColor = txtColor
+        
         colorForTXT = txtColor
         
         smallView.backgroundColor = bgColor
         mediumView.backgroundColor = bgColor
-        largeView.backgroundColor = bgColor
+        
         colorForBackground = bgColor
+        
+        saveButtonEnabled()
     }
 }
 
@@ -336,18 +374,17 @@ extension EditViewController: UITableViewDataSource {
             } else { // subtitle row
                 
                 txtFieldForSubtitle = cellForTxtfield.accTextField
-                cellForTxtfield.accTextField.addTarget(self, action: #selector(getSubTitle), for: .allEvents)
+                cellForTxtfield.accTextField.addTarget(self, action: #selector(getSubTitle), for: .editingChanged)
                 
                 // place holder 대신 UserDefaults의 입력값 넣어주기
                 txtFieldForSubtitle.text = ddayList[cellTag].subTitle
-
             }
             
             cellForTxtfield.textLabel?.text = "\(target.title)"
             
             return cellForTxtfield
             
-        } else if indexPath.section == 1 { // datepicker section // TODO: UserDefaults에 저장된 Date값 불러오기
+        } else if indexPath.section == 1 { // datepicker section
             theDate = ddayList[cellTag].date
             
             let cellForDatepicker = addTableView.dequeueReusableCell(withIdentifier: target.type.rawValue, for: indexPath) as! DatePickerCell
@@ -355,6 +392,12 @@ extension EditViewController: UITableViewDataSource {
             
             // UserDefaults의 date값으로 수정
             cellForDatepicker.accDatePicker.date = ddayList[cellTag].date
+            self.language = ddayList[cellTag].language ?? "English"
+            
+            print("self language: \(self.language)")
+            print("ddayinfo: \(ddayList[cellTag].language)")
+            
+            languageButtonConfiguration(lan: self.language)
             
             cellForDatepicker.delegate = self
             
@@ -371,13 +414,28 @@ extension EditViewController: UITableViewDataSource {
             bgColor = ddayList[cellTag].widgetBGColor ?? "ddayBlack"
             txtColor = ddayList[cellTag].widgetTextColor ?? "ddayWhite"
             
-            changeBGColor(bgColor: UIColor(hexRGB: bgColor))
-            changeTxtColor(txtColor: UIColor(hexRGB: txtColor))
-            changeBothColor(bg: UIColor(hexRGB: bgColor), txt: UIColor(hexRGB: txtColor))
+            print("bg: \(bgColor)")
+            print("txt: \(txtColor)")
+            
+            
+            // Setting for Widget Defautl Color
+            self.smallView.backgroundColor = UIColor(hex: bgColor)
+            self.smallTitle.textColor  = UIColor(hex: txtColor)
+            self.smallDday.textColor  = UIColor(hex: txtColor)
+            self.smallDayNumber.textColor  = UIColor(hex: txtColor)
+            
+            self.mediumView.backgroundColor = UIColor(hex: bgColor)
+            self.mediumTitle.textColor  = UIColor(hex: txtColor)
+            self.mediumDday.textColor  = UIColor(hex: txtColor)
+            self.mediumDate.textColor  = UIColor(hex: txtColor)
+            self.mediumDayNumber.textColor  = UIColor(hex: txtColor)
+            
+            self.colorForTXT = UIColor(hex: txtColor)
+            self.colorForBackground = UIColor(hex: bgColor)
             
             // ColorWell에 보이는 값도 UserDefaults의 color값으로 수정
-            cellForColorwell.colorwellBackground.selectedColor = UIColor(hexRGB: bgColor)
-            cellForColorwell.colorwellText.selectedColor = UIColor(hexRGB: txtColor)
+            cellForColorwell.colorwellBackground.selectedColor = UIColor(hex: bgColor)
+            cellForColorwell.colorwellText.selectedColor = UIColor(hex: txtColor)
 
             cellForColorwell.delegate = self
             

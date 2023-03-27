@@ -15,12 +15,12 @@ struct WidgetView_Multi03_L_Comp02_3: View { // disable shadow
     
     var body: some View {
         
-        var dateInt: Int = CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 2]?.ddayDate ??  "2023.02.16"))
-        var ddayDorPlus: String = CustomFunctions().ddaySetNoneOrPlus(dateIntParam: dateInt)
-        var _formattedDateInt: String = CustomFunctions().dateIntSign(dateIntParam: dateInt) // 296
+        let dateInt: Int = CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 2]?.ddayDate ??  "2023.02.16"))
+        let ddayDorPlus: String = CustomFunctions().ddaySetNoneOrPlus(dateIntParam: dateInt)
+        let _formattedDateInt: String = CustomFunctions().dateIntSign(dateIntParam: dateInt) 
         
         var txtStringArr: [String] = []
-        var _dateCountArr: [Int] = [_formattedDateInt.count]
+        let _dateCountArr: [Int] = [_formattedDateInt.count]
         
         let _: [String] = _dateCountArr.map { index in
             for n in 0..<index {

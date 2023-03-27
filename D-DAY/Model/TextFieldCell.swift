@@ -43,8 +43,8 @@ extension TextFieldCell: UITextFieldDelegate {
         }
         
         // Text length control
-        guard (textField.text?.count)! < 13 else {
-            // 12글자 미만으로 입력해주세요 event
+        guard (textField.text?.count)! < 14 else {
+            // 14글자 미만으로 입력해주세요 event
             return false
         }
         return true
