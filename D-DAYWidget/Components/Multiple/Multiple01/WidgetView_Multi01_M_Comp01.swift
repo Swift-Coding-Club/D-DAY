@@ -15,11 +15,11 @@ struct WidgetView_Multi01_M_Comp01: View { // disable shadow
         
         // 0. Default Array for the variable 'defaultDdaySymbolMenu'
         let defaultStringArr: [[String]] = [
-            // format: [ddayTitle, ddayDate, ddayBgColor, ddayTxtColor]
-            ["길게눌러서 디데이 추가하기", "2023.08.04", "ddayBlack", "ddayLemon"],
-            ["길게눌러서 디데이 추가하기", "2023.06.04", "ddayWhite", "ddayBlack"],
-            ["길게눌러서 디데이 추가하기", "2023.03.04", "ddayWhite", "ddayBlack"],
-            ["길게눌러서 디데이 추가하기", "2023.04.04", "ddayBlack", "ddayLemon"],
+            // format: [ddayTitle, ddayDate, ddayBgColor, ddayTxtColor, ddayIsCountdown]
+            ["길게눌러서 디데이 추가하기", "2023.08.04", "ddayBlack", "ddayLemon", "false"],
+            ["길게눌러서 디데이 추가하기", "2023.06.04", "ddayWhite", "ddayBlack", "false"],
+            ["길게눌러서 디데이 추가하기", "2023.03.04", "ddayWhite", "ddayBlack", "false"],
+            ["길게눌러서 디데이 추가하기", "2023.04.04", "ddayBlack", "ddayLemon", "false"],
         ]
         
         // 1. 위젯 초기(tableview list읽어온 데이터 없을시) 보여지는 default CustomSymbol array
@@ -29,6 +29,7 @@ struct WidgetView_Multi01_M_Comp01: View { // disable shadow
             symbolDdayItem.ddayDate = sArray[1]
             symbolDdayItem.ddayBgColor = sArray[2]
             symbolDdayItem.ddayTxtColor = sArray[3]
+            symbolDdayItem.ddayIsCountdown = sArray[4]
             
             return symbolDdayItem
         }
@@ -53,7 +54,7 @@ struct WidgetView_Multi01_M_Comp01: View { // disable shadow
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayLemon"))
                     
                     ZStack {
-                        Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  defaultStringArr[0][1]))))")
+                        Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  defaultStringArr[0][1]), isTodayCounted: ddaySymbolMenu[safe: 0]?.ddayIsCountdown ?? "false")))")
                             .font(.custom("Inter-ExtraBold", size: 56.0))
                             .frame(width: 128, height: 49, alignment: .topTrailing)
                             .position(x: 65, y: 21)
@@ -85,7 +86,7 @@ struct WidgetView_Multi01_M_Comp01: View { // disable shadow
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayBlack"))
                     
                     ZStack {
-                        Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 1]?.ddayDate ??  defaultStringArr[1][1]))))")
+                        Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 1]?.ddayDate ??  defaultStringArr[1][1]), isTodayCounted: ddaySymbolMenu[safe: 1]?.ddayIsCountdown ?? "false")))")
                             .font(.custom("Inter-ExtraBold", size: 56.0))
                             .frame(width: 135, height: 49, alignment: .topLeading)
                             .position(x: 64, y: 21)
@@ -118,7 +119,7 @@ struct WidgetView_Multi01_M_Comp01: View { // disable shadow
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayBlack"))
                     
                     ZStack {
-                        Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 2]?.ddayDate ??  defaultStringArr[2][1]))))")
+                        Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 2]?.ddayDate ??  defaultStringArr[2][1]), isTodayCounted: ddaySymbolMenu[safe: 2]?.ddayIsCountdown ?? "false")))")
                             .font(.custom("Inter-ExtraBold", size: 56.0))
                             .frame(width: 135, height: 49, alignment: .topLeading)
                             .position(x: 61, y: 21)
@@ -149,7 +150,7 @@ struct WidgetView_Multi01_M_Comp01: View { // disable shadow
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayLemon"))
                     
                     ZStack {
-                        Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 3]?.ddayDate ??  defaultStringArr[3][1]))))")
+                        Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 3]?.ddayDate ??  defaultStringArr[3][1]), isTodayCounted: ddaySymbolMenu[safe: 3]?.ddayIsCountdown ?? "false")))")
                             .font(.custom("Inter-ExtraBold", size: 56.0))
                             .frame(width: 135, height: 49, alignment: .topTrailing)
                             .position(x: 60, y: 23)

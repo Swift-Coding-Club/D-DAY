@@ -31,7 +31,7 @@ struct WidgetView_Multi08_XL_Comp02_1: View { // enable shadow
                          .frame(width: 172, height: 176)
                  
                  // D or + 5
-                 switch CustomFunctions().ddaySetDorPlus(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 4]?.ddayDate ??  "2023.12.16"))) {
+                 switch CustomFunctions().ddaySetDorPlus(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 4]?.ddayDate ??  "2023.12.16"), isTodayCounted: ddaySymbolMenu[safe: 4]?.ddayIsCountdown ?? "false")) {
                  case "D":
                      Text("D")
                          .font(.custom("Inter-Bold", size: 105.0))
@@ -103,10 +103,10 @@ struct WidgetView_Multi08_XL_Comp02_1: View { // enable shadow
                  
                  
                  // DayNumber 5
-                 switch CustomFunctions().dateIntSign(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 4]?.ddayDate ??  "2023.10.16"))).count {
+                 switch CustomFunctions().dateIntSign(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 4]?.ddayDate ??  "2023.10.16"), isTodayCounted: ddaySymbolMenu[safe: 4]?.ddayIsCountdown ?? "false")).count {
                      
                  case ...3:
-                     Text("\(CustomFunctions().dateIntSign(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 4]?.ddayDate ??  "2023.10.16"))))")
+                     Text("\(CustomFunctions().dateIntSign(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 4]?.ddayDate ??  "2023.10.16"), isTodayCounted: ddaySymbolMenu[safe: 4]?.ddayIsCountdown ?? "false")))")
                              .font(.custom("Inter-Bold", size: 107.0))
                              .frame(width: 400, height: 60, alignment: .topLeading)
                              .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
@@ -117,7 +117,7 @@ struct WidgetView_Multi08_XL_Comp02_1: View { // enable shadow
                              .clipped()
                      
                  case 4...:
-                     Text("\(CustomFunctions().dateIntSign(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 4]?.ddayDate ??  "2023.10.16"))))")
+                     Text("\(CustomFunctions().dateIntSign(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 4]?.ddayDate ??  "2023.10.16"), isTodayCounted: ddaySymbolMenu[safe: 4]?.ddayIsCountdown ?? "false")))")
                              .font(.custom("Inter-Bold", size: 83.0))
                              .frame(width: 400, height: 60, alignment: .topLeading)
                              .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
@@ -156,7 +156,7 @@ struct WidgetView_Multi08_XL_Comp02_1: View { // enable shadow
                  
                  
                  // D or + 6
-                 switch CustomFunctions().ddaySetDorPlus(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 5]?.ddayDate ??  "2023.12.16"))) {
+                 switch CustomFunctions().ddaySetDorPlus(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 5]?.ddayDate ??  "2023.12.16"), isTodayCounted: ddaySymbolMenu[safe: 5]?.ddayIsCountdown ?? "false")) {
                  case "D":
                      Text("D")
                          .font(.custom("Inter-Bold", size: 105.0))
@@ -237,10 +237,10 @@ struct WidgetView_Multi08_XL_Comp02_1: View { // enable shadow
                  
                  
                  // DayNumber 6
-                 switch CustomFunctions().dateIntSign(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 5]?.ddayDate ??  "2023.10.16"))).count {
+                 switch CustomFunctions().dateIntSign(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 5]?.ddayDate ??  "2023.10.16"), isTodayCounted: ddaySymbolMenu[safe: 5]?.ddayIsCountdown ?? "false")).count {
                      
                  case ...3:
-                     Text("\(CustomFunctions().dateIntSign(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 5]?.ddayDate ??  "2023.10.16"))))")
+                     Text("\(CustomFunctions().dateIntSign(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 5]?.ddayDate ??  "2023.10.16"), isTodayCounted: ddaySymbolMenu[safe: 5]?.ddayIsCountdown ?? "false")))")
                              .font(.custom("Inter-Bold", size: 110.0))
                              .frame(width: 400, height: 60, alignment: .topLeading)
                              .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
@@ -251,7 +251,7 @@ struct WidgetView_Multi08_XL_Comp02_1: View { // enable shadow
                              .clipped()
                      
                  case 4...:
-                     Text("\(CustomFunctions().dateIntSign(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 5]?.ddayDate ??  "2023.10.16"))))")
+                     Text("\(CustomFunctions().dateIntSign(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 5]?.ddayDate ??  "2023.10.16"), isTodayCounted: ddaySymbolMenu[safe: 5]?.ddayIsCountdown ?? "false")))")
                              .font(.custom("Inter-Bold", size: 86.0))
                              .frame(width: 400, height: 60, alignment: .topLeading)
                              .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
@@ -290,7 +290,7 @@ struct WidgetView_Multi08_XL_Comp02_1: View { // enable shadow
                 
                 
                 // D or + 7
-                switch CustomFunctions().ddaySetDorPlus(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 6]?.ddayDate ??  "2023.12.16"))) {
+                switch CustomFunctions().ddaySetDorPlus(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 6]?.ddayDate ??  "2023.12.16"), isTodayCounted: ddaySymbolMenu[safe: 6]?.ddayIsCountdown ?? "false")) {
                 case "D":
                     Text("D")
                         .font(.custom("Inter-Bold", size: 111.0))
@@ -371,10 +371,10 @@ struct WidgetView_Multi08_XL_Comp02_1: View { // enable shadow
                 
                 
                 // DayNumber 7
-                switch CustomFunctions().dateIntSign(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 6]?.ddayDate ??  "2023.10.16"))).count {
+                switch CustomFunctions().dateIntSign(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 6]?.ddayDate ??  "2023.10.16"), isTodayCounted: ddaySymbolMenu[safe: 6]?.ddayIsCountdown ?? "false")).count {
                     
                 case ...3:
-                    Text("\(CustomFunctions().dateIntSign(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 6]?.ddayDate ??  "2023.10.16"))))")
+                    Text("\(CustomFunctions().dateIntSign(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 6]?.ddayDate ??  "2023.10.16"), isTodayCounted: ddaySymbolMenu[safe: 6]?.ddayIsCountdown ?? "false")))")
                             .font(.custom("Inter-Bold", size: 110.0))
                             .frame(width: 400, height: 60, alignment: .topLeading)
                             .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
@@ -385,7 +385,7 @@ struct WidgetView_Multi08_XL_Comp02_1: View { // enable shadow
                             .clipped()
                     
                 case 4...:
-                    Text("\(CustomFunctions().dateIntSign(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 6]?.ddayDate ??  "2023.10.16"))))")
+                    Text("\(CustomFunctions().dateIntSign(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 6]?.ddayDate ??  "2023.10.16"), isTodayCounted: ddaySymbolMenu[safe: 6]?.ddayIsCountdown ?? "false")))")
                             .font(.custom("Inter-Bold", size: 85.0))
                             .frame(width: 400, height: 60, alignment: .topLeading)
                             .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
@@ -429,7 +429,7 @@ struct WidgetView_Multi08_XL_Comp02_1: View { // enable shadow
                 
                 
                 // D or + 8
-                switch CustomFunctions().ddaySetDorPlus(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 7]?.ddayDate ??  "2023.12.16"))) {
+                switch CustomFunctions().ddaySetDorPlus(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 7]?.ddayDate ??  "2023.12.16"), isTodayCounted: ddaySymbolMenu[safe: 7]?.ddayIsCountdown ?? "false")) {
                 case "D":
                     Text("D")
                         .font(.custom("Inter-Bold", size: 110.0))
@@ -501,10 +501,10 @@ struct WidgetView_Multi08_XL_Comp02_1: View { // enable shadow
                 
                 
                 // DayNumber 8
-                switch CustomFunctions().dateIntSign(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 7]?.ddayDate ??  "2023.10.16"))).count {
+                switch CustomFunctions().dateIntSign(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 7]?.ddayDate ??  "2023.10.16"), isTodayCounted: ddaySymbolMenu[safe: 7]?.ddayIsCountdown ?? "false")).count {
                     
                 case ...3:
-                    Text("\(CustomFunctions().dateIntSign(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 7]?.ddayDate ??  "2023.10.16"))))")
+                    Text("\(CustomFunctions().dateIntSign(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 7]?.ddayDate ??  "2023.10.16"), isTodayCounted: ddaySymbolMenu[safe: 7]?.ddayIsCountdown ?? "false")))")
                             .font(.custom("Inter-Bold", size: 108.0))
                             .frame(width: 400, height: 60, alignment: .topLeading)
                             .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
@@ -515,7 +515,7 @@ struct WidgetView_Multi08_XL_Comp02_1: View { // enable shadow
                             .clipped()
                     
                 case 4...:
-                    Text("\(CustomFunctions().dateIntSign(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 7]?.ddayDate ??  "2023.10.16"))))")
+                    Text("\(CustomFunctions().dateIntSign(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 7]?.ddayDate ??  "2023.10.16"), isTodayCounted: ddaySymbolMenu[safe: 7]?.ddayIsCountdown ?? "false")))")
                             .font(.custom("Inter-Bold", size: 86.0))
                             .frame(width: 400, height: 60, alignment: .topLeading)
                             .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)

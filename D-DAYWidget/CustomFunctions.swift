@@ -16,7 +16,7 @@ import SwiftUI
  5. makeSignedDateNumber (dateIntParam: Int) -> String
 */
 struct CustomFunctions {
-    func calculateDday(ddayRecievedDate: String) -> Int {
+    func calculateDday(ddayRecievedDate: String, isTodayCounted: String) -> Int {
         // D-day 날짜 계산
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy.MM.dd"
@@ -29,7 +29,7 @@ struct CustomFunctions {
         
         let timeInterval = Calendar.current.dateComponents([.day], from: formattedTargetDate, to: formattedCurrentDate)
         
-        return timeInterval.day!
+        return isTodayCounted.bool ?? false ? (timeInterval.day! + 1) : timeInterval.day!
     }
     
     func ddaySetNoneOrPlus(dateIntParam: Int) -> String {
@@ -135,10 +135,10 @@ struct DefaultArrForWidget_M03 {
     func getDaySymbolMenu(entry: Provider.Entry) -> [DdaySymbol] {
         
         let defaultStringArr: [[String]] = [
-            // format: [ddayTitle, ddayDate, ddayBgColor, ddayTxtColor]
-            ["길게눌러서 디데이 추가하기", "2024.01.04", "ddayNeonPink", "ddayNeonGreen"],
-            ["길게눌러서 디데이 추가하기", "2024.02.04", "ddayNeonPink", "ddayNeonGreen"],
-            ["길게눌러서 디데이 추가하기", "2023.02.04", "ddayNeonPink", "ddayNeonGreen"],
+            // format: [ddayTitle, ddayDate, ddayBgColor, ddayTxtColor, ddayIsCountdown]
+            ["길게눌러서 디데이 추가하기", "2024.01.04", "ddayNeonPink", "ddayNeonGreen", "false"],
+            ["길게눌러서 디데이 추가하기", "2024.02.04", "ddayNeonPink", "ddayNeonGreen", "false"],
+            ["길게눌러서 디데이 추가하기", "2023.02.04", "ddayNeonPink", "ddayNeonGreen", "false"],
         ]
         
         let defaultDdaySymbolMenu: [DdaySymbol] = defaultStringArr.map { sArray in
@@ -147,6 +147,7 @@ struct DefaultArrForWidget_M03 {
             symbolDdayItem.ddayDate = sArray[1]
             symbolDdayItem.ddayBgColor = sArray[2]
             symbolDdayItem.ddayTxtColor = sArray[3]
+            symbolDdayItem.ddayIsCountdown = sArray[4]
             
             return symbolDdayItem
         }
@@ -162,15 +163,15 @@ struct DefaultArrForWidget_M08 {
     func getDaySymbolMenu(entry: Provider.Entry) -> [DdaySymbol] {
         
         let defaultStringArr: [[String]] = [
-            // format: [ddayTitle, ddayDate, ddayBgColor, ddayTxtColor]
-            ["길게눌러서 디데이 추가하기", "2023.08.04", "ddayNeonGreen", "ddayBlack"],
-            ["길게눌러서 디데이 추가하기", "2023.05.04", "ddayNeonCrimson", "ddayOrangeLighter"],
-            ["길게눌러서 디데이 추가하기", "2024.01.04", "ddayNeonSkyBlue", "ddayYellow"],
-            ["길게눌러서 디데이 추가하기", "2022.10.04", "ddayNeonBlueDarker", "ddayNeonCrimson"],
-            ["길게눌러서 디데이 추가하기", "2023.03.25", "ddayNeonPurple", "ddayNeonEmerald"],
-            ["길게눌러서 디데이 추가하기", "2023.08.15", "ddayToneDownBabyPink", "ddayToneDownHotPink"],
-            ["길게눌러서 디데이 추가하기", "2024.10.24", "ddayNeonOrange", "ddayNeonGreanBrighter"],
-            ["길게눌러서 디데이 추가하기", "2023.05.20", "ddayNeonPink", "ddayNeonYellow"],
+            // format: [ddayTitle, ddayDate, ddayBgColor, ddayTxtColor, ddayIsCountdown]
+            ["길게눌러서 디데이 추가하기", "2023.08.04", "ddayNeonGreen", "ddayBlack", "false"],
+            ["길게눌러서 디데이 추가하기", "2023.05.04", "ddayNeonCrimson", "ddayOrangeLighter", "false"],
+            ["길게눌러서 디데이 추가하기", "2024.01.04", "ddayNeonSkyBlue", "ddayYellow", "false"],
+            ["길게눌러서 디데이 추가하기", "2022.10.04", "ddayNeonBlueDarker", "ddayNeonCrimson", "false"],
+            ["길게눌러서 디데이 추가하기", "2023.03.25", "ddayNeonPurple", "ddayNeonEmerald", "false"],
+            ["길게눌러서 디데이 추가하기", "2023.08.15", "ddayToneDownBabyPink", "ddayToneDownHotPink", "false"],
+            ["길게눌러서 디데이 추가하기", "2024.10.24", "ddayNeonOrange", "ddayNeonGreanBrighter", "false"],
+            ["길게눌러서 디데이 추가하기", "2023.05.20", "ddayNeonPink", "ddayNeonYellow", "false"],
         ]
         
         let defaultDdaySymbolMenu: [DdaySymbol] = defaultStringArr.map { sArray in
@@ -179,6 +180,7 @@ struct DefaultArrForWidget_M08 {
             symbolDdayItem.ddayDate = sArray[1]
             symbolDdayItem.ddayBgColor = sArray[2]
             symbolDdayItem.ddayTxtColor = sArray[3]
+            symbolDdayItem.ddayIsCountdown = sArray[4]
             
             return symbolDdayItem
         }
@@ -186,5 +188,19 @@ struct DefaultArrForWidget_M08 {
         let ddaySymbolMenu: [DdaySymbol] = entry.configuration.ddaySymbol ?? defaultDdaySymbolMenu
         
         return ddaySymbolMenu
+    }
+}
+
+
+extension String {
+    var bool: Bool? {
+        switch self.lowercased() {
+        case "true":
+            return true
+        case "false":
+            return false
+        default:
+            return nil
+        }
     }
 }

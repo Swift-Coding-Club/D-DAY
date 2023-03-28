@@ -30,7 +30,11 @@ class EditViewController: UIViewController {
     @IBOutlet weak var mediumTitle: UILabel!
     @IBOutlet weak var mediumDate: UILabel!
     
+    // Language Button
     @IBOutlet weak var languageButton: UIButton!
+    
+    // Countdown Button
+    @IBOutlet weak var isTodayCountedButton: UIButton!
     
     // Textfield for Title
     var txtFieldForTitle: UITextField = UITextField()

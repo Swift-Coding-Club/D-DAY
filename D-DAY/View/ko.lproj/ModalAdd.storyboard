@@ -282,12 +282,16 @@
                                                     <constraint firstAttribute="width" constant="153" id="6lq-0x-3NY"/>
                                                     <constraint firstAttribute="height" constant="35" id="Mnu-fu-pln"/>
                                                 </constraints>
+                                                <color key="tintColor" systemColor="systemGrayColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="설정일을 카운트다운" imagePadding="4" titleAlignment="center">
                                                     <imageReference key="image" image="square" catalog="system" symbolScale="small" renderingMode="template"/>
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="11"/>
                                                     <color key="baseForegroundColor" red="0.42408459595959591" green="0.42408459595959591" blue="0.42408459595959591" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="isTodayCountedButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Q8I-S4-7aa"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -341,6 +345,7 @@
                     <connections>
                         <outlet property="addTableView" destination="Wn9-yC-ZcK" id="rTD-aa-qSm"/>
                         <outlet property="cancelButton" destination="pEU-3E-Li3" id="TVI-GO-Io1"/>
+                        <outlet property="isTodayCountedButton" destination="gXf-XS-NKM" id="Fpd-7E-Zo6"/>
                         <outlet property="languageButton" destination="Cvo-fe-n8B" id="7v7-Un-51v"/>
                         <outlet property="mediumDate" destination="jnX-SH-s4g" id="QKl-N2-Fpc"/>
                         <outlet property="mediumDayNumber" destination="T4U-sx-s4c" id="dJR-6v-Vfo"/>
@@ -367,6 +372,9 @@
         </namedColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

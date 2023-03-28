@@ -20,13 +20,16 @@ struct WidgetView_Single02_M_Comp01: View { // disable shadow
             symbolDdayItem.ddayBgColor = "ddayNeonBlue"
             symbolDdayItem.ddayTxtColor = "ddayNeonYellow"
             symbolDdayItem.ddayLanguage = "English"
+            symbolDdayItem.ddayIsCountdown = "false"
 
             return symbolDdayItem
         }
             
         let ddaySymbolMenu: [DdaySymbol] = entry.configuration.ddaySymbol ?? defaultDdaySymbolMenu
         
-        let dateInt = CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  "2024.02.16"))
+        let isTodayCounted: String = ddaySymbolMenu[safe: 0]?.ddayIsCountdown ?? "false"
+        let dateInt = CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  "2024.02.16"), isTodayCounted: isTodayCounted)
+
         let unsignedDateInt = CustomFunctions().dateIntSign(dateIntParam: dateInt)
         
         

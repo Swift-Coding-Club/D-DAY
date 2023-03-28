@@ -18,8 +18,7 @@ class ViewController: UIViewController, CALayerDelegate {
     
     // UserDefaults 넣어 줄 struct list
     var ddayList = [DdayInfo]()
-        
-    // TODO: isTodayCounted 추가했어요 (수정 후 이 코멘트 삭제)
+    
     var isTodayCounted = false
     
     private var gradient: CAGradientLayer!
@@ -144,8 +143,8 @@ class ViewController: UIViewController, CALayerDelegate {
         let formattedCurrentDate = dateFormatter.date(from: currentDateString)!
 
         let timeInterval = Calendar.current.dateComponents([.day], from: formattedTargetDate, to: formattedCurrentDate)
-            
-        return timeInterval.day!
+        
+        return self.isTodayCounted ? (timeInterval.day! + 1) : timeInterval.day!
     }
     
     // 변경된 tableView 값을 UserDefaults에 저장하고, 다시 불러와서 tableView reload
@@ -184,8 +183,10 @@ extension ViewController: UITableViewDataSource{
         let formattedString = dateFormatter.string(from: ddayList[indexPath.row].date)
         cell.date.text = formattedString
         
+        self.isTodayCounted = ddayList[indexPath.row].isTodayCounted
+        
         let dateToCalculate = calculateDday(storedDate: ddayList[indexPath.row].date)
-
+        
         if dateToCalculate > 0 {
             cell.dday.text = "D+" + String(dateToCalculate)
             cell.dday.textColor = .systemBlue
@@ -199,9 +200,6 @@ extension ViewController: UITableViewDataSource{
             cell.dday.textColor = .systemRed
             cell.dday.backgroundColor = .none
         }
-        
-        // TODO: isTodayCounted (수정 후 코멘트 삭제)
-        isTodayCounted = ddayList[indexPath.row].isTodayCounted
         
         return cell
     }

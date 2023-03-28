@@ -19,12 +19,15 @@ struct WidgetView_Single01_M_Comp02: View { // enable shadow
             symbolDdayItem.ddayDate = "2025.12.25"
             symbolDdayItem.ddayBgColor = "ddayNeonGreen"
             symbolDdayItem.ddayTxtColor = "ddayBlack"
+            symbolDdayItem.ddayIsCountdown = "false"
 
             return symbolDdayItem
         }
             
         let ddaySymbolMenu: [DdaySymbol] = entry.configuration.ddaySymbol ?? defaultDdaySymbolMenu
-        let dateInt = CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  "2024.02.16"))
+        
+        let isTodayCounted: String = ddaySymbolMenu[safe: 0]?.ddayIsCountdown ?? "false"
+        let dateInt = CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  "2024.02.16"), isTodayCounted: isTodayCounted)
         
         
         ZStack {

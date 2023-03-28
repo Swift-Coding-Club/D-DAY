@@ -30,7 +30,13 @@ class AddViewController: UIViewController {
     @IBOutlet weak var mediumTitle: UILabel!
     @IBOutlet weak var mediumDate: UILabel!
     
+    // Language Button
     @IBOutlet weak var languageButton: UIButton!
+    
+    // Countdown Button
+    @IBOutlet weak var isTodayCountedButton: UIButton!
+    
+    var isTodayCounted = false
     
     // Textfield for Title
     var txtFieldForTitle: UITextField = UITextField()
@@ -55,6 +61,7 @@ class AddViewController: UIViewController {
     // UserDefaults 넣어 줄 struct list
     var ddayList = [DdayInfo]()
     
+    
     // Language
     var language: String = "English"
 
@@ -66,6 +73,20 @@ class AddViewController: UIViewController {
 }
 
 extension AddViewController {
+    
+    /****
+     IBAction for 'Countdown' button
+     */
+    @IBAction func isTodayCountedButtonTapped(_ sender: Any) {
+        isTodayCounted.toggle()
+        
+        let smallConfig = UIImage.SymbolConfiguration(pointSize: 17, weight: .regular, scale: .small)
+        if isTodayCounted { // true
+            isTodayCountedButton.setImage(UIImage(systemName: "checkmark.square", withConfiguration: smallConfig), for: .normal)
+        } else { // false
+            isTodayCountedButton.setImage(UIImage(systemName: "square", withConfiguration: smallConfig), for: .normal)
+        }
+    }
     
     /****
      IBAction for '취소(cancel)' button
@@ -85,9 +106,10 @@ extension AddViewController {
         bgColor = colorForBackground?.toHexString() ?? "ddayBlack"
         txtColor = colorForTXT?.toHexString() ?? "ddayWhite"
 
-        // TODO: isTodayCounted 추가했어요 (수정 후 이 코멘트 삭제)
         // UserDefaults에 추가
-        let newDdayInfo = DdayInfo(title: self.txtFieldForTitle.text!, subTitle: self.txtFieldForSubtitle.text!, date: self.theDate, isTodayCounted: false, widgetTextColor: txtColor, widgetBGColor: bgColor, language: self.language)
+        let newDdayInfo = DdayInfo(title: self.txtFieldForTitle.text!, subTitle: self.txtFieldForSubtitle.text!, date: self.theDate, isTodayCounted: self.isTodayCounted, widgetTextColor: txtColor, widgetBGColor: bgColor, language: self.language)
+        
+        print("add iscounted : \(self.isTodayCounted)")
                 
         let encodedData = UserDefaults.shared.array(forKey: KeyForUserDefaults) as? [Data] ?? []
 
@@ -143,7 +165,7 @@ extension AddViewController {
         
         let timeInterval = Calendar.current.dateComponents([.day], from: formattedTargetDate, to: formattedCurrentDate)
         
-        return timeInterval.day!
+        return self.isTodayCounted ? (timeInterval.day! + 1) : timeInterval.day!
     }
     
     /****

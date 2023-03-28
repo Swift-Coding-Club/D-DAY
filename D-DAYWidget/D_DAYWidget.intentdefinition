@@ -149,7 +149,7 @@
 			<key>INTypeDisplayNameID</key>
 			<string>YuQiXR</string>
 			<key>INTypeLastPropertyTag</key>
-			<integer>106</integer>
+			<integer>109</integer>
 			<key>INTypeName</key>
 			<string>DdaySymbol</string>
 			<key>INTypeProperties</key>
@@ -271,6 +271,20 @@
 					<string>ddayLanguage</string>
 					<key>INTypePropertyTag</key>
 					<integer>106</integer>
+					<key>INTypePropertyType</key>
+					<string>String</string>
+				</dict>
+				<dict>
+					<key>INTypePropertyDisplayName</key>
+					<string>Dday Is Countdown</string>
+					<key>INTypePropertyDisplayNameID</key>
+					<string>B81KqQ</string>
+					<key>INTypePropertyDisplayPriority</key>
+					<integer>10</integer>
+					<key>INTypePropertyName</key>
+					<string>ddayIsCountdown</string>
+					<key>INTypePropertyTag</key>
+					<integer>109</integer>
 					<key>INTypePropertyType</key>
 					<string>String</string>
 				</dict>

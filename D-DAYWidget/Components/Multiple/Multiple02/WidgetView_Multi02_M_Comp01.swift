@@ -14,13 +14,13 @@ struct WidgetView_Multi02_M_Comp01: View { // disable shadow
     var body: some View {
         
         let defaultStringArr: [[String]] = [
-            // format: [ddayTitle, ddayDate, ddayBgColor, ddayTxtColor]
-            ["길게눌러서 디데이 추가하기", "2023.08.04", "ddayNeonGreen", "ddayBlack"],
-            ["길게눌러서 디데이 추가하기", "2023.10.04", "ddayNeonCrimson", "ddayOrangeLighter"],
-            ["길게눌러서 디데이 추가하기", "2023.11.04", "ddayNeonSkyBlue", "ddayYellow"],
-            ["길게눌러서 디데이 추가하기", "2023.04.04", "ddayNeonPurple", "ddayNeonEmerald"],
-            ["길게눌러서 디데이 추가하기", "2023.10.14", "ddayNeonPink", "ddayWhite"],
-            ["길게눌러서 디데이 추가하기", "2025.05.04", "ddayNeonBlueDarker", "ddayChristmasRed"],
+            // format: [ddayTitle, ddayDate, ddayBgColor, ddayTxtColor, ddayIsCountdown]
+            ["길게눌러서 디데이 추가하기", "2023.08.04", "ddayNeonGreen", "ddayBlack", "false"],
+            ["길게눌러서 디데이 추가하기", "2023.10.04", "ddayNeonCrimson", "ddayOrangeLighter", "false"],
+            ["길게눌러서 디데이 추가하기", "2023.11.04", "ddayNeonSkyBlue", "ddayYellow", "false"],
+            ["길게눌러서 디데이 추가하기", "2023.04.04", "ddayNeonPurple", "ddayNeonEmerald", "false"],
+            ["길게눌러서 디데이 추가하기", "2023.10.14", "ddayNeonPink", "ddayWhite", "false"],
+            ["길게눌러서 디데이 추가하기", "2025.05.04", "ddayNeonBlueDarker", "ddayChristmasRed", "false"],
         ]
         
         let defaultDdaySymbolMenu: [DdaySymbol] = defaultStringArr.map { sArray in
@@ -29,6 +29,7 @@ struct WidgetView_Multi02_M_Comp01: View { // disable shadow
             symbolDdayItem.ddayDate = sArray[1]
             symbolDdayItem.ddayBgColor = sArray[2]
             symbolDdayItem.ddayTxtColor = sArray[3]
+            symbolDdayItem.ddayIsCountdown = sArray[4]
             
             return symbolDdayItem
         }
@@ -77,7 +78,7 @@ struct WidgetView_Multi02_M_Comp01: View { // disable shadow
                         .multilineTextAlignment(.trailing)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 3]?.ddayTxtColor ?? "ddayNeonEmerald"))
                     
-                    Text("\(CustomFunctions().dateIntSign(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 3]?.ddayDate ??  defaultStringArr[3][1]))))")
+                    Text("\(CustomFunctions().dateIntSign(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 3]?.ddayDate ??  defaultStringArr[3][1]), isTodayCounted: ddaySymbolMenu[safe: 3]?.ddayIsCountdown ?? "false")))")
                         .font(.custom("Inter-Bold", size: 57.0))
                         .frame(width: 150, height: 60, alignment: .topLeading)
                         .kerning(-5)
@@ -127,7 +128,7 @@ struct WidgetView_Multi02_M_Comp01: View { // disable shadow
                         .multilineTextAlignment(.trailing)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 4]?.ddayTxtColor ?? "ddayWhite"))
                     
-                    Text("\(CustomFunctions().dateIntSign(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 4]?.ddayDate ??  defaultStringArr[4][1]))))")
+                    Text("\(CustomFunctions().dateIntSign(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 4]?.ddayDate ??  defaultStringArr[4][1]), isTodayCounted: ddaySymbolMenu[safe: 4]?.ddayIsCountdown ?? "false")))")
                         .font(.custom("Inter-Bold", size: 47.0))
                         .frame(width: 150, height: 60, alignment: .topLeading)
                         .kerning(-5)
@@ -179,7 +180,7 @@ struct WidgetView_Multi02_M_Comp01: View { // disable shadow
                         .multilineTextAlignment(.trailing)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                     
-                    Text("\(CustomFunctions().dateIntSign(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  defaultStringArr[0][1]))))")
+                    Text("\(CustomFunctions().dateIntSign(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  defaultStringArr[0][1]), isTodayCounted: ddaySymbolMenu[safe: 0]?.ddayIsCountdown ?? "false")))")
                         .font(.custom("Inter-Bold", size: 51.0))
                         .frame(width: 150, height: 60, alignment: .topLeading)
                         .kerning(-5)
@@ -229,7 +230,7 @@ struct WidgetView_Multi02_M_Comp01: View { // disable shadow
                         .multilineTextAlignment(.trailing)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 5]?.ddayTxtColor ?? "ddayChristmasRed"))
                     
-                    Text("\(CustomFunctions().dateIntSign(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 5]?.ddayDate ??  defaultStringArr[5][1]))))")
+                    Text("\(CustomFunctions().dateIntSign(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 5]?.ddayDate ??  defaultStringArr[5][1]), isTodayCounted: ddaySymbolMenu[safe: 5]?.ddayIsCountdown ?? "false")))")
                         .font(.custom("Inter-Bold", size: 53.0))
                         .frame(width: 150, height: 60, alignment: .topLeading)
                         .kerning(-5)
@@ -283,7 +284,7 @@ struct WidgetView_Multi02_M_Comp01: View { // disable shadow
                         .multilineTextAlignment(.trailing)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 2]?.ddayTxtColor ?? "ddayYellow"))
                     
-                    Text("\(CustomFunctions().dateIntSign(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 2]?.ddayDate ??  defaultStringArr[2][1]))))")
+                    Text("\(CustomFunctions().dateIntSign(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 2]?.ddayDate ??  defaultStringArr[2][1]), isTodayCounted: ddaySymbolMenu[safe: 2]?.ddayIsCountdown ?? "false")))")
                         .font(.custom("Inter-Bold", size: 59.0))
                         .frame(width: 150, height: 60, alignment: .topLeading)
                         .kerning(-5)
@@ -334,7 +335,7 @@ struct WidgetView_Multi02_M_Comp01: View { // disable shadow
                         .multilineTextAlignment(.trailing)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayOrangeLighter"))
                     
-                    Text("\(CustomFunctions().dateIntSign(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 1]?.ddayDate ??  defaultStringArr[1][1]))))")
+                    Text("\(CustomFunctions().dateIntSign(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 1]?.ddayDate ??  defaultStringArr[1][1]), isTodayCounted: ddaySymbolMenu[safe: 1]?.ddayIsCountdown ?? "false")))")
                         .font(.custom("Inter-Bold", size: 58.0))
                         .frame(width: 150, height: 60, alignment: .topLeading)
                         .kerning(-5)

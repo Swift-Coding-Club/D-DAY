@@ -341,6 +341,7 @@
                     <connections>
                         <outlet property="addTableView" destination="l6J-nq-zuL" id="jeP-Mk-Vlf"/>
                         <outlet property="cancelButton" destination="S5T-A0-FKY" id="xs1-MN-9Ki"/>
+                        <outlet property="isTodayCountedButton" destination="Fhk-Ne-C6E" id="jXx-sy-X2j"/>
                         <outlet property="languageButton" destination="gPx-JO-zBB" id="Z90-tj-hw5"/>
                         <outlet property="mediumDate" destination="E4n-er-Sqa" id="1mR-xe-9lm"/>
                         <outlet property="mediumDayNumber" destination="cDC-7O-U0o" id="2Fj-Mb-jCR"/>

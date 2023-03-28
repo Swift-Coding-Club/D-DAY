@@ -15,7 +15,8 @@ struct WidgetView_Multi03_L_Comp02_3: View { // disable shadow
     
     var body: some View {
         
-        let dateInt: Int = CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 2]?.ddayDate ??  "2023.02.16"))
+        let isTodayCounted: String = ddaySymbolMenu[safe: 2]?.ddayIsCountdown ?? "false"
+        let dateInt: Int = CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 2]?.ddayDate ??  "2024.02.10"), isTodayCounted: isTodayCounted)
         let ddayDorPlus: String = CustomFunctions().ddaySetNoneOrPlus(dateIntParam: dateInt)
         let _formattedDateInt: String = CustomFunctions().dateIntSign(dateIntParam: dateInt) 
         
