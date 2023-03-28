@@ -30,6 +30,9 @@ class ColorWellCell: UITableViewCell {
     }
 }
 
+// to contain index which is to be random color index
+var indexArr = [Int]()
+
 extension ColorWellCell {
     func configuration() {
         colorwellText.selectedColor = UIColor(named: "ddayBlack")
@@ -58,10 +61,15 @@ extension ColorWellCell {
     @objc private func showAnyColor() {
         let colorList = Color.colorList
         
-        colorIndex += 1
-        if colorIndex >= colorList.count {
-            colorIndex = 0
-        }
+        var randomIndexNum = 0
+
+        // calculate random color index
+        if indexArr.isEmpty { indexArr = Array(0..<colorList.count) }
+        let index = Int.random(in: 0..<indexArr.count)
+        randomIndexNum = indexArr.remove(at: index)
+
+        colorIndex = randomIndexNum
+            
         let changedColorForBackground = colorList[colorIndex].bgColor
         let changedColorForTXT = colorList[colorIndex].txtColor
         
