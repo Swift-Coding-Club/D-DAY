@@ -265,7 +265,7 @@ extension AddViewController {
             ).isActive = true
             
         case "Japanese":
-            self.mediumDday.text = "ディ-デ-"
+            self.mediumDday.text = "ディ-デイ"
             self.mediumDday.font = UIFont(name: "Inter-Bold", size: 62.0)
             self.mediumDday.addCharacterSpacing(-0.15)
             self.mediumDday.transform = CGAffineTransform(rotationAngle: .pi * -0.05)

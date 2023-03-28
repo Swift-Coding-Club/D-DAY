@@ -17,7 +17,7 @@ struct WidgetView_Single01_M_Comp01: View { // disable shadow
             let symbolDdayItem = DdaySymbol (identifier: "identifier", display: "diaplay")
             symbolDdayItem.ddayTitle = "길게눌러서 디데이 추가하기"
             symbolDdayItem.ddayDate = "2025.12.25"
-            symbolDdayItem.ddayBgColor = "ddayNeonGreen"
+            symbolDdayItem.ddayBgColor = "ddayWhite"
             symbolDdayItem.ddayTxtColor = "ddayBlack"
             symbolDdayItem.ddayIsCountdown = "false"
 
@@ -119,14 +119,14 @@ struct WidgetView_Single01_M_Comp01: View { // disable shadow
                             .frame(width: 400, height: 100, alignment: .leading)
                             .padding(EdgeInsets(top: 15, leading: 43, bottom: 0, trailing: 0))
                             .multilineTextAlignment(.leading)
-                            .kerning(-15)
+                            .kerning(-13)
                             .rotationEffect(.degrees(-10))
                             .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                         
                         Text("\(ddayNumber)")
                             .font(.custom("Inter-Bold", size: 128.0))
                             .frame(width: 400, height: 100, alignment: .leading)
-                            .padding(EdgeInsets(top: 15, leading: 343, bottom: 0, trailing: 0))
+                            .padding(EdgeInsets(top: 15, leading: 352, bottom: 0, trailing: 0))
                             .multilineTextAlignment(.leading)
                             .kerning(-13)
                             .rotationEffect(.degrees(-10))
@@ -248,6 +248,6 @@ struct WidgetView_Single01_M_Comp01: View { // disable shadow
             }
         }
         .frame(height: 200)
-        .background(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayNeonGreen"))
+        .background(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayWhite"))
     }
 }

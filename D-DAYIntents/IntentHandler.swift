@@ -24,8 +24,7 @@ class IntentHandler: INExtension, ConfigurationIntentHandling {
                 identifier: "identifier",
                 display: listItem.title,
                 pronunciationHint: "pronunciationHint",
-//                subtitle: listItemDate,
-                subtitle: String(listItem.isTodayCounted),
+                subtitle: listItemDate,
                 image: nil
             )
             

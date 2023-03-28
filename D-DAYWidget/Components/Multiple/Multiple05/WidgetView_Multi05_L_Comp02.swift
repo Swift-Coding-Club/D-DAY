@@ -15,9 +15,9 @@ struct WidgetView_Multi05_L_Comp02: View { // enable shadow
         
         let defaultStringArr: [[String]] = [
             // format: [ddayTitle, ddayDate, ddayBgColor, ddayTxtColor, ddayIsCountdown]
-            ["길게눌러서 디데이 추가하기", "2023.10.04", "ddayNeonGreen", "ddayBlack", "false"],
-            ["길게눌러서 디데이 추가하기", "2023.05.04", "ddayNeonGreen", "ddayBlack", "false"],
-            ["길게눌러서 디데이 추가하기", "2022.02.04", "ddayNeonGreen", "ddayBlack", "false"],
+            ["길게눌러서 디데이 추가하기", "2023.10.04", "ddayBlack", "ddayWhite", "false"],
+            ["길게눌러서 디데이 추가하기", "2023.05.04", "ddayBlack", "ddayWhite", "false"],
+            ["길게눌러서 디데이 추가하기", "2022.02.04", "ddayBlack", "ddayWhite", "false"],
         ]
         
         let defaultDdaySymbolMenu: [DdaySymbol] = defaultStringArr.map { sArray in
@@ -47,7 +47,7 @@ struct WidgetView_Multi05_L_Comp02: View { // enable shadow
                         .padding(EdgeInsets(top: 13, leading: 27, bottom: 25, trailing: 0))
                         .kerning(-8)
                         .rotationEffect(.degrees(-10))
-                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayNeonGreen"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                     
                 case 5:
                     Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  "2023.10.16"), isTodayCounted: ddaySymbolMenu[safe: 0]?.ddayIsCountdown ?? "false")))")
@@ -57,7 +57,7 @@ struct WidgetView_Multi05_L_Comp02: View { // enable shadow
                         .padding(EdgeInsets(top: 13, leading: 28, bottom: 25, trailing: 0))
                         .kerning(-8)
                         .rotationEffect(.degrees(-10))
-                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayNeonGreen"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                     
                 case 6...:
                     Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  "2023.10.16"), isTodayCounted: ddaySymbolMenu[safe: 0]?.ddayIsCountdown ?? "false")))")
@@ -67,7 +67,7 @@ struct WidgetView_Multi05_L_Comp02: View { // enable shadow
                         .padding(EdgeInsets(top: 13, leading: 33, bottom: 25, trailing: 0))
                         .kerning(-8)
                         .rotationEffect(.degrees(-10))
-                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayNeonGreen"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                     
                 default:
                     Text("Error #F-Count M05-2-1")
@@ -82,7 +82,7 @@ struct WidgetView_Multi05_L_Comp02: View { // enable shadow
                         .multilineTextAlignment(.trailing)
                         .padding(EdgeInsets(top: 0, leading: 240, bottom: 0, trailing: 0))
                         .lineLimit(3)
-                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayNeonGreen"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
 
                 case 5...10:
                     Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
@@ -91,7 +91,7 @@ struct WidgetView_Multi05_L_Comp02: View { // enable shadow
                         .multilineTextAlignment(.trailing)
                         .padding(EdgeInsets(top: 0, leading: 240, bottom: 0, trailing: 0))
                         .lineLimit(3)
-                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayNeonGreen"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
 
                 case 11...:
                     Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
@@ -100,7 +100,7 @@ struct WidgetView_Multi05_L_Comp02: View { // enable shadow
                         .multilineTextAlignment(.trailing)
                         .padding(EdgeInsets(top: 0, leading: 240, bottom: 0, trailing: 0))
                         .lineLimit(3)
-                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayNeonGreen"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                 default:
                     Text("Error #F-Size M05-2-1")
                 }
@@ -110,10 +110,10 @@ struct WidgetView_Multi05_L_Comp02: View { // enable shadow
                     .font(.custom("Inter-Bold", size: 10.0))
                     .frame(width: 70, height: 50, alignment: .topTrailing)
                     .padding(EdgeInsets(top: 80, leading: 240, bottom: 0, trailing: 0))
-                    .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayNeonGreen"))
+                    .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
             }
             .frame(width: 400, height: 80)
-            .background(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
+            .background(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
             .clipped()
             
             
@@ -130,7 +130,7 @@ struct WidgetView_Multi05_L_Comp02: View { // enable shadow
                         .padding(EdgeInsets(top: 30, leading: 0, bottom: 0, trailing: 70))
                         .kerning(-10)
                         .rotationEffect(.degrees(-10))
-                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                     
                 case 5:
                     Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 1]?.ddayDate ??  "2023.10.16"), isTodayCounted: ddaySymbolMenu[safe: 1]?.ddayIsCountdown ?? "false")))")
@@ -140,7 +140,7 @@ struct WidgetView_Multi05_L_Comp02: View { // enable shadow
                         .padding(EdgeInsets(top: 25, leading: 0, bottom: 0, trailing: 70))
                         .kerning(-10)
                         .rotationEffect(.degrees(-10))
-                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                     
                     
                 case 6...:
@@ -151,7 +151,7 @@ struct WidgetView_Multi05_L_Comp02: View { // enable shadow
                         .padding(EdgeInsets(top: 25, leading: 0, bottom: 0, trailing: 70))
                         .kerning(-9)
                         .rotationEffect(.degrees(-10))
-                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                     
                 default:
                     Text("Error #F-Count M05-2-2")
@@ -167,7 +167,7 @@ struct WidgetView_Multi05_L_Comp02: View { // enable shadow
                         .multilineTextAlignment(.leading)
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 240))
                         .lineLimit(3)
-                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
 
                 case 5...10:
                     Text(ddaySymbolMenu[safe: 1]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
@@ -176,7 +176,7 @@ struct WidgetView_Multi05_L_Comp02: View { // enable shadow
                         .multilineTextAlignment(.leading)
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 240))
                         .lineLimit(3)
-                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
 
                 case 11...:
                     Text(ddaySymbolMenu[safe: 1]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
@@ -185,7 +185,7 @@ struct WidgetView_Multi05_L_Comp02: View { // enable shadow
                         .multilineTextAlignment(.leading)
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 240))
                         .lineLimit(3)
-                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                 default:
                     Text("Error #F-Size M05-2-2")
                 }
@@ -196,10 +196,10 @@ struct WidgetView_Multi05_L_Comp02: View { // enable shadow
                     .font(.custom("Inter-Bold", size: 10.0))
                     .frame(width: 70, height: 50, alignment: .topLeading)
                     .padding(EdgeInsets(top: 80, leading: 0, bottom: 0, trailing: 240))
-                    .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
+                    .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
             }
             .frame(width: 400, height: 80)
-            .background(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayNeonGreen"))
+            .background(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
             .clipped()
             
             
@@ -215,7 +215,7 @@ struct WidgetView_Multi05_L_Comp02: View { // enable shadow
                         .multilineTextAlignment(.trailing)
                         .padding(EdgeInsets(top: 0, leading: 240, bottom: 0, trailing: 0))
                         .lineLimit(3)
-                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayNeonGreen"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
 
                 case 5...10:
                     Text(ddaySymbolMenu[safe: 2]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
@@ -224,7 +224,7 @@ struct WidgetView_Multi05_L_Comp02: View { // enable shadow
                         .multilineTextAlignment(.trailing)
                         .padding(EdgeInsets(top: 0, leading: 240, bottom: 0, trailing: 0))
                         .lineLimit(3)
-                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayNeonGreen"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
 
                 case 11...:
                     Text(ddaySymbolMenu[safe: 2]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
@@ -233,7 +233,7 @@ struct WidgetView_Multi05_L_Comp02: View { // enable shadow
                         .multilineTextAlignment(.trailing)
                         .padding(EdgeInsets(top: 0, leading: 240, bottom: 0, trailing: 0))
                         .lineLimit(3)
-                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayNeonGreen"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                 default:
                     Text("Error #F-Size M05-2-3")
                 }
@@ -244,7 +244,7 @@ struct WidgetView_Multi05_L_Comp02: View { // enable shadow
                     .font(.custom("Inter-Bold", size: 10.0))
                     .frame(width: 70, height: 50, alignment: .topTrailing)
                     .padding(EdgeInsets(top: 80, leading: 240, bottom: 0, trailing: 0))
-                    .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayNeonGreen"))
+                    .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                 
                 // DayNumber 3
                 switch CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 2]?.ddayDate ??  "2023.10.16"), isTodayCounted: ddaySymbolMenu[safe: 2]?.ddayIsCountdown ?? "false")).count {
@@ -257,7 +257,7 @@ struct WidgetView_Multi05_L_Comp02: View { // enable shadow
                         .padding(EdgeInsets(top: 13, leading: 27, bottom: 25, trailing: 0))
                         .kerning(-9)
                         .rotationEffect(.degrees(-10))
-                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayNeonGreen"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                     
                 case 5:
                     Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 2]?.ddayDate ??  "2023.10.16"), isTodayCounted: ddaySymbolMenu[safe: 2]?.ddayIsCountdown ?? "false")))")
@@ -267,7 +267,7 @@ struct WidgetView_Multi05_L_Comp02: View { // enable shadow
                         .padding(EdgeInsets(top: 13, leading: 27, bottom: 25, trailing: 0))
                         .kerning(-9)
                         .rotationEffect(.degrees(-10))
-                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayNeonGreen"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                     
                     
                 case 6...:
@@ -278,7 +278,7 @@ struct WidgetView_Multi05_L_Comp02: View { // enable shadow
                         .padding(EdgeInsets(top: 13, leading: 27, bottom: 25, trailing: 0))
                         .kerning(-9)
                         .rotationEffect(.degrees(-10))
-                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayNeonGreen"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                     
                 default:
                     Text("Error #F-Count M05-2-3")
@@ -286,11 +286,11 @@ struct WidgetView_Multi05_L_Comp02: View { // enable shadow
                 
             }
             .frame(width: 400, height: 80)
-            .background(.black)
+            .background(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
             .clipped()
             
         }
         .frame(width: 400, height: 400)
-        .background(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayNeonGreen"))
+        .background(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
     }
 }

@@ -70,6 +70,7 @@ struct CustomFunctions {
  Extensions
  1 . Color
  2.  Array
+ 3. String
 */
 extension Color {
     init(red: Int, green: Int, blue: Int) {
@@ -123,6 +124,19 @@ extension Array {
     }
 }
 
+extension String {
+    var bool: Bool? {
+        switch self.lowercased() {
+        case "true":
+            return true
+        case "false":
+            return false
+        default:
+            return nil
+        }
+    }
+}
+
 
 
 /****
@@ -136,9 +150,9 @@ struct DefaultArrForWidget_M03 {
         
         let defaultStringArr: [[String]] = [
             // format: [ddayTitle, ddayDate, ddayBgColor, ddayTxtColor, ddayIsCountdown]
-            ["길게눌러서 디데이 추가하기", "2024.01.04", "ddayNeonPink", "ddayNeonGreen", "false"],
-            ["길게눌러서 디데이 추가하기", "2024.02.04", "ddayNeonPink", "ddayNeonGreen", "false"],
-            ["길게눌러서 디데이 추가하기", "2023.02.04", "ddayNeonPink", "ddayNeonGreen", "false"],
+            ["길게눌러서 디데이 추가하기", "2024.01.04", "ddayBlack", "ddayWhite", "false"],
+            ["길게눌러서 디데이 추가하기", "2024.02.04", "ddayBlack", "ddayWhite", "false"],
+            ["길게눌러서 디데이 추가하기", "2023.10.04", "ddayBlack", "ddayWhite", "false"],
         ]
         
         let defaultDdaySymbolMenu: [DdaySymbol] = defaultStringArr.map { sArray in
@@ -188,19 +202,5 @@ struct DefaultArrForWidget_M08 {
         let ddaySymbolMenu: [DdaySymbol] = entry.configuration.ddaySymbol ?? defaultDdaySymbolMenu
         
         return ddaySymbolMenu
-    }
-}
-
-
-extension String {
-    var bool: Bool? {
-        switch self.lowercased() {
-        case "true":
-            return true
-        case "false":
-            return false
-        default:
-            return nil
-        }
     }
 }

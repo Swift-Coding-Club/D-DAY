@@ -17,8 +17,8 @@ struct WidgetView_Single02_M_Comp01: View { // disable shadow
             let symbolDdayItem = DdaySymbol (identifier: "identifier", display: "diaplay")
             symbolDdayItem.ddayTitle = "길게눌러 디데이 추가하기"
             symbolDdayItem.ddayDate = "2023.09.24"
-            symbolDdayItem.ddayBgColor = "ddayNeonBlue"
-            symbolDdayItem.ddayTxtColor = "ddayNeonYellow"
+            symbolDdayItem.ddayBgColor = "ddayBlack"
+            symbolDdayItem.ddayTxtColor = "ddayWhite"
             symbolDdayItem.ddayLanguage = "English"
             symbolDdayItem.ddayIsCountdown = "false"
 
@@ -48,7 +48,7 @@ struct WidgetView_Single02_M_Comp01: View { // disable shadow
                             .padding(EdgeInsets(top: 0, leading: 0, bottom: 175, trailing: 20))
                             .kerning(-2)
                             .rotationEffect(.degrees(-13))
-                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayNeonYellow"))
+                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     case false:
                         Text("Day+")
@@ -57,7 +57,7 @@ struct WidgetView_Single02_M_Comp01: View { // disable shadow
                             .padding(EdgeInsets(top: 0, leading: 0, bottom: 175, trailing: 20))
                             .kerning(-2)
                             .rotationEffect(.degrees(-13))
-                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayNeonYellow"))
+                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     default:
                         Text("Encountered Error S02-1-1-01")
@@ -74,7 +74,7 @@ struct WidgetView_Single02_M_Comp01: View { // disable shadow
                             .padding(EdgeInsets(top: 0, leading: 0, bottom: 150, trailing: 24))
                             .kerning(-2)
                             .rotationEffect(.degrees(-12))
-                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayNeonYellow"))
+                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     case false:
                         Text("데이+")
@@ -83,7 +83,7 @@ struct WidgetView_Single02_M_Comp01: View { // disable shadow
                             .padding(EdgeInsets(top: 0, leading: 0, bottom: 150, trailing: 20))
                             .kerning(-2)
                             .rotationEffect(.degrees(-12))
-                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayNeonYellow"))
+                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     default:
                         Text("Encountered Error S02-1-1-02")
@@ -94,22 +94,22 @@ struct WidgetView_Single02_M_Comp01: View { // disable shadow
                     
                     switch dateInt <= 0 {
                     case true:
-                        Text("何日前")
-                            .font(.custom("Inter-Bold", size: 60.0))
+                        Text("ディ-デイ")
+                            .font(.custom("Inter-Bold", size: 64.0))
                             .frame(width: 300, height: 50, alignment: .topLeading)
-                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 140, trailing: 30))
+                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 131, trailing: 30))
                             .kerning(-3)
                             .rotationEffect(.degrees(-10))
-                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayNeonYellow"))
+                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     case false:
-                        Text("何日後")
-                            .font(.custom("Inter-Bold", size: 60.0))
+                        Text("デイ+")
+                            .font(.custom("Inter-Bold", size: 70.0))
                             .frame(width: 300, height: 50, alignment: .topLeading)
-                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 140, trailing: 30))
+                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 153, trailing: 30))
                             .kerning(-3)
                             .rotationEffect(.degrees(-10))
-                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayNeonYellow"))
+                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     default:
                         Text("Encountered Error S02-1-1-03")
@@ -130,7 +130,7 @@ struct WidgetView_Single02_M_Comp01: View { // disable shadow
                         .frame(width: 70, height: 70, alignment: .topTrailing)
                         .padding(EdgeInsets(top: 0, leading: 235, bottom: 50, trailing: 0))
                         .multilineTextAlignment(.trailing)
-                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayNeonYellow"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                     
                 case 5...6:
                     Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
@@ -138,7 +138,7 @@ struct WidgetView_Single02_M_Comp01: View { // disable shadow
                         .frame(width: 75, height: 70, alignment: .topTrailing)
                         .padding(EdgeInsets(top: 0, leading: 230, bottom: 50, trailing: 0))
                         .multilineTextAlignment(.trailing)
-                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayNeonYellow"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                     
                 case 7...10:
                     Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
@@ -146,7 +146,7 @@ struct WidgetView_Single02_M_Comp01: View { // disable shadow
                         .frame(width: 75, height: 70, alignment: .topTrailing)
                         .padding(EdgeInsets(top: 0, leading: 230, bottom: 50, trailing: 0))
                         .multilineTextAlignment(.trailing)
-                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayNeonYellow"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                     
                 case 11...:
                     Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
@@ -154,7 +154,7 @@ struct WidgetView_Single02_M_Comp01: View { // disable shadow
                         .frame(width: 75, height: 70, alignment: .topTrailing)
                         .padding(EdgeInsets(top: 0, leading: 230, bottom: 50, trailing: 0))
                         .multilineTextAlignment(.trailing)
-                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayNeonYellow"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                     
                 default:
                     Text("Encountered Error S02-1-3")
@@ -173,7 +173,7 @@ struct WidgetView_Single02_M_Comp01: View { // disable shadow
                         .multilineTextAlignment(.trailing)
                         .kerning(-12) // 000-12, 124- 11
                         .rotationEffect(.degrees(-8))
-                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayNeonYellow"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                                             
                     
                 case 2...3:
@@ -187,7 +187,7 @@ struct WidgetView_Single02_M_Comp01: View { // disable shadow
                             .multilineTextAlignment(.trailing)
                             .kerning(-12)
                             .rotationEffect(.degrees(-8))
-                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayNeonYellow"))
+                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                                                                                 
                         
                     case 1...2:
@@ -198,7 +198,7 @@ struct WidgetView_Single02_M_Comp01: View { // disable shadow
                             .multilineTextAlignment(.trailing)
                             .kerning(-12)
                             .rotationEffect(.degrees(-8))
-                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayNeonYellow"))
+                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                                                                                 
                         
                     case 3...6:
@@ -209,7 +209,7 @@ struct WidgetView_Single02_M_Comp01: View { // disable shadow
                             .multilineTextAlignment(.trailing)
                             .kerning(-12)
                             .rotationEffect(.degrees(-8))
-                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayNeonYellow"))
+                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     case 7:
                         Text("\(unsignedDateInt)")
@@ -219,7 +219,7 @@ struct WidgetView_Single02_M_Comp01: View { // disable shadow
                             .multilineTextAlignment(.trailing)
                             .kerning(-12)
                             .rotationEffect(.degrees(-8))
-                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayNeonYellow"))
+                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                         
                     case 8...9:
                         Text("\(unsignedDateInt)")
@@ -229,7 +229,7 @@ struct WidgetView_Single02_M_Comp01: View { // disable shadow
                             .multilineTextAlignment(.trailing)
                             .kerning(-12)
                             .rotationEffect(.degrees(-8))
-                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayNeonYellow"))
+                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
                                                                                 
                         
                     default:
@@ -248,12 +248,12 @@ struct WidgetView_Single02_M_Comp01: View { // disable shadow
                     .frame(width: 34, height: 70, alignment: .trailing)
                     .padding(EdgeInsets(top: 100, leading: 270, bottom: 0, trailing: 0))
                     .multilineTextAlignment(.leading)
-                    .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayNeonYellow"))
+                    .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
             }
 
         }
         .frame(height: 200)
-        .background(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayNeonBlue"))
+        .background(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
         
     }
 }

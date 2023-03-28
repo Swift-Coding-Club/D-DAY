@@ -41,7 +41,7 @@ struct WidgetView_Multi03EntryView : View { // hex done
                     WidgetView_Multi03_L_Comp01_3(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu).body
                 }
                 .frame(width: 400, height: 400)
-                .background(Color(hex: entry.configuration.ddaySymbol?[safe: 0]?.ddayBgColor ?? "ddayNeonPink"))
+                .background(Color(hex: entry.configuration.ddaySymbol?[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                 
             case "1": // enable shadow
                 HStack(spacing: 20) {
@@ -50,7 +50,7 @@ struct WidgetView_Multi03EntryView : View { // hex done
                     WidgetView_Multi03_L_Comp02_3(entry: self.entry, ddaySymbolMenu: ddaySymbolMenu).body
                 }
                 .frame(width: 400, height: 400)
-                .background(Color(hex: entry.configuration.ddaySymbol?[safe: 0]?.ddayBgColor ?? "ddayNeonPink"))
+                .background(Color(hex: entry.configuration.ddaySymbol?[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                 
             default:
                 Text("Encountered Error M03-2")
