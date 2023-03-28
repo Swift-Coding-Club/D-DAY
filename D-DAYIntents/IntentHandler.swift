@@ -34,6 +34,10 @@ class IntentHandler: INExtension, ConfigurationIntentHandling {
             // UserDefaults's date (model from DdayInfo.swift) - 2
             symbolDdayItem.ddayDate = listItemDate
 
+            // TODO: isTodayCounted 추가했어요 (수정 후 이 코멘트 삭제)
+            // UserDefaults's isTodayCounted checking (model from DdayInfo.swift)
+//            symbolDdayItem. = listItem.isTodayCounted
+            
             // UserDefaults's widget text color (model from DdayInfo.swift)
             symbolDdayItem.ddayTxtColor = listItem.widgetTextColor ?? "ddayWhite"
             
@@ -42,7 +46,7 @@ class IntentHandler: INExtension, ConfigurationIntentHandling {
             
             // UserDefaults's language (model from DdayInfo.swift)
             symbolDdayItem.ddayLanguage = listItem.language
-
+            
             return symbolDdayItem
         }
         
