@@ -198,7 +198,7 @@
                                                 <color key="textColor" red="0.33725491169999999" green="0.34117650989999998" blue="0.33725491169999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cvo-fe-n8B">
+                                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cvo-fe-n8B">
                                                 <rect key="frame" x="97" y="531.66666666666663" width="70" height="20"/>
                                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                 <constraints>
@@ -213,7 +213,7 @@
                                                         <command title="Item 2" id="MIr-gL-53s"/>
                                                     </children>
                                                 </menu>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" title="Language"/>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G8J-ik-qzu">
                                                 <rect key="frame" x="35" y="565" width="330" height="150"/>
@@ -252,7 +252,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2020.12.25" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnX-SH-s4g">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2023.12.25" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnX-SH-s4g">
                                                         <rect key="frame" x="280" y="103.66666666666663" width="30" height="26.333333333333343"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="30" id="aSt-pa-MR1"/>
@@ -276,14 +276,29 @@
                                                     <constraint firstItem="w30-rx-FNd" firstAttribute="top" secondItem="G8J-ik-qzu" secondAttribute="top" constant="-15" id="yn7-0M-X7d"/>
                                                 </constraints>
                                             </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNl-c1-5uI">
+                                                <rect key="frame" x="220" y="194" width="153" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="153" id="u6r-gP-Yqd"/>
+                                                    <constraint firstAttribute="height" constant="35" id="uxS-Q4-6rf"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="설정일을 카운트다운" imagePadding="4" titleAlignment="center">
+                                                    <imageReference key="image" image="square" catalog="system" symbolScale="small" renderingMode="template"/>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="11"/>
+                                                    <color key="baseForegroundColor" red="0.42408459599999998" green="0.42408459599999998" blue="0.42408459599999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="kpr-xT-bOn" firstAttribute="top" secondItem="Wn9-yC-ZcK" secondAttribute="bottom" constant="8" id="3KV-z6-khS"/>
                                             <constraint firstAttribute="trailing" secondItem="Wn9-yC-ZcK" secondAttribute="trailing" id="86h-oM-yX6"/>
+                                            <constraint firstItem="jNl-c1-5uI" firstAttribute="leading" secondItem="Wn9-yC-ZcK" secondAttribute="trailing" constant="-173" id="BU1-Ed-at2"/>
                                             <constraint firstItem="Cvo-fe-n8B" firstAttribute="centerY" secondItem="fp8-q4-4GD" secondAttribute="centerY" id="LyT-2z-Xvq"/>
                                             <constraint firstItem="fp8-q4-4GD" firstAttribute="bottom" secondItem="nbM-yP-vzL" secondAttribute="bottom" constant="50" id="M4Z-WM-gos"/>
                                             <constraint firstItem="Cvo-fe-n8B" firstAttribute="leading" secondItem="fp8-q4-4GD" secondAttribute="trailing" constant="10" id="MBd-N3-sLk"/>
+                                            <constraint firstItem="jNl-c1-5uI" firstAttribute="top" secondItem="Wn9-yC-ZcK" secondAttribute="top" constant="194" id="Nfv-O5-jL5"/>
                                             <constraint firstItem="nbM-yP-vzL" firstAttribute="top" secondItem="kpr-xT-bOn" secondAttribute="bottom" constant="15" id="Pmg-2r-GAC"/>
                                             <constraint firstItem="nbM-yP-vzL" firstAttribute="leading" secondItem="kpr-xT-bOn" secondAttribute="leading" id="Pvx-1C-lkU"/>
                                             <constraint firstItem="G8J-ik-qzu" firstAttribute="top" secondItem="fp8-q4-4GD" secondAttribute="bottom" constant="15" id="UFp-Uc-f3F"/>
@@ -346,6 +361,7 @@
     </scenes>
     <resources>
         <image name="repeat.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="square" catalog="system" width="128" height="114"/>
         <namedColor name="ddayWhite">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

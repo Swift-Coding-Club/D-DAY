@@ -15,10 +15,10 @@ struct WidgetView_Multi06_XL_Comp02: View { // enable shadow
         
         let defaultStringArr: [[String]] = [
             // format: [ddayTitle, ddayDate, ddayBgColor, ddayTxtColor]
-            ["길게눌러서 디데이 추가하기", "2023.10.04", "ddayOrange", "ddayNeonYellow"],
-            ["길게눌러서 디데이 추가하기", "2023.05.04", "ddayChristmasGreen", "ddayChristmasRed"],
-            ["길게눌러서 디데이 추가하기", "2023.03.04", "ddayLightOrange", "ddayBabyPurpleBrighter"],
-            ["길게눌러서 디데이 추가하기", "2023.02.04", "ddayPurpleDarker", "ddayDriedRosePink"],
+            ["길게눌러서 디데이 추가하기", "2023.08.04", "ddayBlack", "ddayLemon"],
+            ["길게눌러서 디데이 추가하기", "2023.06.04", "ddayWhite", "ddayBlack"],
+            ["길게눌러서 디데이 추가하기", "2023.03.04", "ddayWhite", "ddayBlack"],
+            ["길게눌러서 디데이 추가하기", "2023.04.04", "ddayBlack", "ddayLemon"],
         ]
         
         let defaultDdaySymbolMenu: [DdaySymbol] = defaultStringArr.map { sArray in

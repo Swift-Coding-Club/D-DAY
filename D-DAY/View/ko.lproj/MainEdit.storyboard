@@ -198,19 +198,19 @@
                                                 <color key="textColor" red="0.33725491169999999" green="0.34117650989999998" blue="0.33725491169999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y9Y-MI-Ark">
+                                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPx-JO-zBB">
                                                 <rect key="frame" x="97" y="526.66666666666663" width="70" height="20"/>
                                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="70" id="szM-Yp-l19"/>
-                                                    <constraint firstAttribute="height" constant="20" id="y4a-7K-bu1"/>
+                                                    <constraint firstAttribute="width" constant="70" id="5pG-KI-euy"/>
+                                                    <constraint firstAttribute="height" constant="20" id="Ed5-2W-b6q"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <menu key="menu" id="ilI-cy-JGK">
+                                                <menu key="menu" id="EU9-01-4fo">
                                                     <children>
-                                                        <command title="Item 1" id="DfQ-d4-wfw"/>
-                                                        <command title="Item 2" id="V1E-YJ-BQm"/>
+                                                        <command title="Item 1" id="uZV-Ir-Caf"/>
+                                                        <command title="Item 2" id="RUO-3G-QPz"/>
                                                     </children>
                                                 </menu>
                                                 <state key="normal" title="Language"/>
@@ -252,7 +252,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2020.12.25" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4n-er-Sqa">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2023.12.25" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4n-er-Sqa">
                                                         <rect key="frame" x="280" y="103.66666666666663" width="30" height="26.333333333333343"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="30" id="zhW-Hm-maw"/>
@@ -276,6 +276,19 @@
                                                     <constraint firstAttribute="width" constant="330" id="wcM-tL-VqL"/>
                                                 </constraints>
                                             </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fhk-Ne-C6E">
+                                                <rect key="frame" x="220" y="194" width="153" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="5VW-Bl-4dj"/>
+                                                    <constraint firstAttribute="width" constant="153" id="bys-DZ-9Cs"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="설정일을 카운트다운" imagePadding="4" titleAlignment="center">
+                                                    <imageReference key="image" image="square" catalog="system" symbolScale="small" renderingMode="template"/>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="11"/>
+                                                    <color key="baseForegroundColor" red="0.42408459599999998" green="0.42408459599999998" blue="0.42408459599999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -283,15 +296,17 @@
                                             <constraint firstItem="1Br-7S-n7q" firstAttribute="leading" secondItem="i0L-B7-2Sk" secondAttribute="leading" constant="35" id="2QA-UN-lDA"/>
                                             <constraint firstItem="iUS-yc-hRX" firstAttribute="leading" secondItem="1Br-7S-n7q" secondAttribute="leading" id="2wD-2j-ASQ"/>
                                             <constraint firstAttribute="height" constant="780" id="5hx-7j-PcH"/>
-                                            <constraint firstItem="y9Y-MI-Ark" firstAttribute="leading" secondItem="NYV-KG-zds" secondAttribute="trailing" constant="10" id="Bdd-Ja-9Xq"/>
                                             <constraint firstItem="Yaq-3O-ocw" firstAttribute="leading" secondItem="NYV-KG-zds" secondAttribute="leading" id="Ef7-lf-QEB"/>
-                                            <constraint firstItem="y9Y-MI-Ark" firstAttribute="centerY" secondItem="NYV-KG-zds" secondAttribute="centerY" id="Kef-xU-kXJ"/>
                                             <constraint firstItem="NYV-KG-zds" firstAttribute="bottom" secondItem="iUS-yc-hRX" secondAttribute="bottom" constant="50" id="P2f-hn-KXP"/>
                                             <constraint firstItem="Yaq-3O-ocw" firstAttribute="top" secondItem="NYV-KG-zds" secondAttribute="bottom" constant="15" id="Q7E-YX-ZGq"/>
                                             <constraint firstItem="NYV-KG-zds" firstAttribute="leading" secondItem="iUS-yc-hRX" secondAttribute="leading" id="SmJ-1p-jkf"/>
+                                            <constraint firstItem="gPx-JO-zBB" firstAttribute="leading" secondItem="NYV-KG-zds" secondAttribute="trailing" constant="10" id="T4m-AM-hVo"/>
                                             <constraint firstItem="1Br-7S-n7q" firstAttribute="top" secondItem="l6J-nq-zuL" secondAttribute="bottom" constant="8" id="VHo-q9-sm2"/>
                                             <constraint firstAttribute="trailing" secondItem="l6J-nq-zuL" secondAttribute="trailing" id="ZpU-pQ-6mD"/>
+                                            <constraint firstItem="gPx-JO-zBB" firstAttribute="centerY" secondItem="NYV-KG-zds" secondAttribute="centerY" id="b6W-ZT-jP6"/>
                                             <constraint firstItem="iUS-yc-hRX" firstAttribute="top" secondItem="1Br-7S-n7q" secondAttribute="bottom" constant="10" id="mS5-cq-Haa"/>
+                                            <constraint firstItem="Fhk-Ne-C6E" firstAttribute="top" secondItem="l6J-nq-zuL" secondAttribute="top" constant="194" id="ovs-Qb-vtD"/>
+                                            <constraint firstItem="Fhk-Ne-C6E" firstAttribute="leading" secondItem="l6J-nq-zuL" secondAttribute="trailing" constant="-174" id="rtA-rC-aoX"/>
                                             <constraint firstItem="l6J-nq-zuL" firstAttribute="leading" secondItem="i0L-B7-2Sk" secondAttribute="leading" id="y5U-4k-f29"/>
                                         </constraints>
                                     </view>
@@ -326,7 +341,7 @@
                     <connections>
                         <outlet property="addTableView" destination="l6J-nq-zuL" id="jeP-Mk-Vlf"/>
                         <outlet property="cancelButton" destination="S5T-A0-FKY" id="xs1-MN-9Ki"/>
-                        <outlet property="languageButton" destination="y9Y-MI-Ark" id="CqO-HP-bbA"/>
+                        <outlet property="languageButton" destination="gPx-JO-zBB" id="Z90-tj-hw5"/>
                         <outlet property="mediumDate" destination="E4n-er-Sqa" id="1mR-xe-9lm"/>
                         <outlet property="mediumDayNumber" destination="cDC-7O-U0o" id="2Fj-Mb-jCR"/>
                         <outlet property="mediumDday" destination="miC-di-dTD" id="7t4-9h-WaM"/>
@@ -346,6 +361,7 @@
     </scenes>
     <resources>
         <image name="repeat.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="square" catalog="system" width="128" height="114"/>
         <namedColor name="ddayWhite">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

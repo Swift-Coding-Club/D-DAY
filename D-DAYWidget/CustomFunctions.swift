@@ -57,7 +57,7 @@ struct CustomFunctions {
     }
     
     func makeSignedDateNumber(dateIntParam: Int) -> String {
-        if dateIntParam > 0 {
+        if dateIntParam >= 0 {
             return "+\(dateIntParam)"
         } else {
             return "\(dateIntParam)"

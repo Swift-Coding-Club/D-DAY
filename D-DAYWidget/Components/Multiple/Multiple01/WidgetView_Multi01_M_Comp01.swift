@@ -16,10 +16,10 @@ struct WidgetView_Multi01_M_Comp01: View { // disable shadow
         // 0. Default Array for the variable 'defaultDdaySymbolMenu'
         let defaultStringArr: [[String]] = [
             // format: [ddayTitle, ddayDate, ddayBgColor, ddayTxtColor]
-            ["길게눌러서 디데이 추가하기", "2023.08.04", "ddayOrange", "ddayNeonYellow"],
-            ["길게눌러서 디데이 추가하기", "2023.06.04", "ddayChristmasGreen", "ddayChristmasRed"],
-            ["길게눌러서 디데이 추가하기", "2023.03.04", "ddayLightOrange", "ddayBabyPurpleBrighter"],
-            ["길게눌러서 디데이 추가하기", "2023.04.04", "ddayPurpleDarker", "ddayDriedRosePink"],
+            ["길게눌러서 디데이 추가하기", "2023.08.04", "ddayBlack", "ddayLemon"],
+            ["길게눌러서 디데이 추가하기", "2023.06.04", "ddayWhite", "ddayBlack"],
+            ["길게눌러서 디데이 추가하기", "2023.03.04", "ddayWhite", "ddayBlack"],
+            ["길게눌러서 디데이 추가하기", "2023.04.04", "ddayBlack", "ddayLemon"],
         ]
         
         // 1. 위젯 초기(tableview list읽어온 데이터 없을시) 보여지는 default CustomSymbol array
@@ -43,14 +43,14 @@ struct WidgetView_Multi01_M_Comp01: View { // disable shadow
                         .font(.custom("Inter-Bold", size: 13.0))
                         .frame(width: 200, height: 50, alignment: .topLeading)
                         .position(x: 116, y: 85)
-                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayNeonYellow"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayLemon"))
                     
                     Text(ddaySymbolMenu[safe: 0]?.ddayDate ?? "2023.00.00")
                         .font(.custom("Inter-Bold", size: 9.0))
                         .multilineTextAlignment(.leading)
                         .frame(width: 28, height: 50, alignment: .topLeading)
                         .position(x: 30, y: 123)
-                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayNeonYellow"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayLemon"))
                     
                     ZStack {
                         Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  defaultStringArr[0][1]))))")
@@ -59,15 +59,15 @@ struct WidgetView_Multi01_M_Comp01: View { // disable shadow
                             .position(x: 65, y: 21)
                             .kerning(-5)
                             .clipped()
-                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayOrange"))
+                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                     }
                     .frame(width: 130, height: 49, alignment: .bottomTrailing)
-                    .background(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayNeonYellow"))
+                    .background(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayLemon"))
                     
                 }
                 .position(x: 168, y: 65)
                 .frame(width: 230, height: 130)
-                .background(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayOrange"))
+                .background(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                 
                 
                 ZStack(alignment: .bottom) {
@@ -75,14 +75,14 @@ struct WidgetView_Multi01_M_Comp01: View { // disable shadow
                         .font(.custom("Inter-Bold", size: 13.0))
                         .frame(width: 200, height: 50, alignment: .topTrailing)
                         .position(x: 110, y: 85)
-                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayChristmasRed"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayBlack"))
                     
                     Text(ddaySymbolMenu[safe: 1]?.ddayDate ?? "2023.00.00")
                         .font(.custom("Inter-Bold", size: 9.0))
                         .multilineTextAlignment(.leading)
                         .frame(width: 28, height: 50, alignment: .topTrailing)
                         .position(x: 198, y: 123)
-                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayChristmasRed"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayBlack"))
                     
                     ZStack {
                         Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 1]?.ddayDate ??  defaultStringArr[1][1]))))")
@@ -91,14 +91,14 @@ struct WidgetView_Multi01_M_Comp01: View { // disable shadow
                             .position(x: 64, y: 21)
                             .kerning(-5)
                             .clipped()
-                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayBgColor ?? "ddayChristmasGreen"))
+                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayBgColor ?? "ddayWhite"))
                     }
                     .frame(width: 130, height: 49, alignment: .bottomLeading)
-                    .background(Color(hex: ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayChristmasRed"))
+                    .background(Color(hex: ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayBlack"))
                 }
                 .position(x: 65, y: 65)
                 .frame(width: 230, height: 130)
-                .background(Color(hex: ddaySymbolMenu[safe: 1]?.ddayBgColor ?? "ddayChristmasGreen"))
+                .background(Color(hex: ddaySymbolMenu[safe: 1]?.ddayBgColor ?? "ddayWhite"))
             }
             
             
@@ -108,14 +108,14 @@ struct WidgetView_Multi01_M_Comp01: View { // disable shadow
                         .font(.custom("Inter-Bold", size: 13.0))
                         .frame(width: 200, height: 50, alignment: .topLeading)
                         .position(x: 116, y: 80)
-                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 2]?.ddayTxtColor ?? "ddayBabyPurpleBrighter"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayBlack"))
                     
                     Text(ddaySymbolMenu[safe: 2]?.ddayDate ?? "2023.00.00")
                         .font(.custom("Inter-Bold", size: 9.0))
                         .multilineTextAlignment(.leading)
                         .frame(width: 28, height: 50, alignment: .topLeading)
                         .position(x: 30, y: 35)
-                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 2]?.ddayTxtColor ?? "ddayBabyPurpleBrighter"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayBlack"))
                     
                     ZStack {
                         Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 2]?.ddayDate ??  defaultStringArr[2][1]))))")
@@ -124,14 +124,14 @@ struct WidgetView_Multi01_M_Comp01: View { // disable shadow
                             .position(x: 61, y: 21)
                             .kerning(-5)
                             .clipped()
-                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 2]?.ddayBgColor ?? "ddayLightOrange"))
+                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayBgColor ?? "ddayWhite"))
                     }
                     .frame(width: 130, height: 49, alignment: .bottomLeading)
-                    .background(Color(hex: ddaySymbolMenu[safe: 2]?.ddayTxtColor ?? "ddayBabyPurpleBrighter"))
+                    .background(Color(hex: ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayBlack"))
                 }
                 .position(x: 168, y: 65)
                 .frame(width: 230, height: 130)
-                .background(Color(hex: ddaySymbolMenu[safe: 2]?.ddayBgColor ?? "ddayLightOrange"))
+                .background(Color(hex: ddaySymbolMenu[safe: 1]?.ddayBgColor ?? "ddayWhite"))
                 
                 
                 ZStack(alignment: .top) {
@@ -139,14 +139,14 @@ struct WidgetView_Multi01_M_Comp01: View { // disable shadow
                         .font(.custom("Inter-Bold", size: 13.0))
                         .frame(width: 200, height: 50, alignment: .topTrailing)
                         .position(x: 110, y: 80)
-                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 3]?.ddayTxtColor ?? "ddayDriedRosePink"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayLemon"))
                     
                     Text(ddaySymbolMenu[safe: 3]?.ddayDate ?? "2023.00.00")
                         .font(.custom("Inter-Bold", size: 9.0))
                         .multilineTextAlignment(.leading)
                         .frame(width: 28, height: 50, alignment: .topTrailing)
                         .position(x: 200, y: 35)
-                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 3]?.ddayTxtColor ?? "ddayDriedRosePink"))
+                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayLemon"))
                     
                     ZStack {
                         Text("\(CustomFunctions().makeSignedDateNumber(dateIntParam: CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 3]?.ddayDate ??  defaultStringArr[3][1]))))")
@@ -155,14 +155,14 @@ struct WidgetView_Multi01_M_Comp01: View { // disable shadow
                             .position(x: 60, y: 23)
                             .kerning(-5)
                             .clipped()
-                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 3]?.ddayBgColor ?? "ddayPurpleDarker"))
+                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
                     }
                     .frame(width: 130, height: 49, alignment: .bottomTrailing)
-                    .background(Color(hex: ddaySymbolMenu[safe: 3]?.ddayTxtColor ?? "ddayDriedRosePink"))
+                    .background(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayLemon"))
                 }
                 .position(x: 65, y: 65)
                 .frame(width: 230, height: 130)
-                .background(Color(hex: ddaySymbolMenu[safe: 3]?.ddayBgColor ?? "ddayPurpleDarker"))
+                .background(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayBlack"))
             }
         }
     }
