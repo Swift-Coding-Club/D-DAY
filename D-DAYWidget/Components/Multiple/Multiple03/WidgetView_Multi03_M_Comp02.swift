@@ -90,7 +90,7 @@ struct WidgetView_Multi03_M_Comp02: View { // enable shadow
                     .clipped()
             }
             .frame(width: 190, height: 66)
-            .border(Color(hex: ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayBlack"), width: 4)
+            .border(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"), width: 4)
             .padding(EdgeInsets(top: 0, leading: 170, bottom: 66, trailing: 0))
             
             
