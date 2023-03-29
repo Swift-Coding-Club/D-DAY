@@ -278,16 +278,14 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Gx-Ps-jZK">
-                                                <rect key="frame" x="220" y="194" width="153" height="35"/>
+                                                <rect key="frame" x="172" y="194" width="200" height="35"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="153" id="KR7-7V-r12"/>
+                                                    <constraint firstAttribute="width" constant="200" id="KR7-7V-r12"/>
                                                     <constraint firstAttribute="height" constant="35" id="oF4-K6-XEP"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" imagePadding="4" titleAlignment="center">
+                                                <buttonConfiguration key="configuration" style="plain" title="Count the day of the event" imagePadding="4" titleAlignment="center">
                                                     <imageReference key="image" image="square" catalog="system" symbolScale="small" renderingMode="template"/>
-                                                    <string key="title">Count the day of the event
-</string>
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="11"/>
                                                     <color key="baseForegroundColor" red="0.42408459599999998" green="0.42408459599999998" blue="0.42408459599999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
@@ -303,7 +301,7 @@
                                             <constraint firstItem="AaW-Va-7nb" firstAttribute="leading" secondItem="iUS-yc-hRX" secondAttribute="leading" id="7Ld-vu-dFB"/>
                                             <constraint firstItem="Bbc-W9-gBM" firstAttribute="leading" secondItem="AaW-Va-7nb" secondAttribute="leading" id="8sG-TM-RM9"/>
                                             <constraint firstItem="5Gx-Ps-jZK" firstAttribute="top" secondItem="l6J-nq-zuL" secondAttribute="top" constant="194" id="FC1-FV-ZsD"/>
-                                            <constraint firstItem="5Gx-Ps-jZK" firstAttribute="leading" secondItem="l6J-nq-zuL" secondAttribute="trailing" constant="-174" id="PnU-KL-w0L"/>
+                                            <constraint firstItem="5Gx-Ps-jZK" firstAttribute="leading" secondItem="l6J-nq-zuL" secondAttribute="trailing" constant="-222" id="PnU-KL-w0L"/>
                                             <constraint firstItem="Bbc-W9-gBM" firstAttribute="top" secondItem="AaW-Va-7nb" secondAttribute="bottom" constant="15" id="Rox-VE-y2m"/>
                                             <constraint firstItem="1Br-7S-n7q" firstAttribute="top" secondItem="l6J-nq-zuL" secondAttribute="bottom" constant="8" id="VHo-q9-sm2"/>
                                             <constraint firstAttribute="trailing" secondItem="l6J-nq-zuL" secondAttribute="trailing" id="ZpU-pQ-6mD"/>
