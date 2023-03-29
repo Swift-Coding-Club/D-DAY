@@ -59,7 +59,7 @@ class EditViewController: UIViewController {
     // UserDefaults 넣어 줄 struct list
     var ddayList = [DdayInfo]()
 
-    // TODO: isTodayCounted 추가했어요 (수정 후 이 코멘트 삭제)
+    // Variable for Countdown
     var isTodayCounted = false
     
     // Language
@@ -101,7 +101,6 @@ extension EditViewController {
         bgColor = colorForBackground?.toHexString() ?? "ddayBlack"
         txtColor = colorForTXT?.toHexString() ?? "ddayWhite"
 
-        // TODO: isTodayCounted 추가했어요 (수정 후 이 코멘트 삭제)
         // 변경될 struct
         let editDdayInfo = DdayInfo(title: self.txtFieldForTitle.text!, subTitle: self.txtFieldForSubtitle.text!,  date: self.theDate, isTodayCounted: false, widgetTextColor: txtColor, widgetBGColor: bgColor, language: self.language)
                 
@@ -121,7 +120,7 @@ extension EditViewController {
         // User Default for date
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy.MM.dd"
-
+        
         self.dismiss(animated: true)
     }
     
@@ -401,10 +400,6 @@ extension EditViewController: UITableViewDataSource {
             // UserDefaults의 date값으로 수정
             cellForDatepicker.accDatePicker.date = ddayList[cellTag].date
             self.language = ddayList[cellTag].language ?? "English"
-            
-            print("self language: \(self.language)")
-            print("ddayinfo: \(ddayList[cellTag].language)")
-            
             languageButtonConfiguration(lan: self.language)
             
             cellForDatepicker.delegate = self
@@ -421,10 +416,6 @@ extension EditViewController: UITableViewDataSource {
             
             bgColor = ddayList[cellTag].widgetBGColor ?? "ddayBlack"
             txtColor = ddayList[cellTag].widgetTextColor ?? "ddayWhite"
-            
-            print("bg: \(bgColor)")
-            print("txt: \(txtColor)")
-            
             
             // Setting for Widget Default Color
             self.smallView.backgroundColor = UIColor(hex: bgColor)

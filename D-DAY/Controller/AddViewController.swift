@@ -36,8 +36,6 @@ class AddViewController: UIViewController {
     // Countdown Button
     @IBOutlet weak var isTodayCountedButton: UIButton!
     
-    var isTodayCounted = false
-    
     // Textfield for Title
     var txtFieldForTitle: UITextField = UITextField()
     
@@ -61,6 +59,8 @@ class AddViewController: UIViewController {
     // UserDefaults 넣어 줄 struct list
     var ddayList = [DdayInfo]()
     
+    // Variable for Countdown
+    var isTodayCounted = false
     
     // Language
     var language: String = "English"

@@ -19,6 +19,7 @@ class ViewController: UIViewController, CALayerDelegate {
     // UserDefaults 넣어 줄 struct list
     var ddayList = [DdayInfo]()
     
+    // Variable for Countdown
     var isTodayCounted = false
     
     private var gradient: CAGradientLayer!

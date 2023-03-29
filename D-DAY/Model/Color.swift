@@ -34,11 +34,11 @@ extension Color {
         Color(bgColor: UIColor(named: "ddayBeautifulOrange"), txtColor: UIColor(named: "ddayBlack")),
         Color(bgColor: UIColor(named: "ddayWhite"), txtColor: UIColor(named: "ddayBlack")),
         Color(bgColor: UIColor(named: "ddayBabyPurpleBrighter"), txtColor: UIColor(named: "ddayBabyPink")),
-        Color(bgColor: UIColor(named: "ddaySkinBrightColor"), txtColor: UIColor(named: "ddaySkinColor")),
+        Color(bgColor: UIColor(named: "ddayBabyPinkBright"), txtColor: UIColor(named: "ddayNeonLimeGreenDarker")),
         Color(bgColor: UIColor(named: "ddayTonedownedGreen"), txtColor: UIColor(named: "ddayOrangeBrighter")),
         Color(bgColor: UIColor(named: "ddayFlamingoPink"), txtColor: UIColor(named: "ddayBlack")),
         Color(bgColor: UIColor(named: "ddayToneDownHotPink"), txtColor: UIColor(named: "ddayLightOrange")),
         Color(bgColor: UIColor(named: "ddayNeonBlueBrighter"), txtColor: UIColor(named: "ddayNeonLimeGreen")),
-        Color(bgColor: UIColor(named: "ddayNeonGreen"), txtColor: UIColor(named: "ddayBlack")),
+        Color(bgColor: UIColor(named: "ddayNeonGreanBrighter"), txtColor: UIColor(named: "ddayBlack")),
     ]
 }

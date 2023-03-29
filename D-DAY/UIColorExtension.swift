@@ -106,9 +106,8 @@ public extension UIColor {
                 hex: Int(hex)
             )
         } else {
-//            self.init(hex)
             self.init(named: hex)
-            
         }
     }
+    
 }
