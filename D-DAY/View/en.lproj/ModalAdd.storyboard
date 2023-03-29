@@ -285,9 +285,11 @@
                                                 </constraints>
                                                 <color key="tintColor" systemColor="systemGrayColor"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="설정일을 카운트다운" imagePadding="4" titleAlignment="center">
+                                                <buttonConfiguration key="configuration" style="plain" imagePadding="4" titleAlignment="center">
                                                     <imageReference key="image" image="square" catalog="system" symbolScale="small" renderingMode="template"/>
                                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                                    <string key="title">Count the day of the event
+</string>
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="11"/>
                                                     <color key="baseForegroundColor" red="0.42408459599999998" green="0.42408459599999998" blue="0.42408459599999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
