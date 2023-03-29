@@ -35,7 +35,7 @@
                                 <buttonConfiguration key="configuration" style="plain">
                                     <imageReference key="image" image="plus.circle.fill" catalog="system" renderingMode="hierarchical">
                                         <hierarchicalColors>
-                                            <color red="0.30196078430000001" green="0.31764705879999999" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </hierarchicalColors>
