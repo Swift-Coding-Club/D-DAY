@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -180,7 +181,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.50980395079999996" green="0.98431372640000003" blue="0.30196079609999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="backgroundColor" name="ddayNeonGreen"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="170" id="Ih3-iA-s9G"/>
                                                     <constraint firstItem="28l-cg-SU7" firstAttribute="top" secondItem="nbM-yP-vzL" secondAttribute="top" constant="-30" id="RZH-T3-ii2"/>
@@ -364,6 +365,9 @@
     <resources>
         <image name="repeat.circle.fill" catalog="system" width="128" height="123"/>
         <image name="square" catalog="system" width="128" height="114"/>
+        <namedColor name="ddayNeonGreen">
+            <color red="0.47843137254901963" green="0.98039215686274506" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <namedColor name="ddayWhite">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

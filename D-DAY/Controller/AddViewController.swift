@@ -53,8 +53,8 @@ class AddViewController: UIViewController {
     var theDate: Date = Date()
     
     // Variables for Colorwell
-    var colorForTXT: UIColor? = UIColor(hex: "ddayNeonGreen")
-    var colorForBackground: UIColor? = UIColor(hex: "ddayBlack")
+    var colorForTXT: UIColor? = UIColor(hex: "ddayBlack")
+    var colorForBackground: UIColor? = UIColor(hex: "ddayNeonGreen")
     
     // UserDefaults 넣어 줄 struct list
     var ddayList = [DdayInfo]()

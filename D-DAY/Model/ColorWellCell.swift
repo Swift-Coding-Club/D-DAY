@@ -35,8 +35,8 @@ var indexArr = [Int]()
 
 extension ColorWellCell {
     func configuration() {
-        colorwellText.selectedColor = UIColor(named: "ddayBlack")
-        colorwellBackground.selectedColor = UIColor(named: "ddayNeonGreen")
+        colorwellText.selectedColor = UIColor(hex: "ddayBlack")
+        colorwellBackground.selectedColor = UIColor(hex: "ddayNeonGreen")
         
         colorwellText.addTarget(self, action: #selector(txtColorChange), for: .valueChanged)
         colorwellBackground.addTarget(self, action: #selector(backgroundColorChange), for: .valueChanged)
