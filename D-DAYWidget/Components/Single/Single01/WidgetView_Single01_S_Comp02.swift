@@ -30,6 +30,7 @@ struct WidgetView_Single01_S_Comp02: View { // enable shadow
         let dateInt = CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  "2024.02.16"), isTodayCounted: isTodayCounted)
         let ddayDorPlus = CustomFunctions().ddaySetDorPlus(dateIntParam: dateInt)
         
+        
         ZStack {
             ZStack() {
                 
@@ -37,10 +38,10 @@ struct WidgetView_Single01_S_Comp02: View { // enable shadow
                 switch ddayDorPlus {
                 case "D":
                     Text("D")
-                        .position(x: 7, y: -20)
+                        .position(x: 7, y: -15)
                         .frame(width: 85, height: 36, alignment: .leading)
                         .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
-                        .font(.custom("Inter-Bold", size: 100))
+                        .font(.custom("Inter-Bold", size: 110))
                         .rotationEffect(.degrees(-13))
                         .multilineTextAlignment(.leading)
                     
@@ -118,30 +119,60 @@ struct WidgetView_Single01_S_Comp02: View { // enable shadow
                     .rotationEffect(.degrees(-10))
                     .position(x: 82, y: 108)
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
+                
             case 3:
                 
                 switch Int(dateNumber)! / 100 {
                 case 1:
-                    Text("\(dateNumber)")
-                        .frame(width: 230, alignment: .leading)
-                        .font(.custom("Inter-Bold", size: 110.0))
-                        .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
-                        .multilineTextAlignment(.leading)
-                        .kerning(-10)
-                        .rotationEffect(.degrees(-10))
-                        .position(x: 106, y: 108)
-                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
-                    
+                        switch Int(dateNumber)! {
+                        case 154, 164, 184, 194:
+                            Text("\(dateNumber)")
+                                .frame(width: 230, alignment: .leading)
+                                .font(.custom("Inter-Bold", size: 107.0))
+                                .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
+                                .multilineTextAlignment(.leading)
+                                .kerning(-10)
+                                .rotationEffect(.degrees(-10))
+                                .position(x: 105, y: 108)
+                                .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
+                            
+                            
+                        default:
+                            Text("\(dateNumber)")
+                                .frame(width: 230, alignment: .leading)
+                                .font(.custom("Inter-Bold", size: 110.0))
+                                .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
+                                .multilineTextAlignment(.leading)
+                                .kerning(-10)
+                                .rotationEffect(.degrees(-10))
+                                .position(x: 105, y: 108)
+                                .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
+                        }
+                        
                 case 2:
-                    Text("\(dateNumber)")
-                        .frame(width: 230, alignment: .leading)
-                        .font(.custom("Inter-Bold", size: 100.0))
-                        .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
-                        .multilineTextAlignment(.leading)
-                        .kerning(-10)
-                        .rotationEffect(.degrees(-10))
-                        .position(x: 105, y: 108)
-                        .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
+                    switch Int(dateNumber)! {
+                    case 204:
+                        Text("\(dateNumber)")
+                            .frame(width: 230, alignment: .leading)
+                            .font(.custom("Inter-Bold", size: 99.0))
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
+                            .multilineTextAlignment(.leading)
+                            .kerning(-10)
+                            .rotationEffect(.degrees(-10))
+                            .position(x: 102, y: 107)
+                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
+                        
+                    default:
+                        Text("\(dateNumber)")
+                            .frame(width: 230, alignment: .leading)
+                            .font(.custom("Inter-Bold", size: 101.0))
+                            .shadow(color: Color("ddayBlack").opacity(0.3), radius: 2.2, x: 0.6, y: 4)
+                            .multilineTextAlignment(.leading)
+                            .kerning(-10)
+                            .rotationEffect(.degrees(-10))
+                            .position(x: 107, y: 107)
+                            .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayWhite"))
+                    }
                     
                 case 3...8 :
                     Text("\(dateNumber)")

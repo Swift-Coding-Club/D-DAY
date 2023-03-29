@@ -18,7 +18,7 @@ struct WidgetView_Single01EntryView : View {
         case .systemSmall:
             switch entry.configuration.shadow?.stringValue ?? "0" {
             case "0": // disable shadow
-                WidgetView_Single01_S_Comp01(entry: self.entry).body  
+                WidgetView_Single01_S_Comp01(entry: self.entry).body
                 
             case "1": // enable shadow
                 WidgetView_Single01_S_Comp02(entry: self.entry).body
