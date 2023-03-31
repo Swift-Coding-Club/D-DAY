@@ -8,8 +8,7 @@
 import UIKit
 
 class AddViewController: UIViewController {
-    // Define the IBOutlets
-    
+
     // navigation bar
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
@@ -30,39 +29,34 @@ class AddViewController: UIViewController {
     @IBOutlet weak var mediumTitle: UILabel!
     @IBOutlet weak var mediumDate: UILabel!
     
-    // Language Button
     @IBOutlet weak var languageButton: UIButton!
     
-    // Countdown Button
     @IBOutlet weak var isTodayCountedButton: UIButton!
     
-    // Textfield for Title
+    // for Title
     var txtFieldForTitle: UITextField = UITextField()
     
-    // Textfield for Subtitle
+    // for Subtitle
     var txtFieldForSubtitle: UITextField = UITextField()
     
-    // Data for the Table settings
+    // for the Table settings
     let list = DdaySettingSection.generateData()
     
-    // Variables for TextField
+    // for TextField
     var titleString: String?
     var subtitleString: String?
     
-    // Variable for DatePicker
+    // for DatePicker
     var theDate: Date = Date()
     
-    // Variables for Colorwell
+    // for Colorwell
     var colorForTXT: UIColor? = UIColor(hex: "ddayBlack")
     var colorForBackground: UIColor? = UIColor(hex: "ddayNeonGreen")
     
-    // UserDefaults 넣어 줄 struct list
     var ddayList = [DdayInfo]()
     
-    // Variable for Countdown
     var isTodayCounted = false
     
-    // Language
     var language: String = "English"
 
     override func viewDidLoad() {
@@ -106,28 +100,22 @@ extension AddViewController {
         bgColor = colorForBackground?.toHexString() ?? "ddayBlack"
         txtColor = colorForTXT?.toHexString() ?? "ddayWhite"
 
-        // UserDefaults에 추가
         let newDdayInfo = DdayInfo(title: self.txtFieldForTitle.text!, subTitle: self.txtFieldForSubtitle.text!, date: self.theDate, isTodayCounted: self.isTodayCounted, widgetTextColor: txtColor, widgetBGColor: bgColor, language: self.language)
         
         print("add iscounted : \(self.isTodayCounted)")
                 
         let encodedData = UserDefaults.shared.array(forKey: KeyForUserDefaults) as? [Data] ?? []
 
-        // 불러온 UserDefaults를 struct list에 넣어주기
         ddayList = encodedData.map { try! JSONDecoder().decode(DdayInfo.self, from: $0) }
         
-        // struct list에 추가될 새 struct 넣어주기
         ddayList.append(newDdayInfo)
         
-        // UserDefaults에 바뀐 struct list 저장하기 (decode UserDefaults)
         let data = ddayList.map { try? JSONEncoder().encode($0) }
         UserDefaults.shared.setValue(data, forKey: KeyForUserDefaults)
 
-        // User Default for date
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy.MM.dd"
         
-        // self.dismiss(animated: true)
         self.presentingViewController?.dismiss(animated: true)
     }
     
@@ -300,7 +288,6 @@ extension AddViewController {
 extension AddViewController: DatePickerCellDelegate {
     func getDateValue(value date: Date) {
         self.theDate = date
-        //self.smallDayNumber.text = String(calculateDday(self.theDate))
     }
 }
 
@@ -373,13 +360,11 @@ extension AddViewController: UITableViewDataSource {
             if indexPath.row == 0 { // title row
                 txtFieldForTitle = cellForTxtfield.accTextField
                 cellForTxtfield.accTextField.addTarget(self, action: #selector(getTitle), for: .editingChanged)
-//                txtFieldForTitle.placeholder = "입력하기"
                 txtFieldForTitle.placeholder = NSLocalizedString("입력하기", comment: "") // 지역화 객체
 
             } else { // subtitle row
                 txtFieldForSubtitle = cellForTxtfield.accTextField
                 cellForTxtfield.accTextField.addTarget(self, action: #selector(getSubTitle), for: .editingDidEnd)
-//                txtFieldForSubtitle.placeholder = "입력하기"
                 txtFieldForSubtitle.placeholder = NSLocalizedString("입력하기", comment: "") // 지역화 객체
 
             }

@@ -13,9 +13,11 @@ struct WidgetView_Single02_L_Comp02: View { // enable shadow
     
     var body: some View {
         
+        let localizedKey = LocalizedStringKey("길게 눌러서 디데이 추가하기")
+        
         let defaultDdaySymbolMenu: [DdaySymbol] = [0].map { index in
             let symbolDdayItem = DdaySymbol (identifier: "identifier", display: "diaplay")
-            symbolDdayItem.ddayTitle = "길게눌러서 디데이 추가하기"
+            symbolDdayItem.ddayTitle = localizedKey.stringValue()
             symbolDdayItem.ddayDate = "2023.08.24"
             symbolDdayItem.ddayBgColor = "ddayWhite"
             symbolDdayItem.ddayTxtColor = "ddayBlack"
@@ -64,10 +66,10 @@ struct WidgetView_Single02_L_Comp02: View { // enable shadow
                 
                 
                 // Title
-                switch (ddaySymbolMenu[safe: 0]?.ddayTitle ?? "길게눌러서 디데이 추가하기").count {
+                switch (ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue()).count {
                     
                 case 0...4:
-                    Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                    Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
                         .font(.custom("Inter-Bold", size: 29.0))
                         .frame(width: 130, height: 100, alignment: .topTrailing)
                         .padding(EdgeInsets(top: 0, leading: 150, bottom: 175, trailing: 0))
@@ -77,7 +79,7 @@ struct WidgetView_Single02_L_Comp02: View { // enable shadow
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                     
                 case 5...6:
-                    Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                    Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
                         .font(.custom("Inter-Bold", size: 26.0))
                         .frame(width: 130, height: 100, alignment: .topTrailing)
                         .padding(EdgeInsets(top: 0, leading: 150, bottom: 175, trailing: 0))
@@ -87,7 +89,7 @@ struct WidgetView_Single02_L_Comp02: View { // enable shadow
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                     
                 case 7...10:
-                    Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                    Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
                         .font(.custom("Inter-Bold", size: 23.0))
                         .frame(width: 130, height: 100, alignment: .topTrailing)
                         .padding(EdgeInsets(top: 0, leading: 150, bottom: 185, trailing: 0))
@@ -97,7 +99,7 @@ struct WidgetView_Single02_L_Comp02: View { // enable shadow
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                     
                 case 11...:
-                    Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                    Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
                         .font(.custom("Inter-Bold", size: 20.0))
                         .frame(width: 130, height: 100, alignment: .topTrailing)
                         .padding(EdgeInsets(top: 0, leading: 150, bottom: 185, trailing: 0))

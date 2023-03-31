@@ -37,6 +37,12 @@
 		43B17C4329BA445B00B6A33E /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43B17C4229BA445B00B6A33E /* SplashScreen.storyboard */; };
 		43CE316B29AE4A0900FC7D26 /* DdayInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4323CD5829A32FCC008B75A8 /* DdayInfo.swift */; };
 		43F7FD6429CF0AD400231F0E /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4338D54A298945D100AB3F54 /* UserDefaultsExtension.swift */; };
+		472FC84429D73A4400E97C91 /* D_DAYWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 472FC84829D73A4400E97C91 /* D_DAYWidget.intentdefinition */; };
+		472FC84529D73A4400E97C91 /* D_DAYWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 472FC84829D73A4400E97C91 /* D_DAYWidget.intentdefinition */; };
+		472FC84629D73A4400E97C91 /* D_DAYWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 472FC84829D73A4400E97C91 /* D_DAYWidget.intentdefinition */; };
+		472FC84E29D7406D00E97C91 /* LocalizeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472FC84D29D7406D00E97C91 /* LocalizeExtension.swift */; };
+		472FC84F29D7412900E97C91 /* LocalizeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472FC84D29D7406D00E97C91 /* LocalizeExtension.swift */; };
+		472FC85029D7412A00E97C91 /* LocalizeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472FC84D29D7406D00E97C91 /* LocalizeExtension.swift */; };
 		B300FF1329C06AB500A2AB3B /* WidgetView_Multi01_M_Comp01.swift in Sources */ = {isa = PBXBuildFile; fileRef = B300FF1229C06AB500A2AB3B /* WidgetView_Multi01_M_Comp01.swift */; };
 		B300FF1529C06ABF00A2AB3B /* WidgetView_Multi01_M_Comp02.swift in Sources */ = {isa = PBXBuildFile; fileRef = B300FF1429C06ABF00A2AB3B /* WidgetView_Multi01_M_Comp02.swift */; };
 		B300FF1729C06B2D00A2AB3B /* WidgetView_Multi02_M_Comp01.swift in Sources */ = {isa = PBXBuildFile; fileRef = B300FF1629C06B2D00A2AB3B /* WidgetView_Multi02_M_Comp01.swift */; };
@@ -74,8 +80,6 @@
 		B3C304AA29AB879A00AF2B33 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43AA636C298E1A1D0091B6A0 /* WidgetKit.framework */; };
 		B3C304AB29AB879A00AF2B33 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43AA636E298E1A1E0091B6A0 /* SwiftUI.framework */; };
 		B3C304AE29AB879A00AF2B33 /* D_DAYWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C304AD29AB879A00AF2B33 /* D_DAYWidgetBundle.swift */; };
-		B3C304B529AB879B00AF2B33 /* D_DAYWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B3C304B129AB879A00AF2B33 /* D_DAYWidget.intentdefinition */; };
-		B3C304B629AB879B00AF2B33 /* D_DAYWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B3C304B129AB879A00AF2B33 /* D_DAYWidget.intentdefinition */; };
 		B3C304B929AB879B00AF2B33 /* D-DAYWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B3C304A929AB879A00AF2B33 /* D-DAYWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B3C304C329AB8AA400AF2B33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 437C831C297271A200F886FB /* Assets.xcassets */; };
 		B3C304C929AB8C1700AF2B33 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43F94E0A299C914800F99CCC /* Intents.framework */; };
@@ -92,7 +96,6 @@
 		B3C3050329AB9EB900AF2B33 /* WidgetView_Multi01.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C3050229AB9EB900AF2B33 /* WidgetView_Multi01.swift */; };
 		B3C3050529ABA01800AF2B33 /* WidgetView_Multi04.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C3050429ABA01800AF2B33 /* WidgetView_Multi04.swift */; };
 		B3C3050729ABA12400AF2B33 /* WidgetView_Multi05.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C3050629ABA12400AF2B33 /* WidgetView_Multi05.swift */; };
-		B3C3051D29B5D11D00AF2B33 /* D_DAYWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B3C304B129AB879A00AF2B33 /* D_DAYWidget.intentdefinition */; };
 		B3D0430B29C187BD00213B87 /* WidgetView_Multi03_L_Comp01_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D0430A29C187BD00213B87 /* WidgetView_Multi03_L_Comp01_1.swift */; };
 		B3D0430D29C188CC00213B87 /* WidgetView_Multi03_L_Comp01_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D0430C29C188CC00213B87 /* WidgetView_Multi03_L_Comp01_2.swift */; };
 		B3D0430F29C1892800213B87 /* WidgetView_Multi03_L_Comp01_3.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D0430E29C1892800213B87 /* WidgetView_Multi03_L_Comp01_3.swift */; };
@@ -194,6 +197,14 @@
 		43B17C4229BA445B00B6A33E /* SplashScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
 		43F94E0A299C914800F99CCC /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		43F94E19299C9D2200F99CCC /* D-DAY.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "D-DAY.entitlements"; sourceTree = "<group>"; };
+		472FC84729D73A4400E97C91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = Base; path = Base.lproj/D_DAYWidget.intentdefinition; sourceTree = "<group>"; };
+		472FC84A29D73A4A00E97C91 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/D_DAYWidget.strings; sourceTree = "<group>"; };
+		472FC84D29D7406D00E97C91 /* LocalizeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizeExtension.swift; sourceTree = "<group>"; };
+		472FC85529D7500D00E97C91 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/D_DAYWidget.strings; sourceTree = "<group>"; };
+		472FC85629D7502400E97C91 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		472FC85729D7503800E97C91 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ja; path = ja.lproj/MainEdit.storyboard; sourceTree = "<group>"; };
+		472FC85829D7503D00E97C91 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ja; path = ja.lproj/ModalAdd.storyboard; sourceTree = "<group>"; };
+		472FC85929D7504500E97C91 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ja; path = ja.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B300FF1229C06AB500A2AB3B /* WidgetView_Multi01_M_Comp01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView_Multi01_M_Comp01.swift; sourceTree = "<group>"; };
 		B300FF1429C06ABF00A2AB3B /* WidgetView_Multi01_M_Comp02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView_Multi01_M_Comp02.swift; sourceTree = "<group>"; };
 		B300FF1629C06B2D00A2AB3B /* WidgetView_Multi02_M_Comp01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView_Multi02_M_Comp01.swift; sourceTree = "<group>"; };
@@ -231,7 +242,6 @@
 		B3B9FF0329B845FC00DF2E0F /* WidgetView_Multi03.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView_Multi03.swift; sourceTree = "<group>"; };
 		B3C304A929AB879A00AF2B33 /* D-DAYWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "D-DAYWidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3C304AD29AB879A00AF2B33 /* D_DAYWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D_DAYWidgetBundle.swift; sourceTree = "<group>"; };
-		B3C304B129AB879A00AF2B33 /* D_DAYWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = D_DAYWidget.intentdefinition; sourceTree = "<group>"; };
 		B3C304B429AB879B00AF2B33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3C304C829AB8C1700AF2B33 /* D-DAYIntents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "D-DAYIntents.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3C304CB29AB8C1700AF2B33 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
@@ -347,6 +357,7 @@
 				43C1E38E29A9D006004FF0F6 /* Font */,
 				4338D54A298945D100AB3F54 /* UserDefaultsExtension.swift */,
 				430CFEF429C55A1E00C40015 /* UIColorExtension.swift */,
+				472FC84D29D7406D00E97C91 /* LocalizeExtension.swift */,
 				437C83132972719C00F886FB /* AppDelegate.swift */,
 				437C83152972719C00F886FB /* SceneDelegate.swift */,
 				437C831C297271A200F886FB /* Assets.xcassets */,
@@ -388,7 +399,6 @@
 			children = (
 				4323CD5829A32FCC008B75A8 /* DdayInfo.swift */,
 				4304BC372988F8C1003168BE /* DDAYCell.swift */,
-				437BB28829A352FA002BB251 /* DDAYCell.xib */,
 				B39BBFD0297A8609001D408A /* TextFieldCell.swift */,
 				B30B8C3A297BE15A00F8813B /* ColorWellCell.swift */,
 				B38A476029875CA00088DC56 /* Color.swift */,
@@ -400,6 +410,7 @@
 		43C1E38C29A9CF72004FF0F6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				437BB28829A352FA002BB251 /* DDAYCell.xib */,
 				43B17C4229BA445B00B6A33E /* SplashScreen.storyboard */,
 				4341218B29CEAE2D005B1159 /* Main.storyboard */,
 				4341219429CEAED8005B1159 /* MainEdit.storyboard */,
@@ -571,7 +582,7 @@
 				B3C304FF29AB9B3100AF2B33 /* Font */,
 				B3C304AD29AB879A00AF2B33 /* D_DAYWidgetBundle.swift */,
 				B3C3050829ABA22D00AF2B33 /* View */,
-				B3C304B129AB879A00AF2B33 /* D_DAYWidget.intentdefinition */,
+				472FC84829D73A4400E97C91 /* D_DAYWidget.intentdefinition */,
 				B3C304B429AB879B00AF2B33 /* Info.plist */,
 				B3C304F629AB964500AF2B33 /* Assets.xcassets */,
 				4322A41429ACF9C600994EB1 /* Timeline */,
@@ -767,6 +778,7 @@
 				en,
 				Base,
 				ko,
+				ja,
 			);
 			mainGroup = 437C83072972719C00F886FB;
 			packageReferences = (
@@ -855,9 +867,10 @@
 				B34928602977DD980009C901 /* AddViewController.swift in Sources */,
 				4323CD5C29A330E3008B75A8 /* EditViewController.swift in Sources */,
 				437C83162972719C00F886FB /* SceneDelegate.swift in Sources */,
-				B3C304B629AB879B00AF2B33 /* D_DAYWidget.intentdefinition in Sources */,
+				472FC84429D73A4400E97C91 /* D_DAYWidget.intentdefinition in Sources */,
 				43B17C4129BA42EB00B6A33E /* SplashViewController.swift in Sources */,
 				B39BBFCF297A85DC001D408A /* DatePickerCell.swift in Sources */,
+				472FC84E29D7406D00E97C91 /* LocalizeExtension.swift in Sources */,
 				430CFEF529C55A1E00C40015 /* UIColorExtension.swift in Sources */,
 				4323CD5929A32FCC008B75A8 /* DdayInfo.swift in Sources */,
 				B39BBFD1297A8609001D408A /* TextFieldCell.swift in Sources */,
@@ -887,7 +900,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3C304B529AB879B00AF2B33 /* D_DAYWidget.intentdefinition in Sources */,
+				472FC84529D73A4400E97C91 /* D_DAYWidget.intentdefinition in Sources */,
 				B3075B2C29C2F321007F978C /* WidgetView_Multi07.swift in Sources */,
 				B3FC355729CD435E0095ED9D /* WidgetView_Multi08_XL_Comp01_1.swift in Sources */,
 				B3D0430F29C1892800213B87 /* WidgetView_Multi03_L_Comp01_3.swift in Sources */,
@@ -906,6 +919,7 @@
 				B300FF2729C06DA800A2AB3B /* WidgetView_Multi05_L_Comp01.swift in Sources */,
 				B3FC355329C872FF0095ED9D /* WidgetView_Multi03_L_Comp02_2.swift in Sources */,
 				B3075B0829C19867007F978C /* WidgetView_Single01_M_Comp02.swift in Sources */,
+				472FC85029D7412A00E97C91 /* LocalizeExtension.swift in Sources */,
 				B3075B2029C2F0B5007F978C /* WidgetView_Multi06.swift in Sources */,
 				B300FF2B29C072D500A2AB3B /* CustomFunctions.swift in Sources */,
 				B3075B0E29C1A49B007F978C /* WidgetView_Single02_L_Comp01.swift in Sources */,
@@ -943,9 +957,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				43CE316B29AE4A0900FC7D26 /* DdayInfo.swift in Sources */,
+				472FC84F29D7412900E97C91 /* LocalizeExtension.swift in Sources */,
 				43491FE929B0768E0084B2EA /* IntentHandler.swift in Sources */,
 				43F7FD6429CF0AD400231F0E /* UserDefaultsExtension.swift in Sources */,
-				B3C3051D29B5D11D00AF2B33 /* D_DAYWidget.intentdefinition in Sources */,
+				472FC84629D73A4400E97C91 /* D_DAYWidget.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -980,6 +995,7 @@
 			children = (
 				4340479629CE37B4004A5144 /* en */,
 				4340479829CE37BD004A5144 /* ko */,
+				472FC85629D7502400E97C91 /* ja */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -990,6 +1006,7 @@
 				4341218A29CEAE2D005B1159 /* Base */,
 				4341219029CEAE4B005B1159 /* en */,
 				4341219129CEAE4B005B1159 /* ko */,
+				472FC85929D7504500E97C91 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1000,6 +1017,7 @@
 				4341219329CEAED8005B1159 /* Base */,
 				4341219929CEAEED005B1159 /* en */,
 				4341219A29CEAEF1005B1159 /* ko */,
+				472FC85729D7503800E97C91 /* ja */,
 			);
 			name = MainEdit.storyboard;
 			sourceTree = "<group>";
@@ -1010,8 +1028,19 @@
 				4341219C29CEAF4D005B1159 /* Base */,
 				434121A229CEAF63005B1159 /* en */,
 				434121A329CEAF69005B1159 /* ko */,
+				472FC85829D7503D00E97C91 /* ja */,
 			);
 			name = ModalAdd.storyboard;
+			sourceTree = "<group>";
+		};
+		472FC84829D73A4400E97C91 /* D_DAYWidget.intentdefinition */ = {
+			isa = PBXVariantGroup;
+			children = (
+				472FC84729D73A4400E97C91 /* Base */,
+				472FC84A29D73A4A00E97C91 /* en */,
+				472FC85529D7500D00E97C91 /* ja */,
+			);
+			name = D_DAYWidget.intentdefinition;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1068,7 +1097,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1123,7 +1152,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1150,12 +1179,12 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dday.dd.D-DAY";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1163,7 +1192,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1184,12 +1213,12 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dday.dd.D-DAY";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1197,7 +1226,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -1210,13 +1239,16 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MA5KYZD992;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dday.dd.D-DAYTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/D-DAY.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/D-DAY";
 			};
 			name = Debug;
@@ -1230,13 +1262,16 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MA5KYZD992;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dday.dd.D-DAYTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/D-DAY.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/D-DAY";
 			};
 			name = Release;
@@ -1249,13 +1284,16 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MA5KYZD992;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dday.dd.D-DAYUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = "D-DAY";
 			};
 			name = Debug;
@@ -1268,13 +1306,16 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MA5KYZD992;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dday.dd.D-DAYUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = "D-DAY";
 			};
 			name = Release;
@@ -1292,19 +1333,19 @@
 				INFOPLIST_FILE = "D-DAYWidget/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "D-DAYWidget";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dday.dd.D-DAY.D-DAYWidget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1321,19 +1362,19 @@
 				INFOPLIST_FILE = "D-DAYWidget/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "D-DAYWidget";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dday.dd.D-DAY.D-DAYWidget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -1348,19 +1389,19 @@
 				INFOPLIST_FILE = "D-DAYIntents/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "D-DAYIntents";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dday.dd.D-DAY.D-DAYIntents";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1375,19 +1416,19 @@
 				INFOPLIST_FILE = "D-DAYIntents/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "D-DAYIntents";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dday.dd.D-DAY.D-DAYIntents";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

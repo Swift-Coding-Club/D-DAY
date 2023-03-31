@@ -56,7 +56,7 @@ struct WidgetView_Multi08: Widget {
             WidgetView_Multi08EntryView(entry: entry)
         }
         .configurationDisplayName("#3 iPad 전용 위젯")
-        .description("여러개의 디데이를 표시할 수 있는 위젯입니다.")
+        .description("여러 개의 디데이를 표시할 수 있는 위젯입니다.")
         .supportedFamilies([.systemExtraLarge])
     }
 }

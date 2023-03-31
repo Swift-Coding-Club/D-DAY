@@ -9,7 +9,7 @@
 	<key>INIntentDefinitionNamespace</key>
 	<string>88xZPY</string>
 	<key>INIntentDefinitionSystemVersion</key>
-	<string>21G115</string>
+	<string>22D68</string>
 	<key>INIntentDefinitionToolsBuildVersion</key>
 	<string>14C18</string>
 	<key>INIntentDefinitionToolsVersion</key>
@@ -35,7 +35,7 @@
 					<key>INIntentParameterConfigurable</key>
 					<true/>
 					<key>INIntentParameterDisplayName</key>
-					<string>표시할 디데이 선택하기 (첫번째 선택된 디데이의 컬러로 설정됩니다.)</string>
+					<string>표시할 디데이 선택 (첫번째 선택된 디데이의 컬러로 설정됩니다)</string>
 					<key>INIntentParameterDisplayNameID</key>
 					<string>XKtUVE</string>
 					<key>INIntentParameterDisplayPriority</key>

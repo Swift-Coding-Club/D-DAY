@@ -15,6 +15,8 @@ struct WidgetView_Multi03_L_Comp02_1: View { // enable shadow
     
     var body: some View {
         
+        let localizedKey = LocalizedStringKey("길게 눌러서 디데이 추가하기")
+        
         let isTodayCounted: String = ddaySymbolMenu[safe: 0]?.ddayIsCountdown ?? "false"
         let dateInt: Int = CustomFunctions().calculateDday(ddayRecievedDate: (ddaySymbolMenu[safe: 0]?.ddayDate ??  "2023.12.16"), isTodayCounted: isTodayCounted)
         let ddayDorPlus: String = CustomFunctions().ddaySetNoneOrPlus(dateIntParam: dateInt)
@@ -32,7 +34,7 @@ struct WidgetView_Multi03_L_Comp02_1: View { // enable shadow
         }
         
         ZStack {
-            Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+            Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
                 .font(.custom("Inter-Bold", size: 12.0))
                 .frame(width: 70, height: 55, alignment: .topTrailing)
                 .multilineTextAlignment(.trailing)

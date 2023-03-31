@@ -53,8 +53,8 @@ struct WidgetView_Single01: Widget {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
             WidgetView_Single01EntryView(entry: entry)
         }
-        .configurationDisplayName("#1 심플 위젯")
-        .description("한 개의 디데이를 표시할 수 있는 위젯입니다.")
+        .configurationDisplayName(LocalizedStringKey("#1 싱글 위젯"))
+        .description(LocalizedStringKey("한 개의 디데이를 표시할 수 있는 위젯입니다."))
         .supportedFamilies([.systemSmall, .systemMedium])
     }
 }

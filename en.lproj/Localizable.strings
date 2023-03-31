@@ -21,3 +21,14 @@
 "날짜" = "Date";
 "위젯 색상" = "Widget Colors";
 "설정일을 카운트다운" = "Count the day of the event";
+
+"#1 싱글 위젯" = "Single Widget";
+"#2 다중 위젯" = "Multiple Widget";
+
+"한 개의 디데이를 표시할 수 있는 위젯입니다." = "Widget displaying a single D-Day.";
+"여러 개의 디데이를 표시할 수 있는 위젯입니다." = "Widget displaying muliple D-Days.";
+
+"길게 눌러서 디데이 추가하기" = "Long press to add D-Day";
+
+
+

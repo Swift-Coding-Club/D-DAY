@@ -70,8 +70,8 @@ struct WidgetView_Multi03: Widget {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
             WidgetView_Multi03EntryView(entry: entry)
         }
-        .configurationDisplayName("#2 다중 위젯")
-        .description("여러개의 디데이를 표시할 수 있는 위젯입니다.")
+        .configurationDisplayName(LocalizedStringKey("#2 멀티 위젯"))
+        .description(LocalizedStringKey("여러 개의 디데이를 표시할 수 있는 위젯입니다."))
         .supportedFamilies([.systemLarge])
     }
 }

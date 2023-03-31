@@ -13,14 +13,16 @@ struct WidgetView_Multi02_M_Comp02: View { // enable shadow
     
     var body: some View {
         
+        let localizedKey = LocalizedStringKey("길게 눌러서 디데이 추가하기")
+        
         let defaultStringArr: [[String]] = [
             // format: [ddayTitle, ddayDate, ddayBgColor, ddayTxtColor, ddayIsCountdown]
-            ["길게눌러서 디데이 추가하기", "2023.08.04", "ddayNeonGreen", "ddayBlack", "false"],
-            ["길게눌러서 디데이 추가하기", "2023.10.04", "ddayNeonCrimson", "ddayOrangeLighter", "false"],
-            ["길게눌러서 디데이 추가하기", "2023.11.04", "ddayNeonSkyBlue", "ddayYellow", "false"],
-            ["길게눌러서 디데이 추가하기", "2023.04.04", "ddayNeonPurple", "ddayNeonEmerald", "false"],
-            ["길게눌러서 디데이 추가하기", "2023.10.14", "ddayNeonPink", "ddayWhite", "false"],
-            ["길게눌러서 디데이 추가하기", "2025.05.04", "ddayNeonBlueDarker", "ddayChristmasRed", "false"],
+            [localizedKey.stringValue(), "2023.08.04", "ddayNeonGreen", "ddayBlack", "false"],
+            [localizedKey.stringValue(), "2023.10.04", "ddayNeonCrimson", "ddayOrangeLighter", "false"],
+            [localizedKey.stringValue(), "2023.11.04", "ddayNeonSkyBlue", "ddayYellow", "false"],
+            [localizedKey.stringValue(), "2023.04.04", "ddayNeonPurple", "ddayNeonEmerald", "false"],
+            [localizedKey.stringValue(), "2023.10.14", "ddayNeonPink", "ddayWhite", "false"],
+            [localizedKey.stringValue(), "2025.05.04", "ddayNeonBlueDarker", "ddayChristmasRed", "false"],
         ]
         
         let defaultDdaySymbolMenu: [DdaySymbol] = defaultStringArr.map { sArray in
@@ -72,7 +74,7 @@ struct WidgetView_Multi02_M_Comp02: View { // enable shadow
                         .multilineTextAlignment(.trailing)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 3]?.ddayTxtColor ?? "ddayNeonEmerald"))
                     
-                    Text(ddaySymbolMenu[safe: 3]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                    Text(ddaySymbolMenu[safe: 3]?.ddayTitle ?? localizedKey.stringValue())
                         .font(.custom("Inter-ExtraBold", size: 8.0))
                         .frame(width: 85, height: 50, alignment: .topTrailing)
                         .position(x: 50, y: 45)
@@ -124,7 +126,7 @@ struct WidgetView_Multi02_M_Comp02: View { // enable shadow
                         .multilineTextAlignment(.trailing)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 4]?.ddayTxtColor ?? "ddayWhite"))
                     
-                    Text(ddaySymbolMenu[safe: 4]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                    Text(ddaySymbolMenu[safe: 4]?.ddayTitle ?? localizedKey.stringValue())
                         .font(.custom("Inter-ExtraBold", size: 8.0))
                         .frame(width: 85, height: 50, alignment: .topTrailing)
                         .position(x: 55, y: 30)
@@ -176,7 +178,7 @@ struct WidgetView_Multi02_M_Comp02: View { // enable shadow
                         .multilineTextAlignment(.trailing)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                     
-                    Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                    Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
                         .font(.custom("Inter-ExtraBold", size: 9.0))
                         .frame(width: 90, height: 50, alignment: .topTrailing)
                         .position(x: 65, y: 32)
@@ -228,7 +230,7 @@ struct WidgetView_Multi02_M_Comp02: View { // enable shadow
                         .multilineTextAlignment(.trailing)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 5]?.ddayTxtColor ?? "ddayChristmasRed"))
                     
-                    Text(ddaySymbolMenu[safe: 5]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                    Text(ddaySymbolMenu[safe: 5]?.ddayTitle ?? localizedKey.stringValue())
                         .font(.custom("Inter-ExtraBold", size: 9.0))
                         .frame(width: 97, height: 50, alignment: .topTrailing)
                         .position(x: 60, y: 38)
@@ -285,7 +287,7 @@ struct WidgetView_Multi02_M_Comp02: View { // enable shadow
                         .multilineTextAlignment(.trailing)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 2]?.ddayTxtColor ?? "ddayYellow"))
                     
-                    Text(ddaySymbolMenu[safe: 2]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                    Text(ddaySymbolMenu[safe: 2]?.ddayTitle ?? localizedKey.stringValue())
                         .font(.custom("Inter-ExtraBold", size: 8.0))
                         .frame(width: 85, height: 70, alignment: .topTrailing)
                         .position(x: 68, y: 46)
@@ -338,7 +340,7 @@ struct WidgetView_Multi02_M_Comp02: View { // enable shadow
                         .multilineTextAlignment(.trailing)
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 1]?.ddayTxtColor ?? "ddayOrangeLighter"))
                     
-                    Text(ddaySymbolMenu[safe: 1]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                    Text(ddaySymbolMenu[safe: 1]?.ddayTitle ?? localizedKey.stringValue())
                         .font(.custom("Inter-ExtraBold", size: 9.0))
                         .frame(width: 97, height: 50, alignment: .topTrailing)
                         .position(x: 60, y: 35)

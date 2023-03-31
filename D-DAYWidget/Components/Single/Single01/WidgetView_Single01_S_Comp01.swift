@@ -13,9 +13,11 @@ struct WidgetView_Single01_S_Comp01: View { // disable shadow
     
     var body: some View {
         
+        let localizedKey = LocalizedStringKey("길게 눌러서 디데이 추가하기")
+        
         let defaultDdaySymbolMenu: [DdaySymbol] = [0].map { index in
             let symbolDdayItem = DdaySymbol (identifier: "identifier", display: "diaplay")
-            symbolDdayItem.ddayTitle = "길게눌러서 디데이 추가하기"
+            symbolDdayItem.ddayTitle = localizedKey.stringValue()
             symbolDdayItem.ddayDate = "2023.06.24"
             symbolDdayItem.ddayBgColor = "ddayBlack"
             symbolDdayItem.ddayTxtColor = "ddayWhite"
@@ -60,35 +62,35 @@ struct WidgetView_Single01_S_Comp01: View { // disable shadow
                 // Title
                 switch ddaySymbolMenu[safe: 0]!.ddayTitle!.count {
                 case ...2:
-                    Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                    Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
                         .frame(width: 70, height: 50, alignment: .topTrailing)
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 37, trailing: -50))
                         .font(.custom("Inter-Bold", size: 17.0))
                         .multilineTextAlignment(.trailing)
                     
                 case 3...5:
-                    Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                    Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
                         .frame(width: 70, height: 50, alignment: .topTrailing)
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 37, trailing: -60))
                         .font(.custom("Inter-Bold", size: 16.0))
                         .multilineTextAlignment(.trailing)
                     
                 case 6...9:
-                    Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                    Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
                         .frame(width: 70, height: 50, alignment: .topTrailing)
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 48, trailing: -60))
                         .font(.custom("Inter-Bold", size: 15.0))
                         .multilineTextAlignment(.trailing)
                     
                 case 10...12:
-                    Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                    Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
                         .frame(width: 70, height: 50, alignment: .topTrailing)
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 48, trailing: -60))
                         .font(.custom("Inter-Bold", size: 14.0))
                         .multilineTextAlignment(.trailing)
                 
                 case 13...:
-                    Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                    Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
                         .frame(width: 70, height: 50, alignment: .topTrailing)
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 48, trailing: -60))
                         .font(.custom("Inter-Bold", size: 12.0))

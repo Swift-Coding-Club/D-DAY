@@ -148,11 +148,13 @@ struct DefaultArrForWidget_M03 {
     
     func getDaySymbolMenu(entry: Provider.Entry) -> [DdaySymbol] {
         
+        let localizedKey = LocalizedStringKey("길게 눌러서 디데이 추가하기")
+        
         let defaultStringArr: [[String]] = [
             // format: [ddayTitle, ddayDate, ddayBgColor, ddayTxtColor, ddayIsCountdown]
-            ["길게눌러서 디데이 추가하기", "2024.01.04", "ddayBlack", "ddayWhite", "false"],
-            ["길게눌러서 디데이 추가하기", "2024.02.04", "ddayBlack", "ddayWhite", "false"],
-            ["길게눌러서 디데이 추가하기", "2023.10.04", "ddayBlack", "ddayWhite", "false"],
+            [localizedKey.stringValue(), "2024.01.04", "ddayBlack", "ddayWhite", "false"],
+            [localizedKey.stringValue(), "2024.02.04", "ddayBlack", "ddayWhite", "false"],
+            [localizedKey.stringValue(), "2023.10.04", "ddayBlack", "ddayWhite", "false"],
         ]
         
         let defaultDdaySymbolMenu: [DdaySymbol] = defaultStringArr.map { sArray in
@@ -176,16 +178,18 @@ struct DefaultArrForWidget_M08 {
     
     func getDaySymbolMenu(entry: Provider.Entry) -> [DdaySymbol] {
         
+        let localizedKey = LocalizedStringKey("길게 눌러서 디데이 추가하기")
+        
         let defaultStringArr: [[String]] = [
             // format: [ddayTitle, ddayDate, ddayBgColor, ddayTxtColor, ddayIsCountdown]
-            ["길게눌러서 디데이 추가하기", "2023.08.04", "ddayNeonGreen", "ddayBlack", "false"],
-            ["길게눌러서 디데이 추가하기", "2023.05.04", "ddayNeonCrimson", "ddayOrangeLighter", "false"],
-            ["길게눌러서 디데이 추가하기", "2024.01.04", "ddayNeonSkyBlue", "ddayYellow", "false"],
-            ["길게눌러서 디데이 추가하기", "2022.10.04", "ddayNeonBlueDarker", "ddayNeonCrimson", "false"],
-            ["길게눌러서 디데이 추가하기", "2023.03.25", "ddayNeonPurple", "ddayNeonEmerald", "false"],
-            ["길게눌러서 디데이 추가하기", "2023.08.15", "ddayToneDownBabyPink", "ddayToneDownHotPink", "false"],
-            ["길게눌러서 디데이 추가하기", "2024.10.24", "ddayNeonOrange", "ddayNeonGreanBrighter", "false"],
-            ["길게눌러서 디데이 추가하기", "2023.05.20", "ddayNeonPink", "ddayNeonYellow", "false"],
+            [localizedKey.stringValue(), "2023.08.04", "ddayNeonGreen", "ddayBlack", "false"],
+            [localizedKey.stringValue(), "2023.05.04", "ddayNeonCrimson", "ddayOrangeLighter", "false"],
+            [localizedKey.stringValue(), "2024.01.04", "ddayNeonSkyBlue", "ddayYellow", "false"],
+            [localizedKey.stringValue(), "2022.10.04", "ddayNeonBlueDarker", "ddayNeonCrimson", "false"],
+            [localizedKey.stringValue(), "2023.03.25", "ddayNeonPurple", "ddayNeonEmerald", "false"],
+            [localizedKey.stringValue(), "2023.08.15", "ddayToneDownBabyPink", "ddayToneDownHotPink", "false"],
+            [localizedKey.stringValue(), "2024.10.24", "ddayNeonOrange", "ddayNeonGreanBrighter", "false"],
+            [localizedKey.stringValue(), "2023.05.20", "ddayNeonPink", "ddayNeonYellow", "false"],
         ]
         
         let defaultDdaySymbolMenu: [DdaySymbol] = defaultStringArr.map { sArray in

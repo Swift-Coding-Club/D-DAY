@@ -13,9 +13,11 @@ struct WidgetView_Single01_M_Comp02: View { // enable shadow
     
     var body: some View {
         
+        let localizedKey = LocalizedStringKey("길게 눌러서 디데이 추가하기")
+        
         let defaultDdaySymbolMenu: [DdaySymbol] = [0].map { index in
             let symbolDdayItem = DdaySymbol (identifier: "identifier", display: "diaplay")
-            symbolDdayItem.ddayTitle = "길게눌러서 디데이 추가하기"
+            symbolDdayItem.ddayTitle = localizedKey.stringValue()
             symbolDdayItem.ddayDate = "2025.12.25"
             symbolDdayItem.ddayBgColor = "ddayWhite"
             symbolDdayItem.ddayTxtColor = "ddayBlack"
@@ -34,30 +36,30 @@ struct WidgetView_Single01_M_Comp02: View { // enable shadow
             ZStack {
             
                 // Title
-                switch (ddaySymbolMenu[safe: 0]?.ddayTitle ?? "길게눌러서 디데이 추가하기").count {
+                switch (ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue()).count {
                 case ...5:
-                    Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                    Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
                         .font(.custom("Inter-Bold", size: 20.0))
                         .frame(width: 200, height: 20, alignment: .topLeading)
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 105, trailing: 103))
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                     
                 case 6...10:
-                    Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                    Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
                         .font(.custom("Inter-Bold", size: 18.0))
                         .frame(width: 200, height: 20, alignment: .topLeading)
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 105, trailing: 107))
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                     
                 case 11...14:
-                    Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                    Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
                         .font(.custom("Inter-Bold", size: 15.0))
                         .frame(width: 200, height: 20, alignment: .topLeading)
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 105, trailing: 107))
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                     
                 case 15...:
-                    Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                    Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
                         .font(.custom("Inter-Bold", size: 14.0))
                         .frame(width: 200, height: 80, alignment: .topLeading)
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 48, trailing: 110))

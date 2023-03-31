@@ -13,17 +13,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        
-        // initialViewController를 SplashViewController로 코드를 이용하여 변경. 제일 처음 등장하는 화면이 Splash가 된다.
-        // 스토리보드 찾기
+
         let storyboard = UIStoryboard(name: "SplashScreen", bundle: nil)
         let initialViewController = storyboard.instantiateViewController(withIdentifier: "SplashViewController")
-        // rootViewController 설정하기
+
         self.window?.rootViewController = initialViewController
         self.window?.makeKeyAndVisible()
+        
+        window?.overrideUserInterfaceStyle = .light
         
         guard let _ = (scene as? UIWindowScene) else { return }
     }

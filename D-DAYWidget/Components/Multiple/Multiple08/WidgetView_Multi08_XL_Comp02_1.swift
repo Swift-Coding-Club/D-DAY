@@ -15,6 +15,8 @@ struct WidgetView_Multi08_XL_Comp02_1: View { // enable shadow
     
     var body: some View {
         
+        let localizedKey = LocalizedStringKey("길게 눌러서 디데이 추가하기")
+        
         Group {
             
              // top stack 5
@@ -60,9 +62,9 @@ struct WidgetView_Multi08_XL_Comp02_1: View { // enable shadow
                  
                  
                  // Title 5
-                 switch (ddaySymbolMenu[safe: 4]?.ddayTitle ?? "길게눌러서 디데이 추가하기").count {
+                 switch (ddaySymbolMenu[safe: 4]?.ddayTitle ?? localizedKey.stringValue()).count {
                  case ...5:
-                     Text(ddaySymbolMenu[safe: 4]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                     Text(ddaySymbolMenu[safe: 4]?.ddayTitle ?? localizedKey.stringValue())
                          .font(.custom("Inter-Bold", size: 22.0))
                          .frame(width: 84, height: 80, alignment: .topTrailing)
                          .position(x: 116, y: 64)
@@ -71,7 +73,7 @@ struct WidgetView_Multi08_XL_Comp02_1: View { // enable shadow
                          .foregroundColor(Color(hex: ddaySymbolMenu[safe: 4]?.ddayTxtColor ?? "ddayNeonEmerald"))
                      
                  case 6...10:
-                     Text(ddaySymbolMenu[safe: 4]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                     Text(ddaySymbolMenu[safe: 4]?.ddayTitle ?? localizedKey.stringValue())
                          .font(.custom("Inter-Bold", size: 20.0))
                          .frame(width: 80, height: 80, alignment: .topTrailing)
                          .position(x: 113, y: 64)
@@ -80,7 +82,7 @@ struct WidgetView_Multi08_XL_Comp02_1: View { // enable shadow
                          .foregroundColor(Color(hex: ddaySymbolMenu[safe: 4]?.ddayTxtColor ?? "ddayNeonEmerald"))
 
                  case 11...15:
-                     Text(ddaySymbolMenu[safe: 4]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                     Text(ddaySymbolMenu[safe: 4]?.ddayTitle ?? localizedKey.stringValue())
                          .font(.custom("Inter-Bold", size: 17.0))
                          .frame(width: 85, height: 80, alignment: .topTrailing)
                          .position(x: 113, y: 61)
@@ -89,7 +91,7 @@ struct WidgetView_Multi08_XL_Comp02_1: View { // enable shadow
                          .foregroundColor(Color(hex: ddaySymbolMenu[safe: 4]?.ddayTxtColor ?? "ddayNeonEmerald"))
                      
                  case 16...:
-                     Text(ddaySymbolMenu[safe: 4]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                     Text(ddaySymbolMenu[safe: 4]?.ddayTitle ?? localizedKey.stringValue())
                          .font(.custom("Inter-Bold", size: 13.0))
                          .frame(width: 90, height: 50, alignment: .topTrailing)
                          .position(x: 116, y: 47)
@@ -185,9 +187,9 @@ struct WidgetView_Multi08_XL_Comp02_1: View { // enable shadow
                  
                  
                  // Title 6
-                 switch (ddaySymbolMenu[safe: 5]?.ddayTitle ?? "길게눌러서 디데이 추가하기").count {
+                 switch (ddaySymbolMenu[safe: 5]?.ddayTitle ?? localizedKey.stringValue()).count {
                  case ...4:
-                     Text(ddaySymbolMenu[safe: 5]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                     Text(ddaySymbolMenu[safe: 5]?.ddayTitle ?? localizedKey.stringValue())
                          .font(.custom("Inter-Bold", size: 22.0))
                          .frame(width: 90, height: 80, alignment: .topTrailing)
                          .position(x: 115, y: 73)
@@ -196,7 +198,7 @@ struct WidgetView_Multi08_XL_Comp02_1: View { // enable shadow
                          .foregroundColor(Color(hex: ddaySymbolMenu[safe: 5]?.ddayTxtColor ?? "ddayNeonYellow"))
                      
                  case 5:
-                     Text(ddaySymbolMenu[safe: 5]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                     Text(ddaySymbolMenu[safe: 5]?.ddayTitle ?? localizedKey.stringValue())
                          .font(.custom("Inter-Bold", size: 21.0))
                          .frame(width: 90, height: 80, alignment: .topTrailing)
                          .position(x: 110, y: 67)
@@ -205,7 +207,7 @@ struct WidgetView_Multi08_XL_Comp02_1: View { // enable shadow
                          .foregroundColor(Color(hex: ddaySymbolMenu[safe: 5]?.ddayTxtColor ?? "ddayNeonYellow"))
                      
                  case 6...10:
-                     Text(ddaySymbolMenu[safe: 5]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                     Text(ddaySymbolMenu[safe: 5]?.ddayTitle ?? localizedKey.stringValue())
                          .font(.custom("Inter-Bold", size: 19.0))
                          .frame(width: 90, height: 50, alignment: .topTrailing)
                          .position(x: 115, y: 53)
@@ -214,7 +216,7 @@ struct WidgetView_Multi08_XL_Comp02_1: View { // enable shadow
                          .foregroundColor(Color(hex: ddaySymbolMenu[safe: 5]?.ddayTxtColor ?? "ddayNeonYellow"))
 
                  case 11...15:
-                     Text(ddaySymbolMenu[safe: 5]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                     Text(ddaySymbolMenu[safe: 5]?.ddayTitle ?? localizedKey.stringValue())
                          .font(.custom("Inter-Bold", size: 16.0))
                          .frame(width: 105, height: 80, alignment: .topTrailing)
                          .position(x: 110, y: 73)
@@ -223,7 +225,7 @@ struct WidgetView_Multi08_XL_Comp02_1: View { // enable shadow
                          .foregroundColor(Color(hex: ddaySymbolMenu[safe: 5]?.ddayTxtColor ?? "ddayNeonYellow"))
                      
                  case 16...:
-                     Text(ddaySymbolMenu[safe: 5]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                     Text(ddaySymbolMenu[safe: 5]?.ddayTitle ?? localizedKey.stringValue())
                          .font(.custom("Inter-Bold", size: 13.0))
                          .frame(width: 90, height: 50, alignment: .topTrailing)
                          .position(x: 120, y: 53)
@@ -319,9 +321,9 @@ struct WidgetView_Multi08_XL_Comp02_1: View { // enable shadow
                 
             
                 // Title 7
-                switch (ddaySymbolMenu[safe: 6]?.ddayTitle ?? "길게눌러서 디데이 추가하기").count {
+                switch (ddaySymbolMenu[safe: 6]?.ddayTitle ?? localizedKey.stringValue()).count {
                 case ...4:
-                    Text(ddaySymbolMenu[safe: 6]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                    Text(ddaySymbolMenu[safe: 6]?.ddayTitle ?? localizedKey.stringValue())
                         .font(.custom("Inter-Bold", size: 22.0))
                         .frame(width: 90, height: 50, alignment: .topTrailing)
                         .position(x: 113, y: 70)
@@ -330,7 +332,7 @@ struct WidgetView_Multi08_XL_Comp02_1: View { // enable shadow
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 6]?.ddayTxtColor ?? "ddayNeonGreanBrighter"))
                     
                 case 5:
-                    Text(ddaySymbolMenu[safe: 6]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                    Text(ddaySymbolMenu[safe: 6]?.ddayTitle ?? localizedKey.stringValue())
                         .font(.custom("Inter-Bold", size: 23.0))
                         .frame(width: 90, height: 80, alignment: .topTrailing)
                         .position(x: 115, y: 79)
@@ -339,7 +341,7 @@ struct WidgetView_Multi08_XL_Comp02_1: View { // enable shadow
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 6]?.ddayTxtColor ?? "ddayNeonGreanBrighter"))
                     
                 case 6...10:
-                    Text(ddaySymbolMenu[safe: 6]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                    Text(ddaySymbolMenu[safe: 6]?.ddayTitle ?? localizedKey.stringValue())
                         .font(.custom("Inter-Bold", size: 19.0))
                         .frame(width: 90, height: 50, alignment: .topTrailing)
                         .position(x: 115, y: 64)
@@ -348,7 +350,7 @@ struct WidgetView_Multi08_XL_Comp02_1: View { // enable shadow
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 6]?.ddayTxtColor ?? "ddayNeonGreanBrighter"))
 
                 case 11...15:
-                    Text(ddaySymbolMenu[safe: 6]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                    Text(ddaySymbolMenu[safe: 6]?.ddayTitle ?? localizedKey.stringValue())
                         .font(.custom("Inter-Bold", size: 16.0))
                         .frame(width: 100, height: 80, alignment: .topTrailing)
                         .position(x: 110, y: 76)
@@ -357,7 +359,7 @@ struct WidgetView_Multi08_XL_Comp02_1: View { // enable shadow
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 6]?.ddayTxtColor ?? "ddayNeonGreanBrighter"))
                     
                 case 16...:
-                    Text(ddaySymbolMenu[safe: 6]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                    Text(ddaySymbolMenu[safe: 6]?.ddayTitle ?? localizedKey.stringValue())
                         .font(.custom("Inter-Bold", size: 13.0))
                         .frame(width: 90, height: 50, alignment: .topTrailing)
                         .position(x: 115, y: 64)
@@ -458,9 +460,9 @@ struct WidgetView_Multi08_XL_Comp02_1: View { // enable shadow
                 
                 
                 // Title 8
-                switch (ddaySymbolMenu[safe: 7]?.ddayTitle ?? "길게눌러서 디데이 추가하기").count {
+                switch (ddaySymbolMenu[safe: 7]?.ddayTitle ?? localizedKey.stringValue()).count {
                 case ...4:
-                    Text(ddaySymbolMenu[safe: 7]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                    Text(ddaySymbolMenu[safe: 7]?.ddayTitle ?? localizedKey.stringValue())
                         .font(.custom("Inter-Bold", size: 22.0))
                         .frame(width: 90, height: 70, alignment: .topTrailing)
                         .position(x: 116, y: 77)
@@ -469,7 +471,7 @@ struct WidgetView_Multi08_XL_Comp02_1: View { // enable shadow
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 7]?.ddayTxtColor ?? "ddayNeonYellow"))
                     
                 case 5...10:
-                    Text(ddaySymbolMenu[safe: 7]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                    Text(ddaySymbolMenu[safe: 7]?.ddayTitle ?? localizedKey.stringValue())
                         .font(.custom("Inter-Bold", size: 21.0))
                         .frame(width: 90, height: 70, alignment: .topTrailing)
                         .position(x: 116, y: 77)
@@ -478,7 +480,7 @@ struct WidgetView_Multi08_XL_Comp02_1: View { // enable shadow
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 7]?.ddayTxtColor ?? "ddayNeonYellow"))
 
                 case 11...15:
-                    Text(ddaySymbolMenu[safe: 7]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                    Text(ddaySymbolMenu[safe: 7]?.ddayTitle ?? localizedKey.stringValue())
                         .font(.custom("Inter-Bold", size: 18.0))
                         .frame(width: 90, height: 80, alignment: .topTrailing)
                         .position(x: 116, y: 74)
@@ -487,7 +489,7 @@ struct WidgetView_Multi08_XL_Comp02_1: View { // enable shadow
                         .foregroundColor(Color(hex: ddaySymbolMenu[safe: 7]?.ddayTxtColor ?? "ddayNeonYellow"))
                     
                 case 16...:
-                    Text(ddaySymbolMenu[safe: 7]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                    Text(ddaySymbolMenu[safe: 7]?.ddayTitle ?? localizedKey.stringValue())
                         .font(.custom("Inter-Bold", size: 17.0))
                         .frame(width: 90, height: 100, alignment: .topTrailing)
                         .position(x: 119, y: 85)

@@ -13,12 +13,14 @@ struct WidgetView_Multi03_M_Comp01: View { // disable shadow
     
     var body: some View {
         
+        let localizedKey = LocalizedStringKey("길게 눌러서 디데이 추가하기")
+        
         let defaultStringArr: [[String]] = [
             // format: [ddayTitle, ddayDate, ddayBgColor, ddayTxtColor, ddayIsCountdown]
-            ["길게눌러서 디데이 추가하기", "2024.01.04", "ddayWhite", "ddayBlack", "false"],
-            ["길게눌러서 디데이 추가하기", "2023.10.04", "ddayWhite", "ddayBlack", "false"],
-            ["길게눌러서 디데이 추가하기", "2023.03.14", "ddayWhite", "ddayBlack", "false"],
-            ["길게눌러서 디데이 추가하기", "2024.03.14", "ddayWhite", "ddayBlack", "false"],
+            [localizedKey.stringValue(), "2024.01.04", "ddayWhite", "ddayBlack", "false"],
+            [localizedKey.stringValue(), "2023.10.04", "ddayWhite", "ddayBlack", "false"],
+            [localizedKey.stringValue(), "2023.03.14", "ddayWhite", "ddayBlack", "false"],
+            [localizedKey.stringValue(), "2024.03.14", "ddayWhite", "ddayBlack", "false"],
         ]
         
         let defaultDdaySymbolMenu: [DdaySymbol] = defaultStringArr.map { sArray in
@@ -43,7 +45,7 @@ struct WidgetView_Multi03_M_Comp01: View { // disable shadow
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 50))
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayBgColor ?? "ddayWhite"))
                 
-                Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                Text(ddaySymbolMenu[safe: 0]?.ddayTitle ?? localizedKey.stringValue())
                         .font(.custom("Inter-Bold", size: 9.0))
                         .frame(width: 80, height: 50, alignment: .topTrailing)
                         .padding(EdgeInsets(top: 0, leading: 62, bottom: 1, trailing: 0))
@@ -64,7 +66,7 @@ struct WidgetView_Multi03_M_Comp01: View { // disable shadow
             
             // top stack 2
             ZStack{
-                Text(ddaySymbolMenu[safe: 1]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                Text(ddaySymbolMenu[safe: 1]?.ddayTitle ?? localizedKey.stringValue())
                     .font(.custom("Inter-Bold", size: 9.0)) // 4-12
                     .frame(width: 100, height: 50, alignment: .topLeading)
                     .multilineTextAlignment(.leading)
@@ -99,7 +101,7 @@ struct WidgetView_Multi03_M_Comp01: View { // disable shadow
                     .foregroundColor(Color(hex: ddaySymbolMenu[safe: 0]?.ddayTxtColor ?? "ddayBlack"))
                     
                     
-                Text(ddaySymbolMenu[safe: 2]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                Text(ddaySymbolMenu[safe: 2]?.ddayTitle ?? localizedKey.stringValue())
                     .font(.custom("Inter-Bold", size: 9.0)) // 많이-9, 4-12
                     .frame(width: 46, height: 50, alignment: .topTrailing)
                     .padding(EdgeInsets(top: 5, leading: 110, bottom: 0, trailing: 0))
@@ -121,7 +123,7 @@ struct WidgetView_Multi03_M_Comp01: View { // disable shadow
             
             // bottom stack 2
             ZStack{
-                Text(ddaySymbolMenu[safe: 3]?.ddayTitle ?? "길게눌러서 디데이 추가하기")
+                Text(ddaySymbolMenu[safe: 3]?.ddayTitle ?? localizedKey.stringValue())
                     .font(.custom("Inter-Bold", size: 8.0)) // 2- 14, 3~5-12, <8=-11,  많이-9
                     .frame(width: 70, height: 50, alignment: .topLeading)
                     .multilineTextAlignment(.leading)

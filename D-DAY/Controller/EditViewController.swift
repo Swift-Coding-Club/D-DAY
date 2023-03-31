@@ -8,7 +8,6 @@
 import UIKit
 
 class EditViewController: UIViewController {
-    // Define the IBOutlets
     
     // navigation bar
     @IBOutlet weak var cancelButton: UIButton!
@@ -30,39 +29,34 @@ class EditViewController: UIViewController {
     @IBOutlet weak var mediumTitle: UILabel!
     @IBOutlet weak var mediumDate: UILabel!
     
-    // Language Button
     @IBOutlet weak var languageButton: UIButton!
     
-    // Countdown Button
     @IBOutlet weak var isTodayCountedButton: UIButton!
     
-    // Textfield for Title
+    // for Title
     var txtFieldForTitle: UITextField = UITextField()
     
-    // Textfield for Subtitle
+    // for Subtitle
     var txtFieldForSubtitle: UITextField = UITextField()
     
-    // Data for the Table settings
+    // for the Table settings
     let list = DdaySettingSection.generateData()
     
-    // Variables for TextField
+    // for TextField
     var titleString: String?
     var subtitleString: String?
     
-    // Variable for DatePicker
+    // for DatePicker
     var theDate: Date = Date()
     
-    // Variables for Colorwell
+    // for Colorwell
     var colorForTXT: UIColor? = UIColor(hex: "ddayBlack")
     var colorForBackground: UIColor? = UIColor(hex: "ddayNeonGreen")
     
-    // UserDefaults 넣어 줄 struct list
     var ddayList = [DdayInfo]()
 
-    // Variable for Countdown
     var isTodayCounted = false
     
-    // Language
     var language: String = "English"
     
     var cellTag = 0
@@ -70,10 +64,8 @@ class EditViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
                 
-        // UserDefaults 불러오기 (encode UserDefaults)
         let encodedData = UserDefaults.shared.array(forKey: KeyForUserDefaults) as? [Data] ?? []
 
-        // 불러온 UserDefaults를 struct list에 넣어주기
         ddayList = encodedData.map { try! JSONDecoder().decode(DdayInfo.self, from: $0) }
 
         configuration()
@@ -101,23 +93,17 @@ extension EditViewController {
         bgColor = colorForBackground?.toHexString() ?? "ddayBlack"
         txtColor = colorForTXT?.toHexString() ?? "ddayWhite"
 
-        // 변경될 struct
         let editDdayInfo = DdayInfo(title: self.txtFieldForTitle.text!, subTitle: self.txtFieldForSubtitle.text!,  date: self.theDate, isTodayCounted: false, widgetTextColor: txtColor, widgetBGColor: bgColor, language: self.language)
                 
-        // UserDefaults 불러오기 (encode UserDefaults)
         let encodedData = UserDefaults.shared.array(forKey: KeyForUserDefaults) as? [Data] ?? []
 
-        // 불러온 UserDefaults를 struct list에 넣어주기
         ddayList = encodedData.map { try! JSONDecoder().decode(DdayInfo.self, from: $0) }
         
-        // struct list 중 cellTag(클릭한 cell의 number)에 해당하는 struct의 값을, 변경된 struct값으로 바꿔주기
         ddayList[cellTag] = editDdayInfo
         
-        // UserDefaults에 바뀐 struct list 저장하기 (decode UserDefaults)
         let data = ddayList.map { try? JSONEncoder().encode($0) }
         UserDefaults.shared.setValue(data, forKey: KeyForUserDefaults)
         
-        // User Default for date
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy.MM.dd"
         
@@ -375,7 +361,7 @@ extension EditViewController: UITableViewDataSource {
                 txtFieldForTitle = cellForTxtfield.accTextField
                 cellForTxtfield.accTextField.addTarget(self, action: #selector(getTitle), for: .editingChanged)
                 
-                // place holder 대신 UserDefaults의 입력값 넣어주기
+                // place holder 대신 UserDefaults값으로
                 txtFieldForTitle.text = ddayList[cellTag].title
                 
             } else { // subtitle row
@@ -383,7 +369,7 @@ extension EditViewController: UITableViewDataSource {
                 txtFieldForSubtitle = cellForTxtfield.accTextField
                 cellForTxtfield.accTextField.addTarget(self, action: #selector(getSubTitle), for: .editingChanged)
                 
-                // place holder 대신 UserDefaults의 입력값 넣어주기
+                // place holder 대신 UserDefaults값으로
                 txtFieldForSubtitle.text = ddayList[cellTag].subTitle
             }
             
@@ -397,7 +383,7 @@ extension EditViewController: UITableViewDataSource {
             let cellForDatepicker = addTableView.dequeueReusableCell(withIdentifier: target.type.rawValue, for: indexPath) as! DatePickerCell
             cellForDatepicker.textLabel?.text = "\(target.title)"
             
-            // UserDefaults의 date값으로 수정
+            // UserDefaults의 date값으로
             cellForDatepicker.accDatePicker.date = ddayList[cellTag].date
             self.language = ddayList[cellTag].language ?? "English"
             languageButtonConfiguration(lan: self.language)
@@ -410,7 +396,7 @@ extension EditViewController: UITableViewDataSource {
             let cellForColorwell = addTableView.dequeueReusableCell(withIdentifier: target.type.rawValue, for: indexPath) as! ColorWellCell
             cellForColorwell.textLabel?.text = "\(target.title)"
             
-            // UserDefaults의 color값으로 수정
+            // UserDefaults의 color값으로
             var bgColor = String()
             var txtColor = String()
             
@@ -432,7 +418,7 @@ extension EditViewController: UITableViewDataSource {
             self.colorForTXT = UIColor(hex: txtColor)
             self.colorForBackground = UIColor(hex: bgColor)
             
-            // ColorWell에 보이는 값도 UserDefaults의 color값으로 수정
+            // ColorWell에 보이는 값을 UserDefaults의 color값으로
             cellForColorwell.colorwellBackground.selectedColor = UIColor(hex: bgColor)
             cellForColorwell.colorwellText.selectedColor = UIColor(hex: txtColor)
 

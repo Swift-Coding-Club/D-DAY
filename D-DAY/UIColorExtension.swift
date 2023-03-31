@@ -32,7 +32,7 @@ extension UIColor {
         guard let rgb = hexRGB else {
             return nil
         }
-        self.init(hexRGBA: rgb + "ff") // Add alpha = 1.0
+        self.init(hexRGBA: rgb + "ff")
     }
 
 }
