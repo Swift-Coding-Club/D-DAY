@@ -1,40 +1,34 @@
-# D-DAY
+# D-DAY (디데이 위젯)
 
-> Cool & Simple Date Count Down iOS App with Widget 
+> 깔끔하고 멋진 디데이 위젯 앱
+
+<img src="https://user-images.githubusercontent.com/47246760/229266147-7edff5dd-8c11-4688-bd7d-90696c6e042a.svg"  width="180" align="right"> 
+
+</br>   
 
 <img src="https://user-images.githubusercontent.com/47246760/229154904-00ceb270-9282-4a84-951a-66dbb93b9927.png"  width="900">
 
 ## Description
 * #### **App** ####
-  * UIKit
-  * Add D-DAY 
-    * Add title / subtitle / date / widget colors to show / widget languages to show
-    * Preview of widget with selected colors
-  * Edit D-DAY 
-    * Edit title / subtitle / date / widget colors to show / widget languages to show 
-    * Delete D-DAY with swipe action
-    * Move D-DAY with drag&drop action
+  * D-DAY 추가
+    * 제목 / 소제목 / 날짜 / 위젯 컬러 입력하기
+    * 선택한 위젯 컬러로 위젯 미리보기
+  * D-DAY 수정
+    * 제목 / 소제목 / 날짜 / 위젯 컬러 수정하기
+    * 왼쪽 스와이프로 디데이 삭제하기
+    * 드래그 앤 드롭으로 디데이 이동하기
 * #### **Widget** ####
-  * SwiftUI
-  * Choose widget size
-  * Choose D-DAY to show on the widget  
+  * 위젯 사이즈 선택하기 (싱글 위젯 / 멀티 위젯)
+  * 위젯에 디데이 추가하기
 
 </br>   
 
 ## Requirements
-* iOS 15.0+     
+* iOS 16.0+     
 
 </br>   
 
 ## Tech Stack
-* UIKit
-* Storyboard
-* SwiftUI
+* UIKit (App)
+* SwiftUI (Widget)
 * MVC    
-
-</br>   
-
-## Installation
-1. Go to App Store
-2. Search with keyword 'D-DAY' <span style="color:gray"> also '_dday_' or '_ddaywidget_' </span>
-3. Download and Use!
